@@ -21,7 +21,7 @@
 
 <addon id="plugin.video.sotwesoora.tv"
        name="Sotwesoora.tv"
-       version="0.0.1"
+       version="1.0.0"
        provider-name="hadynz">
     <requires>
         <import addon="xbmc.python" version="2.0"/>
