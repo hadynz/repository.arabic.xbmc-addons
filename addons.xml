@@ -19,6 +19,25 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.sotwesoora.tv"
+       name="Sotwesoora.tv"
+       version="0.0.1"
+       provider-name="hadynz">
+    <requires>
+        <import addon="xbmc.python" version="2.0"/>
+        <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Sotwesoora.tv</summary>
+        <description>Sotwesoora.tv plugin for XBMC. Scrapes Arabic movies from the famous online service.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="repository.arabic.xbmc-addons" name="Arabic XBMC Add-on Repository" version="1.0.0" provider-name="hadynz">
     <extension point="xbmc.addon.repository" name="Arabic XBMC Add-on Repository">
         <info compressed="false">https://github.com/hadynz/repository.arabic.xbmc-addons/raw/master/addons.xml</info>
