@@ -6,20 +6,23 @@ import sys
 thisPlugin = int(sys.argv[1])
 
 # Setting constants
-MODE_MOVIE_LISTING_PAGE = 1
-MODE_PLAYVIDEO = 2
-MODE_NOVIDEOS = 3
+MODE_GOTO_MOVIE_CATEGORIES = 1
+MODE_GOTO_MOVIE_LISTINGS = 2
+MODE_PLAYVIDEO = 3
+MODE_NOVIDEOS = 4
+
+LISTING_MOST_RECENT = "mr";
+LISTING_MOST_VIEWED = "mv";
+LISTING_TOP_RATED = "tr";
+LISTING_RECENTLY_FEATURED = "rf";
+LISTING_RECENTLY_VIEWED = "rv";
+LISTING_RANDOM = "ran";
+
+URL_PATTERN_MOVIES = "http://www.sotwesoora.tv/categories&cid=1&c=Movies&lo=detailed&s={listingType}&t=a&p={pageNo}"
+URL_PATTERN_XML_CONFIG = "http://www.sotwesoora.tv/flv_player/data/playerConfig/{videoId}.xml"
 
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
-
-START_PAGINATION_INDEX = 1
-MOVIES_URL = "http://www.sotwesoora.tv/categories"
-
-def getRootCategories():
-    addDir("Movies", MOVIES_URL, MODE_MOVIE_LISTING_PAGE, 1)
-    xbmcplugin.endOfDirectory(thisPlugin)
-
 
 class VideoClipRow():
     def __init__(self, el):
@@ -28,23 +31,23 @@ class VideoClipRow():
         self.name = imgEl['alt']
         self.url = el.find('a')['href'].encode('utf-8')
 
-def playVideo(thumbnailUrl):
-    m = re.search('.*\/(\d+)\/.*', thumbnailUrl, re.M|re.I)
-    videoID = m.group(1)
-    playerConfigUrl = 'http://www.sotwesoora.tv/flv_player/data/playerConfig/{0}.xml'.format(videoID)
+def getRootCategories():
+    addDir("Movies", MODE_GOTO_MOVIE_CATEGORIES)
+    xbmcplugin.endOfDirectory(thisPlugin)
 
-    response = opener.open(playerConfigUrl)
-    html_data = response.read()
-    opener.close()
+def getMovieCategories():
+    addDir("Recently Featured", MODE_GOTO_MOVIE_LISTINGS, LISTING_RECENTLY_FEATURED)
+    addDir("Recently Viewed", MODE_GOTO_MOVIE_LISTINGS, LISTING_RECENTLY_VIEWED)
+    addDir("Most Recent", MODE_GOTO_MOVIE_LISTINGS, LISTING_MOST_RECENT)
+    addDir("Most Viewed", MODE_GOTO_MOVIE_LISTINGS, LISTING_MOST_VIEWED)
+    addDir("Top Rated", MODE_GOTO_MOVIE_LISTINGS, LISTING_TOP_RATED)
+    addDir("Random", MODE_GOTO_MOVIE_LISTINGS, LISTING_RANDOM)
+    xbmcplugin.endOfDirectory(thisPlugin)
 
-    soup = BeautifulSoup(html_data)
-    clipStreamingUrl = soup.find('video')['sd']
+def getMovieLinks(listingType, pageNo):
+    pageUrl = URL_PATTERN_MOVIES.format(listingType=listingType, pageNo=pageNo)
 
-    listItem = xbmcgui.ListItem(path=clipStreamingUrl)
-    return xbmcplugin.setResolvedUrl(thisPlugin, True, listItem)
-
-def getMovieLinks(websiteUrl, currentIndex):
-    response = opener.open(websiteUrl)
+    response = opener.open(pageUrl)
     inner_data = response.read();
     opener.close()
 
@@ -57,9 +60,24 @@ def getMovieLinks(websiteUrl, currentIndex):
         clip = VideoClipRow(boxRowEl)
         addLink(clip.name, clip.url, MODE_PLAYVIDEO, clip.thumbnail, resultsCount)
 
-    addDir("Next Page >>", MOVIES_URL, MODE_MOVIE_LISTING_PAGE, currentIndex + 1)
+    addDir("Next Page >>", MODE_GOTO_MOVIE_LISTINGS, listingType, pageNo + 1)
 
     xbmcplugin.endOfDirectory(thisPlugin)
+
+def playVideo(thumbnailUrl):
+    m = re.search('.*\/(\d+)\/.*', thumbnailUrl, re.M|re.I)
+    videoId = m.group(1)
+    playerConfigUrl = URL_PATTERN_XML_CONFIG.format(videoId=videoId)
+
+    response = opener.open(playerConfigUrl)
+    html_data = response.read()
+    opener.close()
+
+    soup = BeautifulSoup(html_data)
+    clipStreamingUrl = soup.find('video')['sd']
+
+    listItem = xbmcgui.ListItem(path=clipStreamingUrl)
+    return xbmcplugin.setResolvedUrl(thisPlugin, True, listItem)
 
 def get_params():
     param = []
@@ -79,8 +97,8 @@ def get_params():
 
     return param
 
-def addDir(name, url, mode, pageIndex):
-    u = sys.argv[0] + "?url=" + urllib.quote_plus(url + "&p=" + str(pageIndex)) + "&mode=" + str(mode) + "&pageindex=" + str(pageIndex)
+def addDir(name, mode, listingType=None, pageIndex=None):
+    u = sys.argv[0] + "?mode=" + str(mode) + "&listingType=" + str(listingType) + "&pageIndex=" + str(pageIndex)
     liz = xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage="DefaultFolder.png")
     liz.setInfo(type="Video", infoLabels={"Title": name})
     ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=liz, isFolder=True)
@@ -97,6 +115,7 @@ def addLink(name, url, mode, iconImage, totalItems):
 params = get_params()
 url = None
 lastMode = None
+listingType = None
 pageIndex = 1
 
 try:
@@ -108,15 +127,22 @@ try:
 except:
     pass
 try:
-    pageIndex = int(params["pagendex"])
+    listingType = params["listingType"]
+except:
+    pass
+try:
+    pageIndex = int(params["pageIndex"])
 except:
     pass
 
 if lastMode is None:
     getRootCategories()
 
-elif lastMode == MODE_MOVIE_LISTING_PAGE:
-    getMovieLinks(url, pageIndex)
+elif lastMode == MODE_GOTO_MOVIE_CATEGORIES:
+    getMovieCategories()
+
+elif lastMode == MODE_GOTO_MOVIE_LISTINGS:
+    getMovieLinks(listingType, pageIndex)
 
 elif lastMode == MODE_PLAYVIDEO:
     playVideo(url)
