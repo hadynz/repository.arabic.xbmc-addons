@@ -1,0 +1,7 @@
+<settings>
+   <setting id="proxy" type="ipaddress" label="GLArab Plugin (Proxy) Location - 127.0.0.1 for local" default="127.0.0.1"/>
+   <setting id="paid_account" type="bool" label="Paid Account" default="false"/>
+   <setting id="username" type="text"  label="Username" default="" enable="eq(-1,true)"/>
+   <setting id="password" type="text"  label="Password" default="" enable="eq(-2,true)"/>
+   <setting id="show_thumbnail" type="bool" label="Show glarab.com Thumbnails" default="true"/>   
+</settings>
