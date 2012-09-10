@@ -13,7 +13,7 @@ The Al Qahera Al Youm XBMC plugin scrapes the show's online website and delivers
 Using the XBMC plugin
 ---------------------
 #### Installation ####
-Install the **[Arabic XBMC addons repository](https://github.com/hadynz/repository.arabic.xbmc-addons)** and select to install this plugin from it.
+Install the **[Arabic XBMC addons repository](https://github.com/hadynz/repository.arabic.xbmc-addons#arabic-xbmc-repository)** and select to install this plugin from it.
 
 #### Configuration #####
 No configuration is required for this plugin.
