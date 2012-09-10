@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+
+  <!-- ATN Credentials -->
+  <category label="30001">
+    <setting label="30200" id="username" type="text"  default="" />
+    <setting label="30201" id="password" type="text" option="hidden" enable="!eq(-1,)" default="" />
+    <setting id="validLogin" type="text" visible="false" default="false" />
+  </category>
+
+</settings>

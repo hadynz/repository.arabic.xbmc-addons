@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- Category strings -->
+    <string id="30001">ATN Credentials</string>
+
+    <!-- Plugin settings strings -->
+    <string id="30200">Username</string>
+    <string id="30201">Password</string>
+
+    <!-- Menu strings -->
+    <string id="30500">Login...</string>
+    <string id="30501">All</string>
+
+    <!-- messages -->
+    <string id="30600">Error</string>
+    <string id="30601">Unknown error</string>
+    <string id="30602">Bad username or password</string>
+
+</strings>

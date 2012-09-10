@@ -19,6 +19,25 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.atnnetwork"
+       name="ATNNetwork"
+       version="1.0.0"
+       provider-name="hadynz">
+    <requires>
+        <import addon="xbmc.python" version="2.0"/>
+        <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>ATNNetwork</summary>
+        <description>ATN Network plugin for XBMC. Use your ATN subscription and watch live TV from this service on XBMC.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.video.glarab"
        name="GLArab"
        version="0.0.1"
