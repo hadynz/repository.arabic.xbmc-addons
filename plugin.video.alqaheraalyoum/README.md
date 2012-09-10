@@ -8,7 +8,12 @@ Spear headed by leading Arab presenter Amr Adeeb, Al Qahera Al Youm (Arabic: Ø§Ù
 Clips of the program used to be uploaded daily on to the show's official YouTube channel until recently; the official YouTube channel has been shutdown. The program clips are now instead being directly uploaded to the official program website (http://www.alqaheraalyoum.net).
 
 #### A XBMC video plugin ####
-
+The Al Qahera Al Youm XBMC plugin scrapes the show's online website and delivers their video clip content through XBMC for convenient consumption.
 
 Using the XBMC plugin
 ---------------------
+#### Installation ####
+Install the **[Arabic XBMC addons repository](https://github.com/hadynz/repository.arabic.xbmc-addons)** and select to install this plugin from it.
+
+#### Configuration #####
+No configuration is required for this plugin.
