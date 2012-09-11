@@ -29,7 +29,7 @@ created and a special proxy installed (for Windows and Mac only).
 
 ### Sotwesoora.Tv (Free service)
 
-## Get Started
+## Installation
 Simply download the [repository zip](https://github.com/downloads/hadynz/repository.arabic.xbmc-addons/repository.arabic.xbmc-addons-1.0.0.zip) 
 and install it in XBMC.
 
@@ -38,6 +38,8 @@ on the XBMC wiki to learn how to install addons from a repository.
 
 Alternatively, you can also use the 
 [XBMC's repository installer plugin](http://passion-xbmc.org/addons/?Page=View&ID=plugin.program.repo.installer).
+
+## Contributing
 
 ## Questions, Comments, Feature Requests or Issues
 If you have any of these, go ahead and submit an 
