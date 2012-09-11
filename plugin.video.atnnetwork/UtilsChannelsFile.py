@@ -1,3 +1,4 @@
+import os
 import sys
 from BeautifulSoup import BeautifulSoup
 
@@ -13,13 +14,14 @@ class Channel:
 
 class UtilsChannelsFile:
 
-    _channelsXmlFile = "\\resources\\data\\channels.xml"
+    _channelsXmlFile = os.path.join('resources', 'data', 'channels.xml')
 
     def __init__(self):
         self.pluginPath = sys.modules["__main__"].pluginPath
 
     def readChannelsFileAsSoup(self):
-        handler = open(self.pluginPath + self._channelsXmlFile).read()
+        filename = os.path.join(self.pluginPath, self._channelsXmlFile)
+        handler = open(filename).read()
         return BeautifulSoup(handler)
 
     def getCategories(self):
