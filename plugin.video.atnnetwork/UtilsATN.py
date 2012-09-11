@@ -3,6 +3,7 @@ import hashlib
 import json
 import sys
 import urllib2
+from re import sub
 
 URL_LOGIN_TOKEN = "email={email}&password={password}"
 URL_GET_PACKAGES = "http://api.arabtvnet.tv/get_packages?{loginTicket}"
@@ -63,6 +64,14 @@ class UtilsATN:
         return self.getData(url)
 
     def getChannelStreamUrl(self, channelID):
+        # Call get_channel service to fetch http cdn URL
         url = self.urls['get_channel'].format(loginTicket=self.loginTicket(), packageNo="15", channelID=channelID)
         channelData = self.getData(url)
-        return channelData["Message"]
+        httpUrl = channelData["Message"]
+
+        # Construct stream url
+        cdnUrl = httpUrl.replace('http://', '')
+        cdnUrl = sub('live(.*)', '', cdnUrl)
+        streamUrl = 'rtmp://%slive?%s playpath=%s.stream' % (cdnUrl, self.loginTicket(), channelID)
+
+        return streamUrl
