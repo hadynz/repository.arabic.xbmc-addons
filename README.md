@@ -8,21 +8,26 @@ Arabic XBMC Addons Repository
 * Github: https://github.com/hadynz/repository.arabic.xbmc-addons
 
 ## Introduction
+This repository contains a number of XBMC addons that are focused around providing Arabic streaming content.
+Some plugins provide access to free and paid Arabic TV. Other plugins provide access to Arabic movies
+or online cliips of shows and TV series.
 
 ## Arabic XBMC Addons
 The following is a listing of the Arabic XBMC addons available from this repository:
 
-### ATN Network
+### ATN Network (Paid service)
 Watch live Arabic TV by logging in with your [ATN Network](http://www.atnnetwork.com) subscription login.
 [Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.atnnetwork)
 
-### GLArab
-
+### GLArab (Paid and Free service)
+Watch live Arabic TV through the [GLArab](http://www.glarab.com) service. This service is free but requires a GLArab account to be
+created and a special proxy installed (for Windows and Mac only). 
+[Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.glarab)
 
 ### Al Qahera Al Youm
 
 
-### Sotwesoora.Tv
+### Sotwesoora.Tv (Free service)
 
 ## Get Started
 Simply download the [repository zip](https://github.com/downloads/hadynz/repository.arabic.xbmc-addons/repository.arabic.xbmc-addons-1.0.0.zip) 
