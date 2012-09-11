@@ -1,4 +1,4 @@
-Arabic XBMC Repository
+Arabic XBMC Addons Repository
 ======================
 * Author: Hady Osman (hadyos@gmail.com)
 * Twitter: [@hadynz](https://twitter.com/hadynz)
@@ -9,7 +9,20 @@ Arabic XBMC Repository
 
 ## Introduction
 
-## Arabic XBMC Plugins
+## Arabic XBMC Addons
+The following is a listing of the Arabic XBMC addons available from this repository:
+
+### ATN Network
+Watch live Arabic TV by logging in with your [ATN Network](http://www.atnnetwork.com) subscription login.
+[Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.atnnetwork).
+
+### GLArab
+
+
+### Al Qahera Al Youm
+
+
+### Sotwesoora.Tv
 
 ## Get Started
 Simply download the repository zip and install it, or use 
