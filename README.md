@@ -39,7 +39,11 @@ on the XBMC wiki to learn how to install addons from a repository.
 Alternatively, you can also use the 
 [XBMC's repository installer plugin](http://passion-xbmc.org/addons/?Page=View&ID=plugin.program.repo.installer).
 
-## Contributing
+## F.A.Q.
+### When I install the repository from ZIP file, XBMC complains that it "does not have the correct structure".
+This has typically meant that you have downloaded this github repository as a ZIP file (by clicking on the
+'Download as zip' button) in the downloads page. Instead, you need to download the repository from the link
+in the 'Download Packages' section of the downloads page.
 
 ## Questions, Comments, Feature Requests or Issues
 If you have any of these, go ahead and submit an 
