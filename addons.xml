@@ -2,7 +2,7 @@
 <addons>
 <addon id="plugin.video.alqaheraalyoum"
        name="AlQaheraAlYoum"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="hadynz">
     <requires>
         <import addon="xbmc.python" version="2.0"/>

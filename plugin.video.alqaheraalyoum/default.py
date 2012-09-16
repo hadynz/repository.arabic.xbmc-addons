@@ -50,7 +50,6 @@ def playVideo(thumbnailUrl):
     matchObj = re.search( r'file: \'(.*)\'', inner_data, re.M|re.I)
 
     clipStreamingUrl = matchObj.group(1)
-    clipStreamingUrl = "plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=dZVsyM_4AA8"
 
     listItem = xbmcgui.ListItem(path=clipStreamingUrl)
     return xbmcplugin.setResolvedUrl(plugin, True, listItem)
