@@ -14,7 +14,7 @@ MODE_INDEX = 2
 MODE_PLAYVIDEO = 3
 MODE_NOVIDEOS = 4
 
-QAHERA_NEW_VIDEOS_URL = "http://www.alqaheraalyoum.net/videos/newvideos.php%s"
+QAHERA_NEW_VIDEOS_URL = "http://www.alqaheraalyoum.net/videos/newvideos.php"
 
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
@@ -32,7 +32,7 @@ class EpisodeClip():
         self.url = el.find('a')['href']
         self.name = el.findAll('td')[1].contents[0]
 
-# Using REGEX instead of .Replace - weird behaviour in some cases by latter
+        # Using REGEX instead of .Replace - weird behaviour in some cases by latter
         p1 = re.compile(' hours')
         p2 = re.compile(' minutes')
         p3 = re.compile(' day')
@@ -50,6 +50,7 @@ def playVideo(thumbnailUrl):
     matchObj = re.search( r'file: \'(.*)\'', inner_data, re.M|re.I)
 
     clipStreamingUrl = matchObj.group(1)
+    clipStreamingUrl = "plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=dZVsyM_4AA8"
 
     listItem = xbmcgui.ListItem(path=clipStreamingUrl)
     return xbmcplugin.setResolvedUrl(plugin, True, listItem)
