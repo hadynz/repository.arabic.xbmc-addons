@@ -1,3 +1,4 @@
+import os
 import sys
 import xbmcplugin
 import xbmcgui
@@ -37,16 +38,16 @@ def getCategoryChannels(categoryTitle):
     channelsList = utilsChannelsFile.getChannelsByCategoryTitle(categoryTitle)
     for channel in channelsList:
         addLink(channel.title, channel.id, MODE_PLAY_VIDEO, channel.thumbnail, len(channelsList))
-    
+
     xbmcplugin.endOfDirectory(plugin)
 
 def getAllATNChannels():
     channels_json = utilsATN.getAllChannels()
     resultsCount = len(channels_json)
-    
+
     for channel in channels_json:
         addLink(channel['Name'], channel['ID'], MODE_PLAY_VIDEO, channel['Logo'], resultsCount)
-    
+
     xbmcplugin.endOfDirectory(plugin)
 
 def playVideo(channelID):
@@ -81,17 +82,20 @@ def login():
 
 def addDir(name, mode, channelName=None):
     u = sys.argv[0] + "?mode=" + str(mode) + "&channelName=" + str(channelName)
-    liz = xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage="DefaultFolder.png")
-    liz.setInfo(type="Video", infoLabels={"Title": name})
-    ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=liz, isFolder=True)
+
+    thumbnail = os.path.join(pluginPath, 'art', name.lower() + '.jpg')
+
+    li = xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=thumbnail)
+    li.setInfo(type="Video", infoLabels={"Title": name})
+    ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=li, isFolder=True)
     return ok
 
 def addLink(name, channelID, mode, iconImage, totalItems):
     u = sys.argv[0] + "?channelID=" + str(channelID) + "&mode=" + str(mode)
-    liz = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconImage)
-    liz.setInfo(type="Video", infoLabels={"Title": name})
-    liz.setProperty('IsPlayable', 'true')
-    ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=liz, totalItems=totalItems)
+    li = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconImage)
+    li.setInfo(type="Video", infoLabels={"Title": name})
+    li.setProperty('IsPlayable', 'true')
+    ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=li, totalItems=totalItems)
     return ok
 
 params = get_params()
@@ -118,7 +122,7 @@ if lastMode is None:
 
 elif lastMode == MODE_LIST_CHANNELS_FROM_ATN:
     getAllATNChannels()
-    
+
 elif lastMode == MODE_LIST_CATEGORY_CHANNELS:
     getCategoryChannels(channelName)
 
