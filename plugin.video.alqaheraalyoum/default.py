@@ -42,16 +42,33 @@ class EpisodeClip():
         dateRowContent = el.findAll('td')[2].find('a').contents[0]
         self.date = dateRowContent[dateRowContent.find('|') + 2:]
 
+def extractYoutubeVid(url):
+    if isinstance(url, str):
+        url = [url]
+
+    ret_list = []
+    for item in url:
+        item = item[item.find("v=") + 2:]
+        if item.find("&") > -1:
+            item = item[:item.find("&")]
+        ret_list.append(item)
+
+    return ret_list
+
 def playVideo(thumbnailUrl):
     response = opener.open(thumbnailUrl)
     inner_data = response.read();
     opener.close()
 
     matchObj = re.search( r'file: \'(.*)\'', inner_data, re.M|re.I)
+    url = matchObj.group(1)
 
-    clipStreamingUrl = matchObj.group(1)
+    # If a youtube clip, need to play clip using the XBMC Youtube plugin
+    if "youtube.com" in url:
+        vid = extractYoutubeVid(url)[0]
+        url = "plugin://plugin.video.youtube/?path=/root/video&action=play_video&videoid=%s" % vid
 
-    listItem = xbmcgui.ListItem(path=clipStreamingUrl)
+    listItem = xbmcgui.ListItem(path=url)
     return xbmcplugin.setResolvedUrl(plugin, True, listItem)
 
 def getEpisodes(categoryUrl):

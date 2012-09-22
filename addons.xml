@@ -2,9 +2,10 @@
 <addons>
 <addon id="plugin.video.alqaheraalyoum"
        name="AlQaheraAlYoum"
-       version="1.0.3"
+       version="1.0.4"
        provider-name="hadynz">
     <requires>
+        <import addon="plugin.video.youtube" version="3.2.0"/>
         <import addon="xbmc.python" version="2.0"/>
         <import addon="script.module.beautifulsoup" version="3.0.8"/>
     </requires>
