@@ -1,3 +1,4 @@
 1.0.0 - Initial version
 1.0.1 - Fixed OS separator for Linuxs
 1.0.2 - Fixed stream path for ATN videos
+1.0.5 - Updated static XML list of channels. Added subscription expiry check

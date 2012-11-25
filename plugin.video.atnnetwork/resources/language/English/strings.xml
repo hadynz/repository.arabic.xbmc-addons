@@ -9,11 +9,14 @@
 
     <!-- Menu strings -->
     <string id="30500">Login...</string>
-    <string id="30501">All</string>
+    <string id="30501">All - View all subscription channels</string>
 
     <!-- messages -->
     <string id="30600">Error</string>
     <string id="30601">Unknown error</string>
     <string id="30602">Bad username or password</string>
+    <string id="30603">ATN Subscription Expired</string>
+    <string id="30604">Your ATN subscription has expired.</string>
+    <string id="30605">Please renew and try again.</string>
 
 </strings>

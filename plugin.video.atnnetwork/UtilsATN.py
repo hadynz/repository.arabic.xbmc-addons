@@ -4,11 +4,6 @@ import json
 import sys
 import urllib2
 
-URL_LOGIN_TOKEN = "email={email}&password={password}"
-URL_GET_PACKAGES = "http://api.arabtvnet.tv/get_packages?{loginTicket}"
-URL_GET_CHANNEL = "http://api.arabtvnet.tv/channel?{loginTicket}&package={packageNo}&channel={channelID}"
-URL_GET_CHANNELS = "http://api.arabtvnet.tv/channels?{loginTicket}&package={packageNo}"
-
 class UtilsATN:
 
     # ATN Feeds
@@ -16,7 +11,7 @@ class UtilsATN:
     urls['login_querystring'] = "email={email}&password={password}"
     urls['get_packages'] = "http://api.arabtvnet.tv/get_packages?{loginTicket}"
     urls['get_channel'] = "http://api.arabtvnet.tv/channel?{loginTicket}&package={packageNo}&channel={channelID}"
-    urls['get_channels'] = "http://api.arabtvnet.tv/channels?{loginTicket}&package={packageNo}"
+    urls['get_channels'] = "http://api.arabtvnet.tv/channels?package={packageNo}"
 
     def __init__(self):
         self.settings = sys.modules["__main__"].settings
@@ -43,9 +38,12 @@ class UtilsATN:
 
         return json.loads(data)
 
-    def login(self):
+    def getATNSubscriptionPackages(self):
         url = self.urls['get_packages'].format(loginTicket=self.loginTicket())
-        atnPackageData = self.getData(url)
+        return self.getData(url)
+
+    def login(self):
+        atnPackageData = self.getATNSubscriptionPackages()
 
         success = False
 
@@ -58,13 +56,13 @@ class UtilsATN:
 
         return success
 
-    def getAllChannels(self):
-        url = self.urls['get_channels'].format(loginTicket=self.loginTicket(), packageNo="15")
+    def getAllChannels(self, packageNo):
+        url = self.urls['get_channels'].format(packageNo=packageNo)
         return self.getData(url)
 
-    def getChannelStreamUrl(self, channelID):
+    def getChannelStreamUrl(self, channelID, packageNo):
         # Call get_channel service to fetch http cdn URL
-        url = self.urls['get_channel'].format(loginTicket=self.loginTicket(), packageNo="15", channelID=channelID)
+        url = self.urls['get_channel'].format(loginTicket=self.loginTicket(), packageNo=packageNo, channelID=channelID)
         channelData = self.getData(url)
 
         return channelData["Message"]

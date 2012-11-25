@@ -24,7 +24,7 @@ class Generator:
         channels_xml = u"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<categories>\n"
 
         try:
-            _path = "\\resources\\data\\channels.csv"
+            _path = ".\\resources\\data\\channels.csv"
             csv_lines = open(_path, "r" ).read().splitlines()
 
             channels_list = []
@@ -49,7 +49,7 @@ class Generator:
         channels_xml = channels_xml.strip() + u"\n</categories>\n"
 
         # save file
-        self._save_file( channels_xml.encode( "utf-8" ), file="\\resources\\data\\channels.xml" )
+        self._save_file( channels_xml.encode( "utf-8" ), file=".\\resources\\data\\channels.xml" )
 
     def _save_file( self, data, file ):
         try:
