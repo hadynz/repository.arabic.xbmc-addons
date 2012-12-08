@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.shahid.net"
+       name="Shahid.net"
+       version="1.0.0"
+       provider-name="hadynz">
+    <requires>
+        <import addon="xbmc.python" version="2.0"/>
+        <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Shahid.net</summary>
+        <description>Watch MBC's TV catch-up server, Shahid.net in XBMC! Shahid.net offers content from MBC channels as well as other Arabic TV content.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
