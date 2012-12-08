@@ -29,6 +29,9 @@ created and a special proxy installed (for Windows and Mac only).
 
 ### Sotwesoora.Tv (Free service)
 
+### Shahid.net (Free service)
+Watch MBC's TV catch-up server, [Shahid.net](http://shahid.mbc.net) in XBMC! Shahid.net offers content from MBC channels as well as other Arabic TV content. This service is absolutely free
+
 ## Installation
 Simply download the [repository zip](https://github.com/downloads/hadynz/repository.arabic.xbmc-addons/repository.arabic.xbmc-addons-1.0.0.zip) 
 and install it in XBMC.
