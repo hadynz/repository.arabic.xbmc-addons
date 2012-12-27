@@ -2,15 +2,15 @@
 <addons>
 <addon id="plugin.video.alqaheraalyoum"
        name="AlQaheraAlYoum"
-       version="1.0.4"
+       version="2.0.0"
        provider-name="hadynz">
     <requires>
-        <import addon="plugin.video.youtube" version="3.2.0"/>
         <import addon="xbmc.python" version="2.0"/>
         <import addon="script.module.beautifulsoup" version="3.0.8"/>
+        <import addon="script.module.xbmcswift2" version="1.1.1" />
+        <import addon="plugin.video.youtube" version="3.2.0"/>
     </requires>
-    <extension point="xbmc.python.pluginsource"
-               library="default.py">
+    <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
