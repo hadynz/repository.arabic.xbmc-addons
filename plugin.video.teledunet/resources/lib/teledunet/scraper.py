@@ -5,7 +5,6 @@ from urllib2 import (urlopen, Request)
 from urlparse import urljoin
 from BeautifulSoup import BeautifulSoup
 
-BASE_URL = 'http://www.alqaheraalyoum.net/videos/newvideos.php'
 TELEDUNET_URL = 'http://www.teledunet.com/'
 TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/tv/?stretching=none&file=rtmp://www.teledunet.com:1935/teledunet/%s'
 
