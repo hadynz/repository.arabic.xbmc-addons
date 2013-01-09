@@ -6,7 +6,7 @@ from urlparse import urljoin
 from BeautifulSoup import BeautifulSoup
 
 TELEDUNET_URL = 'http://www.teledunet.com/'
-TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/tv/?stretching=none&file=rtmp://www.teledunet.com:1935/teledunet/%s'
+TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/tv/?file=rtmp://www.teledunet.com:1935/teledunet/%s'
 
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
@@ -45,16 +45,14 @@ def get_rtmp_params(channel_name):
         'playpath': channel_name,
         'app': 'teledunet',
         'swf_url': ('http://www.teledunet.com/tv/player.swf?'
-                    'repeat=always&'
+                    'repeat=single&'
                     'autostart=true&'
-                    'stretching_=none&'
                     'id0=%(time_player)s&'
                     'streamer=rtmp://www.teledunet.com:1935/teledunet&'
                     'file=%(channel_name)s&'
-                    'provider=rtmp&skin=bekle/bekle.xml'
+                    'provider=rtmp'
                    ) % {'time_player': time_player_id, 'channel_name': channel_name},
         'video_page_url': TELEDUNET_TIMEPLAYER_URL % channel_name,
-        'swfVfy': 'true',
         'live': '1'
     }
 

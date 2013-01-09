@@ -1,1 +1,2 @@
 1.0.0 - Initial version
+1.0.1 - Minor fix to RTMP url - added pageUrl parameter which suddenly became required

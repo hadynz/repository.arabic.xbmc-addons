@@ -1,8 +1,8 @@
-from operator import itemgetter
 import os
+import xbmcplugin, xbmcgui, xbmcaddon
+from operator import itemgetter
 from xbmcswift2 import Plugin
 from resources.lib.teledunet.api import TeledunetAPI
-import xbmcplugin,xbmcgui,xbmcaddon
 
 PLUGIN_NAME = 'Teledunet.com'
 PLUGIN_ID = 'plugin.video.teledunet'
@@ -88,23 +88,23 @@ def play_video(url):
 
     def rtmpdump_output(rtmp_params):
         return (
-            'rtmpdump.exe '
-            '--rtmp "%(rtmp_url)s" '
-            '--app "%(app)s" '
-            '--swfUrl "%(swf_url)s" '
-            '--playpath "%(playpath)s" '
-            '-o test.flv'
-        ) % rtmp_params
+           'rtmpdump.exe '
+           '--rtmp "%(rtmp_url)s" '
+           '--app "%(app)s" '
+           '--swfUrl "%(swf_url)s" '
+           '--playpath "%(playpath)s" '
+           '-o test.flv'
+       ) % rtmp_params
 
     def xbmc_output(rtmp_params):
         return (
-            '%(rtmp_url)s '
-            'app=%(app)s '
-            'swfUrl=%(swf_url)s '
-            'playpath=%(playpath)s '
-            'live=%(live)s '
-            'swfVfy=%(swfVfy)s '
-        ) % rtmp_params
+           '%(rtmp_url)s '
+           'app=%(app)s '
+           'swfUrl=%(swf_url)s '
+           'playpath=%(playpath)s '
+           'live=%(live)s '
+           'pageUrl=%(video_page_url)s '
+       ) % rtmp_params
 
     playback_url = xbmc_output(rtmp_params)
     plugin.log.info('RTMP cmd: %s' % rtmpdump_output(rtmp_params))
