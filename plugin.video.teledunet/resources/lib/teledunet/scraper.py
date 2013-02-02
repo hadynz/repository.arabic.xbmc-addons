@@ -51,7 +51,7 @@ def get_rtmp_params(channel_name):
                     'streamer=rtmp://www.teledunet.com:1935/teledunet&'
                     'file=%(channel_name)s&'
                     'provider=rtmp'
-                   ) % {'time_player': time_player_id, 'channel_name': channel_name},
+                       ) % {'time_player': time_player_id, 'channel_name': channel_name},
         'video_page_url': TELEDUNET_TIMEPLAYER_URL % channel_name,
         'live': '1'
     }
@@ -60,14 +60,15 @@ def get_channels():
     html = _html(TELEDUNET_URL)
 
     items = []
-    for li in html.find('ol').findAll('li'):
+
+    for li in html.find('div', { 'id': 'list_chaine' }).findAll('div', {'class':'div_channel'}):
         onClickEl = li.find('a')['onclick']
         m = re.search('.*\'(.*)\'.*', onClickEl, re.M|re.I)
         channel_name = m.group(1)
 
         items.append({
-            'thumbnail': TELEDUNET_URL + li.findAll('img')[1]['src'],
-            'label': li.find('a').contents[1],
+            'thumbnail': li.findAll('img')[0]['src'],
+            'label': li.find('font').contents[0],
             'path': channel_name
         })
 
