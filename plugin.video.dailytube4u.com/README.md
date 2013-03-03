@@ -1,10 +1,10 @@
-Télé du Net XBMC plugin
-=======================
+DailyTube4U.com
+===============
 
 #### About the service ####
-Télé du Net is a free online broadcasting service based in Tunisia that is dedicated to online viewers that live outside the Arab world.
+Watch a huge variety of OnDemand online Arabic TV streams provided and maintained by dailytube4u.com.
 
-It broadcasts channels through the internet 24/7. The service is completely free to use and has a great compilation of channels to choose from.
+The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kalam, Nas Book, Ibrahim Wal Nas and others.
 
 Using the XBMC plugin
 ---------------------

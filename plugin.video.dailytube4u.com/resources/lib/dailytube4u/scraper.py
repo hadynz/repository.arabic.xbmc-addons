@@ -58,7 +58,7 @@ def get_clips_for_show(show_path):
                 'path' : link,
                 'thumbnail' : thumbnail,
                 'info' : {
-                    'duration' : duration_min
+                    'duration' : str(duration_min)
                 },
                 'is_playable' : True
             })
@@ -85,14 +85,22 @@ def _parse_title(raw_title):
 
     # Handle Al-Qahera-Al-Youm title format
     # e.g. '2-27-02-2013 ....'
-    m = re.search('^([1-9])-([0-9]{2}-[0-9]{2}-[0-9]{4}) (.*)', raw_title.encode('utf-8'), re.M|re.I)
-    m = re.search('(.*) ([0-9]{4}-[0-9]{2}-[0-9]{2})-([1-9])', raw_title.encode('utf-8'), re.M|re.I)
+    m = re.search('(.*) ([0-9]{4}-[0-9][0-9]?-[0-9][0-9]?)-([1-9])', raw_title.encode('utf-8'), re.M|re.I)
     if m:
         title = m.group(1)
         release_date = _strptime(m.group(2))
         part = m.group(3)
 
         return '[[COLOR blue]Part %s[/COLOR], %s] %s ' % (part, release_date.strftime('%a %b %e'), title)
+
+    # Handle Ibrahim Eisa, Huna Al Qahera tile format
+    # e.g. '27-2-2013 ...'
+    m = re.search('(.*) ([0-9]{4}-[0-9][0-9]?-[0-9][0-9]?)', raw_title.encode('utf-8'), re.M|re.I)
+    if m:
+        title = m.group(1)
+        release_date = _strptime(m.group(2))
+
+        return '[%s] %s ' % (release_date.strftime('%a %b %e'), title)
 
     # General cleanup
     # Replace \' with '
