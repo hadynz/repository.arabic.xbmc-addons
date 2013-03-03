@@ -63,8 +63,8 @@ def get_clips_for_show(show_path):
                 'is_playable' : True
             })
 
-        except:
-            pass
+        except Exception as ex:
+            print 'Error parsing clip title and link: %s' % ex
 
     return items
 
@@ -83,24 +83,28 @@ def get_channels():
 
 def _parse_title(raw_title):
 
-    # Handle Al-Qahera-Al-Youm title format
-    # e.g. '2-27-02-2013 ....'
-    m = re.search('(.*) ([0-9]{4}-[0-9][0-9]?-[0-9][0-9]?)-([1-9])', raw_title.encode('utf-8'), re.M|re.I)
-    if m:
-        title = m.group(1)
-        release_date = _strptime(m.group(2))
-        part = m.group(3)
+    try:
+        # Handle Al-Qahera-Al-Youm title format
+        # e.g. '2-27-02-2013 ....'
+        m = re.search('(.*) ([0-9]{4}-[0-9][0-9]?-[0-9][0-9]?)-([1-9])', raw_title.encode('utf-8'), re.M|re.I)
+        if m:
+            title = m.group(1)
+            release_date = _strptime(m.group(2))
+            part = m.group(3)
 
-        return '[[COLOR blue]Part %s[/COLOR], %s] %s ' % (part, release_date.strftime('%a %b %e'), title)
+            return '[[COLOR blue]Part %s[/COLOR], %s] %s ' % (part, release_date.strftime('%a %b %e'), title)
 
-    # Handle Ibrahim Eisa, Huna Al Qahera tile format
-    # e.g. '27-2-2013 ...'
-    m = re.search('(.*) ([0-9]{4}-[0-9][0-9]?-[0-9][0-9]?)', raw_title.encode('utf-8'), re.M|re.I)
-    if m:
-        title = m.group(1)
-        release_date = _strptime(m.group(2))
+        # Handle Ibrahim Eisa, Huna Al Qahera tile format
+        # e.g. '27-2-2013 ...'
+        m = re.search('(.*) ([0-9]{4}-[0-9][0-9]?-[0-9][0-9]?)', raw_title.encode('utf-8'), re.M|re.I)
+        if m:
+            title = m.group(1)
+            release_date = _strptime(m.group(2))
 
-        return '[%s] %s ' % (release_date.strftime('%a %b %e'), title)
+            return '[%s] %s ' % (release_date.strftime('%a %b %e'), title)
+
+    except Exception as ex:
+        print 'Error parsing clip title: %s' % ex
 
     # General cleanup
     # Replace \' with '
