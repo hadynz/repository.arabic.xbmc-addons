@@ -52,3 +52,6 @@ in the 'Download Packages' section of the downloads page.
 ## Questions, Comments, Feature Requests or Issues
 If you have any of these, go ahead and submit an 
 [issue](https://github.com/hadynz/repository.arabic.xbmc-addons/issues), or contact me directly.
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hadynz/repository.arabic.xbmc-addons/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
