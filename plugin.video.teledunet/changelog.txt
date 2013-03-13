@@ -1,3 +1,4 @@
 1.0.0 - Initial version
 1.0.1 - Minor fix to RTMP url - added pageUrl parameter which suddenly became required
 1.0.2 - Updated Teledunet scraper code to match update look of website
+1.0.3 - Fix to add channels to favorites list (make sure to delete old favorites) 

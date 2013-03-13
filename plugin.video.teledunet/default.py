@@ -80,7 +80,7 @@ def list_channels_for_network(network_name):
 
     return sorted(network_channels, key=itemgetter('label'))
 
-@plugin.route('/play/<url>/')
+@plugin.route('/play/<url>')
 def play_video(url):
     print 'website url'
     print url
