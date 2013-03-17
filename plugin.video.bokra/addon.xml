@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.bokra"
-  version="1.3.0"
+  version="1.4.0"
   name="BOKRA"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="1.3"/>
+            version="1.4"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">

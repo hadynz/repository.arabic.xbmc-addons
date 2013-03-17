@@ -45,28 +45,28 @@ def CATEGORIES():
 	#addDir('مسلسلات ','tv1.alarab.net/view-1951/مسلسلات-اجنبية',1,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	
 def retrive_max_page(url):
-   
-    req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link=response.read()
-    response.close()
-    url_ch=(re.compile('<span class="curpage">1</span>(.+?)</div>').findall(link))
-    url_ch=str(url_ch)
-    url_ch=(url_ch.split('>'))
-    page_list=[]
-    for items in  url_ch  :
-        mystring=items.split('.') 
-        for elements in mystring:
-            if 'html' in elements:
-                elements=str(elements)
-                elements=elements.replace('html/', '')
-                elements=elements.replace('"', '')
-                elements=elements.strip()
-                page_list.append(elements)
-    
     try:
-        return max(page_list)
+		req = urllib2.Request(url)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
+		response.close()
+		url_ch=(re.compile('<span class="curpage">1</span>(.+?)</div>').findall(link))
+		url_ch=str(url_ch)
+		url_ch=(url_ch.split('>'))
+		page_list=[]
+		for items in  url_ch  :
+			mystring=items.split('.') 
+			for elements in mystring:
+				if 'html' in elements:
+					elements=str(elements)
+					elements=elements.replace('html/', '')
+					elements=elements.replace('"', '')
+					elements=elements.strip()
+					page_list.append(elements)
+		
+		
+			return max(page_list)
     except Exception:
         return 1
 
@@ -80,113 +80,121 @@ def checkURL(url):
 
 	
 def index(url):
-    counter=0
-    orig=url
-    kurl=url
-    maxvalue=int(retrive_max_page(kurl))+3
-    final_items=[]
-    for counter in range(0,int(maxvalue)):
-        
-        kurl=orig+'/'+str(counter)
-        req = urllib2.Request(kurl)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-        response = urllib2.urlopen(req)
-        link=response.read()
-        
-        response.close()
-        
-        url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="139" height="96').findall(link))
-        
-        
-        for items in url_ch:
-           
-            for elements in items:
-                
-                for i in items:
-                    url= items[0].strip()
-                    name= items[1].replace("pageTracker._trackPageview('/VideoAlbum/","")
-                    name=name.replace("html","")
-                    name=name.replace(".')","")
-                    name=name.rsplit("/",1)
-                    name = name[1].strip()  
-                    image= items[2].strip()
-                    if image not in final_items:
-                        final_items.append(name)
-                        final_items.append(url)
-                        final_items.append(image)
-        for items in final_items:
-        #print elements
-            if final_items.__len__()>0:
-                
-                name=final_items.pop(0)
-                print name
-            if final_items.__len__()>0:
-                
-                url=final_items.pop(0)
-                print url
-            if final_items.__len__()>0:
-                
-                image=final_items.pop(0)
-                addDir(name,url,2,image)
+	try:
+		counter=0
+		orig=url
+		kurl=url
+		maxvalue=int(retrive_max_page(kurl))+3
+		final_items=[]
+		for counter in range(0,int(maxvalue)):
+			
+			kurl=orig+'/'+str(counter)
+			req = urllib2.Request(kurl)
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			response = urllib2.urlopen(req)
+			link=response.read()
+			
+			response.close()
+			
+			url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="139" height="96').findall(link))
+			
+			
+			for items in url_ch:
+			   
+				for elements in items:
+					
+					for i in items:
+						url= items[0].strip()
+						name= items[1].replace("pageTracker._trackPageview('/VideoAlbum/","")
+						name=name.replace("html","")
+						name=name.replace(".')","")
+						name=name.rsplit("/",1)
+						name = name[1].strip()  
+						image= items[2].strip()
+						if image not in final_items:
+							final_items.append(name)
+							final_items.append(url)
+							final_items.append(image)
+			for items in final_items:
+			#print elements
+				if final_items.__len__()>0:
+					
+					name=final_items.pop(0)
+					print name
+				if final_items.__len__()>0:
+					
+					url=final_items.pop(0)
+					print url
+				if final_items.__len__()>0:
+					
+					image=final_items.pop(0)
+					addDir(name,url,2,image)
+	except Exception:
+		print "Film series Exception occured"
 
 def index_films(url):
-    counter=0
-    orig=url
-    kurl=url
-    final_items=[]
-    maxvalue=int(retrive_max_page(kurl))+10
-    print "this is max  "+str(maxvalue)
-    for counter in range(0,int(maxvalue)):
-       
-        kurl=orig+'/'+str(counter)
-     
-        req = urllib2.Request(kurl)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-        response = urllib2.urlopen(req)
-        link=response.read()
-        
-        response.close()
-        
-        url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="139" height="96').findall(link))
-        
-        
-        for items in url_ch:
-           
-            for elements in items:
-                
-                for i in items:
-                    url= items[0].strip()
-                    name= items[1].replace("pageTracker._trackPageview('/VideoAlbum/","")
-                    name=name.replace("html","")
-                    name=name.replace(".')","")
-                    name=name.rsplit("/",1)
-                    name = name[1].strip()  
-                    image= items[2].strip()
-                    if image not in final_items:
-                        final_items.append(name)
-                        final_items.append(url)
-                        final_items.append(image)
-        for items in final_items:
-        #print elements
-            if final_items.__len__()>0:
-                
-                name=final_items.pop(0)
-                print name
-            if final_items.__len__()>0:
-                
-                url=final_items.pop(0)
-                print url
-            if final_items.__len__()>0:
-                
-                image=final_items.pop(0)
-                addDir(name,url,5,image)
+	try:
+		counter=0
+		orig=url
+		kurl=url
+		final_items=[]
+		maxvalue=int(retrive_max_page(kurl))+10
+		print "this is max  "+str(maxvalue)
+		for counter in range(0,int(maxvalue)):
+		   
+			kurl=orig+'/'+str(counter)
+		 
+			req = urllib2.Request(kurl)
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			response = urllib2.urlopen(req)
+			link=response.read()
+			
+			response.close()
+			
+			url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="139" height="96').findall(link))
+			
+			
+			for items in url_ch:
+			   
+				for elements in items:
+					
+					for i in items:
+						url= items[0].strip()
+						name= items[1].replace("pageTracker._trackPageview('/VideoAlbum/","")
+						name=name.replace("html","")
+						name=name.replace(".')","")
+						name=name.rsplit("/",1)
+						name = name[1].strip()  
+						image= items[2].strip()
+						if image not in final_items:
+							final_items.append(name)
+							final_items.append(url)
+							final_items.append(image)
+			for items in final_items:
+			#print elements
+				if final_items.__len__()>0:
+					
+					name=final_items.pop(0)
+					print name
+				if final_items.__len__()>0:
+					
+					url=final_items.pop(0)
+					print url
+				if final_items.__len__()>0:
+					
+					image=final_items.pop(0)
+					addDir(name,url,5,image)
+	except Exception:
+		print "Film Exception occured"
 
 			
-def listSeries(url): 
+def listSeries(url):
+	
 	counter=0
 	final_items=[]
 	kurl=url
 	maxvalue=int(retrive_max_page(kurl))+3
+	
 	print "THIS IS PAGENR" +str(maxvalue)
 	
         for counter in range(1,int(maxvalue)):
@@ -201,7 +209,7 @@ def listSeries(url):
             
             url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="139" height="96').findall(link))
             
-           
+     
             for items in url_ch:
                 for elements in items:
                     
