@@ -84,7 +84,7 @@ def index(url):
 		counter=0
 		orig=url
 		kurl=url
-		maxvalue=int(retrive_max_page(kurl))+3
+		maxvalue=int(retrive_max_page(kurl))+5
 		final_items=[]
 		for counter in range(0,int(maxvalue)):
 			
@@ -138,7 +138,7 @@ def index_films(url):
 		orig=url
 		kurl=url
 		final_items=[]
-		maxvalue=int(retrive_max_page(kurl))+10
+		maxvalue=int(retrive_max_page(kurl))+12
 		print "this is max  "+str(maxvalue)
 		for counter in range(0,int(maxvalue)):
 		   
@@ -193,7 +193,7 @@ def listSeries(url):
 	counter=0
 	final_items=[]
 	kurl=url
-	maxvalue=int(retrive_max_page(kurl))+3
+	maxvalue=int(retrive_max_page(kurl))+5
 	
 	print "THIS IS PAGENR" +str(maxvalue)
 	
