@@ -71,7 +71,6 @@ def get_channels():
 	items = []
 
 	for div in html.findAll("div", { "class":"div_channel" }):
-		print div,
 		onClickEl = div.findAll('a')[0]['onclick']
 		m = re.search('.*\'(.*)\'.*', onClickEl, re.M|re.I)
 		if m is not None:
@@ -79,7 +78,6 @@ def get_channels():
 			# Remove the '+' at the End to get RTMP_Params 
 			if channel_name.endswith('+'):
 				channel_name = channel_name[:-1]
-			print channel_name
 			if color in div['style']:
 				items.append({
 					 'thumbnail': div.findAll('img')[0]['src'],
@@ -95,17 +93,14 @@ def get_channels():
 		
 	if not items:
 			path = os.path.join(os.path.dirname(__file__),HTML_FALLBACK)
-			print path
 			html = BeautifulSoup(''.join(open(path).readlines()), convertEntities=BeautifulSoup.HTML_ENTITIES)
 			for div in html.findAll("div", { "class":"div_channel" }):
-				print div,
 				onClickEl = div.findAll('a')[0]['onclick']
 				m = re.search('.*\'(.*)\'.*', onClickEl, re.M|re.I)
 				if m is not None:
 					channel_name = m.group(1)
 					if channel_name.endswith('+'):
 						channel_name = channel_name[:-1]
-					print channel_name
 					items.append({
 						'thumbnail': div.findAll('img')[0]['src'],
 						'label': div.find('font').contents[0],
