@@ -14,3 +14,13 @@ MYMETA.yml
 nytprof.out
 pm_to_blib
 .idea/
+
+repo/.DS_Store
+
+plugin.video.teledunet/resources/lib/.DS_Store
+
+plugin.video.teledunet/resources/.DS_Store
+
+plugin.video.teledunet/.DS_Store
+
+.DS_Store
