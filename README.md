@@ -33,7 +33,7 @@ created and a special proxy installed (for Windows and Mac only).
 
 ### Panet arabic films.
 
-
+### Alarab arabic media content.
 ### Shahid.net (Free service)
 Watch MBC's TV catch-up server, [Shahid.net](http://shahid.mbc.net) in XBMC! Shahid.net offers content from MBC channels as well as other Arabic TV content. This service is absolutely free.
 [Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.shahid.net)
