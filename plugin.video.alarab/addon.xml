@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.alarab"
-  version="1.0.0"
+  version="1.1.0"
   name="ALARAB"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="1.0"/>
+            version="1.1"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Alarab vod Arabic plugin</summary>
-    <description>Alarab Arabic plugin.</description>
+    <summary>Alarab VOD Arabic plugin by BISHA</summary>
+    <description>Alarab VOD Arabic plugin by BISHA</description>
    
     <platform>all</platform>
   </extension>
