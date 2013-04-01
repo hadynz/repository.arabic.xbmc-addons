@@ -102,13 +102,18 @@ def list_eposodes(url):
 					if items[1] not in item_list:
 						
 						name= str(items[1])
-						name=name.replace("ون لاين مباشرة بجودة عالية على العرب بدون تحميل جودة dvd ا","")
-						name=name.replace("شاهدة مباشرة مشاهدة", "")
-						name=name.replace("كاملة اونلاين ","")
 						name=name.replace("تحميل", "")
+						name=name.replace("مسلسل", "")
+						name=name.replace("مدبلجة", "")
+						name=name.replace("مدبلجة", "")
+						name=name.replace("بالعربية", "")
+						name=name.replace("بالعربية", "")
+						name=name.replace("كاملة", "")
+						name=name.replace("مدبلجة", "")
+						name=name.replace("مترجم", "")
 						name=name.replace("فيلم", "")
 						name=name.replace("dvd", "")
-						name=name.replace("م ", "")
+						
 						name=name.replace("مشاهدة", "")
 						name=name.replace("اونلاين", "")
 						name=name.replace("بجودة", "")
@@ -121,13 +126,8 @@ def list_eposodes(url):
 						name=name.replace("كامل", "")
 						name=name.replace("بدون", "")
 						name=name.replace("اون لاين", "")
-						#name=name.replace("ب", "")
-						#name=name.replace("ة","")
-						name=name.replace("تحمي", "")
 						name=name.replace("كواليتي", "")
-						
-					
-						
+						name=name.strip()
 						
 						print name
 						print items[0]
@@ -162,13 +162,10 @@ def list_films(url):
 				#print items[1]
 				name=str( items[1]).replace("جودة", "")
 				name=name.replace("مشاهدة", "").strip()
-				name=name.replace("ون لاين مباشرة بجودة عالية على العرب بدون تحميل جودة dvd ا","")
-				name=name.replace("شاهدة مباشرة مشاهدة", "")
-				
 				name=name.replace("dvd", "")
 				name=name.replace("فيلم", "")
-				name=name.replace("م ", "")
-				name=name.replace("اون لاين", "")
+				name=name.replace("لاين", "")
+				name=name.replace("اون", "")
 				name=name.replace("اونلاين", "")
 				name=name.replace("بجودة", "")
 				name=name.replace("عالية", "")
@@ -180,9 +177,6 @@ def list_films(url):
 				name=name.replace("كواليتي", "")
 				name=name.replace("بدون", "")
 				name=name.replace("كامل", "")
-				name=name.replace("ب", "")
-				name=name.replace("ة","")
-				name=name.replace("تحمي", "")
 				name=name.strip()
 				print name
 				print items[0]
