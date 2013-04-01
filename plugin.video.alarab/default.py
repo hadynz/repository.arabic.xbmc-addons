@@ -89,19 +89,50 @@ def index_series(url):
 
 def list_eposodes(url):
     try:
-		req = urllib2.Request(url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		url_ch=(re.compile('<a href="(.+?)" title="(.+?)" class="vd_title">').findall(link))
-		response.close()
-		item_list=[]
-		for items in url_ch:
-			for element in items:
-				if items[1] not in item_list:
-					print items[1]
-					addDir(items[1],"http://tv1.alarab.net"+str(items[0]),3,"")
-					item_list.append(items[1])
+		for counter in range(1,5):
+			req = urllib2.Request(url+"_"+str(counter))
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			response = urllib2.urlopen(req)
+			link=response.read()
+			url_ch=(re.compile('<a href="(.+?)" title="(.+?)" class="vd_title">').findall(link))
+			response.close()
+			item_list=[]
+			for items in url_ch:
+				for element in items:
+					if items[1] not in item_list:
+						
+						name= str(items[1])
+						name=name.replace("ون لاين مباشرة بجودة عالية على العرب بدون تحميل جودة dvd ا","")
+						name=name.replace("شاهدة مباشرة مشاهدة", "")
+						name=name.replace("كاملة اونلاين ","")
+						name=name.replace("تحميل", "")
+						name=name.replace("فيلم", "")
+						name=name.replace("dvd", "")
+						name=name.replace("م ", "")
+						name=name.replace("مشاهدة", "")
+						name=name.replace("اونلاين", "")
+						name=name.replace("بجودة", "")
+						name=name.replace("عالية", "")
+						name=name.replace("مباشرة", "")
+						name=name.replace("على", "")
+						name=name.replace("العرب", "")
+						name=name.replace("تحميل", "")
+						name=name.replace("جودة", "")
+						name=name.replace("كامل", "")
+						name=name.replace("بدون", "")
+						name=name.replace("اون لاين", "")
+						#name=name.replace("ب", "")
+						#name=name.replace("ة","")
+						name=name.replace("تحمي", "")
+						name=name.replace("كواليتي", "")
+						
+					
+						
+						
+						print name
+						print items[0]
+						addDir(name,"http://tv1.alarab.net"+str(items[0]),3,"")
+						item_list.append(items[1])
     except Exception:
 		print "Exception in list_epos "
 					
@@ -131,6 +162,28 @@ def list_films(url):
 				#print items[1]
 				name=str( items[1]).replace("جودة", "")
 				name=name.replace("مشاهدة", "").strip()
+				name=name.replace("ون لاين مباشرة بجودة عالية على العرب بدون تحميل جودة dvd ا","")
+				name=name.replace("شاهدة مباشرة مشاهدة", "")
+				
+				name=name.replace("dvd", "")
+				name=name.replace("فيلم", "")
+				name=name.replace("م ", "")
+				name=name.replace("اون لاين", "")
+				name=name.replace("اونلاين", "")
+				name=name.replace("بجودة", "")
+				name=name.replace("عالية", "")
+				name=name.replace("مباشرة", "")
+				name=name.replace("على", "")
+				name=name.replace("العرب", "")
+				name=name.replace("تحميل", "")
+				name=name.replace("جودة", "")
+				name=name.replace("كواليتي", "")
+				name=name.replace("بدون", "")
+				name=name.replace("كامل", "")
+				name=name.replace("ب", "")
+				name=name.replace("ة","")
+				name=name.replace("تحمي", "")
+				name=name.strip()
 				print name
 				print items[0]
 				print elements[0]
@@ -142,20 +195,34 @@ def list_films(url):
 
 def get_epos_video(url,name):
 	try:
-		req = urllib2.Request(url)
+		url=str(url).split("_")
+    
+		tnumber=str( url[0])
+		tnumber=tnumber.replace("http://tv1.alarab.net/viewVedio/","")
+		tnumber=tnumber.replace("http://tv1.alarab.net/v", "")
+		tnumber=tnumber.replace("-", "").strip()
+		tnumber="http://alarabplayers.alarab.net/test.php?vid="+tnumber
+		
+		req = urllib2.Request(tnumber)
 		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 		response = urllib2.urlopen(req)
 		link=response.read()
+		
 		response.close()
-		url_ch=(re.compile('<a href="(.+?)" target="_blank">').findall(link))
-		url_ch= str(url_ch)
-		url_ch=url_ch.split("url")
-		url_ch=str(url_ch[1].replace("=http://flv.alarab.net/media/videos/flv/",""))
-		url_ch=url_ch.replace("']", "").strip()
-		if "www.youtube" in url_ch:
-			url_ch=url_ch.split("v=")
-			print "youtube after split: "+str(url_ch)
-			video_id=str(url_ch[1])
+		url_ch=(re.compile("'file': '(.+?)',").findall(link))
+		url_ch=str(url_ch).replace("['", "")
+		video=str(url_ch).replace("']", "").strip()
+		
+		image=(re.compile("'image': '(.+?)',").findall(link))
+		image=str(image).replace("['", "")
+		image=str(image).replace("']", "").strip()
+		
+		print video
+		print image
+		if "www.youtube" in video:
+			video=video.split("v=")
+			print "youtube after split: "+str(video)
+			video_id=str(video[1])
 			video_id=video_id.replace(".flv","").strip()
 			print "first item of youtube: "+str(video_id)
 			playback_url = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % video_id
@@ -164,10 +231,7 @@ def get_epos_video(url,name):
 			addLink(name,playback_url,"")
 				
 		else:
-
-			url_ch="http://flv-origin.alarab.net//flv/"+str(url_ch)+"?start=0"
-			print "SERIEURL "+  url_ch
-			addLink(name,url_ch,"")
+			addLink(name,video,image)
 	except Exception:
 		print "Exception in get_epos_video "
 			
