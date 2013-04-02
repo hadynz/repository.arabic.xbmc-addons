@@ -89,7 +89,7 @@ def index_series(url):
 
 def list_eposodes(url):
     try:
-		for counter in range(1,5):
+		for counter in range(1,8):
 			req = urllib2.Request(url+"_"+str(counter))
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 			response = urllib2.urlopen(req)
@@ -107,13 +107,13 @@ def list_eposodes(url):
 						name=name.replace("مدبلجة", "")
 						name=name.replace("مدبلجة", "")
 						name=name.replace("بالعربية", "")
-						name=name.replace("بالعربية", "")
+						name=name.replace("لاين", "")
 						name=name.replace("كاملة", "")
 						name=name.replace("مدبلجة", "")
 						name=name.replace("مترجم", "")
 						name=name.replace("فيلم", "")
 						name=name.replace("dvd", "")
-						
+						name=name.replace("لابن", "")
 						name=name.replace("مشاهدة", "")
 						name=name.replace("اونلاين", "")
 						name=name.replace("بجودة", "")
@@ -125,7 +125,7 @@ def list_eposodes(url):
 						name=name.replace("جودة", "")
 						name=name.replace("كامل", "")
 						name=name.replace("بدون", "")
-						name=name.replace("اون لاين", "")
+						name=name.replace("اون", "")
 						name=name.replace("كواليتي", "")
 						name=name.strip()
 						
