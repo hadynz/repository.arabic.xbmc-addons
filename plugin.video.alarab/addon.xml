@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.alarab"
-  version="1.4.0"
+  version="1.5.0"
   name="ALARAB"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="1.4"/>
+            version="2.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
