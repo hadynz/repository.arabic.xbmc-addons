@@ -6,9 +6,8 @@ from urllib2 import (urlopen, Request)
 from urlparse import urljoin
 from BeautifulSoup import BeautifulSoup
 
-
 TELEDUNET_URL = 'http://www.teledunet.com/'
-TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/tv/?file=rtmp://www.teledunet.com:1935/teledunet/%s'
+TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/tv/?channel=%s&no_pub'
 HTML_FALLBACK = 'htmlfallback.html'
 
 cj = cookielib.CookieJar()
@@ -37,84 +36,67 @@ def _html(url):
 def _get_channel_time_player(channel_name):
     url = TELEDUNET_TIMEPLAYER_URL % channel_name
     req = Request(url)
-    req.add_header('Referer', TELEDUNET_URL)	# Simulate request is coming from website
+    req.add_header('Referer', TELEDUNET_URL)    # Simulate request is coming from website
     html = get(req)
 
     m = re.search('time_player=(.*);', html, re.M | re.I)
     time_player_str = eval(m.group(1))
 
-    return repr(time_player_str).rstrip('0').rstrip('.')
+    m = re.search('curent_media=\'(.*)\';', html, re.M | re.I)
+    rtmp_url = m.group(1)
+
+    return rtmp_url, repr(time_player_str).rstrip('0').rstrip('.')
 
 def get_rtmp_params(channel_name):
 
-    '''
-    Recent hack in Teledunet service returns channel link as follows:
-    rtmp://ks3313747.kimsufi.com:1935/teledunet/abu_dhabi_drama
-    '''
-    m = re.search('(.*:.*).*\/(.*)', channel_name, re.M|re.I)
-    rtmp_url = m.group(1)
-    channel_name = m.group(2)
-
-    time_player_id = _get_channel_time_player(channel_name)
+    rtmp_url, time_player_id = _get_channel_time_player(channel_name)
 
     return {
-    'rtmp_url': rtmp_url,
-    'playpath': channel_name,
-    'app': 'teledunet',
-    'swf_url': ('http://www.teledunet.com/tv/player.swf?'
-                'bufferlength=5&'
-                'repeat=single&'
-                'autostart=true&'
-                'id0=%(time_player)s&'
-                'streamer=%(rtmp_url)s&'
-                'file=%(channel_name)s&'
-                'provider=rtmp'
-               ) % {'time_player': time_player_id, 'channel_name': channel_name, 'rtmp_url': rtmp_url},
-    'video_page_url': 'http://www.teledunet.com/tv/?channel=%s&no_pub' % channel_name,
-    'live': '1'
+        'rtmp_url': rtmp_url,
+        'playpath': channel_name,
+        'app': 'teledunet',
+        'swf_url': ('http://www.teledunet.com/tv/player.swf?'
+                    'bufferlength=5&'
+                    'repeat=single&'
+                    'autostart=true&'
+                    'id0=%(time_player)s&'
+                    'streamer=%(rtmp_url)s&'
+                    'file=%(channel_name)s&'
+                    'provider=rtmp'
+                       ) % {'time_player': time_player_id, 'channel_name': channel_name, 'rtmp_url': rtmp_url},
+        'video_page_url': 'http://www.teledunet.com/tv/?channel=%s&no_pub' % channel_name,
+        'live': '1'
     }
 
 def get_channels():
-
     html = _html(TELEDUNET_URL)
-    color = '#009900'
+    items = _parse_channels_from_html_dom(html)
+
+    '''
+    If no channels are returned from Teledunet service, fall back to returning
+    channels from an offline HTML fallback file
+    Hady: Unsure in what scenario is this useful given that RTMP stream might also be down as well?!
+    '''
+    if not items:
+        path = os.path.join(os.path.dirname(__file__), HTML_FALLBACK)
+        html = BeautifulSoup(''.join(open(path).readlines()), convertEntities=BeautifulSoup.HTML_ENTITIES)
+        items = _parse_channels_from_html_dom(html)
+
+    return items
+
+def _parse_channels_from_html_dom(html):
+
     items = []
 
     for div in html.findAll("div", { "class":"div_channel" }):
-        onClickEl = div.findAll('a')[0]['onclick']
-        m = re.search('.*\'(.*)\'.*', onClickEl, re.M|re.I)
-        if m is not None:
-            channel_name = m.group(1)
-            # Remove the '+' at the End to get RTMP_Params
-            if channel_name.endswith('+'):
-                channel_name = channel_name[:-1]
-            if color in div['style']:
-                items.append({
-                'thumbnail': div.findAll('img')[0]['src'],
-                'label': '[COLOR green]%(channelname)s[/COLOR]' % {'channelname': div.find('font').contents[0]},
-                'path': channel_name
-                })
-            else :
-                items.append({
-                'thumbnail': div.findAll('img')[0]['src'],
-                'label': div.find('font').contents[0],
-                'path': channel_name
-                })
+        is_working = '#009900' in div['style']
+        label_pattern = '[COLOR green]%s[/COLOR]' if is_working else '%s'
+        path = re.sub('^.*\=', '', div.findAll('a')[1]['href'])
 
-    if not items:
-        path = os.path.join(os.path.dirname(__file__),HTML_FALLBACK)
-        html = BeautifulSoup(''.join(open(path).readlines()), convertEntities=BeautifulSoup.HTML_ENTITIES)
-        for div in html.findAll("div", { "class":"div_channel" }):
-            onClickEl = div.findAll('a')[0]['onclick']
-            m = re.search('.*\'(.*)\'.*', onClickEl, re.M|re.I)
-            if m is not None:
-                channel_name = m.group(1)
-                if channel_name.endswith('+'):
-                    channel_name = channel_name[:-1]
-                items.append({
-                'thumbnail': div.findAll('img')[0]['src'],
-                'label': div.find('font').contents[0],
-                'path': channel_name
-                })
+        items.append({
+            'thumbnail' : div.findAll('img')[0]['src'],
+            'label' : label_pattern % div.find('font').contents[0],
+            'path' : path
+        })
 
     return items

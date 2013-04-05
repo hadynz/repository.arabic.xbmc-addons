@@ -4,3 +4,4 @@
 1.0.3 - Fix to add channels to favorites list (make sure to delete old favorites) 
 1.0.4 - Backup function which loads a offline html file of teledunet when the site is offline. Green colored channels get a green font. Some minor bug fixes.
 1.0.5 - Updated plugin to work with new RTMP URL's implemented by the Teledunet service
+1.0.6 - Updated internal channels playpath to work well with XBMC favourite system. Minor code refactor as well

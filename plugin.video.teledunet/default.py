@@ -82,8 +82,6 @@ def list_channels_for_network(network_name):
 
 @plugin.route('/play/<url>')
 def play_video(url):
-    print 'website url'
-    print url
     rtmp_params = api.get_rtmp_params(url)
 
     def rtmpdump_output(rtmp_params):
