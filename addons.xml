@@ -184,7 +184,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon id="plugin.video.teledunet"
        name="Teledunet.com"
-       version="1.0.6"
+       version="1.0.7"
        provider-name="hadynz">
     <requires>
         <import addon="xbmc.python" version="2.0"/>

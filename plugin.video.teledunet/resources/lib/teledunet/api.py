@@ -1,3 +1,4 @@
+import re
 from scraper import (get_rtmp_params, get_channels)
 
 NETWORKS = {
@@ -16,6 +17,8 @@ NETWORKS = {
     'Sama ': [],
     'Nile': [],
     'Melody': [],
+    'Libya': [],
+    'Toyor': [],
     'Al Nahar': ['Al-Nahar', 'Nahar']
 }
 
@@ -26,7 +29,8 @@ CATEGORIES = {
     'Cooking': ['Fatafeat'],
     'Children': ['Ajyal', 'Baraem', 'Cartoon', 'Founon', 'Cocuk', 'Spacepower', 'Toyor'],
     'General': ['Alhayat', 'Dream', 'CBC', 'Faraeen', 'MBC Masr', 'MBC 1', 'MBC 3', 'MBC 4',
-                'Masria', 'Masriya', 'Mehwar', 'Misr 25', 'Life', 'On TV', 'Ontv', 'Qatar', 'Dubai', 'Syria', 'Sharjah'],
+                'Masria', 'Masriya', 'Mehwar', 'Misr 25', 'Life', 'On TV', 'Ontv', 'Qatar', 'Dubai', 'Syria',
+                'Sharjah'],
     'News': ['Alarabiya', 'Aljazeera', 'France', 'Geographic'],
     'Sport': ['riadia', 'Gladiator', 'JSC', 'Mosar3'],
     'Music': ['Aghanina', 'Hits', 'Zaman', 'Khaliji', 'Clip', 'Arabica', 'Ghinwa', 'Mawal', 'Mazzika', 'Mtv', 'Zaman'],
@@ -35,8 +39,8 @@ CATEGORIES = {
 }
 
 '''The main API object. Useful as a starting point to get available subjects. '''
-class TeledunetAPI(object):
 
+class TeledunetAPI(object):
     def __init__(self, cache):
         self.cache = cache
 
@@ -44,7 +48,10 @@ class TeledunetAPI(object):
         return get_rtmp_params(channel_name)
 
     def get_channels(self):
-        return get_channels()
+        if 'data' not in self.cache:
+            self.cache['data'] = get_channels()
+
+        return self.cache.get('data')
 
     def get_channels_grouped_by_network(self):
         items = []
@@ -75,18 +82,17 @@ class TeledunetAPI(object):
     def get_channels_for_category(self, channels, channel_name):
         def belongsToNetwork(channel):
             for prefix in CATEGORIES[channel_name]:
-                if prefix in channel['label']:
+                if prefix in channel['title']:
                     return True
-            return channel_name in channel['label']
+            return channel_name in channel['title']
 
         return filter(belongsToNetwork, channels)
 
     def get_channels_for_network(self, channels, network_name):
-
         def belongsToNetwork(channel):
             for prefix in NETWORKS[network_name]:
-                if channel['label'].startswith(prefix):
+                if re.sub('\[.*?\]', '', channel['title']).startswith(prefix):
                     return True
-            return channel['label'].startswith(network_name)
+            return re.sub('\[.*?\]', '', channel['title']).startswith(network_name)
 
         return filter(belongsToNetwork, channels)

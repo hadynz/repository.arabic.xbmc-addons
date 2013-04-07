@@ -17,6 +17,7 @@ def _url(path=''):
     """Returns a full url for the given path"""
     return urljoin(BASE_URL, path)
 
+
 def get(url):
     """Performs a GET request for the given url and returns the response"""
     try:
@@ -33,6 +34,7 @@ def _html(url):
     """Downloads the resource at the given url and parses via BeautifulSoup"""
     return BeautifulSoup(get(url), convertEntities=BeautifulSoup.HTML_ENTITIES)
 
+
 def _get_channel_time_player(channel_name):
     url = TELEDUNET_TIMEPLAYER_URL % channel_name
     req = Request(url)
@@ -47,8 +49,8 @@ def _get_channel_time_player(channel_name):
 
     return rtmp_url, repr(time_player_str).rstrip('0').rstrip('.')
 
-def get_rtmp_params(channel_name):
 
+def get_rtmp_params(channel_name):
     rtmp_url, time_player_id = _get_channel_time_player(channel_name)
 
     return {
@@ -68,6 +70,7 @@ def get_rtmp_params(channel_name):
         'live': '1'
     }
 
+
 def get_channels():
     html = _html(TELEDUNET_URL)
     items = _parse_channels_from_html_dom(html)
@@ -84,19 +87,19 @@ def get_channels():
 
     return items
 
-def _parse_channels_from_html_dom(html):
 
+def _parse_channels_from_html_dom(html):
     items = []
 
-    for div in html.findAll("div", { "class":"div_channel" }):
+    for div in html.findAll("div", {"class": "div_channel"}):
         is_working = '#009900' in div['style']
         label_pattern = '[COLOR green]%s[/COLOR]' if is_working else '%s'
         path = re.sub('^.*\=', '', div.findAll('a')[1]['href'])
 
         items.append({
-            'thumbnail' : div.findAll('img')[0]['src'],
-            'label' : label_pattern % div.find('font').contents[0],
-            'path' : path
+            'title': label_pattern % div.find('font').contents[0],
+            'thumbnail': div.findAll('img')[0]['src'],
+            'path': path
         })
 
     return items
