@@ -234,65 +234,72 @@ def listSeries(url):
 				
 
 def VideoLinks(name,url):
-	print "Before editing "+url
-	try:
-		url=(url.split("/"))
-		print 'THIS IS URL' ,url
-		serie_num=re.findall(r'\d+', url[5])
-		serie_num=str(serie_num)
-		print "SerieNR "+str(serie_num)
-		serie_num=serie_num[0]
-		serie_num=str(serie_num)
-		serie_num=(serie_num.replace("['", ""))
-		serie_num=(serie_num.replace("']", ""))
-		final_url=str(url[0]+"//"+url[2]+"/"+url[3]+"/"+url[4]+"/"+serie_num+".html")
-		print "FINAAAL  "+final_url
-		temp_url=final_url
-		print "TEMP URL"+temp_url
-		req = urllib2.Request(final_url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		response.close()
-		url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" frameborder="0" style="border:0"').findall(link))
-		url_ch=str(url_ch)
-		url_ch= url_ch.replace("['", "")
-		url_ch= url_ch.replace("']", "")
-		url_ch= url_ch.strip()
-		url_ch= url_ch.replace(" ", "")
-		print " Tredje "+ url_ch 
-		
-		req = urllib2.Request(url_ch)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		#print "LINK " +link
-		response.close()
-		url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
-		url_ch=str(url_ch)
-		url_ch= url_ch.replace("['", "")
-		url_ch= url_ch.replace("']", "")
-		url_ch= url_ch.strip()
-		print "videoid: "+url_ch
-		
-		final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
-		print "TEST "+final_url
-		
-		req = urllib2.Request(final_url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		response.close()
-		url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
-		url_ch=str(url_ch)
-		url_ch= url_ch.replace("['", "")
-		url_ch= url_ch.replace("']", "")
-		url_ch=url_ch.replace("?","")
-		url_ch= url_ch.strip()
-		print "This is video file"+url_ch
-		addLink(name,url_ch,"")
-	except IndexError:
-		VideoLinks(name,url)
+    print "Before editing "+url
+    try:
+        url=(url.split("/"))
+        print 'THIS IS URL' ,url
+        serie_num=re.findall(r'\d+', url[5])
+        serie_num=str(serie_num)
+        print "SerieNR "+str(serie_num)
+        serie_num=serie_num[0]
+        serie_num=str(serie_num)
+        serie_num=(serie_num.replace("['", ""))
+        serie_num=(serie_num.replace("']", ""))
+        final_url=str(url[0]+"//"+url[2]+"/"+url[3]+"/"+url[4]+"/"+serie_num+".html")
+        print "FINAAAL  "+final_url
+        temp_url=final_url
+        print "TEMP URL"+temp_url
+        req = urllib2.Request(final_url)
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+        response = urllib2.urlopen(req)
+        link=response.read()
+        response.close()
+        url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" frameborder="0" style="border:0"').findall(link))
+        url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
+        url_ch=str(url_ch)
+        url_ch= url_ch.replace("['", "")
+        url_ch= url_ch.replace("']", "")
+        url_ch= url_ch.strip()
+        url_ch= url_ch.replace(" ", "")
+        print " Tredje "+ url_ch 
+        
+        req = urllib2.Request(url_ch)
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+        response = urllib2.urlopen(req)
+        link=response.read()
+        #print "LINK " +link
+        response.close()
+        url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
+        url_ch=str(url_ch)
+        url_ch= url_ch.replace("['", "")
+        url_ch= url_ch.replace("']", "")
+        url_ch= url_ch.strip()
+        print "videoid: "+url_ch
+        
+        final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
+        print "TEST "+final_url
+        
+        req = urllib2.Request(final_url)
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+        response = urllib2.urlopen(req)
+        link=response.read()
+        response.close()
+        url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
+        url_ch=str(url_ch)
+        url_ch= url_ch.replace("['", "")
+        url_ch= url_ch.replace("']", "")
+        url_ch=url_ch.replace("?","")
+        url_ch= url_ch.strip()
+        
+        
+        print "This is video file"+url_ch
+        url_image=str(url_image).replace("['", "")
+        url_image=url_image.replace("']", "").strip()
+        print url_image
+        addLink(name,url_ch,url_image)
+        
+    except IndexError:
+        VideoLinks(name,url)
 		
 def VideoLinks_Films(name,url):
 	print "Before editing "+str(url)
@@ -305,6 +312,7 @@ def VideoLinks_Films(name,url):
 	link=response.read()
 	response.close()
 	url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" frameborder="0" style="border:0"').findall(link))
+	url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
 	url_ch=str(url_ch)
 	url_ch= url_ch.replace("['", "")
 	url_ch= url_ch.replace("']", "")
@@ -339,8 +347,10 @@ def VideoLinks_Films(name,url):
 	url_ch= url_ch.replace("']", "")
 	url_ch=url_ch.replace("?","")
 	url_ch= url_ch.strip()
-
-	addLink(name,url_ch,"")
+	url_image=str(url_image).replace("['", "")
+	url_image=url_image.replace("']", "").strip()
+	
+	addLink(name,url_ch,url_image)
 
 
                 
