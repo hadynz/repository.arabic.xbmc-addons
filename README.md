@@ -1,9 +1,8 @@
 Arabic XBMC Addons Repository
 ======================
+
 * Author: Hady Osman (hadyos@gmail.com)
 * Twitter: [@hadynz](https://twitter.com/hadynz)
-* Date: October, 2012
-* Last Update: September 10, 2012
 * Version: 1.0.0
 * Github: https://github.com/hadynz/repository.arabic.xbmc-addons
 
@@ -53,6 +52,14 @@ Alternatively, you can also use the
 This has typically meant that you have downloaded this github repository as a ZIP file (by clicking on the
 'Download as zip' button) in the downloads page. Instead, you need to download the repository from the link
 in the 'Download Packages' section of the downloads page.
+
+## Contributors
+* [Qwin](https://github.com/Qwin)
+* [bbk79](https://github.com/bbk79)
+* [bisha77](https://github.com/bisha77)
+
+## Contribution
+If you want to contribute either reach me on twitter or the XBMC forums via a private message.
 
 ## Questions, Comments, Feature Requests or Issues
 If you have any of these, go ahead and submit an 
