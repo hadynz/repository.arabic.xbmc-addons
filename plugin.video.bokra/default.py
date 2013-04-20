@@ -245,8 +245,9 @@ def VideoLinks(name,url):
         serie_num=str(serie_num)
         serie_num=(serie_num.replace("['", ""))
         serie_num=(serie_num.replace("']", ""))
-        final_url=str(url[0]+"//"+url[2]+"/"+url[3]+"/"+url[4]+"/"+serie_num+".html")
+        final_url=str(url[0]+"//"+url[2]+"/"+url[3]+"/"+url[4]+"/"+url[5]+"/"+serie_num).replace('[','')
         print "FINAAAL  "+final_url
+
         temp_url=final_url
         print "TEMP URL"+temp_url
         req = urllib2.Request(final_url)
@@ -254,7 +255,7 @@ def VideoLinks(name,url):
         response = urllib2.urlopen(req)
         link=response.read()
         response.close()
-        url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" frameborder="0" style="border:0"').findall(link))
+        url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No"></iframe>').findall(link))
         url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
         url_ch=str(url_ch)
         url_ch= url_ch.replace("['", "")
@@ -311,7 +312,7 @@ def VideoLinks_Films(name,url):
 	response = urllib2.urlopen(req)
 	link=response.read()
 	response.close()
-	url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" frameborder="0" style="border:0"').findall(link))
+	url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No"></iframe>').findall(link))
 	url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
 	url_ch=str(url_ch)
 	url_ch= url_ch.replace("['", "")
