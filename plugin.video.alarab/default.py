@@ -14,6 +14,8 @@ __settings__ = xbmcaddon.Addon(id='plugin.video.alarab')
 __icon__ = __settings__.getAddonInfo('icon')
 __fanart__ = __settings__.getAddonInfo('fanart')
 __language__ = __settings__.getLocalizedString
+_thisPlugin = int(sys.argv[1])
+_pluginName = (sys.argv[0])
 
 def patch_http_response_read(func):
     def inner(*args):
@@ -39,6 +41,7 @@ def CATEGORIES():
 	addDir('افلام اجنبية','http://tv1.alarab.net/view-1_%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%A7%D8%AC%D9%86%D8%A8%D9%8A%D8%A9_5553',4,'http://www.alfnnews.com/files/pic/2012/5/19/2012561916144-alarb.gif')
 	addDir('مقاطع مضحكة ','http://tv1.alarab.net/view-1_%D9%85%D9%82%D8%A7%D8%B7%D8%B9-%D9%85%D8%B6%D8%AD%D9%83%D8%A9_309',4,'http://www.alfnnews.com/files/pic/2012/5/19/2012561916144-alarb.gif')
 	addDir('مسرحيات','http://tv1.alarab.net/view-1_%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A7%D8%AA_313',4,'http://www.alfnnews.com/files/pic/2012/5/19/2012561916144-alarb.gif')
+	
 	
 	
 	
@@ -81,8 +84,8 @@ def index_series(url):
 				image= items[0]
 				name= items [1]
 				url_serie=elements
-				print name
-				print "http://tv1.alarab.net"+url_serie
+				#print name
+				#print "http://tv1.alarab.net"+url_serie
 				addDir(name,"http://tv1.alarab.net"+str(url_serie),2,image)
 	except Exception:
 		print "Exception in index_series "
@@ -129,9 +132,9 @@ def list_eposodes(url):
 						name=name.replace("كواليتي", "")
 						name=name.strip()
 						
-						print name
-						print items[0]
-						addDir(name,"http://tv1.alarab.net"+str(items[0]),3,"")
+						#print name
+						#print items[0]
+						addLink(name,"http://tv1.alarab.net"+str(items[0]),3,"")
 						item_list.append(items[1])
     except Exception:
 		print "Exception in list_epos "
@@ -181,7 +184,7 @@ def list_films(url):
 				print name
 				print items[0]
 				print elements[0]
-				addDir(name,"http://tv1.alarab.net"+str(items[0]),3,elements[0])
+				addLink(name,"http://tv1.alarab.net"+str(items[0]),3,elements[0])
 	except Exception:
 		print "Exception in list_films "
 	
@@ -221,11 +224,15 @@ def get_epos_video(url,name):
 			print "first item of youtube: "+str(video_id)
 			playback_url = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % video_id
 			
-			xbmc.Player(xbmc.PLAYER_CORE_MPLAYER).play(playback_url)
-			addLink(name,playback_url,"")
+			listItem = xbmcgui.ListItem(path=str(playback_url))
+			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+			
+			
 				
 		else:
-			addLink(name,video,image)
+			listItem = xbmcgui.ListItem(path=str(video))
+			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+			
 	except Exception:
 		print "Exception in get_epos_video "
 			
@@ -253,14 +260,22 @@ def get_params():
 
 
 
-def addLink(name,url,iconimage):
+def addLinkOLD(name,url,iconimage):
         ok=True
         liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
         liz.setInfo( type="Video", infoLabels={ "Title": name } )
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
         return ok
 
-
+def addLink(name,url,mode,iconimage):
+    u=_pluginName+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)
+    ok=True
+    liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+    liz.setInfo( type="Video", infoLabels={ "Title": name } )
+    liz.setProperty("IsPlayable","true");
+    ok=xbmcplugin.addDirectoryItem(handle=_thisPlugin,url=u,listitem=liz,isFolder=False)
+    return ok
+	
 def addDir(name,url,mode,iconimage):
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
         ok=True

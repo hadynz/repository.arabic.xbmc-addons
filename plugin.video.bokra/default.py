@@ -14,6 +14,10 @@ __settings__ = xbmcaddon.Addon(id='plugin.video.bokra')
 __icon__ = __settings__.getAddonInfo('icon')
 __fanart__ = __settings__.getAddonInfo('fanart')
 __language__ = __settings__.getLocalizedString
+_thisPlugin = int(sys.argv[1])
+_pluginName = (sys.argv[0])
+
+
 
 def patch_http_response_read(func):
     def inner(*args):
@@ -185,7 +189,7 @@ def index_films(url):
 				if final_items.__len__()>0:
 					
 					image=final_items.pop(0)
-					addDir(name,url,5,image)
+					addLink(name,url,5,image)
 	except Exception:
 		print "Film Exception occured"
 
@@ -230,80 +234,81 @@ def listSeries(url):
                                 final_items.append(image)
         
 			
-				addDir(name,url,3,image)
+				addLink(name,url,3,image)
 				
 
 def VideoLinks(name,url):
     print "Before editing "+url
     try:
-        url=(url.split("/"))
-        print 'THIS IS URL' ,url
-        serie_num=re.findall(r'\d+', url[5])
-        serie_num=str(serie_num)
-        print "SerieNR "+str(serie_num)
-        serie_num=serie_num[0]
-        serie_num=str(serie_num)
-        serie_num=(serie_num.replace("['", ""))
-        serie_num=(serie_num.replace("']", ""))
-        final_url=str(url[0]+"//"+url[2]+"/"+url[3]+"/"+url[4]+"/"+url[5]+"/"+serie_num).replace('[','')
-        print "FINAAAL  "+final_url
+		url=(url.split("/"))
+		print 'THIS IS URL' ,url
+		serie_num=re.findall(r'\d+', url[5])
+		serie_num=str(serie_num)
+		print "SerieNR "+str(serie_num)
+		serie_num=serie_num[0]
+		serie_num=str(serie_num)
+		serie_num=(serie_num.replace("['", ""))
+		serie_num=(serie_num.replace("']", ""))
+		final_url=str(url[0]+"//"+url[2]+"/"+url[3]+"/"+url[4]+"/"+url[5]+"/"+serie_num).replace('[','')
+		print "FINAAAL  "+final_url
 
-        temp_url=final_url
-        print "TEMP URL"+temp_url
-        req = urllib2.Request(final_url)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-        response = urllib2.urlopen(req)
-        link=response.read()
-        response.close()
-        url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No"></iframe>').findall(link))
-        url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
-        url_ch=str(url_ch)
-        url_ch= url_ch.replace("['", "")
-        url_ch= url_ch.replace("']", "")
-        url_ch= url_ch.strip()
-        url_ch= url_ch.replace(" ", "")
-        print " Tredje "+ url_ch 
+		temp_url=final_url
+		print "TEMP URL"+temp_url
+		req = urllib2.Request(final_url)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
+		response.close()
+		url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No"></iframe>').findall(link))
+		url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
+		url_ch=str(url_ch)
+		url_ch= url_ch.replace("['", "")
+		url_ch= url_ch.replace("']", "")
+		url_ch= url_ch.strip()
+		url_ch= url_ch.replace(" ", "")
+		print " Tredje "+ url_ch 
         
-        req = urllib2.Request(url_ch)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-        response = urllib2.urlopen(req)
-        link=response.read()
+		req = urllib2.Request(url_ch)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
         #print "LINK " +link
-        response.close()
-        url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
-        url_ch=str(url_ch)
-        url_ch= url_ch.replace("['", "")
-        url_ch= url_ch.replace("']", "")
-        url_ch= url_ch.strip()
-        print "videoid: "+url_ch
+		response.close()
+		url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
+		url_ch=str(url_ch)
+		url_ch= url_ch.replace("['", "")
+		url_ch= url_ch.replace("']", "")
+		url_ch= url_ch.strip()
+		print "videoid: "+url_ch
         
-        final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
-        print "TEST "+final_url
+		final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
+		print "TEST "+final_url
         
-        req = urllib2.Request(final_url)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-        response = urllib2.urlopen(req)
-        link=response.read()
-        response.close()
-        url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
-        url_ch=str(url_ch)
-        url_ch= url_ch.replace("['", "")
-        url_ch= url_ch.replace("']", "")
-        url_ch=url_ch.replace("?","")
-        url_ch= url_ch.strip()
+		req = urllib2.Request(final_url)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
+		response.close()
+		url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
+		url_ch=str(url_ch)
+		url_ch= url_ch.replace("['", "")
+		url_ch= url_ch.replace("']", "")
+		url_ch=url_ch.replace("?","")
+		url_ch= url_ch.strip()
         
         
-        print "This is video file"+url_ch
-        url_image=str(url_image).replace("['", "")
-        url_image=url_image.replace("']", "").strip()
-        print url_image
-        addLink(name,url_ch,url_image)
+		#print "This is video file"+url_ch
+		url_image=str(url_image).replace("['", "")
+		url_image=url_image.replace("']", "").strip()
+		#print url_image
+		listItem = xbmcgui.ListItem(path=str(url_ch))
+		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
         
     except IndexError:
         VideoLinks(name,url)
 		
 def VideoLinks_Films(name,url):
-	print "Before editing "+str(url)
+	#print "Before editing "+str(url)
 	
 	temp_url=url
 	
@@ -351,7 +356,8 @@ def VideoLinks_Films(name,url):
 	url_image=str(url_image).replace("['", "")
 	url_image=url_image.replace("']", "").strip()
 	
-	addLink(name,url_ch,url_image)
+	listItem = xbmcgui.ListItem(path=str(url_ch))
+	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 
 
                 
@@ -376,12 +382,22 @@ def get_params():
 
 
 
-def addLink(name,url,iconimage):
+def addLinkOLD(name,url,iconimage):
         ok=True
         liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
         liz.setInfo( type="Video", infoLabels={ "Title": name } )
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
         return ok
+
+def addLink(name,url,mode,iconimage):
+    u=_pluginName+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)
+    ok=True
+    liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+    liz.setInfo( type="Video", infoLabels={ "Title": name } )
+    liz.setProperty("IsPlayable","true");
+    ok=xbmcplugin.addDirectoryItem(handle=_thisPlugin,url=u,listitem=liz,isFolder=False)
+    return ok
+	
 
 
 def addDir(name,url,mode,iconimage):
