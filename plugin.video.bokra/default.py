@@ -47,6 +47,7 @@ def CATEGORIES():
 	addDir('مسلسلات تركية','http://www.bokra.net/VideoCategory/27/مسلسلات_تركية_.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
 	addDir('افلام تركية','http://www.bokra.net/VideoCategory/48/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D8%AA%D8%B1%D9%83%D9%8A%D8%A9.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	addDir('افلام اجنبية','http://www.bokra.net/VideoCategory/46/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D8%A7%D8%AC%D9%86%D8%A8%D9%8A%D8%A9.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
+	addDir('منوعات','http://www.bokra.net/VideoCategory/45/%D9%85%D9%86%D9%88%D8%B9%D8%A7%D8%AA_+.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	
 	
 	
@@ -181,11 +182,11 @@ def index_films(url):
 				if final_items.__len__()>0:
 					
 					name=final_items.pop(0)
-					print name
+					
 				if final_items.__len__()>0:
 					
 					url=final_items.pop(0)
-					print url
+					
 				if final_items.__len__()>0:
 					
 					image=final_items.pop(0)
@@ -238,22 +239,22 @@ def listSeries(url):
 				
 
 def VideoLinks(name,url):
-    print "Before editing "+url
+    
     try:
 		url=(url.split("/"))
-		print 'THIS IS URL' ,url
+	
 		serie_num=re.findall(r'\d+', url[5])
 		serie_num=str(serie_num)
-		print "SerieNR "+str(serie_num)
+	
 		serie_num=serie_num[0]
 		serie_num=str(serie_num)
 		serie_num=(serie_num.replace("['", ""))
 		serie_num=(serie_num.replace("']", ""))
 		final_url=str(url[0]+"//"+url[2]+"/"+url[3]+"/"+url[4]+"/"+url[5]+"/"+serie_num).replace('[','')
-		print "FINAAAL  "+final_url
+	
 
 		temp_url=final_url
-		print "TEMP URL"+temp_url
+		
 		req = urllib2.Request(final_url)
 		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 		response = urllib2.urlopen(req)
@@ -266,44 +267,63 @@ def VideoLinks(name,url):
 		url_ch= url_ch.replace("']", "")
 		url_ch= url_ch.strip()
 		url_ch= url_ch.replace(" ", "")
-		print " Tredje "+ url_ch 
+		
+		
+		
+		if "GetVideoPlayer&ID=" in str(url_ch):
+			req = urllib2.Request(url_ch)
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			response = urllib2.urlopen(req)
+			link=response.read()
+			#print "LINK " +link
+			response.close()
+			url_ch=(re.compile("'file': '(.+?)',").findall(link))
+			url_ch=str(url_ch)
+			url_ch= url_ch.replace("['", "")
+			url_ch= url_ch.replace("']", "")
+			url_ch= url_ch.replace("http://www.youtube.com/watch?v=","").strip()
+			playback_url = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % url_ch
+			listItem = xbmcgui.ListItem(path=str(playback_url))
+			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+		else:
+		
         
-		req = urllib2.Request(url_ch)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		response = urllib2.urlopen(req)
-		link=response.read()
-        #print "LINK " +link
-		response.close()
-		url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
-		url_ch=str(url_ch)
-		url_ch= url_ch.replace("['", "")
-		url_ch= url_ch.replace("']", "")
-		url_ch= url_ch.strip()
-		print "videoid: "+url_ch
-        
-		final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
-		print "TEST "+final_url
-        
-		req = urllib2.Request(final_url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		response.close()
-		url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
-		url_ch=str(url_ch)
-		url_ch= url_ch.replace("['", "")
-		url_ch= url_ch.replace("']", "")
-		url_ch=url_ch.replace("?","")
-		url_ch= url_ch.strip()
-        
-        
-		#print "This is video file"+url_ch
-		url_image=str(url_image).replace("['", "")
-		url_image=url_image.replace("']", "").strip()
-		#print url_image
-		listItem = xbmcgui.ListItem(path=str(url_ch))
-		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-        
+			req = urllib2.Request(url_ch)
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			response = urllib2.urlopen(req)
+			link=response.read()
+			#print "LINK " +link
+			response.close()
+			url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
+			url_ch=str(url_ch)
+			url_ch= url_ch.replace("['", "")
+			url_ch= url_ch.replace("']", "")
+			url_ch= url_ch.strip()
+			
+			
+			final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
+			
+			
+			req = urllib2.Request(final_url)
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			response = urllib2.urlopen(req)
+			link=response.read()
+			response.close()
+			url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
+			url_ch=str(url_ch)
+			url_ch= url_ch.replace("['", "")
+			url_ch= url_ch.replace("']", "")
+			url_ch=url_ch.replace("?","")
+			url_ch= url_ch.strip()
+			
+			
+			#print "This is video file"+url_ch
+			url_image=str(url_image).replace("['", "")
+			url_image=url_image.replace("']", "").strip()
+			#print url_image
+			listItem = xbmcgui.ListItem(path=str(url_ch))
+			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+			
     except IndexError:
         VideoLinks(name,url)
 		
@@ -325,39 +345,57 @@ def VideoLinks_Films(name,url):
 	url_ch= url_ch.strip()
 	url_ch= url_ch.replace(" ", "")
 	
-	
-	req = urllib2.Request(url_ch)
-	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-	response = urllib2.urlopen(req)
-	link=response.read()
-	#print "LINK " +link
-	response.close()
-	url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
-	url_ch=str(url_ch)
-	url_ch= url_ch.replace("['", "")
-	url_ch= url_ch.replace("']", "")
-	url_ch= url_ch.strip()
+	if "GetVideoPlayer&ID=" in str(url_ch):
+		req = urllib2.Request(url_ch)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
+		#print "LINK " +link
+		response.close()
+		url_ch=(re.compile("'file': '(.+?)',").findall(link))
+		url_ch=str(url_ch)
+		url_ch= url_ch.replace("['", "")
+		url_ch= url_ch.replace("']", "")
+		url_ch= url_ch.replace("http://www.youtube.com/watch?v=","").strip()
+		playback_url = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % url_ch
+		listItem = xbmcgui.ListItem(path=str(playback_url))
+		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 
+	else:
 	
-	final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
+	
+		req = urllib2.Request(url_ch)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
+		#print "LINK " +link
+		response.close()
+		url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
+		url_ch=str(url_ch)
+		url_ch= url_ch.replace("['", "")
+		url_ch= url_ch.replace("']", "")
+		url_ch= url_ch.strip()
 
-	
-	req = urllib2.Request(final_url)
-	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-	response = urllib2.urlopen(req)
-	link=response.read()
-	response.close()
-	url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
-	url_ch=str(url_ch)
-	url_ch= url_ch.replace("['", "")
-	url_ch= url_ch.replace("']", "")
-	url_ch=url_ch.replace("?","")
-	url_ch= url_ch.strip()
-	url_image=str(url_image).replace("['", "")
-	url_image=url_image.replace("']", "").strip()
-	
-	listItem = xbmcgui.ListItem(path=str(url_ch))
-	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+		
+		final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
+
+		
+		req = urllib2.Request(final_url)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
+		response.close()
+		url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
+		url_ch=str(url_ch)
+		url_ch= url_ch.replace("['", "")
+		url_ch= url_ch.replace("']", "")
+		url_ch=url_ch.replace("?","")
+		url_ch= url_ch.strip()
+		url_image=str(url_image).replace("['", "")
+		url_image=url_image.replace("']", "").strip()
+		
+		listItem = xbmcgui.ListItem(path=str(url_ch))
+		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 
 
                 
