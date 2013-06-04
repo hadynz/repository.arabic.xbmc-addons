@@ -6,3 +6,4 @@
 1.0.5 - Updated plugin to work with new RTMP URL's implemented by the Teledunet service
 1.0.6 - Updated internal channels playpath to work well with XBMC favourite system. Minor code refactor as well
 1.0.7 - Cached fetching of channels for 20 minutes to dramatically speed up menu browsing
+1.0.8 - Updated Teledunet scraper code to handle dynamic chanels playpath and to show channels name after source website update. Blue colored HD channels get a blue font.
