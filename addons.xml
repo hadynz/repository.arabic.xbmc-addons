@@ -104,7 +104,7 @@
 
 <addon id="plugin.video.dailytube4u.com"
        name="DailyTube4U.com"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="hadynz">
     <requires>
         <import addon="xbmc.python" version="2.0"/>

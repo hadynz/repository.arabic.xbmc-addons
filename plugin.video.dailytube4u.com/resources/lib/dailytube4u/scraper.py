@@ -25,8 +25,6 @@ def get_clips_for_show(show_path):
     content = content.replace("\\\"", "")
     html = BeautifulSoup(content, convertEntities=BeautifulSoup.HTML_ENTITIES)
 
-    #html = _html(SCRAPE_SOURCE_URL % show_path)
-
     items = []
 
     for clipEl in html.find('div', { 'class' : 'maincharts' }).findAll('div', {'class' : re.compile(r'\bvideoBox\b')}):
@@ -73,10 +71,10 @@ def get_channels():
 
     items = []
 
-    for anchorEl in html.find('ul', { 'role' : 'menu' }).findAll('a'):
+    for anchorEl in html.find('select', { 'class' : 'categsselectmn-mob' }).findAll('option')[1:]:
         items.append({
             'label': anchorEl.contents[0],
-            'path' : anchorEl['href']
+            'path' : anchorEl['value']
         })
 
     return items

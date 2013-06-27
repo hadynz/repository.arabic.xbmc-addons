@@ -1,3 +1,4 @@
 1.0.0 - Initial version
 1.0.1 - Fixed unicode issue in XBMC Eden
 1.0.2 - Wrapped parsing of channels and titles in try/catch to handle issues that can arise from different OS at current stage.
+1.0.3 - Updated module to read new channel dropdown on DailyTube4U.com website
