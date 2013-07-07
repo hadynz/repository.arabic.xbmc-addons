@@ -31,7 +31,9 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
+	addDir('مسلسلات رمضان 2013','http://www.bokra.net/VideoCategory/125/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA_%D8%B1%D9%85%D8%B6%D8%A7%D9%86_2013.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
 	addDir('مسلسلات عربية','http://www.bokra.net/VideoCategory/98/مسلسلات_عربية.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
+	addDir('مسلسلات','http://www.bokra.net/VideoCategory/43/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
 	addDir('افلام عربية','http://www.bokra.net/VideoCategory/100/أفلام_عربية.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	addDir(' افلام فلسطينية','http://www.bokra.net/VideoCategory/18/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	addDir('افلام وثائقيه','http://www.bokra.net/VideoCategory/23/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D9%88%D8%AB%D8%A7%D8%A6%D9%82%D9%8A%D8%A9.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
@@ -100,11 +102,11 @@ def index(url):
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 			response = urllib2.urlopen(req)
 			link=response.read()
-			
 			response.close()
 			
 			url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="139" height="96').findall(link))
-			
+			if len(str(url_ch))<3:
+				url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="147" height="107').findall(link))
 			
 			for items in url_ch:
 			   
@@ -116,7 +118,8 @@ def index(url):
 						name=name.replace("html","")
 						name=name.replace(".')","")
 						name=name.rsplit("/",1)
-						name = name[1].strip()  
+						name = name[1].strip() 
+						
 						image= items[2].strip()
 						if image not in final_items:
 							final_items.append(name)
@@ -127,11 +130,11 @@ def index(url):
 				if final_items.__len__()>0:
 					
 					name=final_items.pop(0)
-					print name
+					
 				if final_items.__len__()>0:
 					
 					url=final_items.pop(0)
-					print url
+					
 				if final_items.__len__()>0:
 					
 					image=final_items.pop(0)
