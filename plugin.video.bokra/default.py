@@ -33,7 +33,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 def CATEGORIES():
 	addDir('مسلسلات رمضان 2013','http://www.bokra.net/VideoCategory/125/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA_%D8%B1%D9%85%D8%B6%D8%A7%D9%86_2013.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
 	addDir('مسلسلات عربية','http://www.bokra.net/VideoCategory/98/مسلسلات_عربية.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
-	addDir('مسلسلات','http://www.bokra.net/VideoCategory/43/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
+	addDir('مسلسلات متنوعة','http://www.bokra.net/VideoCategory/43/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
 	addDir('افلام عربية','http://www.bokra.net/VideoCategory/100/أفلام_عربية.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	addDir(' افلام فلسطينية','http://www.bokra.net/VideoCategory/18/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	addDir('افلام وثائقيه','http://www.bokra.net/VideoCategory/23/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D9%88%D8%AB%D8%A7%D8%A6%D9%82%D9%8A%D8%A9.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
@@ -93,7 +93,7 @@ def index(url):
 		counter=0
 		orig=url
 		kurl=url
-		maxvalue=int(retrive_max_page(kurl))+5
+		maxvalue=int(retrive_max_page(kurl))+14
 		final_items=[]
 		for counter in range(0,int(maxvalue)):
 			
