@@ -218,7 +218,9 @@ def listSeries(url):
             response.close()
             
             url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="139" height="96').findall(link))
-            
+            if len(str(url_ch))<3:
+				url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img src="(.+?)" width="147" height="107').findall(link))
+			
      
             for items in url_ch:
                 for elements in items:
@@ -264,6 +266,10 @@ def VideoLinks(name,url):
 		link=response.read()
 		response.close()
 		url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No"></iframe>').findall(link))
+		if len(str(url_ch))<3:
+				url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="360" height="260" scrolling="No"></iframe>').findall(link))
+			
+		
 		url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
 		url_ch=str(url_ch)
 		url_ch= url_ch.replace("['", "")
