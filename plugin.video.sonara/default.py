@@ -29,6 +29,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
+	addDir('مسلسلات رمضان 2013','http://www.sonara.net/videon-85.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
 	addDir('مسلسلات عربية','http://www.sonara.net/videon-49.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
 	addDir('كرتون ','http://www.sonara.net/videon-53.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
 	addDir('افلام عربية','http://www.sonara.net/video_cat-603.html',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
@@ -72,23 +73,25 @@ def listContent(url):
 
 def listFilmContent(url):
     req = urllib2.Request(url)
-    req = urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.1.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
     response = urllib2.urlopen(req)
     link=response.read()
-    target= re.findall(r'<div class="thumb">(.*?)\s(.*?)<div class="video_holder">', link, re.DOTALL)
-    for i in  target:
-        firstpart=str( i[1]).split('</a>')
-        name=firstpart[1]
-        name=str(name).split('target="_self">')
-        name=str(name[1]).strip()
-        
-        firstpart= firstpart[0]
-        firstpart=str(firstpart).split('<img src="')
-        image= str(firstpart[1]).replace('" width="192" height="125">', '').strip()
-        path=str( firstpart[0]).replace('<a href="', '').replace('" target="_self">', '').replace('video-','').replace('.html','').strip()
-        addLink(name,path,3,image)
+    target= re.findall(r'<div class="thumb"(.*?)\s(.*?)<td width="800" align="center" style="padding-top: 25px;">', link, re.DOTALL)
+    for epost in target:
+        mystring= epost[1]
+        mystring=str(mystring).split('</a>')
+        #print mystring
+        for items in mystring:
+            if '<img src="' in str(items):
+                target_name=str(items).split('<img src="')
+                mytarget=str(target_name[0]).replace('<a href="', '').replace('" target="_self">', '').replace('</div>', '').replace('<div class="video_holder">', '').replace('<div class="thumb">', '').strip()
+                mytarget=str(mytarget).replace('video-','').replace('.html','').strip()
+                myimage=str(target_name[1]).replace('<img src="', '').replace('" width="192" height="125">', '').strip()
+                
+            if '<div class="name">' in str(items):
+                target_name=str(items).split('" target="_self">')
+                name=str(target_name[1]).replace('<a href="', '').replace('" target="_self">', '').strip()
+                addLink(name,mytarget,3,myimage)
                                  
 
 def listEpos(url):
@@ -126,22 +129,19 @@ def getVideoFile(url):
 		link=str(link).split(';')
 		firstpath=''
 		secpath=''
-		firsbool=False
-		secbool=False
+		
 		for items in link:
-			if 'rtmp' in str( items):
-				firstpath=str(items).replace("dlk.addVariable('streamer','", '').replace("')","").strip()
-				firsbool=True
+			
 			if 'file' in str( items):
 				secpath=str( items).replace("dlk.addVariable('file','", '').split("&image=")
+            
 				secpath=str( secpath[0]).strip()
-				secbool=True
-			if firsbool and secbool:
-				final= firstpath+'/'+secpath
-				listItem = xbmcgui.ListItem(path=str(final))
+            
+				playingpath='rtmp://vod.sonara.net/cvod swfUrl=http://www.sonara.net/mediaplayera/player.swf playpath='+str(secpath)
+			
+				listItem = xbmcgui.ListItem(path=str(playingpath))
 				xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-				firsbool=False
-				secbool=False
+				
     except:
 		pass
 def get_params():
