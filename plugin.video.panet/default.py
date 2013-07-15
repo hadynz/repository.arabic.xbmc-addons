@@ -12,19 +12,25 @@ __settings__ = xbmcaddon.Addon(id='plugin.video.panet')
 __icon__ = __settings__.getAddonInfo('icon')
 __fanart__ = __settings__.getAddonInfo('fanart')
 __language__ = __settings__.getLocalizedString
+_thisPlugin = int(sys.argv[1])
+_pluginName = (sys.argv[0])
 
 
 def CATEGORIES():
-	addDir('Arab films','http://www.panet.co.il/online/video/movies/P-0.html/',1,'http://images2.layoutsparks.com/1/188565/passion-photo-graph-film.jpg')
+	addDir('مسلسلات رمضان 2013','http://www.panet.co.il/Ext/series.php?name=category&id=32&country=NL&page=',29,'')
+	addDir('مسلسلات سورية ولبنانية','http://www.panet.co.il/Ext/series.php?name=category&id=18&country=NL&page=',29,'')
+	addDir('مسلسلات مصرية','http://www.panet.co.il/Ext/series.php?name=category&id=19&country=NL&page=',29,'')
+	addDir('مسلسلات خليجية','http://www.panet.co.il/Ext/series.php?name=category&id=21&country=NL&page=',29,'')
+	addDir('افلام عربية ','http://www.panet.co.il/online/video/movies/P-0.html/',1,'')
+	addDir('مسلسلات تركية','http://www.panet.co.il/Ext/series.php?name=category&id=17&country=TR&page=',29,'')
+	addDir('مسلسلات مكسيكية و عالمية','http://www.panet.co.il/Ext/series.php?name=category&id=20&country=NL&page=',29,'')
+	addDir('رسوم متحركة , برامج اطفال','http://www.panet.co.il/Ext/series.php?name=category&id=15&country=NL&page=',29,'')
+	addDir('كليبات مضحكة','http://www.panet.co.il/Ext/series.php?name=category&id=2&country=NL&page=',29,'')
+	addDir('برامج ومنوعات','http://www.panet.co.il/Ext/series.php?name=category&id=27&country=NL&page=',29,'')
 	
-	#addDir( 'Turkish drama','http://www.panet.co.il/Ext/series.php?name=category&id=17&country=TR&page=',29,'')
-	#addDir( 'Egyptian drama','',1,'')
-	#addDir( 'Syrian drama','',1,'')
-	#addDir( 'Lebanese drama','',1,'')
-	#addDir( 'Golf drama','',1,'')
 		
 def checkURL(url):
-    p = urlparse(url)
+    p = urlparse(str(url))
     h = HTTP(p[1])
     h.putrequest('HEAD', p[2])
     h.endheaders()
@@ -32,167 +38,179 @@ def checkURL(url):
     else: return 0
 
 def INDEX_TURKISH(url):
-    siteMax=10
-    Serie=0
-    
-    while Serie!=siteMax:
-    
-        #filmo=str(film)
-        url='http://www.panet.co.il/Ext/series.php?name=category&id=17&country=TR&page='+str(Serie)
-        Serie=Serie+1
-        if checkURL(url):
-                    req = urllib2.Request(url)
-                    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-                    response = urllib2.urlopen(req)
-                    link=response.read()
-                   
-                    response.close()
-                    
-                    serierList=[]
-                   
-                    match_url_thumb=(re.compile('a href="(.+?)"><font face="Tahoma" size="2" color="Black"><b>(.+?)</b><br/>').findall(link))
-                    
-                    for i in match_url_thumb:
-                        
-                        url=match_url_thumb.pop(0)
-                        #print url
-                        for url_thumb in url :
-                            url_path=url[0].replace("'",'')
-                            serieName=url[1].replace("'",'')
-                            #thumb_path=url[1].replace('"','')
-                            #url_path='http://www.panet.co.i'+url_path
-                             
-                            if not url_path in serierList:
-                                serierList.append(serieName)
-                                serierList.append(url_path)
-                    for item in serierList:
-                        serieName=serierList.pop(0)
-                        serieUrl=serierList.pop(0)
-                        print serieName
-                        serieUrl="http://www.panet.co.il"+serieUrl
-                        print serieUrl
-                        addDir(serieName,serieUrl,30,'')
+	try:
+		siteMax=10
+		Serie=0
+		
+		while Serie!=siteMax:
+			kurl=[url]
+			kurl=str(url).replace("['","").replace("']","").strip()
+			kurl=str(url)+str(Serie)
+			
+			Serie=Serie+1
+			if checkURL(kurl):
+						req = urllib2.Request(kurl)
+						req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+						response = urllib2.urlopen(req)
+						link=response.read()
+					   
+						response.close()
+						
+						serierList=[]
+					   
+						match_url_thumb=(re.compile('a href="(.+?)"><font face="Tahoma" size="2" color="Black"><b>(.+?)</b><br/>').findall(link))
+						
+						for i in match_url_thumb:
+							
+							url2=match_url_thumb.pop(0)
+							
+							for url_thumb in url2 :
+								url_path=url2[0].replace("'",'')
+								serieName=url2[1].replace("'",'')
+								
+								if not url_path in serierList:
+									serierList.append(serieName)
+									serierList.append(url_path)
+						for item in serierList:
+							serieName=serierList.pop(0)
+							serieUrl=serierList.pop(0)
+							
+							serieUrl="http://www.panet.co.il"+serieUrl
+							
+							addDir(serieName,serieUrl,30,'')
+	except:
+		pass
 def LIST_SERIES(url):
-    #url='http://www.panet.co.il/Ext/series.php?name=folder&id=163'
-    #&country=TR&page=
-	
-    for counter in range(0,10):
-        url=url+"&country=TR&page="+str(counter)
-        if checkURL(url):
-            req = urllib2.Request(url)
-            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-            response = urllib2.urlopen(req)
-            link=response.read()
-            response.close()
-            serierList=[]
-            match_url_thumb=(re.compile('<a href="(.+?)"><img border="0" src="(.+?)" width="150" height="83"></a><br>').findall(link))
-           
-            buf = StringIO.StringIO(link)
-            bisha= str(match_url_thumb).split()
-            counter=0
-            for names in link.split():
-                
-                line=buf.readline()
-                if ('الحلقة ') in line:
-                    if len(line)<50:
-                        name= line.strip()
-                        
-                        page_url= bisha[counter].replace("[('","")
-                        page_url=page_url.replace("',","").strip()
-                        thumNail=bisha[1].replace("'),","")
-                        thumNail=thumNail.replace("'","").strip()
-                        page_url=page_url.replace("('","").strip()
-                        page_url="http://www.panet.co.il"+page_url
-                        print name
-                        print page_url
-                        addDir(name,page_url,31,thumNail)
+	try:
+    
+		for counter in range(0,10):
+			url=url+"&country=TR&page="+str(counter)
+			if checkURL(url):
+				req = urllib2.Request(url)
+				req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+				response = urllib2.urlopen(req)
+				link=response.read()
+				response.close()
+				serierList=[]
+				match_url_thumb=(re.compile('<a href="(.+?)"><img border="0" src="(.+?)" width="150" height="83"></a><br>').findall(link))
+			   
+				buf = StringIO.StringIO(link)
+				bisha= str(match_url_thumb).split()
+				counter=0
+				for names in link.split():
+					
+					line=buf.readline()
+					if ('الحلقة ') in line:
+						if len(line)<50:
+							name= line.strip()
+							
+							page_url= bisha[counter].replace("[('","")
+							page_url=page_url.replace("',","").strip()
+							thumNail=bisha[1].replace("'),","")
+							thumNail=thumNail.replace("'","").strip()
+							page_url=page_url.replace("('","").strip()
+							page_url="http://www.panet.co.il"+page_url
+							addLink(name,page_url,31,thumNail)
+	except:
+		pass
 
 def GET_VIDEO_FILE(url):
-    url= url.split("autostart=")
-    temp=url.pop(0)
-    url=url.pop(0)
-    url=url.replace("&page=0","").strip()
-   
-    url="http://www.panet.co.il/Ext/vplayer_lib.php?media="+url+'&start=false'
-   
-    if checkURL(url):
-		req = urllib2.Request(url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		req.add_header('Host',' fms-eu0.panet.co.il')
-		req.add_header('Accept',' text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
-		req.add_header('Accept-Language',' en-US,en;q=0.5')
-		req.add_header('Accept-Encoding', 'deflate')
-		req.add_header('Referer',' http://www.panet.co.il/Ext/players/flv5/player.swf')
-		req.add_header('Cookie',' __auc=82d7ffe213cb1b4ce1d273c7ba1; __utma=31848767.848342890.1360191082.1360611183.1360620657.4; __utmz=31848767.1360191082.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmb=31848767.4.10.1360620660; __utmc=31848767; __asc=169c084d13ccb4fa36df421055e')
-		req.add_header('Connection',' keep-alive')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		response.close()
-		match_url_thumb=(re.compile('<link rel="video_src" href="(.+?)"/>').findall(link))
-        #print match_url_thumb
-		match_url_thumb=str(match_url_thumb).replace("['", "")
-		match_url_thumb=str(match_url_thumb).replace("']", "").strip()
-        #match_url_thumb=match_url_thumb.replace("http://www.panet.co.il/Ext/players/flv/playern.swf?type=http&streamer=start&file=", "http://www.panet.co.il/Ext/players/flv/playern.swf?type=http&amp;streamer=start&amp;file=")
-		match_url_thumb=match_url_thumb.replace('%3A',':')
-		match_url_thumb=match_url_thumb.replace('%2F','/')
-		match_url_thumb=match_url_thumb.replace('http://','')
-		match_url_thumb=match_url_thumb.replace('file=','file=http://')
-		match_url_thumb=match_url_thumb.replace("www.panet.co.il/Ext/players/flv/playern.swf?type=http&streamer=start&file=","")+"?start=0"
-		match_url_thumb=str(match_url_thumb.replace("?start=0",""))
-		match_url_thumb='rtmp://fms-eu1.panet.co.il swfUrl=http://www.panet.co.il/Ext/players/flv/playern.swf? repeat=single streamer=start file='+match_url_thumb+' provider=rtmp start=0'
-		#match_url_thumb='rtmp://fms-eu1.panet.co.il swfUrl=http://www.panet.co.il/Ext/players/flv/playern.swf? file=/vod//96/96534/96534.mp4'
-		print "This is video :"+match_url_thumb
-		addLink(name,'match_url_thumb','')
+	try:
+		url= url.split("autostart=")
+		temp=url.pop(0)
+		url=url.pop(0)
+		url=url.replace("&page=0","").strip()
+	   
+		url="http://www.panet.co.il/Ext/vplayer_lib.php?media="+url+'&start=false'
+	   
+		if checkURL(url):
+			req = urllib2.Request(url)
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			req.add_header('Host',' fms-eu0.panet.co.il')
+			req.add_header('Accept',' text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+			req.add_header('Accept-Language',' en-US,en;q=0.5')
+			req.add_header('Accept-Encoding', 'deflate')
+			req.add_header('Referer',' http://www.panet.co.il/Ext/players/flv5/player.swf')
+			req.add_header('Cookie',' __auc=82d7ffe213cb1b4ce1d273c7ba1; __utma=31848767.848342890.1360191082.1360611183.1360620657.4; __utmz=31848767.1360191082.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmb=31848767.4.10.1360620660; __utmc=31848767; __asc=169c084d13ccb4fa36df421055e')
+			req.add_header('Connection',' keep-alive')
+			response = urllib2.urlopen(req)
+			link=response.read()
+			response.close()
+			match_url_thumb=(re.compile('<link rel="video_src" href="(.+?)"/>').findall(link))
+			#print match_url_thumb
+			match_url_thumb=str(match_url_thumb).replace("['", "")
+			match_url_thumb=str(match_url_thumb).replace("']", "").strip()
+			#match_url_thumb=match_url_thumb.replace("http://www.panet.co.il/Ext/players/flv/playern.swf?type=http&streamer=start&file=", "http://www.panet.co.il/Ext/players/flv/playern.swf?type=http&amp;streamer=start&amp;file=")
+			match_url_thumb=match_url_thumb.replace('%3A',':')
+			match_url_thumb=match_url_thumb.replace('%2F','/')
+			match_url_thumb=match_url_thumb.replace('http://','')
+			match_url_thumb=match_url_thumb.replace('file=','file=http://')
+			
+			match_url_thumb=match_url_thumb.replace("www.panet.co.il/Ext/players/flv/playern.swf?type=http&streamer=start&file=","")
+			
+			match_url_thumb=match_url_thumb+'|Referer=http://www.panet.co.il/Ext/players/flv5/player.swf'
+			listItem = xbmcgui.ListItem(path=str(match_url_thumb))
+			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	except:
+		pass
 	
 def INDEX(url,start,max):
-    film=start
-	
-	
-    while film<max :
-        film=film+1
-        filmo=str(film)
-        programurl=[str('http://www.panet.co.il/online/video/movies/movie/'+filmo+'.html')]
-        for currurl in programurl:
-            url=programurl.pop(0)
-            
-            if checkURL(url):
-                req = urllib2.Request(url)
-                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-                response = urllib2.urlopen(req)
-                link=response.read()
-                response.close()
-                
-                match=(re.compile('name="title" content=(.+?)/>').findall(link))
-                
-                if len(match) :
-                    
-                        name= ''.join(match).replace('"', '')
-                        
-                match2=re.compile('"video_src" href="(.+?)"/>').findall(link)
-                if len(match2) :
-                        VideoImg= (''.join(match2).replace('"', '').split('&image='))
-                        temp=VideoImg.pop(0).strip(' ')
-                        thumbnail=VideoImg.pop(0).strip(' ')
-			addDir(name,url,2,thumbnail)
+	try:
+		film=start
+		
+		
+		while film<max :
+			film=film+1
+			filmo=str(film)
+			programurl=[str('http://www.panet.co.il/online/video/movies/movie/'+filmo+'.html')]
+			for currurl in programurl:
+				url=programurl.pop(0)
+				
+				if checkURL(url):
+					req = urllib2.Request(url)
+					req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+					response = urllib2.urlopen(req)
+					link=response.read()
+					response.close()
+					
+					match=(re.compile('name="title" content=(.+?)/>').findall(link))
+					
+					if len(match) :
+						
+							name= ''.join(match).replace('"', '')
+							
+					match2=re.compile('"video_src" href="(.+?)"/>').findall(link)
+					if len(match2) :
+							VideoImg= (''.join(match2).replace('"', '').split('&image='))
+							temp=VideoImg.pop(0).strip(' ')
+							thumbnail=VideoImg.pop(0).strip(' ')
+				addLink(name,url,2,thumbnail)
+	except:
+		pass
 		
 
 		
 def VIDEOLINKS(url,name):
-                req = urllib2.Request(url)
-                req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-                response = urllib2.urlopen(req)
-                link=response.read()
-                response.close()
-                match2=re.compile('"video_src" href="(.+?)"/>').findall(link)
-                
-                if len(match2) :
-                        VideoImg= (''.join(match2).replace('"', '').split('&image='))
-                        videoPath=VideoImg.pop(0).strip('')
-                        videoPath=videoPath[81:]
-                        videoPath=videoPath.replace('%3A',':')
-                        videoPath=videoPath.replace('%2F','/')
-		addLink(name,videoPath,'')
-        
+	try:
+		req = urllib2.Request(url)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
+		response.close()
+		match2=re.compile('"video_src" href="(.+?)"/>').findall(link)
+					
+		if len(match2) :
+			VideoImg= (''.join(match2).replace('"', '').split('&image='))
+			videoPath=VideoImg.pop(0).strip('')
+			videoPath=videoPath[81:]
+			videoPath=videoPath.replace('%3A',':')
+			videoPath=videoPath.replace('%2F','/')
+			
+		listItem = xbmcgui.ListItem(path=str(videoPath))
+		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	except:
+		pass
+			
 
                 
 def get_params():
@@ -216,12 +234,14 @@ def get_params():
 
 
 
-def addLink(name,url,iconimage):
-        ok=True
-        liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
-        liz.setInfo( type="Video", infoLabels={ "Title": name } )
-        ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
-        return ok
+def addLink(name,url,mode,iconimage):
+    u=_pluginName+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)
+    ok=True
+    liz=xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=iconimage)
+    liz.setInfo( type="Video", infoLabels={ "Title": name } )
+    liz.setProperty("IsPlayable","true");
+    ok=xbmcplugin.addDirectoryItem(handle=_thisPlugin,url=u,listitem=liz,isFolder=False)
+    return ok
 
 
 def addDir(name,url,mode,iconimage):

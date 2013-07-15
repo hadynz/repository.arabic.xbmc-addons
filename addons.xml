@@ -146,7 +146,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon
   id="plugin.video.panet"
-  version="1.1.0"
+  version="1.2.0"
   name="Panet"
   provider-name="Bisha">
   <requires>
