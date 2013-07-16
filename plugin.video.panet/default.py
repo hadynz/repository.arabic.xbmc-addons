@@ -36,13 +36,60 @@ def checkURL(url):
     h.endheaders()
     if h.getreply()[0] == 200: return 1
     else: return 0
+	
+def PanetListSeries(url):
+    siteMax=10
+    Serie=0
+    mynamearray=[]
+    myimagesarray=[]
+    myurlarray=[]
+    
+    
+    while Serie!=siteMax:
+        Serie=Serie+1
+        kurl=str(url)+str(Serie)
+        req = urllib2.Request(kurl)
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+        response = urllib2.urlopen(req)
+        link=response.read()
+        
+        buf = StringIO.StringIO(link)
+        buf2 = StringIO.StringIO(link)
+        
+        for names in link.split():
+            line=buf.readline()
+            if ('><font face="Tahoma" size="2" color="Black"><b>') in line:
+                name=str((str(line).split('"Black"><b>'))[1]).replace('</b><br/>', '').strip()
+                mynamearray.append(name)
+      
+        for imagesandurls in link.split():
+            line=buf2.readline()
+            if '<a href="/Ext/series.php?name=folder&id=' and '"><img border="0" src="' and '" width="150" height="83"></a><br>' in line:
+        
+                both=str( line).split('"><img border="0" src="')
+                myurl=str(both[0]).replace('<a href="', '').strip()
+                myurl='http://www.panet.co.il'+myurl
+                myurlarray.append(myurl)
+                
+                myimage=str(both[1]).replace('" width="150" height="83"></a><br>', '').strip()
+                myimagesarray.append(myimage)
+    for i in range(0,400):
+        try:
+            
+            print mynamearray[i]
+            print myurlarray[i]
+            addDir(mynamearray[i],myurlarray[i],30,myimagesarray[i])
+        except:
+            pass
+            
+
 
 def INDEX_TURKISH(url):
 	try:
 		siteMax=10
 		Serie=0
 		
-		while Serie!=siteMax:
+		while Serie!=siteMax+5:
 			kurl=[url]
 			kurl=str(url).replace("['","").replace("']","").strip()
 			kurl=str(url)+str(Serie)
@@ -57,7 +104,7 @@ def INDEX_TURKISH(url):
 						response.close()
 						
 						serierList=[]
-					   
+						
 						match_url_thumb=(re.compile('a href="(.+?)"><font face="Tahoma" size="2" color="Black"><b>(.+?)</b><br/>').findall(link))
 						
 						for i in match_url_thumb:
@@ -397,7 +444,7 @@ elif mode==24:
 	
 if mode==29:
 	#print ""+url
-	INDEX_TURKISH(url)
+	PanetListSeries(url)
 elif mode==30:
 	#print ""+url
 	LIST_SERIES(url)
