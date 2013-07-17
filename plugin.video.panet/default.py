@@ -6,7 +6,8 @@ from urlparse import urlparse
 import StringIO
 import urllib2,urllib
 import re
-
+import httplib
+import time
 
 __settings__ = xbmcaddon.Addon(id='plugin.video.panet')
 __icon__ = __settings__.getAddonInfo('icon')
@@ -14,6 +15,16 @@ __fanart__ = __settings__.getAddonInfo('fanart')
 __language__ = __settings__.getLocalizedString
 _thisPlugin = int(sys.argv[1])
 _pluginName = (sys.argv[0])
+
+def patch_http_response_read(func):
+    def inner(*args):
+        try:
+            return func(*args)
+        except httplib.IncompleteRead, e:
+            return e.partial
+
+    return inner
+httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
@@ -29,8 +40,10 @@ def CATEGORIES():
 	addDir('برامج ومنوعات','http://www.panet.co.il/Ext/series.php?name=category&id=27&country=NL&page=',29,'')
 	
 		
+
+	
 def checkURL(url):
-    p = urlparse(str(url))
+    p = urlparse(url)
     h = HTTP(p[1])
     h.putrequest('HEAD', p[2])
     h.endheaders()
@@ -66,13 +79,16 @@ def PanetListSeries(url):
             line=buf2.readline()
             if '<a href="/Ext/series.php?name=folder&id=' and '"><img border="0" src="' and '" width="150" height="83"></a><br>' in line:
         
-                both=str( line).split('"><img border="0" src="')
-                myurl=str(both[0]).replace('<a href="', '').strip()
-                myurl='http://www.panet.co.il'+myurl
-                myurlarray.append(myurl)
+				both=str( line).split('"><img border="0" src="')
+				myurl=str(both[0]).replace('<a href="', '').strip()
+				myurl='http://www.panet.co.il'+myurl
+				myurl=str(myurl).split('&country=')
+				myurl=str(myurl[0]).strip()
+				print "SONSON "+myurl
+				myurlarray.append(myurl)
                 
-                myimage=str(both[1]).replace('" width="150" height="83"></a><br>', '').strip()
-                myimagesarray.append(myimage)
+				myimage=str(both[1]).replace('" width="150" height="83"></a><br>', '').strip()
+				myimagesarray.append(myimage)
     for i in range(0,400):
         try:
             
@@ -84,83 +100,194 @@ def PanetListSeries(url):
             
 
 
-def INDEX_TURKISH(url):
-	try:
-		siteMax=10
-		Serie=0
-		
-		while Serie!=siteMax+5:
-			kurl=[url]
-			kurl=str(url).replace("['","").replace("']","").strip()
-			kurl=str(url)+str(Serie)
-			
-			Serie=Serie+1
-			if checkURL(kurl):
-						req = urllib2.Request(kurl)
-						req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-						response = urllib2.urlopen(req)
-						link=response.read()
-					   
-						response.close()
-						
-						serierList=[]
-						
-						match_url_thumb=(re.compile('a href="(.+?)"><font face="Tahoma" size="2" color="Black"><b>(.+?)</b><br/>').findall(link))
-						
-						for i in match_url_thumb:
-							
-							url2=match_url_thumb.pop(0)
-							
-							for url_thumb in url2 :
-								url_path=url2[0].replace("'",'')
-								serieName=url2[1].replace("'",'')
-								
-								if not url_path in serierList:
-									serierList.append(serieName)
-									serierList.append(url_path)
-						for item in serierList:
-							serieName=serierList.pop(0)
-							serieUrl=serierList.pop(0)
-							
-							serieUrl="http://www.panet.co.il"+serieUrl
-							
-							addDir(serieName,serieUrl,30,'')
-	except:
-		pass
-def LIST_SERIES(url):
-	try:
-    
-		for counter in range(0,10):
-			url=url+"&country=TR&page="+str(counter)
-			if checkURL(url):
-				req = urllib2.Request(url)
-				req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-				response = urllib2.urlopen(req)
-				link=response.read()
-				response.close()
-				serierList=[]
-				match_url_thumb=(re.compile('<a href="(.+?)"><img border="0" src="(.+?)" width="150" height="83"></a><br>').findall(link))
-			   
-				buf = StringIO.StringIO(link)
-				bisha= str(match_url_thumb).split()
-				counter=0
-				for names in link.split():
+def getEpesodes(url):
+	
+	 
+    siteMax=10
+    counter=0
+    c2=0
+       
+    while counter!=siteMax:
+        kurl=url+"&country=NL&page="+str(counter)
+        #print "MY URL "+kurl
+        
+        if checkURL(kurl):
+            req = urllib2.Request(kurl)
+            req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+            response = urllib2.urlopen(req)
+            link=response.read()
+            response.close()
+            counter=counter+1
+            target= re.findall(r'<div class="series-table-item">(.*?)\s(.*?)</font>', link, re.DOTALL)
+            for items in target:
+                try:   
+                    mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(0)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                    myimageurl=str((str(items).split('&page='+str(0)+'"><img border="0" src="'))[1]).strip()
+                    myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                    myseriename=str(items).split('<br/>')
+                    myseriename= myseriename[1]
+                    myseriename=myseriename[0:0]+myseriename[13+1:]
+                    myseriename=myseriename[0:53]+myseriename[65+1:]
+                    myseriename=str(myseriename).split(' ')
+                    epos="الحلقة" +" "+ (str(myseriename[1]).strip())
+                    print epos
+                    print myimageurl
+                    addLink(epos,mypageurl,31,'')
+                except IndexError:
+                    print ""
+                    try:
+                        mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(1)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                        myimageurl=str((str(items).split('&page='+str(1)+'"><img border="0" src="'))[1]).strip()
+                        myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                        myseriename=str(items).split('<br/>')
+                        myseriename= myseriename[1]
+                        myseriename=myseriename[0:0]+myseriename[13+1:]
+                        myseriename=myseriename[0:53]+myseriename[65+1:]
+                        myseriename=str(myseriename).split(' ')
+                        epos="الحلقة" +" "+ (str(myseriename[1]).strip())
+                        print epos
+                        print myimageurl
+                        addLink(epos,mypageurl,31,'')
+                    except IndexError:
+                        print ""
+                        try:
+                            mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(2)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                            myimageurl=str((str(items).split('&page='+str(2)+'"><img border="0" src="'))[1]).strip()
+                            myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                            myseriename=str(items).split('<br/>')
+                            myseriename= myseriename[1]
+                            myseriename=myseriename[0:0]+myseriename[13+1:]
+                            myseriename=myseriename[0:53]+myseriename[65+1:]
+                            myseriename=str(myseriename).split(' ')
+                            epos="الحلقة" +" "+ (str(myseriename[1]).strip())
+                            print epos
+                            print myimageurl
+                            addLink(epos,mypageurl,31,'')
+                        except IndexError:
+                            print ""
+                            try:
+                                mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(3)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                                myimageurl=str((str(items).split('&page='+str(3)+'"><img border="0" src="'))[1]).strip()
+                                myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                                myseriename=str(items).split('<br/>')
+                                myseriename= myseriename[1]
+                                myseriename=myseriename[0:0]+myseriename[13+1:]
+                                myseriename=myseriename[0:53]+myseriename[65+1:]
+                                myseriename=str(myseriename).split(' ')
+                                epos="الحلقة" +" "+ (str(myseriename[1]).strip())
+                                print epos
+                                print myimageurl
+                                addLink(epos,mypageurl,31,'')
+                            except IndexError:
+                                print ""
+                                try:
+                                    mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(4)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                                    myimageurl=str((str(items).split('&page='+str(4)+'"><img border="0" src="'))[1]).strip()
+                                    myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                                    myseriename=str(items).split('<br/>')
+                                    myseriename= myseriename[1]
+                                    myseriename=myseriename[0:0]+myseriename[13+1:]
+                                    myseriename=myseriename[0:53]+myseriename[65+1:]
+                                    myseriename=str(myseriename).split(' ')
+                                    epos="الحلقة" +" "+ (str(myseriename[1]).strip())
+                                    print epos
+                                    print myimageurl
+                                    addLink(epos,mypageurl,31,'')
+                                except IndexError:
+                                    print ""
+                                    try:
+                                        mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(5)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                                        myimageurl=str((str(items).split('&page='+str(5)+'"><img border="0" src="'))[1]).strip()
+                                        myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                                        myseriename=str(items).split('<br/>')
+                                        myseriename= myseriename[1]
+                                        myseriename=myseriename[0:0]+myseriename[13+1:]
+                                        myseriename=myseriename[0:53]+myseriename[65+1:]
+                                        myseriename=str(myseriename).split(' ')
+                                        epos=("الحلقة" +" "+ (str(myseriename[1]).strip()))
+                                        print epos
+                                        print myimageurl
+                                        addLink(epos,mypageurl,31,'')
+                                    except IndexError:
+                                        print ""
+                                        try:
+                                            mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(6)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                                            myimageurl=str((str(items).split('&page='+str(6)+'"><img border="0" src="'))[1]).strip()
+                                            myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                                            myseriename=str(items).split('<br/>')
+                                            myseriename= myseriename[1]
+                                            myseriename=myseriename[0:0]+myseriename[13+1:]
+                                            myseriename=myseriename[0:53]+myseriename[65+1:]
+                                            myseriename=str(myseriename).split(' ')
+                                            epos=("الحلقة" +" "+ (str(myseriename[1]).strip()))
+                                            print epos
+                                            print myimageurl
+                                            addLink(epos,mypageurl,31,'')
+                                        except IndexError:
+                                            print ""
+                                            try:
+                                                mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(7)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                                                myimageurl=str((str(items).split('&page='+str(7)+'"><img border="0" src="'))[1]).strip()
+                                                myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                                                myseriename=str(items).split('<br/>')
+                                                myseriename= myseriename[1]
+                                                myseriename=myseriename[0:0]+myseriename[13+1:]
+                                                myseriename=myseriename[0:53]+myseriename[65+1:]
+                                                myseriename=str(myseriename).split(' ')
+                                                epos=("الحلقة" +" "+ (str(myseriename[1]).strip()))
+                                                print epos
+                                                print myimageurl
+                                                addLink(epos,mypageurl,31,'')
+                                            except IndexError:
+                                                print ""
+                                                try:
+                                                    mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(8)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                                                    myimageurl=str((str(items).split('&page='+str(8)+'"><img border="0" src="'))[1]).strip()
+                                                    myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                                                    myseriename=str(items).split('<br/>')
+                                                    myseriename= myseriename[1]
+                                                    myseriename=myseriename[0:0]+myseriename[13+1:]
+                                                    myseriename=myseriename[0:53]+myseriename[65+1:]
+                                                    myseriename=str(myseriename).split(' ')
+                                                    epos=("الحلقة" +" "+ (str(myseriename[1]).strip()))
+                                                    print epos
+                                                    print myimageurl
+                                                    addLink(epos,mypageurl,31,'')
+                                                except IndexError:
+                                                    print ""
+                                                    try:
+                                                        mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(9)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                                                        myimageurl=str((str(items).split('&page='+str(9)+'"><img border="0" src="'))[1]).strip()
+                                                        myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                                                        myseriename=str(items).split('<br/>')
+                                                        myseriename= myseriename[1]
+                                                        myseriename=myseriename[0:0]+myseriename[13+1:]
+                                                        myseriename=myseriename[0:53]+myseriename[65+1:]
+                                                        myseriename=str(myseriename).split(' ')
+                                                        epos=("الحلقة" +" "+ (str(myseriename[1]).strip()))
+                                                        print epos
+                                                        print myimageurl
+                                                        addLink(epos,mypageurl,31,'')
+                                                    except IndexError:
+                                                        print ""
+                                                        try:
+                                                            mypageurl="http://www.panet.co.il"+str(str((str(items).split('&page='+str(10)+'"><img border="0" src="'))[0]).split('href="')[1]).strip()
+                                                            myimageurl=str((str(items).split('&page='+str(10)+'"><img border="0" src="'))[1]).strip()
+                                                            myimageurl=str(str(myimageurl).split('jpg"')[0]).strip()+'jpg'
+                                                            myseriename=str(items).split('<br/>')
+                                                            myseriename= myseriename[1]
+                                                            myseriename=myseriename[0:0]+myseriename[13+1:]
+                                                            myseriename=myseriename[0:53]+myseriename[65+1:]
+                                                            myseriename=str(myseriename).split(' ')
+                                                            epos=("الحلقة" +" "+ (str(myseriename[1]).strip()))
+                                                            print epos
+                                                            print myimageurl
+                                                            addLink(epos,mypageurl,31,'')
+                                                        except IndexError:
+                                                            print ""
 					
-					line=buf.readline()
-					if ('الحلقة ') in line:
-						if len(line)<50:
-							name= line.strip()
-							
-							page_url= bisha[counter].replace("[('","")
-							page_url=page_url.replace("',","").strip()
-							thumNail=bisha[1].replace("'),","")
-							thumNail=thumNail.replace("'","").strip()
-							page_url=page_url.replace("('","").strip()
-							page_url="http://www.panet.co.il"+page_url
-							addLink(name,page_url,31,thumNail)
-	except:
-		pass
-
+	
+	
 def GET_VIDEO_FILE(url):
 	try:
 		url= url.split("autostart=")
@@ -447,7 +574,7 @@ if mode==29:
 	PanetListSeries(url)
 elif mode==30:
 	#print ""+url
-	LIST_SERIES(url)
+	getEpesodes(url)
 elif mode==31:
 	#print ""+url
 	GET_VIDEO_FILE(url)

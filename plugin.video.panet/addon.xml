@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.panet"
-  version="1.3.0"
+  version="1.4.0"
   name="Panet"
   provider-name="Bisha">
   <requires>
