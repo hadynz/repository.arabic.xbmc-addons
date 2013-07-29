@@ -48,7 +48,8 @@ def listContent(url):
     #url="http://www.sonara.net/videon-50.html"
 		req = urllib2.Request(url)
 		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.1.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
+		#req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.1.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
+		req.add_header('Cookie', ' InterstitialAd=1; __utma=261095506.527469422.1375113861.1375113861.1375113861.1; __utmb=261095506.3.10.1375113861; __utmz=261095506.1375113861.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; popupbannerA=1')
 		response = urllib2.urlopen(req)
 		link=response.read()
 		target= re.findall(r'<div class="thumb" style="position: relative;">(.*?)\s(.*?)</a>(.*?)</div>(.*?)</a>', link, re.DOTALL)
@@ -74,6 +75,7 @@ def listContent(url):
 def listFilmContent(url):
     req = urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    req.add_header('Cookie', ' InterstitialAd=1; __utma=261095506.527469422.1375113861.1375113861.1375113861.1; __utmb=261095506.3.10.1375113861; __utmz=261095506.1375113861.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; popupbannerA=1')
     response = urllib2.urlopen(req)
     link=response.read()
     target= re.findall(r'<div class="thumb"(.*?)\s(.*?)<td width="800" align="center" style="padding-top: 25px;">', link, re.DOTALL)
