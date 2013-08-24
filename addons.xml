@@ -42,6 +42,27 @@
 </addon>
 
 <addon
+  id="plugin.video.alqudseyes"
+  version="1.0.0"
+  name="Alqudseyes"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="1.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Alqudseyes vod Arabic plugin</summary>
+    <description>Alqudseyes Arabic plugin.</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
   id="plugin.video.arabchannels"
   version="1.0.3"
   name="Arabic Live Streams"
