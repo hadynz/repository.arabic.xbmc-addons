@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="plugin.video.rotana"
+  version="1.0.0"
+  name="ROTANA"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Rotana vod Arabic plugin</summary>
+    <description>Rotana Arabic plugin.</description>
+   
+    <platform>all</platform>
+  </extension>
+</addon>
