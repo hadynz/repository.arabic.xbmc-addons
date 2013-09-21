@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.teledunet"
        name="Teledunet.com"
-       version="1.0.8"
-       provider-name="hadynz">
+       version="1.0.9"
+       provider-name="hadynz fixed by formee (unofficial updated version)">
     <requires>
         <import addon="xbmc.python" version="2.0"/>
         <import addon="script.module.beautifulsoup" version="3.0.8"/>
