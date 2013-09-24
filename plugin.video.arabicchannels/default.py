@@ -34,34 +34,42 @@ def CATEGORIES():
 	
 		
 def indexChannels(url):
+  
     req = urllib2.Request(url)
     response = urllib2.urlopen(req)
     link=response.read()
-    counter=0
-    
+    channelnr=0
     matchObj=(re.compile('<div class="(.+?)"><a href="#" onclick="document.getElementById(.+?)><span class="nume"(.+?)</span><img src="(.+?)"/></a></div>').findall(link))
     for items in matchObj:
+       
         path=str( items[1]).split("src='")
         path=path[1]
         path="http://www.arabichannels.com/"+str(path).replace(';"',"").replace("'", '').strip()
         name=str( items[2]).replace(">", "").strip()
         image=str( items[3]).strip()
-        if "./" in image:
-            image=str(image).replace("./","")
-            image="http://www.arabichannels.com/"+image
-        addLink(name,path,2,image)
+        
+        if not "http:"  in image:
+            if "./"  in image:
+                image=str(image).replace("./","")
+                image="http://www.arabichannels.com/"+image
+            elif "/images/" in image:
+                image="http://www.arabichannels.com"+image
+        if "IPTV Receiver" not in str(name):
+			addLink(name,path,2,image)
 		
 def playChannel(url):
 
 	if ".php" in str(url):
-		
+
 		req = urllib2.Request(url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		req.add_header('Host', 'arabichannels.com')
-		req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
-		req.add_header('Referer', ' http://arabichannels.com/')
+		req.add_header('Accept', ' text/html, application/xhtml+xml, */*')
+		req.add_header('Referer', 'http://arabichannels.com/')
+		req.add_header('User-Agent', 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)')
+		req.add_header('Accept-Encoding', ' gzip, deflate')
 		req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-		req.add_header('Cookie', 'tzLogin=odm88i2u82984i10cd1m4pkqo7; __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; HstCmu2398318=1378312346484; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1378312556024; HstPn2398318=2; HstPt2398318=2; HstCnv2398318=1; HstCns2398318=1; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.1.1378312556.1378312346.; _pk_ses.1.c9f1=*; MLRV_72398318=1378312557906; MLR72398318=1378312555000')
+		req.add_header('DNT', '1')
+		req.add_header('Host', 'arabichannels.com')
+		req.add_header('Cookie', 'tzLogin=jsuobfug5ef93ct6c93bnu8f46; __qca=P0-995007673-1378149031936; _pk_id.1.c9f1=18ee4dc4b5730162.1378149032.2.1379954957.1378149081.; _pk_ses.1.c9f1=*; HstCfa2398318=1378149046964; HstCla2398318=1379954941158; HstCmu2398318=1378149046964; HstPn2398318=1; HstPt2398318=2; HstCnv2398318=2; HstCns2398318=2; MLR72398318=1379954942000; MLRV_72398318=1379954942025; __zlcmid=L5dBUG7j5BRBI6')
 		response = urllib2.urlopen(req)
 		link=response.read()
 		streamer=(re.compile("'streamer':(.+?)',").findall(link))
@@ -69,25 +77,95 @@ def playChannel(url):
 		swf=str(swf).replace("['", "").replace("']", "").strip()
 		streamer=str(streamer).replace('[', "").replace('"]', "").strip()
 		streamer=str(streamer).replace("'", "").replace('"', "").strip().replace("]/", "").strip()
-		file=(re.compile("'file':(.+?)',").findall(link))
-		file=str(file).replace('[', "").replace('"]', "").strip()
-		file=str(file).replace("'", "").replace('"', "").strip()
-		complete=streamer + ' playpath=' + file + ' swfUrl=http://arabichannels.com' + swf + ' flashver=WIN%25252011,8,800,168 live=1 timeout=15 swfVfy=1 pageUrl=http://arabichannels.com'
+		fileLoc=(re.compile("'file':(.+?)',").findall(link))
+		fileLoc=str(fileLoc[0]).replace("'", "").strip()
+		fileLoc=str(fileLoc).replace("'", "").replace('"', "").strip()
+		complete=streamer + ' playpath=' + fileLoc + ' swfUrl=http://arabichannels.com' + swf + ' flashver=WIN%11,8,800,175 live=1 timeout=15 swfVfy=1 pageUrl='+str(url)
 		listItem = xbmcgui.ListItem(path=str(complete))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+		
 	elif ".html" in str(url):
+        
+			myfinalpath=' '
 			req = urllib2.Request(url)
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			req.add_header('Accept', ' text/html, application/xhtml+xml, */*')
+			req.add_header('Referer', 'http://arabichannels.com/')
+			req.add_header('User-Agent', 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)')
+			req.add_header('Accept-Encoding', ' gzip, deflate')
+			req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
+			req.add_header('DNT', '1')
+			req.add_header('Host', 'arabichannels.com')
+			req.add_header('Cookie', 'tzLogin=jsuobfug5ef93ct6c93bnu8f46; __qca=P0-995007673-1378149031936; _pk_id.1.c9f1=18ee4dc4b5730162.1378149032.2.1379954957.1378149081.; _pk_ses.1.c9f1=*; HstCfa2398318=1378149046964; HstCla2398318=1379954941158; HstCmu2398318=1378149046964; HstPn2398318=1; HstPt2398318=2; HstCnv2398318=2; HstCns2398318=2; MLR72398318=1379954942000; MLRV_72398318=1379954942025; __zlcmid=L5dBUG7j5BRBI6')
 			response = urllib2.urlopen(req)
 			link=response.read()
-			mypath=(re.compile('<iframe width="728" height="430" src="(.+?)" style="').findall(link))
-			mypath=str(mypath).replace('[', "").replace('"]', "").strip()
-			mypath=str(mypath).replace("'", "").replace('"', "").strip()
-			mypath=str(mypath).replace(']', '')
-			listItem = xbmcgui.ListItem(path=str(mypath))
-			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+			mypath=(re.compile("file: '(.+?)',").findall(link))
+			if len(mypath)<3:
+				myfinalpath=(re.compile('file: "(.+?)"').findall(link))
+				myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
+				finalurl=str(retrieveChannel(myfinalpath))
+				listItem = xbmcgui.ListItem(path=str(finalurl))
+				xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	
+				if len(myfinalpath)<3:
+					myfinalpath=(re.compile('<param name="movie" value="(.+?)">').findall(link))
+					myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
+					finalurl=str(retrieveChannel(myfinalpath))
+					listItem = xbmcgui.ListItem(path=str(finalurl))
+					xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	
+					if len(myfinalpath)<3:
+						target= re.findall(r'</head>(.*?)\s(.*?)</object>', link, re.DOTALL)
+						myfinalpath=target
+						finalurl=str(retrieveChannel(myfinalpath))
+						listItem = xbmcgui.ListItem(path=str(finalurl))
+						xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	
+						if len(myfinalpath)<4:
+							myfinalpath=(re.compile('<iframe width="728" height="430" src="//(.+?)" frameborder="0"').findall(link))
+							myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
+							finalurl=str(retrieveChannel(myfinalpath))
+							listItem = xbmcgui.ListItem(path=str(finalurl))
+							xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+							if len(myfinalpath)<3:
+								myfinalpath=(re.compile('<iframe width="728" height="430" src="(.+?)" style="').findall(link))
+								myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
+								finalurl=str(retrieveChannel(myfinalpath))
+								listItem = xbmcgui.ListItem(path=str(finalurl))
+								xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	
+                                if len(myfinalpath)<3:
+									target= re.findall(r'</head>(.*?)\s(.*?)</object>', link, re.DOTALL)
+									myfinalpath=str(target).replace("['", "").replace("']", "").strip()
+									finalurl=str(retrieveChannel(myfinalpath))
+									listItem = xbmcgui.ListItem(path=str(finalurl))
+									xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	
+                                    
+                                
+			for item in  mypath:
+				if "smil" in str(item):
+					mydest="http://www.arabichannels.com/"+str( item).strip()
+					req2 = urllib2.Request(mydest)
+					req2.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+					response2 = urllib2.urlopen(req2)
+					link2=response2.read()
+					myfinalpath=(re.compile(' <meta base="(.+?)"/>').findall(link2))
+					myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
+					finalurl=str(retrieveChannel(myfinalpath))
+					listItem = xbmcgui.ListItem(path=str(finalurl))
+					xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	
+			
 
-
+def retrieveChannel(url):
+	if "youtube" in str(url):
+		finalurl=str(url).split("v=")
+		finalurl=finalurl[1]
+		playback_url = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % finalurl
+	elif "youtube" not in str(url):
+		playback_url=url
+	return playback_url
+	
 def get_params():
         param=[]
         paramstring=sys.argv[2]
