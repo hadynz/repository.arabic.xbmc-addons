@@ -80,7 +80,7 @@ def playChannel(url):
 		fileLoc=(re.compile("'file':(.+?)',").findall(link))
 		fileLoc=str(fileLoc[0]).replace("'", "").strip()
 		fileLoc=str(fileLoc).replace("'", "").replace('"', "").strip()
-		complete=streamer + ' playpath=' + fileLoc + ' swfUrl=http://arabichannels.com' + swf + ' flashver=WIN%11,8,800,175 live=1 timeout=15 swfVfy=1 pageUrl='+str(url)
+		complete=streamer + ' playpath=' + fileLoc + ' swfUrl=http://arabichannels.com' + swf + ' flashver=WIN25252011,8,800,175 live=1 timeout=15 swfVfy=1 pageUrl='+str(url)
 		listItem = xbmcgui.ListItem(path=str(complete))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		
@@ -99,49 +99,6 @@ def playChannel(url):
 			response = urllib2.urlopen(req)
 			link=response.read()
 			mypath=(re.compile("file: '(.+?)',").findall(link))
-			if len(mypath)<3:
-				myfinalpath=(re.compile('file: "(.+?)"').findall(link))
-				myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
-				finalurl=str(retrieveChannel(myfinalpath))
-				listItem = xbmcgui.ListItem(path=str(finalurl))
-				xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-	
-				if len(myfinalpath)<3:
-					myfinalpath=(re.compile('<param name="movie" value="(.+?)">').findall(link))
-					myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
-					finalurl=str(retrieveChannel(myfinalpath))
-					listItem = xbmcgui.ListItem(path=str(finalurl))
-					xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-	
-					if len(myfinalpath)<3:
-						target= re.findall(r'</head>(.*?)\s(.*?)</object>', link, re.DOTALL)
-						myfinalpath=target
-						finalurl=str(retrieveChannel(myfinalpath))
-						listItem = xbmcgui.ListItem(path=str(finalurl))
-						xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-	
-						if len(myfinalpath)<4:
-							myfinalpath=(re.compile('<iframe width="728" height="430" src="//(.+?)" frameborder="0"').findall(link))
-							myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
-							finalurl=str(retrieveChannel(myfinalpath))
-							listItem = xbmcgui.ListItem(path=str(finalurl))
-							xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-							if len(myfinalpath)<3:
-								myfinalpath=(re.compile('<iframe width="728" height="430" src="(.+?)" style="').findall(link))
-								myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
-								finalurl=str(retrieveChannel(myfinalpath))
-								listItem = xbmcgui.ListItem(path=str(finalurl))
-								xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-	
-                                if len(myfinalpath)<3:
-									target= re.findall(r'</head>(.*?)\s(.*?)</object>', link, re.DOTALL)
-									myfinalpath=str(target).replace("['", "").replace("']", "").strip()
-									finalurl=str(retrieveChannel(myfinalpath))
-									listItem = xbmcgui.ListItem(path=str(finalurl))
-									xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-	
-                                    
-                                
 			for item in  mypath:
 				if "smil" in str(item):
 					mydest="http://www.arabichannels.com/"+str( item).strip()
@@ -149,10 +106,12 @@ def playChannel(url):
 					req2.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 					response2 = urllib2.urlopen(req2)
 					link2=response2.read()
+					videosource=(re.compile('<video src="(.+?)" system-bitrate="400000"').findall(link2))
 					myfinalpath=(re.compile(' <meta base="(.+?)"/>').findall(link2))
 					myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
-					finalurl=str(retrieveChannel(myfinalpath))
-					listItem = xbmcgui.ListItem(path=str(finalurl))
+					videosource=str(videosource).replace("['", "").replace("']", "").replace("'","").strip()
+					myfinalpath=myfinalpath + ' playpath=' + videosource + ' swfUrl=http://arabichannels.com/player4/jwplayer.flash.swf live=1 buffer=300000 timeout=15 swfVfy=1 pageUrl=http://arabichannels.com'
+					listItem = xbmcgui.ListItem(path=str(myfinalpath))
 					xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	
 			
