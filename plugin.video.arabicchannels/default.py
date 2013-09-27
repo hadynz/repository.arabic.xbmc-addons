@@ -6,7 +6,7 @@ from urlparse import urlparse
 import StringIO
 import httplib
 import time
-
+from random import randint
 
 __settings__ = xbmcaddon.Addon(id='plugin.video.arabicchannels')
 __icon__ = __settings__.getAddonInfo('icon')
@@ -34,27 +34,32 @@ def CATEGORIES():
 	
 		
 def indexChannels(url):
-  
-    req = urllib2.Request(url)
-    response = urllib2.urlopen(req)
-    link=response.read()
-    channelnr=0
-    matchObj=(re.compile('<div class="(.+?)"><a href="#" onclick="document.getElementById(.+?)><span class="nume"(.+?)</span><img src="(.+?)"/></a></div>').findall(link))
-    for items in matchObj:
-       
-        path=str( items[1]).split("src='")
-        path=path[1]
-        path="http://www.arabichannels.com/"+str(path).replace(';"',"").replace("'", '').strip()
-        name=str( items[2]).replace(">", "").strip()
-        image=str( items[3]).strip()
-        
-        if not "http:"  in image:
-            if "./"  in image:
-                image=str(image).replace("./","")
-                image="http://www.arabichannels.com/"+image
-            elif "/images/" in image:
-                image="http://www.arabichannels.com"+image
-        if "IPTV Receiver" not in str(name):
+	req = urllib2.Request(url)
+	req.add_header('Accept', ' text/html, application/xhtml+xml, */*')
+	req.add_header('Referer', 'http://arabichannels.com/')
+	req.add_header('User-Agent', 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)')
+	req.add_header('Accept-Encoding', ' gzip, deflate')
+	req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
+	req.add_header('DNT', '1')
+	req.add_header('Host', 'arabichannels.com')
+	req.add_header('Cookie', 'tzLogin=jsuobfug5ef93ct6c93bnu8f46; __qca=P0-995007673-1378149031936; _pk_id.1.c9f1=18ee4dc4b5730162.1378149032.2.1379954957.1378149081.; _pk_ses.1.c9f1=*; HstCfa2398318=1378149046964; HstCla2398318=1379954941158; HstCmu2398318=1378149046964; HstPn2398318=1; HstPt2398318=2; HstCnv2398318=2; HstCns2398318=2; MLR72398318=1379954942000; MLRV_72398318=1379954942025; __zlcmid=L5dBUG7j5BRBI6')
+
+	response = urllib2.urlopen(req)
+	link=response.read()
+	matchObj=(re.compile('<div class="(.+?)"><a href="#" onclick="document.getElementById(.+?)><span class="nume"(.+?)</span><img src="(.+?)"/></a></div>').findall(link))
+	for items in matchObj:
+		path=str( items[1]).split("src='")
+		path=path[1]
+		path="http://www.arabichannels.com/"+str(path).replace(';"',"").replace("'", '').strip()
+		name=str( items[2]).replace(">", "").strip()
+		image=str( items[3]).strip()
+		if not "http:"  in image:
+			if "./"  in image:
+				image=str(image).replace("./","")
+				image="http://www.arabichannels.com/"+image
+			elif "/images/" in image:
+				image="http://www.arabichannels.com"+image
+		if "IPTV Receiver" not in str(name):
 			addLink(name,path,2,image)
 		
 def playChannel(url):
@@ -80,7 +85,8 @@ def playChannel(url):
 		fileLoc=(re.compile("'file':(.+?)',").findall(link))
 		fileLoc=str(fileLoc[0]).replace("'", "").strip()
 		fileLoc=str(fileLoc).replace("'", "").replace('"', "").strip()
-		complete=streamer + ' playpath=' + fileLoc + ' swfUrl=http://arabichannels.com' + swf + ' flashver=WIN25252011,8,800,175 live=1 timeout=15 swfVfy=1 pageUrl='+str(url)
+		mynr=randint(1000,6000)
+		complete=streamer + ' playpath=' + fileLoc + ' swfUrl=http://arabichannels.com' + swf + ' flashver=WIN'+str(mynr)+'11 live=1 timeout=15 swfVfy=1 pageUrl='+str(url)
 		listItem = xbmcgui.ListItem(path=str(complete))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		
