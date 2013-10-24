@@ -94,8 +94,8 @@ def _parse_channels_from_html_dom(html):
     items = []
 
     for div in html.findAll("div", {"class": "div_channel"}):
-        match2=re.compile('''<a href=".+?" onclick="go_c2.?'(.+?)'.+?'rtmp.+?'.?" style_=".+?"><img onerror=".+?" src="(.+?)" height=".+?" style=".+?" /><font style=".+?"> <span id=".+?">(.+?)</span> <font style=".+?">(.+?)</font>''').findall(str(div))
-        match=re.compile('''<a href=".+?" onclick="go_c2.?'(.+?)'.+?'rtmp.+?'.?" style_=".+?"><img onerror=".+?" src="(.+?)" height=".+?" style=".+?" /><font style=".+?"> <span id=".+?">(.+?)</span>''').findall(str(div))
+        match2=re.compile('''onclick="go_c2.?'(.+?)'.+?'rtmp.+?style=".+?<img onerror=".+?" src="(.+?)" height=.+? style=.+?><font style=".+?"> <span id=.+?">(.+?)</span>.+?<font style=".+?">(.+?)</font>''').findall(str(div))
+        match=re.compile('''onclick="go_c2.?'(.+?)'.+?'rtmp.+?style=".+?<img onerror=".+?" src="(.+?)" height=.+? style=.+?><font style=".+?"> <span id=.+?">(.+?)</span>''').findall(str(div))
         for url,thumb,name in match:
             for url2,thumb2,name2,hd in match2:
                 if name==name2:
