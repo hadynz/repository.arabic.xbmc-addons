@@ -7,6 +7,7 @@ import StringIO
 import urllib2,urllib
 import re
 import httplib,itertools
+
 import time
 
 
@@ -158,11 +159,12 @@ def list_films(url):
 			response = urllib2.urlopen(req)
 			link=response.read()
 			response.close()
-			url_ch=(re.compile('<a href="(.+?)" title="(.+?)dvd اونلاين ">').findall(link))
+			url_ch=(re.compile('<a href="(.+?)" title="(.+?)dvd اونلاين "').findall(link))
+			print url_ch
 			url_ch_2=(re.compile('<img src="(.+?)" alt="(.+?)"  />').findall(link))
 			 
 			for items,elements in itertools.izip( url_ch,url_ch_2):
-				#print items[1]
+				
 				name=str( items[1]).replace("جودة", "")
 				name=name.replace("مشاهدة", "").strip()
 				name=name.replace("dvd", "")

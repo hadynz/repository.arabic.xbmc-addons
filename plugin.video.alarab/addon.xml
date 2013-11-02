@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.alarab"
-  version="1.6.0"
+  version="1.7.0"
   name="ALARAB"
   provider-name="Bisha">
   <requires>
