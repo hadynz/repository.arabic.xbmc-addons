@@ -1,186 +1,125 @@
-import sys
-import urllib
-import xbmcplugin
-import xbmcgui
-import xbmcaddon
+import os
+import xbmcplugin, xbmcgui, xbmcaddon
+from xbmcswift2 import Plugin
+from resources.lib.shahidnet.api import ShahidNetAPI, MediaType
 
-import ShahidUtils
+PLUGIN_NAME = 'Shahid.net'
+PLUGIN_ID = 'plugin.video.shahid.net'
+plugin = Plugin(PLUGIN_NAME, PLUGIN_ID, __file__)
 
-plugin = int(sys.argv[1])
-settings = xbmcaddon.Addon(id='plugin.video.shahid.net')
-language = settings.getLocalizedString
-pluginPath = settings.getAddonInfo('path')
+api = ShahidNetAPI()
 
-ShahidUtils = ShahidUtils.ShahidUtils()
 
-# Setting constants
-MODE_LIST_CHANNELS = 1
-MODE_LIST_PROGRAMS = 2
-MODE_LIST_VIDEOS = 3
-MODE_PLAY_VIDEO = 4
-MODE_LIST_STREAMS = 5
+@plugin.cached_route('/', TTL=60*24) # Cache for 24hours
+def list_all_channels():
+    channels = api.get_channels()
+    sorted_channels = sorted(channels, key=lambda channel: channel['name'])
 
-def getRootCategories():
-    addLink("Channels", MODE_LIST_CHANNELS)
-    #addLink("Programs", MODE_LIST_CATEGORY_CHANNELS)
-    #addLink("Episodes", MODE_LIST_CATEGORY_CHANNELS)
-    #addLink("Clips",    MODE_LIST_CATEGORY_CHANNELS)
-    xbmcplugin.endOfDirectory(plugin)
+    items = [{
+                 'label': channel['name'],
+                 'path': plugin.url_for('list_channel_programs', channelID=channel['id']),
+                 'thumbnail': channel['thumb_url'],
+                 'properties': [
+                     ('fanart_image', channel['image_url'])
+                 ]
+             } for channel in sorted_channels]
 
-def listChannels():
-    modelChannels = ShahidUtils.getChannelList()
-    for channel in sorted(modelChannels, key=lambda c: c.name):
-        params = "channelID={0}".format(channel.id)
-        addLink(channel.name, MODE_LIST_PROGRAMS, params, channel.image_thumb, channel.image_fanart)
+    return items
 
-    xbmcplugin.endOfDirectory(plugin)
 
-def listPrograms(channelID):
-    modelPrograms = ShahidUtils.getProgramList(channelID)
+@plugin.cached_route('/list/channels/<channelID>', TTL=60*5) # Cache for 5hours
+def list_channel_programs(channelID):
+    programs = api.get_channel_programs(channelID)
 
-    for program in sorted(modelPrograms, key=lambda p: p.name):
-        params = "programID={0}&episodesCount={1}&clipsCount={2}".format(program.id, str(program.episode_count), str(program.clip_count))
+    items = [{
+                 'label': program['name'],
+                 'path': _program_path(program),
+                 'thumbnail': program['thumb_url'],
+                 'properties': [
+                     ('fanart_image', program['image_url'])
+                 ]
+             } for program in programs]
 
-        # Append videoType if possible
-        if program.episode_count > 0 and program.clip_count == 0:
-            params += "&videoType=%s" % "episodes"
+    return items
 
-        if program.episode_count == 0 and program.clip_count > 0:
-            params += "&videoType=%s" % "clips"
 
-        addLink(program.name, MODE_LIST_VIDEOS, params, program.image_thumb, program.image_fanart)
+def _program_path(program):
+    episodeCount = int(program['episode_count'])
+    clipCount = int(program['clip_count'])
 
-    xbmcplugin.endOfDirectory(plugin)
+    if episodeCount > 0 and clipCount is 0:
+        return plugin.url_for('list_media_items', programID=program['id'], mediaType=MediaType.EPISODE)
 
-def showEpisodeClipFolders(programID, episodesCount, clipsCount):
-    paramsPattern = "programID={0}&videoType={1}"
+    if episodeCount is 0 and clipCount > 0:
+        return plugin.url_for('list_media_items', programID=program['id'], mediaType=MediaType.CLIP)
 
-    addLink("Episodes (%s)" % episodesCount, MODE_LIST_VIDEOS, paramsPattern.format(programID, "episodes"))
-    addLink("Clips (%s)" % clipsCount, MODE_LIST_VIDEOS, paramsPattern.format(programID, "clips"))
+    return plugin.url_for('list_episode_clip_choice', programID=program['id'], episodeCount=str(episodeCount),
+                          clipsCount=str(clipCount))
 
-    xbmcplugin.endOfDirectory(plugin)
 
-def listVideos(programID, videoType):
-    paramsPattern = "programID={0}&videoType={1}&clipID={2}"
-    list = ShahidUtils.getVideoList(programID, videoType)
+@plugin.route('/list/media/program/<programID>/episode/<episodeCount>/clips/<clipsCount>')
+def list_episode_clip_choice(programID, episodeCount, clipsCount):
+    items = [{
+                 'label': "Episodes ([COLOR blue]%s[/COLOR] episode%s)" % (
+                     episodeCount, 's' if episodeCount > 1 else ''),
+                 'path': plugin.url_for('list_media_items', programID=programID, mediaType=MediaType.EPISODE)
+             },
+             {
+                 'label': "Clips ([COLOR blue]%s[/COLOR] clip%s)" % (clipsCount, 's' if clipsCount > 1 else ''),
+                 'path': plugin.url_for('list_media_items', programID=programID, mediaType=MediaType.CLIP)
+             }
+    ]
 
-    for item in filter(lambda x: x.coming_soon == 0 , list):
-        addLink(item.name, MODE_LIST_STREAMS, paramsPattern.format(programID, videoType, item.id, item.name), item.image_thumb, isFolder=False)
+    return plugin.finish(items)
 
-    xbmcplugin.endOfDirectory(plugin)
 
-def listStreams(programID, clipID):
-    paramsPattern = "playUrl={0}"
-    streamList = ShahidUtils.getPlayStreamOptions(programID, clipID)
+@plugin.cached_route('/list/clips/<programID>/<mediaType>', TTL=60*2) # Cache for 2hours
+def list_media_items(programID, mediaType):
+    mediaItems = api.get_program_media(programID, mediaType)
 
-    # If only one stream is returned, just simply play it by default for user
-    if len(streamList) == 1:
-        url = urllib.quote_plus(streamList[0].url)
-        return playVideo(url)
+    plugin.set_content('episodes')
 
-    # Many options are returned, list them to our dear user
-    else:
-        for item in streamList:
-            url = urllib.quote_plus(item.url)
-            addLink(item.title, MODE_PLAY_VIDEO, paramsPattern.format(url), None, isFolder=False)
+    items = [{
+                 'label': _clip_name(media),
+                 'path': plugin.url_for('play_video', programID=programID, mediaType=mediaType, mediaID=media['id']),
+                 'thumbnail': media['thumb_url'],
+                 'info': {
+                     'title': _clip_name(media),
+                     'duration': media['duration'],
+                     'episode': media['episode_number'],
+                     'dateadded': media['tx_date'],
+                     'tvshowtitle': media['series_name']
+                 },
+                 'is_playable': True
+             } for media in reversed(mediaItems)]
 
-        xbmcplugin.endOfDirectory(plugin)
+    return items
 
-def playVideo(playUrl):
-    playUrl = urllib.unquote_plus(playUrl)
 
-    item = xbmcgui.ListItem(path=playUrl)
-    item.setInfo(type = 'video', infoLabels = {'Title': None})
-    return xbmcplugin.setResolvedUrl(handle=int(sys.argv[1]), succeeded=True, listitem=item)
+def _clip_name(media):
+    if media['type'] == 'clip':
+        if not media['summary']:
+            return media['series_name']
 
-def get_params():
-    param = []
-    paramstring = sys.argv[2]
-    if len(paramstring) >= 2:
-        params = sys.argv[2]
-        cleanedparams = params.replace('?', '')
-        if (params[len(params) - 1] == '/'):
-            params = params[0:len(params) - 2]
-        pairsofparams = cleanedparams.split('&')
-        param = {}
-        for i in range(len(pairsofparams)):
-            splitparams = {}
-            splitparams = pairsofparams[i].split('=')
-            if (len(splitparams)) == 2:
-                param[splitparams[0]] = splitparams[1]
+        return media['summary']
 
-    return param
+    return media['type'].title() + ' ' + media['episode_number']
 
-def addLink(name, mode, params=None, thumbnailImage="DefaultVideo.png", fanArtImage=None, isFolder=True):
-    if params is None:
-        params = ''
 
-    u = sys.argv[0] + "?mode={0}&{1}".format(str(mode), params)
+@plugin.route('/play/<programID>/<mediaType>/<mediaID>')
+def play_video(programID, mediaType, mediaID):
+    quality = plugin.get_setting('quality')
+    url = api.get_media_stream(quality, programID, mediaType, mediaID)
 
-    li = xbmcgui.ListItem(name, iconImage="DefaultVideo.png", thumbnailImage=thumbnailImage)
-    li.setInfo(type="Video", infoLabels={"Title": name})
+    plugin.log.info('Play Quality: %s' % quality)
+    plugin.log.info('Playing url: %s' % url)
 
-    if mode == MODE_PLAY_VIDEO or \
-       mode == MODE_LIST_STREAMS:   # Temporary hack; we are currently always returning one stream to play
-        li.setProperty('IsPlayable', 'true')
+    return plugin.set_resolved_url(url)
 
-    if fanArtImage is not None:
-        li.setProperty('fanart_image', fanArtImage)
 
-    ok = xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=li, isFolder=isFolder)
-    return ok
+def _art(file, *args):
+    return os.path.join(plugin.addon.getAddonInfo('path'), file, *args)
 
-def tryParse(array, key):
-    value = None
 
-    try:
-        value = array[key]
-    except:
-        pass
-
-    return value
-
-# ---------------------------------------------------------------------------------
-
-#
-# Parse query string parameters
-params = get_params()
-lastMode = None
-
-try:
-    lastMode = int(params["mode"])
-except:
-    pass
-
-channelID       = tryParse(params, "channelID")
-programID       = tryParse(params, "programID")
-episodesCount   = tryParse(params, "episodesCount")
-clipsCount      = tryParse(params, "clipsCount")
-videoType       = tryParse(params, "videoType")
-clipID          = tryParse(params, "clipID")
-playUrl         = tryParse(params, "playUrl")
-
-#
-# Controller Logic
-print "Current URL: " + sys.argv[2]
-
-if lastMode is None:
-    getRootCategories()
-
-elif lastMode == MODE_LIST_CHANNELS:
-    listChannels()
-
-elif lastMode == MODE_LIST_PROGRAMS:
-    listPrograms(channelID)
-
-elif lastMode == MODE_LIST_VIDEOS:
-    if videoType is not None:
-        listVideos(programID, videoType)
-    else:
-        showEpisodeClipFolders(programID, episodesCount, clipsCount)
-
-elif lastMode == MODE_LIST_STREAMS:
-    listStreams(programID, clipID)
-
-elif lastMode == MODE_PLAY_VIDEO:
-    playVideo(playUrl)
+if __name__ == '__main__':
+    plugin.run()

@@ -1,1 +1,2 @@
 1.0.0 - Initial version of Shahid.net
+2.0.0 - Complete re-write of the plugin. Using new hadynz-shahid service in the cloud to resolve Shahid streams. Introduced caching.

@@ -230,7 +230,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon id="plugin.video.shahid.net"
        name="Shahid.net"
-       version="1.0.0"
+       version="2.0.0"
        provider-name="hadynz">
     <requires>
         <import addon="xbmc.python" version="2.0"/>
@@ -242,7 +242,12 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Shahid.net</summary>
-        <description>Watch MBC's TV catch-up server, Shahid.net in XBMC! Shahid.net offers content from MBC channels as well as other Arabic TV content.</description>
+        <description>Watch MBC's TV catch-up server, Shahid.net in XBMC!
+
+Shahid.net offers content from MBC channels as well as other Arabic TV content.
+
+This plugin has been re-written to provide XBMC users with an amazing and native experience of browsing Shahid.net's amazing content through your favourite media center interface.
+        </description>
         <platform>all</platform>
     </extension>
 </addon>

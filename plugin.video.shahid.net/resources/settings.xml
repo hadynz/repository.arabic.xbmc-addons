@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+
+  <category label="General">
+    <setting label="Max video quality" id="quality" type="labelenum" values="720p HD|520p HIGH|360p LOW|240p LOWEST"
+             default="720p HD" />
+  </category>
+
+</settings>
