@@ -37,10 +37,10 @@ Watch MBC's TV catch-up server, [Shahid.net](http://shahid.mbc.net) in XBMC! Sha
 [Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.shahid.net)
 
 ## Installation
-There are two main ways to install the repository:
+There are two main ways to install this XBMC repository:
 ### 1. Using XBMC HUB's Fusion Server (recommended)
-1. Follow steps **1-13** from the following URL: http://www.xbmchub.com/blog/2012/04/24/fusion-easy-addon-installation-for-xbmc/
-2. Browse to the following **/video/world/arabic**
+1. Add http://fusion.xbmchub.com as a media source (or follow steps **1-13** from the following URL: http://www.xbmchub.com/blog/2012/04/24/fusion-easy-addon-installation-for-xbmc).
+2. Browse to the following direction structure: **/video/world/arabic**
 3. Choose: **repository.arabic.xbmc-addons-1.0.0.zip**
 
 ### 2. Manual Download and Installation
