@@ -8,33 +8,23 @@ Arabic XBMC Addons Repository
 
 ## Introduction
 This repository contains a number of XBMC addons that are focused around providing Arabic streaming content.
-Some plugins provide access to free and paid Arabic TV. Other plugins provide access to Arabic movies
-or online cliips of shows and TV series.
+
+Some plugins provide access to free and paid Arabic TV. Other plugins provide access to Arabic TV On-Demand which might include movies, clips and TV series.
 
 ## Arabic XBMC Addons
 The following is a listing of the Arabic XBMC addons available from this repository:
 
-### ATN Network (Paid service)
-Watch live Arabic TV by logging in with your [ATN Network](http://www.atnnetwork.com) subscription login.
-[Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.atnnetwork)
-
-### GLArab (Paid and Free service)
-Watch live Arabic TV through the [GLArab](http://www.glarab.com) service. This service is free but requires a GLArab account to be
-created and a special proxy installed (for Windows and Mac only). 
-[Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.glarab)
-
-### Al Qahera Al Youm
-
-### Sotwesoora.Tv (Free service)
-
-### Bokra arabic and international media content.
-
-### Panet arabic films.
-
-### Alarab arabic media content.
-### Shahid.net (Free service)
-Watch MBC's TV catch-up server, [Shahid.net](http://shahid.mbc.net) in XBMC! Shahid.net offers content from MBC channels as well as other Arabic TV content. This service is absolutely free.
-[Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.shahid.net)
+\# | Plugin | Source | Subscription | Media Type
+---|---|---|---|---
+1 | Shahid.Net | http://shahid.mbc.net | No | TV On-Demand
+2 | Al Qahera Al Youm | http://www.alqaheraalyoum.net‎ | No | TV Show
+3 | ATN Network | http://www.atnnetwork.com | Yes | Live TV
+4 | GL Arab | http://www.glarab.com | No | Live TV
+5 | Teledunet | http://www.teledunet.com | No | Live TV
+6 | Sotwesoora.Tv | http://www.sotwesoora.tv | No | Movies, TV Series
+7 | Bokra | ? | ? | ?
+8 | Panet | ? | ? | ?
+9 | Alarab | ? | ? | ?
 
 ## Installation
 There are two main ways to install this XBMC repository:
@@ -56,16 +46,17 @@ This has typically meant that you have downloaded this github repository as a ZI
 in the 'Download Packages' section of the downloads page.
 
 ## Contributors
+* [hadynz](https://github.com/hadynz)
 * [Qwin](https://github.com/Qwin)
 * [bbk79](https://github.com/bbk79)
 * [bisha77](https://github.com/bisha77)
 
 ## Contribution
-If you want to contribute either reach me on twitter or the XBMC forums via a private message.
+If you want to contribute to this repository either reach me on [twitter](http://twitter.com/hadynz) or the XBMC forums via a [private message](http://forum.xbmc.org/member.php?action=profile&uid=137319).
 
 ## Questions, Comments, Feature Requests or Issues
-If you have any of these, go ahead and submit an 
-[issue](https://github.com/hadynz/repository.arabic.xbmc-addons/issues), or contact me directly.
+If you have any suggestions or feedback to make this repository even more awesome sauce then go ahead and submit an 
+[issue](https://github.com/hadynz/repository.arabic.xbmc-addons/issues), or [contact me directly](mailto:hadyos@gmail.com).
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hadynz/repository.arabic.xbmc-addons/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
