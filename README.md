@@ -25,7 +25,6 @@ created and a special proxy installed (for Windows and Mac only).
 
 ### Al Qahera Al Youm
 
-
 ### Sotwesoora.Tv (Free service)
 
 ### Bokra arabic and international media content.
@@ -38,14 +37,17 @@ Watch MBC's TV catch-up server, [Shahid.net](http://shahid.mbc.net) in XBMC! Sha
 [Read more...](https://github.com/hadynz/repository.arabic.xbmc-addons/tree/master/plugin.video.shahid.net)
 
 ## Installation
-Simply download the [repository zip](https://github.com/downloads/hadynz/repository.arabic.xbmc-addons/repository.arabic.xbmc-addons-1.0.0.zip) 
+There are two main ways to install the repository:
+### 1. Using XBMC HUB's Fusion Server (recommended)
+1. Follow steps **1-13** from the following URL: http://www.xbmchub.com/blog/2012/04/24/fusion-easy-addon-installation-for-xbmc/
+2. Browse to the following **/video/world/arabic**
+3. Choose: **repository.arabic.xbmc-addons-1.0.0.zip**
+
+### 2. Manual Download and Installation
+1. Simply download the [repository zip](https://github.com/downloads/hadynz/repository.arabic.xbmc-addons/repository.arabic.xbmc-addons-1.0.0.zip) 
 and install it in XBMC.
-
-Read the following [guide](http://wiki.xbmc.org/index.php?title=Add-ons#How_to_install_from_zip) 
+2. Read the following [guide](http://wiki.xbmc.org/index.php?title=Add-ons#How_to_install_from_zip) 
 on the XBMC wiki to learn how to install addons from a repository.
-
-Alternatively, you can also use the 
-[XBMC's repository installer plugin](http://passion-xbmc.org/addons/?Page=View&ID=plugin.program.repo.installer).
 
 ## F.A.Q.
 ### When I install the repository from ZIP file, XBMC complains that it "does not have the correct structure".
