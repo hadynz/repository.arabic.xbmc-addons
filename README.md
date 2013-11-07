@@ -25,6 +25,7 @@ The following is a listing of the Arabic XBMC addons available from this reposit
 7 | Bokra | ? | ? | ?
 8 | Panet | ? | ? | ?
 9 | Alarab | ? | ? | ?
+10 | DailyTube4U.com | http://www.dailytube4u.com/ | No | On-Demand TV, News, Sports
 
 ## Installation
 There are two main ways to install this XBMC repository:
