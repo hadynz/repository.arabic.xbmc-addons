@@ -292,6 +292,27 @@ This plugin has been re-written to provide XBMC users with an amazing and native
     </extension>
 </addon>
 
+<addon
+  id="plugin.video.syriadrama"
+  version="1.0.0"
+  name="Syria Drama"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Syria Drama vod Arabic plugin</summary>
+    <description>Syria Drama Arabic plugin.</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.teledunet"
        name="Teledunet.com"
        version="1.1.0"
