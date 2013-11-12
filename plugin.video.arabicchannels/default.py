@@ -29,20 +29,20 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
-	addDir('All Channels','http://arabichannels.com/index.php',1,'http://arabichannels.com/images/general.jpg')
+	addDir('All Channels','http://arabichannels.com/',1,'http://arabichannels.com/images/general.jpg')
 	
 	
 		
 def indexChannels(url):
 	req = urllib2.Request(url)
-	req.add_header('Accept', ' text/html, application/xhtml+xml, */*')
-	req.add_header('Referer', 'http://arabichannels.com/')
-	req.add_header('User-Agent', 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)')
-	req.add_header('Accept-Encoding', ' gzip, deflate')
-	req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-	req.add_header('DNT', '1')
 	req.add_header('Host', 'arabichannels.com')
-	req.add_header('Cookie', 'tzLogin=jsuobfug5ef93ct6c93bnu8f46; __qca=P0-995007673-1378149031936; _pk_id.1.c9f1=18ee4dc4b5730162.1378149032.2.1379954957.1378149081.; _pk_ses.1.c9f1=*; HstCfa2398318=1378149046964; HstCla2398318=1379954941158; HstCmu2398318=1378149046964; HstPn2398318=1; HstPt2398318=2; HstCnv2398318=2; HstCns2398318=2; MLR72398318=1379954942000; MLRV_72398318=1379954942025; __zlcmid=L5dBUG7j5BRBI6')
+	req.add_header('Cache-Control', 'max-age=0')
+	req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+	req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
+	req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
+	req.add_header('Referer', 'http://arabichannels.com/')
+	req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
+	req.add_header('Cookie', ' __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; c_ref_2398318=http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic; tzLogin=shgt7sskuulgi2fiuo88d19bv2; _pk_ref.1.c9f1=%5B%22%22%2C%22%22%2C1381342881%2C%22http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic%22%5D; HstCmu2398318=1381342881259; MLRV_72398318=1381342891622; MLR72398318=1381342888000; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1381343208529; HstPn2398318=3; HstPt2398318=17; HstCnv2398318=11; HstCns2398318=11; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.7.1381343209.1380731782.; _pk_ses.1.c9f1=*')
 
 	response = urllib2.urlopen(req)
 	link=response.read()
@@ -60,21 +60,22 @@ def indexChannels(url):
 			elif "/images/" in image:
 				image="http://www.arabichannels.com"+image
 		if "IPTV Receiver" not in str(name):
-			addLink(name,path,2,image)
+			if "ArabiChannels TV" not in str(name):
+				addLink(name,path,2,image)
 		
 def playChannel(url):
 
 	if ".php" in str(url):
 
 		req = urllib2.Request(url)
-		req.add_header('Accept', ' text/html, application/xhtml+xml, */*')
-		req.add_header('Referer', 'http://arabichannels.com/')
-		req.add_header('User-Agent', 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)')
-		req.add_header('Accept-Encoding', ' gzip, deflate')
-		req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-		req.add_header('DNT', '1')
 		req.add_header('Host', 'arabichannels.com')
-		req.add_header('Cookie', 'tzLogin=jsuobfug5ef93ct6c93bnu8f46; __qca=P0-995007673-1378149031936; _pk_id.1.c9f1=18ee4dc4b5730162.1378149032.2.1379954957.1378149081.; _pk_ses.1.c9f1=*; HstCfa2398318=1378149046964; HstCla2398318=1379954941158; HstCmu2398318=1378149046964; HstPn2398318=1; HstPt2398318=2; HstCnv2398318=2; HstCns2398318=2; MLR72398318=1379954942000; MLRV_72398318=1379954942025; __zlcmid=L5dBUG7j5BRBI6')
+		req.add_header('Cache-Control', 'max-age=0')
+		req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+		req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
+		req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
+		req.add_header('Referer', 'http://arabichannels.com/')
+		req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
+		req.add_header('Cookie', ' __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; c_ref_2398318=http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic; tzLogin=shgt7sskuulgi2fiuo88d19bv2; _pk_ref.1.c9f1=%5B%22%22%2C%22%22%2C1381342881%2C%22http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic%22%5D; HstCmu2398318=1381342881259; MLRV_72398318=1381342891622; MLR72398318=1381342888000; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1381343208529; HstPn2398318=3; HstPt2398318=17; HstCnv2398318=11; HstCns2398318=11; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.7.1381343209.1380731782.; _pk_ses.1.c9f1=*')
 		response = urllib2.urlopen(req)
 		link=response.read()
 		streamer=(re.compile("'streamer':(.+?)',").findall(link))
@@ -85,8 +86,8 @@ def playChannel(url):
 		fileLoc=(re.compile("'file':(.+?)',").findall(link))
 		fileLoc=str(fileLoc[0]).replace("'", "").strip()
 		fileLoc=str(fileLoc).replace("'", "").replace('"', "").strip()
-		mynr=randint(1000,6000)
-		complete=streamer + ' playpath=' + fileLoc + ' swfUrl=http://arabichannels.com' + swf + ' flashver=WIN'+str(mynr)+'11 live=1 timeout=15 swfVfy=1 pageUrl='+str(url)
+		mynr=randint(4000,5000)
+		complete=streamer +'/'+fileLoc+ ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer=10.3.183 live=1 swfVfy=true pageUrl='+str(url)
 		listItem = xbmcgui.ListItem(path=str(complete))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		
@@ -94,14 +95,14 @@ def playChannel(url):
         
 			myfinalpath=' '
 			req = urllib2.Request(url)
-			req.add_header('Accept', ' text/html, application/xhtml+xml, */*')
-			req.add_header('Referer', 'http://arabichannels.com/')
-			req.add_header('User-Agent', 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)')
-			req.add_header('Accept-Encoding', ' gzip, deflate')
-			req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-			req.add_header('DNT', '1')
 			req.add_header('Host', 'arabichannels.com')
-			req.add_header('Cookie', 'tzLogin=jsuobfug5ef93ct6c93bnu8f46; __qca=P0-995007673-1378149031936; _pk_id.1.c9f1=18ee4dc4b5730162.1378149032.2.1379954957.1378149081.; _pk_ses.1.c9f1=*; HstCfa2398318=1378149046964; HstCla2398318=1379954941158; HstCmu2398318=1378149046964; HstPn2398318=1; HstPt2398318=2; HstCnv2398318=2; HstCns2398318=2; MLR72398318=1379954942000; MLRV_72398318=1379954942025; __zlcmid=L5dBUG7j5BRBI6')
+			req.add_header('Cache-Control', 'max-age=0')
+			req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+			req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
+			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
+			req.add_header('Referer', 'http://arabichannels.com/')
+			req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
+			req.add_header('Cookie', ' __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; c_ref_2398318=http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic; tzLogin=shgt7sskuulgi2fiuo88d19bv2; _pk_ref.1.c9f1=%5B%22%22%2C%22%22%2C1381342881%2C%22http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic%22%5D; HstCmu2398318=1381342881259; MLRV_72398318=1381342891622; MLR72398318=1381342888000; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1381343208529; HstPn2398318=3; HstPt2398318=17; HstCnv2398318=11; HstCns2398318=11; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.7.1381343209.1380731782.; _pk_ses.1.c9f1=*')
 			response = urllib2.urlopen(req)
 			link=response.read()
 			mypath=(re.compile("file: '(.+?)',").findall(link))
@@ -208,6 +209,7 @@ elif mode==1:
 elif mode==2:
         print ""+url
         playChannel(url)
+		
 
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

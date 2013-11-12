@@ -85,7 +85,7 @@
 
 <addon
   id="plugin.video.arabicchannels"
-  version="1.0.3"
+  version="1.0.4"
   name="ARABIC CHANNELS"
   provider-name="Bisha">
   <requires>

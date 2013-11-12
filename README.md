@@ -22,10 +22,13 @@ The following is a listing of the Arabic XBMC addons available from this reposit
 4 | GL Arab | http://www.glarab.com | No | Live TV
 5 | Teledunet | http://www.teledunet.com | No | Live TV
 6 | Sotwesoora.Tv | http://www.sotwesoora.tv | No | Movies, TV Series
-7 | Bokra | ? | ? | ?
-8 | Panet | ? | ? | ?
-9 | Alarab | ? | ? | ?
+7 | Bokra | http://bokra.net/ | No | Movies, TV Series
+8 | Panet | http://www.panet.co.il/ | No | Movies, TV Series
+9 | Alarab | http://www.alarab.net/ | No | Movies, TV Series
 10 | DailyTube4U.com | http://www.dailytube4u.com | No | On-Demand TV, News, Sports
+11 | Syrian-drama | http://syrian-drama.com/ | No | Movies, TV Series
+12 | Alquds Eyes | http://www.alqudseyes.com/ | No | Movies, TV Series
+13 | Arabichannels | http://arabichannels.com/ | No | Live TV
 
 ## Installation
 There are two main ways to install this XBMC repository:
