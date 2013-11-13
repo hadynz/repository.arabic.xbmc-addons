@@ -86,8 +86,12 @@ def playChannel(url):
 		fileLoc=(re.compile("'file':(.+?)',").findall(link))
 		fileLoc=str(fileLoc[0]).replace("'", "").strip()
 		fileLoc=str(fileLoc).replace("'", "").replace('"', "").strip()
-		mynr=randint(4000,5000)
-		complete=streamer +'/'+fileLoc+ ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer=10.3.183 live=1 swfVfy=true pageUrl='+str(url)
+		mynr1=randint(10,20)
+		mynr2=randint(0,10)
+		mynr3=randint(100,900)
+		
+		mynr=randint(10000,500000)
+		complete=streamer +'/'+fileLoc+ ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
 		listItem = xbmcgui.ListItem(path=str(complete))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		
@@ -102,7 +106,7 @@ def playChannel(url):
 			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
 			req.add_header('Referer', 'http://arabichannels.com/')
 			req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-			req.add_header('Cookie', ' __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; c_ref_2398318=http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic; tzLogin=shgt7sskuulgi2fiuo88d19bv2; _pk_ref.1.c9f1=%5B%22%22%2C%22%22%2C1381342881%2C%22http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic%22%5D; HstCmu2398318=1381342881259; MLRV_72398318=1381342891622; MLR72398318=1381342888000; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1381343208529; HstPn2398318=3; HstPt2398318=17; HstCnv2398318=11; HstCns2398318=11; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.7.1381343209.1380731782.; _pk_ses.1.c9f1=*')
+			#req.add_header('Cookie', ' __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; c_ref_2398318=http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic; tzLogin=shgt7sskuulgi2fiuo88d19bv2; _pk_ref.1.c9f1=%5B%22%22%2C%22%22%2C1381342881%2C%22http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic%22%5D; HstCmu2398318=1381342881259; MLRV_72398318=1381342891622; MLR72398318=1381342888000; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1381343208529; HstPn2398318=3; HstPt2398318=17; HstCnv2398318=11; HstCns2398318=11; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.7.1381343209.1380731782.; _pk_ses.1.c9f1=*')
 			response = urllib2.urlopen(req)
 			link=response.read()
 			mypath=(re.compile("file: '(.+?)',").findall(link))

@@ -51,9 +51,10 @@ in the 'Download Packages' section of the downloads page.
 
 ## Contributors
 * [hadynz](https://github.com/hadynz)
+* [bisha77](https://github.com/bisha77)
 * [Qwin](https://github.com/Qwin)
 * [bbk79](https://github.com/bbk79)
-* [bisha77](https://github.com/bisha77)
+
 
 ## Contribution
 If you want to contribute to this repository either reach me on [twitter](http://twitter.com/hadynz) or the XBMC forums via a [private message](http://forum.xbmc.org/member.php?action=profile&uid=137319).
