@@ -7,6 +7,8 @@ import StringIO
 import httplib
 import time
 from random import randint
+from urllib2 import Request, build_opener, HTTPCookieProcessor, HTTPHandler
+import cookielib
 
 __settings__ = xbmcaddon.Addon(id='plugin.video.arabicchannels')
 __icon__ = __settings__.getAddonInfo('icon')
@@ -16,7 +18,27 @@ _thisPlugin = int(sys.argv[1])
 _pluginName = (sys.argv[0])
 
 
+def getCookies(url):
 
+    #Create a CookieJar object to hold the cookies
+    cj = cookielib.CookieJar()
+    #Create an opener to open pages using the http protocol and to process cookies.
+    opener = build_opener(HTTPCookieProcessor(cj), HTTPHandler())
+    #create a request object to be used to get the page.
+    req = Request(url)
+    req.add_header('Host', 'arabichannels.com')
+    req.add_header('Cache-Control', 'max-age=0')
+    req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+    req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
+    req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
+    req.add_header('Referer', 'http://arabichannels.com/')
+    req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
+    f = opener.open(req)
+    #see the first few lines of the page
+    cj=str(cj).split('tzLogin=')[1]
+    cj=str(cj).split(' ')[0].strip()
+    return cj
+	
 def patch_http_response_read(func):
     def inner(*args):
         try:
@@ -42,8 +64,7 @@ def indexChannels(url):
 	req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
 	req.add_header('Referer', 'http://arabichannels.com/')
 	req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-	req.add_header('Cookie', ' __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; c_ref_2398318=http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic; tzLogin=shgt7sskuulgi2fiuo88d19bv2; _pk_ref.1.c9f1=%5B%22%22%2C%22%22%2C1381342881%2C%22http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic%22%5D; HstCmu2398318=1381342881259; MLRV_72398318=1381342891622; MLR72398318=1381342888000; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1381343208529; HstPn2398318=3; HstPt2398318=17; HstCnv2398318=11; HstCns2398318=11; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.7.1381343209.1380731782.; _pk_ses.1.c9f1=*')
-
+	req.add_header('Cookie', '  tzLogin='+str(getCookies('http://arabichannels.com/')))
 	response = urllib2.urlopen(req)
 	link=response.read()
 	matchObj=(re.compile('<div class="(.+?)"><a href="#" onclick="document.getElementById(.+?)><span class="nume"(.+?)</span><img src="(.+?)"/></a></div>').findall(link))
@@ -75,7 +96,7 @@ def playChannel(url):
 		req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
 		req.add_header('Referer', 'http://arabichannels.com/')
 		req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-		req.add_header('Cookie', ' __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; c_ref_2398318=http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic; tzLogin=shgt7sskuulgi2fiuo88d19bv2; _pk_ref.1.c9f1=%5B%22%22%2C%22%22%2C1381342881%2C%22http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic%22%5D; HstCmu2398318=1381342881259; MLRV_72398318=1381342891622; MLR72398318=1381342888000; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1381343208529; HstPn2398318=3; HstPt2398318=17; HstCnv2398318=11; HstCns2398318=11; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.7.1381343209.1380731782.; _pk_ses.1.c9f1=*')
+		req.add_header('Cookie', '  tzLogin='+str(getCookies('http://arabichannels.com/')))
 		response = urllib2.urlopen(req)
 		link=response.read()
 		streamer=(re.compile("'streamer':(.+?)',").findall(link))
@@ -89,11 +110,21 @@ def playChannel(url):
 		mynr1=randint(10,20)
 		mynr2=randint(0,10)
 		mynr3=randint(100,900)
-		
 		mynr=randint(10000,500000)
+		
+		#complete=streamer + ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
 		complete=streamer +'/'+fileLoc+ ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
 		listItem = xbmcgui.ListItem(path=str(complete))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+		time.sleep(6)
+		if xbmc.Player().isPlayingVideo()==False:
+			complete=streamer + ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
+			listItem = xbmcgui.ListItem(path=str(complete))
+			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+		
+		
+		
+		
 		
 	elif ".html" in str(url):
         
@@ -106,7 +137,8 @@ def playChannel(url):
 			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
 			req.add_header('Referer', 'http://arabichannels.com/')
 			req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-			#req.add_header('Cookie', ' __qca=P0-131665082-1378312345646; HstCfa2398318=1378312346484; c_ref_2398318=http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic; tzLogin=shgt7sskuulgi2fiuo88d19bv2; _pk_ref.1.c9f1=%5B%22%22%2C%22%22%2C1381342881%2C%22http%3A%2F%2Fforum.xbmc.org%2Fshowthread.php%3Ftid%3D173949%26highlight%3Darabic%22%5D; HstCmu2398318=1381342881259; MLRV_72398318=1381342891622; MLR72398318=1381342888000; __zlcmid=Kmd8axlKuhiHGM; HstCla2398318=1381343208529; HstPn2398318=3; HstPt2398318=17; HstCnv2398318=11; HstCns2398318=11; _pk_id.1.c9f1=fbf663c0b4b5b54e.1378312346.7.1381343209.1380731782.; _pk_ses.1.c9f1=*')
+			req.add_header('Cookie', '  tzLogin='+str(getCookies('http://arabichannels.com/')))
+			#req.add_header('Cookie', '  tzLogin=t5r8fm4vpck03ap6feeakj3of4; __qca=P0-831467814-1383850814929; HstCfa2398318=1383850815237; HstCmu2398318=1383850815237; HstCla2398318=1384292777596; HstPn2398318=1; HstPt2398318=6; HstCnv2398318=3; HstCns2398318=5; MLR72398318=1384292780000; __zlcmid=LodILVkuY96YpR; _pk_id.1.c9f1=ab7e13fd2cf6be07.1383850815.4.1384292879.1384285142.')
 			response = urllib2.urlopen(req)
 			link=response.read()
 			mypath=(re.compile("file: '(.+?)',").findall(link))
