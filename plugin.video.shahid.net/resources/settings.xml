@@ -3,7 +3,7 @@
 
   <category label="General">
     <setting label="Max video quality" id="quality" type="labelenum" values="720p HD|520p HIGH|360p LOW|240p LOWEST"
-             default="720p HD" />
+             default="520p HIGH" />
   </category>
 
 </settings>

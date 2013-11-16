@@ -1,87 +1,80 @@
-import json
 import re
-from urllib2 import (urlopen )
-from BeautifulSoup import BeautifulSoup
-
-API_KEY = '4cd216240b9e47c3d97450b9b4866d3f'
-
-URL_CHANNEL_LIST = "http://shahid.mbc.net/api/channelList?api_key={apiKey}&offset=0&limit=60"
-URL_PROGRAMS_LIST = "http://shahid.mbc.net/api/programsList?api_key={apiKey}&offset=0&limit=60&channel_id={channelID}"
-URL_MEDIA_LIST = "http://shahid.mbc.net/api/mediaList?api_key={apiKey}&offset=0&limit=60&program_id={programID}&sub_type={mediaType}"
-URL_MEDIA_INFO = "http://shahid.mbc.net/api/mediaInfoList?api_key={apiKey}&media_id={mediaID}&offset=0&limit=60&program_id={programID}&sub_type={mediaType}"
-
-URL_MEDIA_STREAM = "http://hadynz-shahid.appspot.com/scrape?m={mediaHash}"
-
-def get(url):
-    """Performs a GET request for the given url and returns the response"""
-    conn = urlopen(url)
-    resp = conn.read()
-    conn.close()
-    return resp
+from models import MediaType
+from resources.lib.common.utils import html
+from webservice import MediaItem
 
 
-def _html(url):
-    """Downloads the resource at the given url and parses via BeautifulSoup"""
-    return BeautifulSoup(get(url), convertEntities=BeautifulSoup.HTML_ENTITIES)
+MAX_LIMIT = 25
 
 
-def _json(url):
-    print 'Fetching JSON from: ' + url
-    response = get(url).decode("utf-8-sig")
-    return json.loads(response)
+URL_MOST_WATCHED = "http://shahid.mbc.net/Ajax/popular?operation={operation}&time_period=month&&offset={offset}&limit={maxLimit}"
+URL_LATEST = "http://shahid.mbc.net/Ajax/recent/{operation}/0/0/0/4?offset={offset}&limit={maxLimit}"
 
 
-def get_channels():
-    response = _json(URL_CHANNEL_LIST.format(apiKey=API_KEY))
-    return response['channels']
+MOST_WATCHED_MAP = {
+    MediaType.PROGRAM: 'load_popular_programs',
+    MediaType.EPISODE: 'load_popular_episodes',
+    MediaType.CLIP: 'load_popular_clips'
+}
 
-def get_channel_programs(channelID):
-    response = _json(URL_PROGRAMS_LIST.format(apiKey=API_KEY, channelID=channelID))
-    return response['programs']
+LATEST_MAP = {
+    MediaType.PROGRAM: 'load_recent_series',
+    MediaType.EPISODE: 'load_recent_episodes',
+    MediaType.CLIP: 'load_recent_clips'
+}
 
-def get_program_media(programID, mediaType):
-    response = _json(URL_MEDIA_LIST.format(apiKey=API_KEY, programID=programID, mediaType=mediaType))
-    return response['media']
+MEDIA_TYPE = {
+    MediaType.EPISODE: 'episode',
+    MediaType.CLIP: 'clip',
+    MediaType.PROGRAM: 'program',
+}
 
-def _get_media_info(programID, mediaType, mediaID):
-    response = _json(URL_MEDIA_INFO.format(apiKey=API_KEY, programID=programID, mediaType=mediaType, mediaID=mediaID))
-    return response['media']
 
-def _get_media_id_hash(programID, mediaType, mediaID):
-    mediaInfo = _get_media_info(programID, mediaType, mediaID)
-    mediaUrl = mediaInfo['media_url']
+def get_most_watched(programType):
+    url = URL_MOST_WATCHED.format(operation=MOST_WATCHED_MAP[programType], offset='0', maxLimit=MAX_LIMIT)
+    html_response = html(url)
 
-    try:
-        matchObj = re.search(r'media\/(.*)\.m3u8', mediaUrl, re.M|re.I)
-        mediaHash = matchObj.group(1)
+    items = html_response.find('ul').findAll('a', {'class': 'tip_anchor'})
+    return [_get_item(clip, programType) for clip in items]
 
-        return mediaHash
 
-    except Exception as ex:
-        print 'Error parsing media hash from media url: %s' % ex
+def _get_item(el, mediaType):
+    span_list = el.findAll('span', {'class': re.compile(r"\b.*title.*\b")})
+    description = el.find('span', {'class': 'title_minor'})
+    season_episode_str = span_list[2].contents[0].strip()
 
-    return None
+    # Extract Season and Episode no from a mixed string (e.g. "Season 1, Episode 3) in Arabic
+    digits_list = re.findall(r'\d{1,5}', season_episode_str)
 
-def get_media_stream(quality, programID, mediaType, mediaID):
-    mediaHash = _get_media_id_hash(programID, mediaType, mediaID)
-    streams = _json(URL_MEDIA_STREAM.format(apiKey=API_KEY, mediaHash=mediaHash))
+    json = {
+        'type': MEDIA_TYPE[mediaType],
+        'summary': '' if len(description.contents) == 0 else description.contents[0].strip(),
+        'series_name': span_list[0].contents[0].strip(' -'),
+        'episode_number': digits_list[1] if len(digits_list) > 1 else '',
+        'season_number': digits_list[0],
+        'thumb_url': el.find('img')['src'],
+        'url': re.sub('(.*[0-9]\/).*', r'\g<1>', el['href']), # strip out troublesome ascii characters
+    }
 
-    for stream in streams:
-        if quality == stream['Quality']:
-            return stream['URL']
+    return MediaItem(json)
 
-    return None
+
+def get_latest(mediaType):
+    '''
+    Deprecated. Using Shahid.Net API to fetch the latest media items by different media types
+    '''
+    url = URL_LATEST.format(operation=LATEST_MAP[mediaType], offset='0', maxLimit=MAX_LIMIT)
+    response = html(url)
+    return response
+
 
 def debug():
-    for program in get_channel_programs('8'):
-        print program['mobile_image_url'] + ' id=' + program['id'] + ' clip_count=' + program['clip_count'] + ' episode_count=' +  program['episode_count'] + ' item_type=' + program['item_type']
-
-    for media in get_program_media('1559', 'episodes'):
-        print media
-
-    print get_media_stream('360p LOW', '1559', 'episodes', '53899')
+    for item in get_most_watched(MediaType.CLIP):
+        print item.description
+        #print get_latest(MediaType.PROGRAM)
 
 
-# debug()
+if __name__ == '__main__':
+    debug()
 
 
