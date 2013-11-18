@@ -125,7 +125,7 @@
 
 <addon
   id="plugin.video.bokra"
-  version="2.6.0"
+  version="2.7.0"
   name="BOKRA"
   provider-name="Bisha">
   <requires>
@@ -235,6 +235,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
     <requires>
         <import addon="xbmc.python" version="2.0"/>
         <import addon="script.module.beautifulsoup" version="3.0.8"/>
+        <import addon="script.module.xbmcswift2" version="1.1.1" />
     </requires>
     <extension point="xbmc.python.pluginsource"
                library="default.py">
