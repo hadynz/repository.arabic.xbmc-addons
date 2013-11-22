@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.bokra"
-  version="2.7.0"
+  version="2.8.0"
   name="BOKRA"
   provider-name="Bisha">
   <requires>
@@ -14,7 +14,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Bokra vod Arabic plugin</summary>
-    <description>Bokra Arabic plugin.</description>
+    <description>Bokra Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/” </description>
    
     <platform>all</platform>
   </extension>

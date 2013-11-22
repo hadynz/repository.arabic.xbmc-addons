@@ -30,6 +30,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
+	xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'http://wadeni.com/images/icons/0alarab-net.jpg'))
 	addDir('مسلسلات عربية','http://tv1.alarab.net/view-1_%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_8',1,'http://www.alfnnews.com/files/pic/2012/5/19/2012561916144-alarb.gif')
 	addDir('افلام عربية','http://tv1.alarab.net/view-1_%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_1',4,'http://www.alfnnews.com/files/pic/2012/5/19/2012561916144-alarb.gif')
 	addDir('افلام كرتون','http://tv1.alarab.net/view-1_%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D9%83%D8%B1%D8%AA%D9%88%D9%86_295',4,'http://www.alfnnews.com/files/pic/2012/5/19/2012561916144-alarb.gif')

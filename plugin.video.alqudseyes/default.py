@@ -28,6 +28,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
+	xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'https://pbs.twimg.com/profile_images/1124212894/qudseyes.jpg'))
 	addDir('افلام','http://aflam.alqudseyes.com/',1,'http://aflam.alqudseyes.com/site_images/aqe_logo_new.png')
 	addDir('مسلسلات','http://mosalsalat.alqudseyes.com/',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
 	addDir('برامج تلفزيون','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86/c8',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
@@ -125,6 +126,7 @@ def get_film_video_file(url):
 	url_ch=str(url_ch).split('mp4:')
     
 	url_ch=url_ch[0]+' swfUrl=http://mosalsalat.alqudseyes.com/player/jw6/jwplayer.flash.swf playpath=mp4:'+url_ch[1]
+	#url_ch='http://assets.delvenetworks.com/player/loader.swf?playerForm=64fc5d4a5f47400fac523fba125a8de8&&mediaId=92bb83bb29d145d99b057cb8ef7d3020&&defaultQuality=Download&amp;allowHttpDownload=true&amp;pdBitrate=224&amp;allowSharePanel=true&amp;allowEmbed=true'
 	listItem = xbmcgui.ListItem(path=str(url_ch))
 	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	
