@@ -29,6 +29,7 @@ The following is a listing of the Arabic XBMC addons available from this reposit
 11 | Syrian-drama | http://syrian-drama.com/ | No | Movies, TV Series
 12 | Alquds Eyes | http://www.alqudseyes.com/ | No | Movies, TV Series
 13 | Arabichannels | http://arabichannels.com/ | No | Live TV
+14 | DramaCafe |http://online.dramacafe.tv/ | No | Movies, TV Series
 
 ## Installation
 There are two main ways to install this XBMC repository:
