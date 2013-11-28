@@ -26,12 +26,12 @@ def getCookies(url):
     opener = build_opener(HTTPCookieProcessor(cj), HTTPHandler())
     #create a request object to be used to get the page.
     req = Request(url)
-    req.add_header('Host', 'arabichannels.com')
+    req.add_header('Host', 'www.arabichannels.com')
     req.add_header('Cache-Control', 'max-age=0')
     req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
     req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
     req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-    req.add_header('Referer', 'http://arabichannels.com/')
+    req.add_header('Referer', 'http://www.arabichannels.com/')
     req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
     f = opener.open(req)
     #see the first few lines of the page
@@ -51,20 +51,20 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
-	addDir('All Channels','http://arabichannels.com/',1,'http://arabichannels.com/images/general.jpg')
+	addDir('All Channels','http://www.arabichannels.com/',1,'http://www.arabichannels.com/images/general.jpg')
 	
 	
 		
 def indexChannels(url):
 	req = urllib2.Request(url)
-	req.add_header('Host', 'arabichannels.com')
+	req.add_header('Host', 'www.arabichannels.com')
 	req.add_header('Cache-Control', 'max-age=0')
 	req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
 	req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
 	req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-	req.add_header('Referer', 'http://arabichannels.com/')
+	req.add_header('Referer', 'http://www.arabichannels.com/')
 	req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-	req.add_header('Cookie', '  tzLogin='+str(getCookies('http://arabichannels.com/')))
+	req.add_header('Cookie', '  tzLogin='+str(getCookies('http://www.arabichannels.com/')))
 	response = urllib2.urlopen(req)
 	link=response.read()
 	matchObj=(re.compile('<div class="(.+?)"><a href="#" onclick="document.getElementById(.+?)><span class="nume"(.+?)</span><img src="(.+?)"/></a></div>').findall(link))
@@ -89,14 +89,14 @@ def playChannel(url):
 	if ".php" in str(url):
 
 		req = urllib2.Request(url)
-		req.add_header('Host', 'arabichannels.com')
+		req.add_header('Host', 'www.arabichannels.com')
 		req.add_header('Cache-Control', 'max-age=0')
 		req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
 		req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
 		req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-		req.add_header('Referer', 'http://arabichannels.com/')
+		req.add_header('Referer', 'http://www.arabichannels.com/')
 		req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-		req.add_header('Cookie', '  tzLogin='+str(getCookies('http://arabichannels.com/')))
+		req.add_header('Cookie', '  tzLogin='+str(getCookies('http://www.arabichannels.com/')))
 		response = urllib2.urlopen(req)
 		link=response.read()
 		streamer=(re.compile("'streamer':(.+?)',").findall(link))
@@ -113,12 +113,12 @@ def playChannel(url):
 		mynr=randint(10000,500000)
 		
 		#complete=streamer + ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
-		complete=streamer +'/'+fileLoc+ ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
+		complete=streamer +'/'+fileLoc+ ' swfUrl=http://www.arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
 		listItem = xbmcgui.ListItem(path=str(complete))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		time.sleep(6)
 		if xbmc.Player().isPlayingVideo()==False:
-			complete=streamer + ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
+			complete=streamer + ' swfUrl=http://www.arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
 			listItem = xbmcgui.ListItem(path=str(complete))
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		
@@ -130,14 +130,14 @@ def playChannel(url):
         
 			myfinalpath=' '
 			req = urllib2.Request(url)
-			req.add_header('Host', 'arabichannels.com')
+			req.add_header('Host', 'www.arabichannels.com')
 			req.add_header('Cache-Control', 'max-age=0')
 			req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
 			req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
 			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-			req.add_header('Referer', 'http://arabichannels.com/')
+			req.add_header('Referer', 'http://www.arabichannels.com/')
 			req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-			req.add_header('Cookie', '  tzLogin='+str(getCookies('http://arabichannels.com/')))
+			req.add_header('Cookie', '  tzLogin='+str(getCookies('http://www.arabichannels.com/')))
 			#req.add_header('Cookie', '  tzLogin=t5r8fm4vpck03ap6feeakj3of4; __qca=P0-831467814-1383850814929; HstCfa2398318=1383850815237; HstCmu2398318=1383850815237; HstCla2398318=1384292777596; HstPn2398318=1; HstPt2398318=6; HstCnv2398318=3; HstCns2398318=5; MLR72398318=1384292780000; __zlcmid=LodILVkuY96YpR; _pk_id.1.c9f1=ab7e13fd2cf6be07.1383850815.4.1384292879.1384285142.')
 			response = urllib2.urlopen(req)
 			link=response.read()
@@ -153,7 +153,7 @@ def playChannel(url):
 					myfinalpath=(re.compile(' <meta base="(.+?)"/>').findall(link2))
 					myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
 					videosource=str(videosource).replace("['", "").replace("']", "").replace("'","").strip()
-					myfinalpath=myfinalpath + ' playpath=' + videosource + ' swfUrl=http://arabichannels.com/player4/jwplayer.flash.swf live=1 buffer=300000 timeout=15 swfVfy=1 pageUrl=http://arabichannels.com'
+					myfinalpath=myfinalpath + ' playpath=' + videosource + ' swfUrl=http://www.arabichannels.com/player4/jwplayer.flash.swf live=1 buffer=300000 timeout=15 swfVfy=1 pageUrl=http://www.arabichannels.com'
 					listItem = xbmcgui.ListItem(path=str(myfinalpath))
 					xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	
