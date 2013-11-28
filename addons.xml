@@ -85,7 +85,7 @@
 
 <addon
   id="plugin.video.arabicchannels"
-  version="1.0.7"
+  version="1.0.8"
   name="ARABIC CHANNELS"
   provider-name="Bisha">
   <requires>
@@ -182,6 +182,27 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   <extension point="xbmc.addon.metadata">
     <summary>DRAMACAFE vod Arabic plugin</summary>
     <description>DRAMACAFE Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.dubaitv"
+  version="1.1.0"
+  name="DUBAI TV"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="1.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>DUBAI TV vod Arabic plugin</summary>
+    <description>DUBAI TV Arabic plugin, This plugin is FREE , No one is permitted to sell it</description>
 
     <platform>all</platform>
   </extension>
