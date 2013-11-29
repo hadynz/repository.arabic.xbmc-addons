@@ -1,0 +1,35 @@
+2.0.2 (24.11.2013)
+ - added hardcoded streams that were curated by the XBMC community (including Al Jazeera Sport channels)
+
+2.0.1 (24.11.2013)
+ - dynamically generate PHP session ID instead of hardcode
+
+2.0.0 (24.11.2013)
+ - fixed issue fetching stream timestamp from Teledunet by adding new required host headers
+ - re-added browse by network and category
+ - new face-lift as bonus to all respected viewers of the plugin ;-)
+
+1.0.7
+ - Cached fetching of channels for 20 minutes to dramatically speed up menu browsing
+
+1.0.6
+ - Updated internal channels playpath to work well with XBMC favourite system. Minor code refactor as well
+
+1.0.5
+ - Updated plugin to work with new RTMP URL's implemented by the Teledunet service
+
+1.0.4
+ - Backup function which loads a offline html file of teledunet when the site is offline. Green colored
+   channels get a green font. Some minor bug fixes.
+
+1.0.3
+ - Fix to add channels to favorites list (make sure to delete old favorites)
+
+1.0.2
+ - Updated Teledunet scraper code to match update look of website
+
+1.0.1
+ - Minor fix to RTMP url - added pageUrl parameter which suddenly became required
+
+1.0.0
+ - initial release

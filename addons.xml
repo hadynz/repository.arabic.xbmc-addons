@@ -358,8 +358,8 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon id="plugin.video.teledunet"
        name="Teledunet.com"
-       version="1.1.0"
-       provider-name="hadynz fixed by formee (unofficial updated version)">
+       version="2.0.2"
+       provider-name="hadynz">
     <requires>
         <import addon="xbmc.python" version="2.0"/>
         <import addon="script.module.beautifulsoup" version="3.0.8"/>
