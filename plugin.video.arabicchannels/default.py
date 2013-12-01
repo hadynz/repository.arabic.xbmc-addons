@@ -35,8 +35,8 @@ def getCookies(url):
     req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
     f = opener.open(req)
     #see the first few lines of the page
-    cj=str(cj).split('tzLogin=')[1]
-    cj=str(cj).split(' ')[0].strip()
+    cj=str(cj).replace('<cookielib.CookieJar[<Cookie', '').replace('/>]>', '')
+    cj=str(cj).strip()
     return cj
 	
 def patch_http_response_read(func):
