@@ -2,12 +2,12 @@
 <addons>
 <addon
   id="plugin.video.alarab"
-  version="1.8.0"
+  version="1.9.0"
   name="ALARAB"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.0"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -15,7 +15,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Alarab VOD Arabic plugin by BISHA</summary>
-    <description>Alarab VOD Arabic plugin by BISHA. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+    <description>Alarab VOD Arabic plugin by BISHA. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>
@@ -43,12 +43,12 @@
 
 <addon
   id="plugin.video.alqudseyes"
-  version="1.1.0"
+  version="1.2.0"
   name="Alqudseyes"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="1.1"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -56,7 +56,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Alqudseyes vod Arabic plugin</summary>
-    <description>Alqudseyes Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+    <description>Alqudseyes Arabic plugin. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>
@@ -125,12 +125,12 @@
 
 <addon
   id="plugin.video.bokra"
-  version="2.8.0"
+  version="2.9.0"
   name="BOKRA"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.0"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -138,7 +138,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Bokra vod Arabic plugin</summary>
-    <description>Bokra Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/” </description>
+    <description>Bokra Arabic plugin. This plugin is completely FREE” </description>
 
     <platform>all</platform>
   </extension>
@@ -168,12 +168,12 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon
   id="plugin.video.dramacafe"
-  version="1.0.0"
+  version="1.1.0"
   name="DRAMACAFE "
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.0"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -181,7 +181,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>DRAMACAFE vod Arabic plugin</summary>
-    <description>DRAMACAFE Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+    <description>DRAMACAFE Arabic plugin. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>
@@ -189,12 +189,12 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon
   id="plugin.video.dubaitv"
-  version="1.1.0"
+  version="1.2.0"
   name="DUBAI TV"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="1.1"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -202,7 +202,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>DUBAI TV vod Arabic plugin</summary>
-    <description>DUBAI TV Arabic plugin, This plugin is FREE , No one is permitted to sell it</description>
+    <description>DUBAI TV Arabic plugin, This plugin is FREE</description>
 
     <platform>all</platform>
   </extension>
@@ -230,12 +230,12 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon
   id="plugin.video.panet"
-  version="1.5.0"
+  version="1.6.0"
   name="Panet"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="1.1"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -243,7 +243,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Panet vod Arabic plugin</summary>
-    <description>Panet Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+    <description>Panet Arabic plugin. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>
@@ -297,12 +297,12 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon
   id="plugin.video.sonara"
-  version="1.4.0"
+  version="1.5.0"
   name="Sonara"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.0"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -310,7 +310,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Sonara vod Arabic plugin</summary>
-    <description>Sonara Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+    <description>Sonara Arabic plugin. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>
@@ -337,12 +337,12 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon
   id="plugin.video.syriadrama"
-  version="1.1.0"
+  version="1.2.0"
   name="Syria Drama"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.0"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -350,7 +350,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Syria Drama vod Arabic plugin</summary>
-    <description>Syria Drama Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+    <description>Syria Drama Arabic plugin. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>

@@ -28,7 +28,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
-	xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'http://pschools.haifanet.org.il/abd.relchaj/2010/panet.jpg'))
+	#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'http://pschools.haifanet.org.il/abd.relchaj/2010/panet.jpg'))
 	addDir('مسلسلات رمضان 2013','http://www.panet.co.il/Ext/series.php?name=category&id=32&country=NL&page=',29,'')
 	addDir('مسلسلات سورية ولبنانية','http://www.panet.co.il/Ext/series.php?name=category&id=18&country=NL&page=',29,'')
 	addDir('مسلسلات مصرية','http://www.panet.co.il/Ext/series.php?name=category&id=19&country=NL&page=',29,'')

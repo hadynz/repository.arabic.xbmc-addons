@@ -27,7 +27,7 @@ def patch_http_response_read(func):
 httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 def GetCategories():
-	xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely, Nobody has the right to charge you for this addon', 16000, 'https://pbs.twimg.com/profile_images/1908891822/R5MpO.gif'))
+	#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely, Nobody has the right to charge you for this addon', 16000, 'https://pbs.twimg.com/profile_images/1908891822/R5MpO.gif'))
 	url='http://www.online.dramacafe.tv/index.html'
 	req = urllib2.Request(url)
 	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')

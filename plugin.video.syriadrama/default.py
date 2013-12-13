@@ -32,7 +32,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
-	xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'https://lh5.googleusercontent.com/-ZaRTz8kxk-k/AAAAAAAAAAI/AAAAAAAAAAA/f643_NNxkOU/s48-c-k-no/photo.jpg'))
+	#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'https://lh5.googleusercontent.com/-ZaRTz8kxk-k/AAAAAAAAAAI/AAAAAAAAAAA/f643_NNxkOU/s48-c-k-no/photo.jpg'))
 	addDir('SYRIA DRAMA','http://www.syria-drama.net/video-category/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/',1,'http://www.english.globalarabnetwork.com/images/stories/2009/August/Syria_Drama_Channel_Officially_Launched.jpg')
 	
 	

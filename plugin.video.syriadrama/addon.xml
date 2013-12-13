@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.syriadrama"
-  version="1.1.0"
+  version="1.2.0"
   name="Syria Drama"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.0"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -14,7 +14,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Syria Drama vod Arabic plugin</summary>
-    <description>Syria Drama Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+    <description>Syria Drama Arabic plugin. This plugin is completely FREE”</description>
    
     <platform>all</platform>
   </extension>

@@ -32,7 +32,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
-	xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'http://upload.wikimedia.org/wikipedia/he/b/b1/Bokra.net_logo.jpg'))
+	#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'http://upload.wikimedia.org/wikipedia/he/b/b1/Bokra.net_logo.jpg'))
 	addDir('مسلسلات رمضان 2013','http://www.bokra.net/VideoCategory/125/مسلسلات_رمضان_2013.html',6,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
 	addDir('مسلسلات عربية','http://www.bokra.net/VideoCategory/98/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA_%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
 	addDir('مسلسلات متنوعة','http://www.bokra.net/VideoCategory/43/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA.html',1,'http://images.bokra.net/bokra//28-11-2010/4shobek.jpg')
@@ -347,9 +347,12 @@ def VideoLinks(name,url):
 		
 		req = urllib2.Request(final_url)
 		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		req.add_header('Referer', 'http://bokra.net/?ref='+str(final_url))
 		response = urllib2.urlopen(req)
 		link=response.read()
+		
 		response.close()
+		
 		url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No"></iframe>').findall(link))
 		if len(str(url_ch))<3:
 				url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="360" height="260" scrolling="No"></iframe>').findall(link))
@@ -367,6 +370,7 @@ def VideoLinks(name,url):
 		if "GetVideoPlayer&ID=" in str(url_ch):
 			req = urllib2.Request(url_ch)
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			req.add_header('Referer', 'http://bokra.net/?ref='+str(url_ch))
 			response = urllib2.urlopen(req)
 			link=response.read()
 			#print "LINK " +link
@@ -384,6 +388,7 @@ def VideoLinks(name,url):
         
 			req = urllib2.Request(url_ch)
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			req.add_header('Referer', 'http://bokra.net/?ref='+str(url_ch))
 			response = urllib2.urlopen(req)
 			link=response.read()
 			#print "LINK " +link
@@ -400,6 +405,7 @@ def VideoLinks(name,url):
 			
 			req = urllib2.Request(final_url)
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			req.add_header('Referer', 'http://bokra.net/?ref='+str(final_url))
 			response = urllib2.urlopen(req)
 			link=response.read()
 			response.close()
@@ -428,6 +434,7 @@ def VideoLinks_Films(name,url):
 	
 	req = urllib2.Request(url)
 	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	req.add_header('Referer', 'http://bokra.net/?ref='+str(url))
 	response = urllib2.urlopen(req)
 	link=response.read()
 	response.close()
@@ -442,6 +449,7 @@ def VideoLinks_Films(name,url):
 	if "GetVideoPlayer&ID=" in str(url_ch):
 		req = urllib2.Request(url_ch)
 		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		req.add_header('Referer', 'http://bokra.net/?ref='+str(url_ch))
 		response = urllib2.urlopen(req)
 		link=response.read()
 		#print "LINK " +link
@@ -460,6 +468,7 @@ def VideoLinks_Films(name,url):
 	
 		req = urllib2.Request(url_ch)
 		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		req.add_header('Referer', 'http://bokra.net/?ref='+str(url_ch))
 		response = urllib2.urlopen(req)
 		link=response.read()
 		#print "LINK " +link
@@ -476,6 +485,7 @@ def VideoLinks_Films(name,url):
 		
 		req = urllib2.Request(final_url)
 		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		req.add_header('Referer', 'http://bokra.net/?ref='+str(final_url))
 		response = urllib2.urlopen(req)
 		link=response.read()
 		response.close()
