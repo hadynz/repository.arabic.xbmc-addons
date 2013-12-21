@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="plugin.video.unofficalteledunet"
+  version="1.0.0"
+  name="Unoffical Teledunet Plugin"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Unoffical teledunet</summary>
+    <description>Unoffical teledunet plugin.</description>
+   
+    <platform>all</platform>
+  </extension>
+</addon>
