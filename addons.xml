@@ -297,7 +297,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon
   id="plugin.video.sonara"
-  version="1.5.0"
+  version="1.6.0"
   name="Sonara"
   provider-name="Bisha">
   <requires>
@@ -310,7 +310,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Sonara vod Arabic plugin</summary>
-    <description>Sonara Arabic plugin. This plugin is completely FREE”</description>
+    <description>Sonara Arabic plugin. This plugin is completely FREE</description>
 
     <platform>all</platform>
   </extension>
