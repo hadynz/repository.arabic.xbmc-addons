@@ -422,11 +422,8 @@ def index_Teledunet(url):
 	for itemsImg in  image:
 		myImage="http://www.teledunet.com/"+str( itemsImg[1] )
 		imgArray.append(myImage) 
-	for items in style:
-		styleItem=str( items).split('background-color:#')[1]
-		styleItem=str( styleItem).replace(';"', '').strip()
-		colorArray.append(styleItem) 
-	for (names,images,paths,colors) in itertools.izip (nameArray,imgArray,pathArray,colorArray):
+	
+	for (names,images,paths) in itertools.izip (nameArray,imgArray,pathArray):
 		
 		addLink(names,paths,10,images)
 

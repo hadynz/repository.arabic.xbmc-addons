@@ -39,20 +39,6 @@ def CATEGORIES():
 	
 		
 def index(url):
-	url="http://www.teledunet.com/list_chaines.php"
-	req = urllib2.Request(url)
-	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-	response = urllib2.urlopen(req)
-	link=response.read()
-	response.close()
-	style=(re.compile('<div  id="(.+?)class=div_channel>').findall(link))
-	image=(re.compile('<img onerror="(.+?)src="(.+?)" height=').findall(link))
-	nameUrl=(re.compile('onclick="set_favoris(.+?);" style=').findall(link))
-	imgArray=[]
-	colorArray=[]
-	nameArray=[]
-	pathArray=[]
-	global globalIp
 	addLink('MBC','rtmp://www.teledunet.com:1935/teledunet/mbc_1',2,'https://si0.twimg.com/profile_images/1133033554/mbc-fb.JPG')
 	addLink('MBC DRAMA','rtmp://www.teledunet.com:1935/teledunet/mbc_drama',2,'http://www.allied-media.com/ARABTV/images/mbc_drama.jpg')
 	addLink('JSC +1','rtmp://www.teledunet.com:1935/teledunet/jsc_1',2,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
@@ -65,6 +51,10 @@ def index(url):
 	addLink('JSC +8','rtmp://www.teledunet.com:1935/teledunet/jsc_8',2,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
 	addLink('JSC +9','rtmp://www.teledunet.com:1935/teledunet/jsc_9',2,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
 	addLink('JSC +10','rtmp://www.teledunet.com:1935/teledunet/jsc_10',2,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
+	addLink('JSC 1 HD','rtmp://www.teledunet.com:1935/teledunet/tele_1_hd',2,'')
+	addLink('JSC 2 HD','rtmp://www.teledunet.com:1935/teledunet/tele_2_hd',2,'')
+	addLink('JSC 3 HD','rtmp://www.teledunet.com:1935/teledunet/tele_3_hd',2,'')
+	addLink('JSC 4 HD','rtmp://www.teledunet.com:1935/teledunet/tele_4_hd',2,'')
 	addLink('Abu Dhabi Al Oula','rtmp://www.teledunet.com:1935/teledunet/abu_dhabi',2,'https://www.zawya.com/pr/images/2009/ADTV_One_RGB_2009_10_08.jpg')
 	addLink('Abu Dhabi Sports','rtmp://www.teledunet.com:1935/teledunet/abu_dhabi_sports_1',2,'https://si0.twimg.com/profile_images/2485587448/2121.png')
 	addLink('Al Jazeera','rtmp://www.teledunet.com:1935/teledunet/aljazeera',2,'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg')
@@ -78,34 +68,65 @@ def index(url):
 	addLink('ART Aflam 2','rtmp://www.teledunet.com:1935/teledunet/art_aflam_2',2,'http://www.invision.com.sa/en/sites/default/files/imagecache/216x216/channels/2011/10/11/1138.jpg')
 	addLink('Cartoon Network','rtmp://www.teledunet.com:1935/teledunet/cartoon_network',2,'http://upload.wikimedia.org/wikipedia/commons/b/bb/Cartoon_Network_Arabic_logo.png')
 	addLink('MTV Lebanon','rtmp://www.teledunet.com:1935/teledunet/mtv',2,'http://mtv.com.lb/images/mtv-social-logo1.jpg')
+	addLink('AlJadeed','rtmp://www.teledunet.com:1935/teledunet/aljaded_sat',2,'')
 	addLink('NBN','rtmp://www.teledunet.com:1935/teledunet/nbn',2,'http://upload.wikimedia.org/wikipedia/en/1/14/Nbn_lebanon.png')
 	addLink('Otv Lebanon','rtmp://www.teledunet.com:1935/teledunet/otv_lebanon',2,'http://www.worldmedia.com.au/Portals/0/Images/Logo_s/otv.png')
 	addLink('Al Hayat','rtmp://www.teledunet.com:1935/teledunet/alhayat_1',2,'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg')
 	addLink('Al Hayat Cinema','rtmp://www.teledunet.com:1935/teledunet/alhayat_cinema',2,'http://www.lyngsat-logo.com/hires/aa/alhayat_cinema.png')
-	addLink('Alarabiya','rtmp://www.teledunet.com:1935/teledunet/alarabiya',2,'http://www.debbieschlussel.com/archives/alarabiya2.jpg')   
+	addLink('Alarabiya','rtmp://www.teledunet.com:1935/teledunet/alarabiya',2,'http://www.debbieschlussel.com/archives/alarabiya2.jpg')
 	addLink('Tele Sports','rtmp://www.teledunet.com:1935/teledunet/tele_sports',2,'http://www.itwebsystems.co.uk/resources/icon.png')
-	
+	addLink('Noursat','rtmp://www.teledunet.com:1935/teledunet/noursat',2,'')
+	addLink('TF1','rtmp://www.teledunet.com:1935/teledunet/tf1',2,'')
+	addLink('Al Masriyah','rtmp://www.teledunet.com:1935/teledunet/al_masriyah',2,'')
+	addLink('Iqra','rtmp://www.teledunet.com:1935/teledunet/Iqra',2,'')
+	addLink('Canal Plus','rtmp://www.teledunet.com:1935/teledunet/canal_plus',2,'')
+	addLink('Euro SPort 1','rtmp://www.teledunet.com:1935/teledunet/euro_sport_1',2,'')
+	addLink('France 2','rtmp://www.teledunet.com:1935/teledunet/france_2',2,'')
+	addLink('Melody Arabia','rtmp://www.teledunet.com:1935/teledunet/melody',2,'')
     
+	url="http://www.teledunet.com/list_chaines.php"
+	req = urllib2.Request(url)
+	req.add_header('Host', 'www.teledunet.com')
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:26.0) Gecko/20100101 Firefox/26.0')
+	req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+	req.add_header('Accept-Encoding', 'gzip, deflate')
+	req.add_header('Referer', 'http://www.teledunet.com/')
+	req.add_header('Cookie', str(getCookies(url)))
+	req.add_header('Connection', 'keep-alive')
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	response = urllib2.urlopen(req)
+	link=response.read()
+	
+	response.close()
+	style=(re.compile('<div  id="(.+?)class=div_channel>').findall(link))
+	#print style
+	image=(re.compile('<img onerror="(.+?)src="(.+?)" height=').findall(link))
+	
+	
+	nameUrl=(re.compile('onclick="set_favoris(.+?);" style=').findall(link))
+	
+	imgArray=[]
+	colorArray=[]
+	nameArray=[]
+	pathArray=[]
+	
+	
 	for itemNameUrl in nameUrl:
 		myItems=str(itemNameUrl).split(',')
+		
 		name=str(myItems[1]).replace("'",'').strip()
+		print name
 		path=str(myItems[2]).replace("'",'').replace(")",'').strip()
-		if not 'www' in path:
-			globalIp=str( path).split('teledunet')[0]
-			globalIp=str(globalIp).replace("1935/","1935")
-			#print globalIp
-		#path=str(path).replace("rtmp://www.teledunet.com:1935/",str(globalIp))
+		print path
 		nameArray.append(name) 
 		pathArray.append(path) 
     
 	for itemsImg in  image:
 		myImage="http://www.teledunet.com/"+str( itemsImg[1] )
+		print 
 		imgArray.append(myImage) 
-	for items in style:
-		styleItem=str( items).split('background-color:#')[1]
-		styleItem=str( styleItem).replace(';"', '').strip()
-		colorArray.append(styleItem) 
-	for (names,images,paths,colors) in itertools.izip (nameArray,imgArray,pathArray,colorArray):
+	
+	for (names,images,paths) in itertools.izip (nameArray,imgArray,pathArray):
 		
 		addLink(names,paths,2,images)
 	
