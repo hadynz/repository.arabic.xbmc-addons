@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
-  id="plugin.video.arabchannels"
-  version="1.0.3"
-  name="Arabic Live Streams"
+  id="plugin.video.ArabicStreamSuperCollection"
+  version="1.0.0"
+  name="Arabic Live Stream Super Collection"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.0"/>
+            version="2.7"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Arabic TV channels from different providers</summary>
-    <description>Arabic TV channels from different providers</description>
+    <summary>Arabic Live Stream Super Collection plugin</summary>
+    <description>Arabic Live Stream Super Collection, This plugin is FREE , No one is permitted to sell it</description>
    
     <platform>all</platform>
   </extension>
