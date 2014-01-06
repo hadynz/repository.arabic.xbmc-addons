@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.dardarkom"
-  version="1.0.0"
+  version="1.1.0"
   name="DARDARKOM MOVIES"
   provider-name="Bisha">
   <requires>
@@ -14,7 +14,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>DARDARKOM MOVIES Arabic plugin</summary>
-    <description>DARDARKOM MOVIES plugin, This plugin is FREE , No one is permitted to sell it</description>
+    <description>DARDARKOM MOVIES plugin, Arabic , Hollywood, European and Bollywood movies </description>
    
     <platform>all</platform>
   </extension>

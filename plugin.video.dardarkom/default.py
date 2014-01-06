@@ -34,11 +34,11 @@ def getCategories():
 	addDir('افلام اسيوية','http://www.dardarkom.com/watch-asian-movies-on-line',3,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,30,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
 	addDir('أفلام اوروبية عالمية','http://www.dardarkom.com/watch-european-movies',1,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,7,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
 	addDir('أفلام انمي كرتون اون لاين','http://www.dardarkom.com/anime',1,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,7,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
-	addDir('أفلام وثائقية اون لاين','http://www.dardarkom.com/documentary-films',4,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,10,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
+	addDir('أفلام وثائقية اون لاين','http://www.dardarkom.com/documentary-films',5,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,10,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
 	addDir('أفلام مصرية أون لاين','http://www.dardarkom.com/filme-enline/filme-egypt',3,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,30,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
-	addDir('أفلام مصرية قديمة أون لاين','http://www.dardarkom.com/filme-enline/classic',4,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,10,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
-	addDir('أفلام مغربية اون لاين','http://www.dardarkom.com/filme-enline/filme-maroc',1,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,7,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
-	addDir('أفلام عربية اون لاين','http://www.dardarkom.com/filme-enline/arabic',4,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,10,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
+	addDir('أفلام مصرية قديمة أون لاين','http://www.dardarkom.com/filme-enline/classic',5,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,10,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
+	addDir('أفلام مغربية اون لاين','http://www.dardarkom.com/filme-enline/filme-maroc',5,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,7,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
+	addDir('أفلام عربية اون لاين','http://www.dardarkom.com/filme-enline/arabic',5,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',1,10,'DESCRIPTION','0.0',"N/A","N/A","N/A","N/A","N/A","N/A")
 
 def removeArabicCharsFromString(myString):
     finalString=''
@@ -62,13 +62,16 @@ def getImdbCred(movieName):
     myImdbArray={"Year":"","Genre":"","Poster":"", "Plot":"","imdbRating":"","Actors":"","Runtime":"","Writer":"","Director":""}
     
     if 'Response":"False"' in str(link):
-        myImdbArray["Year"]="Error"
-        myImdbArray["Genre"]="Error"
-        myImdbArray["Poster"]="Error"
-        myImdbArray["Plot"]="Error"
-        myImdbArray["imdbRating"]="Error"
-        myImdbArray["Actors"]="Error"
-        myImdbArray["Runtime"]="Error"
+		myImdbArray["Year"]="No Year found"
+		myImdbArray["Genre"]="No Genre found"
+		myImdbArray["Poster"]="No Poster found"
+		myImdbArray["Plot"]="No Plot found"
+		myImdbArray["imdbRating"]="No Rating found"
+		myImdbArray["Actors"]="No Actors found"
+		myImdbArray["Runtime"]="No Runtime found"
+		myImdbArray["Writer"]="No Writer found"
+		myImdbArray["Director"]="No Director found"
+		 
         
     if 'Response":"True"' in str(link):
         try:
@@ -76,7 +79,7 @@ def getImdbCred(movieName):
             Year=str(Year).replace("['", "").replace("']", "").strip()
             myImdbArray["Year"]=Year
         except:
-            myImdbArray["Year"]="Error"
+            myImdbArray["Year"]="No Year found"
             pass
         
         try:
@@ -84,7 +87,7 @@ def getImdbCred(movieName):
             Genre=str(Genre).replace("['", "").replace("']", "").strip()
             myImdbArray["Genre"]=Genre
         except:
-            myImdbArray["Genre"]="Error"
+            myImdbArray["Genre"]="No Genre found"
             pass
         
         try:
@@ -93,7 +96,7 @@ def getImdbCred(movieName):
             myImdbArray["Poster"]=Poster
            
         except:
-            myImdbArray["Poster"]="Error"
+            myImdbArray["Poster"]="No Poster found"
             pass
         
         try:
@@ -102,7 +105,7 @@ def getImdbCred(movieName):
             myImdbArray["Plot"]=Plot
            
         except:
-            myImdbArray["Plot"]="Error"
+            myImdbArray["Plot"]="No Plot found"
             pass
         
         try:
@@ -111,7 +114,7 @@ def getImdbCred(movieName):
             myImdbArray["imdbRating"]=imdbRating
             
         except:
-            myImdbArray["imdbRating"]="Error"
+            myImdbArray["imdbRating"]="No Rating found"
             pass
         
         try:
@@ -120,7 +123,7 @@ def getImdbCred(movieName):
             myImdbArray["Actors"]=Actors
             
         except:
-            myImdbArray["Actors"]="Error"
+            myImdbArray["Actors"]="No Actors found"
             pass
         
         try:
@@ -129,7 +132,7 @@ def getImdbCred(movieName):
             myImdbArray["Writer"]=Writer
             
         except:
-            myImdbArray["Writer"]="Error"
+            myImdbArray["Writer"]="No Writer found"
             pass
         
         try:
@@ -138,7 +141,7 @@ def getImdbCred(movieName):
             myImdbArray["Director"]=Director
             
         except:
-            myImdbArray["Director"]="Error"
+            myImdbArray["Director"]="No Director found"
             pass
         
         try:
@@ -164,14 +167,21 @@ def getImdbCred(movieName):
                 myImdbArray["Runtime"]=Runtime
                 
         except:
-            myImdbArray["Runtime"]="Error"
+            myImdbArray["Runtime"]="No Runtime found"
             pass
     return myImdbArray
 	
 def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,director):
 	try:
-		for i in range(initial,max):
-			req = urllib2.Request(url+'/page/'+str(i)+'/')
+		for counter in range(initial,max):
+			dlg = xbmcgui.DialogProgress()
+			line1 = 'Getting the movies...'
+			dlg.create('In progress, Please wait...', line1)
+			percent = int((counter * 100) / max)
+			label = str(counter)+" out of "+str(max)+" pages"
+			dlg.update(percent, line1, label)
+			
+			req = urllib2.Request(url+'/page/'+str(counter)+'/')
 			response = urllib2.urlopen(req)
 			link=response.read()
 			url_target=(re.compile('<a href="(.+?)"><font color="(.+?)">(.+?)</font>   </a>').findall(link))
@@ -194,12 +204,12 @@ def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 				duration=str(myResult["Runtime"]).strip()
 				writer=str(myResult["Writer"]).strip()
 				director=str(myResult["Director"]).strip()
-				if  myResult["Plot"]=="Error" and myResult["Poster"]=="Error" and rating=="Error" and genre=="Error" and year=="Error" and cast=="Error" and duration=="Error" and writer=="Error" and director=="Error":
-					addLink(name2+"\n"+genre+": "+year,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
+				if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
+					addLink(name+"\n"+genre+": "+year,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
 				else:
 					plot2= getImdbCred(name2)["Plot"]
 					combinedPlot=str(plot)+"\n"+"\n"+str(plot2)+"\n"+"Actors: "+str(cast)
-					addLink(name2+"\n"+genre+": "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
+					addLink(name+"\n"+genre+": "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
 					
 			if len(str(name))<2:
 				url_target2=(re.compile('<a href="(.+?)">(.+?)</a></center>').findall(link))
@@ -218,12 +228,12 @@ def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 					duration=str(myResult["Runtime"]).strip()
 					writer=str(myResult["Writer"]).strip()
 					director=str(myResult["Director"]).strip()
-					if  myResult["Plot"]=="Error" and myResult["Poster"]=="Error" and rating=="Error" and genre=="Error" and year=="Error" and cast=="Error" and duration=="Error" and writer=="Error" and director=="Error":
-						addLink(name2+"\n"+genre+": "+year,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
+					if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
+						addLink(name+"\n"+genre+": "+year,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
 					else:
 						plot2= getImdbCred(name2)["Plot"]
 						combinedPlot=str(plot)+"\n"+"\n"+str(plot2)+"\n"+"Actors: "+str(cast)
-						addLink(name2+"\n"+genre+": "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
+						addLink(name+"\n"+genre+": "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
 	except:
 		pass
 				
@@ -233,20 +243,96 @@ def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 	addDir('<<<< اضهار افلام جديدة',url,4,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',initial,max,'DESCRIPTION','0.0')
 
 	
-		
+def indexOldEgyptian(url,initial,max,plot,rating,genre,cast,year,duration,writer,director):
+	try:
+		for counter in range(initial,max):
+			dlg = xbmcgui.DialogProgress()
+			line1 = 'Getting the movies...'
+			dlg.create('In progress, Please wait...', line1)
+			percent = int((counter * 100) / max)
+			label = str(counter)+" out of "+str(max)+" pages"
+			dlg.update(percent, line1, label)
+			
+			req = urllib2.Request(url+'/page/'+str(counter)+'/')
+			response = urllib2.urlopen(req)
+			link=response.read()
+			url_target=(re.compile('<a href="(.+?)"><font color="(.+?)">(.+?)</font>   </a>').findall(link))
+			url_2=(re.compile('<a href="(.+?)" onclick="return hs.expand').findall(link))
+			target= re.findall(r'<div  style="font-family:Tahoma;font-size:9pt;color: #5C7287;;text-align:right;padding:10px; margin-right:10px;">(.*?)\s(.*?)</div>', link, re.DOTALL)
+			name=''
+			
+			for (itr,items,it) in itertools.izip  (url_target,url_2,target):
+				name=str( itr[2]).strip()
+				path =str(itr[0]).strip()
+				image=str(items).strip()
+				plot=str( it[1]).strip()
+				name2=removeArabicCharsFromString(name)
+				myResult=(getImdbCred(name2))
+				myFanart=str(myResult["Poster"]).strip()
+				rating=str(myResult["imdbRating"]).strip()
+				genre=str(myResult["Genre"]).strip()
+				cast=str(myResult["Actors"]).strip()
+				year=str(myResult["Year"]).strip()
+				duration=str(myResult["Runtime"]).strip()
+				writer=str(myResult["Writer"]).strip()
+				director=str(myResult["Director"]).strip()
+				if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
+					addLink(name,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
+				else:
+					plot2= getImdbCred(name2)["Plot"]
+					combinedPlot=str(plot)+"\n"+"\n"+str(plot2)+"\n"+"Actors: "+str(cast)
+					addLink(name,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
+					
+			if len(str(name))<2:
+				url_target2=(re.compile('<a href="(.+?)">(.+?)</a></center>').findall(link))
+				url_2=(re.compile('<center><div class="boxshort"> <img src="(.+?)" alt="').findall(link))
+				for (itr,items) in itertools.izip  (url_target2,url_2):
+					path=str( itr[0]).strip()
+					name=str( itr[1]).strip()
+					image=str(items).strip()
+					name2=removeArabicCharsFromString(name)
+					myResult=(getImdbCred(name2))
+					myFanart=str(myResult["Poster"]).strip()
+					rating=str(myResult["imdbRating"]).strip()
+					genre=str(myResult["Genre"]).strip()
+					cast=str(myResult["Actors"]).strip()
+					year=str(myResult["Year"]).strip()
+					duration=str(myResult["Runtime"]).strip()
+					writer=str(myResult["Writer"]).strip()
+					director=str(myResult["Director"]).strip()
+					if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
+						addLink(name,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
+					else:
+						plot2= getImdbCred(name2)["Plot"]
+						combinedPlot=str(plot)+"\n"+"\n"+str(plot2)+"\n"+"Actors: "+str(cast)
+						addLink(name,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
+	except:
+		pass
+	initial=initial+10
+	max=max + 10
+	addDir('<<<< اضهار افلام جديدة',url,5,'http://www.theonestopfunshop.com/product_images/uploaded_images/movie-night.jpg',initial,max,'DESCRIPTION','0.0')
+
+	
 def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,director):
 	try:
 	
-		for i in range(initial,max):
+		for counter in range(initial,max):
 			url_target=""
 			url_2=""
 			target=""
 			name=''
 			fanart=''
 			link=""
-		
+			
+			dlg = xbmcgui.DialogProgress()
+			line1 = 'Getting the movies...'
+			dlg.create('In progress, Please wait...', line1)
+			percent = int((counter * 100) / max)
+			label = str(counter)+" out of "+str(max)+" pages"
+			dlg.update(percent, line1, label)
+			
 			try:
-				req = urllib2.Request(url+'/page/'+str(i)+'/')
+				req = urllib2.Request(url+'/page/'+str(counter)+'/')
 				response = urllib2.urlopen(req)
 				link=response.read()
 				url_target=(re.compile('<a href="(.+?)"><font color="(.+?)">(.+?)</font>   </a>').findall(link))
@@ -274,7 +360,7 @@ def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 				duration=str(myResult["Runtime"]).strip()
 				writer=str(myResult["Writer"]).strip()
 				director=str(myResult["Director"]).strip()
-				if  myResult["Plot"]=="Error" and myResult["Poster"]=="Error" and rating=="Error" and genre=="Error" and year=="Error" and cast=="Error" and duration=="Error" and writer=="Error" and director=="Error":
+				if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
 					addLink(name2+"\n"+genre+": "+year,path,2,image,image,plot,'N/A','N/A','N/A','N/A','N/A')
 				else:
 					plot2= getImdbCred(name2)["Plot"]
@@ -290,7 +376,7 @@ def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 					image=str(items).strip()
 					name2=removeArabicCharsFromString(name)
 					myResult=(getImdbCred(name2))
-					if  myResult["Plot"]=="Error" and myResult["Poster"]=="Error" and rating=="Error" and genre=="Error" and year=="Error" and cast=="Error" and duration=="Error":
+					if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
 						addLink(name2+"\n"+genre+": "+year,path,2,image,image," ","N/A","N/A","N/A","N/A")
 					else:
 						myFanart=str(myResult["Poster"]).strip()
@@ -315,9 +401,15 @@ def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 
 def indexEgyptian(url,initial,max,plot,rating,genre,cast,year,duration,writer,director):
 	try:
-		for i in range(initial,max):
+		for counter in range(initial,max):
 			
-			req = urllib2.Request(url+'/page/'+str(i)+'/')
+			dlg = xbmcgui.DialogProgress()
+			line1 = 'Getting the movies...'
+			dlg.create('In progress, Please wait...', line1)
+			percent = int((counter * 100) / max)
+			label = str(counter)+" out of "+str(max)+" pages"
+			dlg.update(percent, line1, label)
+			req = urllib2.Request(url+'/page/'+str(counter)+'/')
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 			response = urllib2.urlopen(req)
 			link=response.read()
@@ -510,5 +602,9 @@ elif mode==3:
 elif mode==4:
         print ""+url
         indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,director)
+		
+elif mode==5:
+        print ""+url
+        indexOldEgyptian(url,initial,max,plot,rating,genre,cast,year,duration,writer,director)
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
