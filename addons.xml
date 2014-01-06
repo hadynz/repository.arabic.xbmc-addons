@@ -167,6 +167,27 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 </addon>
 
 <addon
+  id="plugin.video.dardarkom"
+  version="1.0.0"
+  name="DARDARKOM MOVIES"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="1.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>DARDARKOM MOVIES Arabic plugin</summary>
+    <description>DARDARKOM MOVIES plugin, This plugin is FREE , No one is permitted to sell it</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
   id="plugin.video.dramacafe"
   version="1.1.0"
   name="DRAMACAFE "
