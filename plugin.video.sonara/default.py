@@ -121,33 +121,7 @@ def listEpos(url):
     except:
 		pass
 
-def getVideoFileOLD(url):
-    try:
-		url='http://www.sonara.net/video_player_new.php?ID='+str(url) 
-		req = urllib2.Request(url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.9.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); geo_user=INT; popupbannerA=1')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		link=str(link).split(';')
-		firstpath=''
-		secpath=''
-		
-		for items in link:
-			
-			if 'file' in str( items):
-				secpath=str( items).replace("dlk.addVariable('file','", '').split("&image=")
-            
-				secpath=str( secpath[0]).strip()
-            
-				playingpath='rtmp://vod.sonara.net/cvod swfUrl=http://www.sonara.net/mediaplayera/player.swf playpath='+str(secpath)
-			
-				listItem = xbmcgui.ListItem(path=str(playingpath))
-				xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
-				
-    except:
-		pass
-		
+
 def getVideoFile(url):
 	try:
 			url='http://www.sonara.net/video_player_new.php?ID='+str(url) 
@@ -156,22 +130,28 @@ def getVideoFile(url):
 			req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.9.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); geo_user=INT; popupbannerA=1')
 			response = urllib2.urlopen(req)
 			link=response.read()
-			link=str(link).split(';')
-			firstpath=''
-			secpath=''
-			mySwf=''
-			secpath=''
-			for items in link:
-				if 'file' in str( items):
-					
-					secpath=str( items).replace("dlk.addVariable('file','", '').split("&image=")
-					
-					secpath=str( secpath[0]).strip()
-				if 'SWFObject' in  str( items):
-					mySwf=str( items).split('>')
-					mySwf=str( mySwf[6]).replace("var dlk = new SWFObject('", "").replace("'","").strip()
-					mySwf=str(mySwf).split(',')[0]
-			playingpath='rtmp://vod.sonara.net/cvod swfUrl='+str(mySwf)+' playpath='+str(secpath)
+			target= re.findall(r"<script type='text/javascript'>(.*?)\s(.*?)</script>", link, re.DOTALL)
+			target=str(target).split(',')
+			mp4File=''
+			swfFile=''
+			rtmp=''
+			for itr in target:
+				if 'mp4' in itr:
+					mp4File=str(itr).split("&image=")[0]
+					mp4File=str(mp4File).replace("\'mp4:","").strip()
+					mp4File=str(mp4File).replace("\/","mp4:/").strip()
+				if 'SWFObject' in itr:
+					swfFile=str( itr).split("SWFObject")[1]
+					swfFile=str(swfFile).split("http:")[1]
+					swfFile=str(swfFile).split(".swf")[0]
+					swfFile="http:"+swfFile+".swf"
+				if 'rtmp' in itr:
+					rtmp=str( itr).split("');")[0]
+					rtmp=str( rtmp).split("rtmp:")[1]
+					rtmp=rtmp[:-1]
+					rtmp="rtmp:"+rtmp
+					swfFile="http://www.sonara.net/mediaplayera/player.swf"
+			playingpath=rtmp+" swfUrl="+swfFile+" playpath="+mp4File
 			listItem = xbmcgui.ListItem(path=str(playingpath))
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	except:
