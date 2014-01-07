@@ -194,6 +194,7 @@ def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 				path =str(itr[0]).strip()
 				image=str(items).strip()
 				plot=str( it[1]).strip()
+				plot=str(plot).replace("&quot;","").replace(";quot&","")
 				name2=removeArabicCharsFromString(name)
 				myResult=(getImdbCred(name2))
 				myFanart=str(myResult["Poster"]).strip()
@@ -204,12 +205,14 @@ def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 				duration=str(myResult["Runtime"]).strip()
 				writer=str(myResult["Writer"]).strip()
 				director=str(myResult["Director"]).strip()
+				genre = "[COLOR=%s]%s[/COLOR]" % ( "FF00FF00", genre  )
+				year = "[COLOR=%s]%s[/COLOR]" % ( "FFFF0000  ", year  )
 				if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
-					addLink(name+"\n"+genre+": "+year,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
+					addLink(name+" "+genre+" "+year,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
 				else:
 					plot2= getImdbCred(name2)["Plot"]
 					combinedPlot=str(plot)+"\n"+"\n"+str(plot2)+"\n"+"Actors: "+str(cast)
-					addLink(name+"\n"+genre+": "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
+					addLink(name+" "+genre+" "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
 					
 			if len(str(name))<2:
 				url_target2=(re.compile('<a href="(.+?)">(.+?)</a></center>').findall(link))
@@ -228,12 +231,14 @@ def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 					duration=str(myResult["Runtime"]).strip()
 					writer=str(myResult["Writer"]).strip()
 					director=str(myResult["Director"]).strip()
+					genre = "[COLOR=%s]%s[/COLOR]" % ( "FF00FF00", genre  )
+					year = "[COLOR=%s]%s[/COLOR]" % ( "FFFF0000  ", year  )
 					if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
-						addLink(name+"\n"+genre+": "+year,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
+						addLink(name+" "+genre+" "+year,path,2,image,image,plot,' ',"N/A","N/A","N/A","N/A","N/A","N/A")
 					else:
 						plot2= getImdbCred(name2)["Plot"]
 						combinedPlot=str(plot)+"\n"+"\n"+str(plot2)+"\n"+"Actors: "+str(cast)
-						addLink(name+"\n"+genre+": "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
+						addLink(name+" "+genre+" "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
 	except:
 		pass
 				
@@ -266,6 +271,7 @@ def indexOldEgyptian(url,initial,max,plot,rating,genre,cast,year,duration,writer
 				path =str(itr[0]).strip()
 				image=str(items).strip()
 				plot=str( it[1]).strip()
+				plot=str(plot).replace("&quot;","").replace(";quot&","")
 				name2=removeArabicCharsFromString(name)
 				myResult=(getImdbCred(name2))
 				myFanart=str(myResult["Poster"]).strip()
@@ -350,6 +356,7 @@ def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 				path =str(itr[0]).strip()
 				image=str(items).strip()
 				plot=str( it[1]).strip()
+				plot=str(plot).replace("&quot;","").replace(";quot&","")
 				name2=removeArabicCharsFromString(name)
 				myResult=(getImdbCred(name2))
 				myFanart=str(myResult["Poster"]).strip()
@@ -360,12 +367,14 @@ def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 				duration=str(myResult["Runtime"]).strip()
 				writer=str(myResult["Writer"]).strip()
 				director=str(myResult["Director"]).strip()
+				genre = "[COLOR=%s]%s[/COLOR]" % ( "FF00FF00", genre  )
+				year = "[COLOR=%s]%s[/COLOR]" % ( "FFFF0000  ", year  )
 				if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
-					addLink(name2+"\n"+genre+": "+year,path,2,image,image,plot,'N/A','N/A','N/A','N/A','N/A')
+					addLink(name2+" "+genre+" "+year,path,2,image,image,plot,'N/A','N/A','N/A','N/A','N/A')
 				else:
 					plot2= getImdbCred(name2)["Plot"]
 					combinedPlot=str(plot)+"\n"+"\n"+str(plot2)+"\n"+"Actors: "+str(cast)
-					addLink(name2+"\n"+genre+": "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
+					addLink(name2+" "+genre+" "+year,path,2,image,myFanart,combinedPlot,rating,genre,cast,year,duration,writer,director)
 							
 			if len(str(name))<2:
 				url_target2=(re.compile('<a href="(.+?)">(.+?)</a></center>').findall(link))
@@ -376,8 +385,10 @@ def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 					image=str(items).strip()
 					name2=removeArabicCharsFromString(name)
 					myResult=(getImdbCred(name2))
+					genre = "[COLOR=%s]%s[/COLOR]" % ( "FF00FF00", genre  )
+					year = "[COLOR=%s]%s[/COLOR]" % ( "FFFF0000  ", year  )
 					if  myResult["Plot"]=="No Plot found" and myResult["Poster"]=="No Poster found" and rating=="No Rating found" and genre=="No Genre found" and year=="No Year found" and cast=="No Actors found" and duration=="No Runtime found" and writer=="No Writer found" and director=="No Director found":
-						addLink(name2+"\n"+genre+": "+year,path,2,image,image," ","N/A","N/A","N/A","N/A")
+						addLink(name2+" "+genre+" "+year,path,2,image,image," ","N/A","N/A","N/A","N/A")
 					else:
 						myFanart=str(myResult["Poster"]).strip()
 						plot2= getImdbCred(name2)["Plot"]
@@ -389,7 +400,9 @@ def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 						duration=str(myResult["Runtime"]).strip()
 						writer=str(myResult["Writer"]).strip()
 						director=str(myResult["Director"]).strip()
-						addLink(name2+"\n"+genre+": "+year,path,2,image,myFanart,plot2,rating,genre,cast,year,duration,writer,director)
+						genre = "[COLOR=%s]%s[/COLOR]" % ( "FF00FF00", genre  )
+						year = "[COLOR=%s]%s[/COLOR]" % ( "FFFF0000  ", year  )
+						addLink(name2+" "+genre+" "+year,path,2,image,myFanart,plot2,rating,genre,cast,year,duration,writer,director)
 			
 					
 	except:
@@ -422,6 +435,7 @@ def indexEgyptian(url,initial,max,plot,rating,genre,cast,year,duration,writer,di
 				name=str( itr[2]).strip()
 				path=str(i).strip()
 				plot=str( trpl[1]).strip()
+				plot=str(plot).replace("&quot;","").replace(";quot&","")
 				addLink(name,path,2,image,image,plot," ","N/A","N/A","N/A","N/A","N/A","N/A")
 	
 	except:
