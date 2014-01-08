@@ -173,7 +173,7 @@ def getImdbCred(movieName):
 	
 def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,director):
 	try:
-		for counter in range(initial,max):
+		for counter in range(initial,max+1):
 			dlg = xbmcgui.DialogProgress()
 			line1 = 'Getting the movies...'
 			dlg.create('In progress, Please wait...', line1)
@@ -250,7 +250,7 @@ def indexIndian(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 	
 def indexOldEgyptian(url,initial,max,plot,rating,genre,cast,year,duration,writer,director):
 	try:
-		for counter in range(initial,max):
+		for counter in range(initial,max+1):
 			dlg = xbmcgui.DialogProgress()
 			line1 = 'Getting the movies...'
 			dlg.create('In progress, Please wait...', line1)
@@ -322,7 +322,7 @@ def indexOldEgyptian(url,initial,max,plot,rating,genre,cast,year,duration,writer
 def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,director):
 	try:
 	
-		for counter in range(initial,max):
+		for counter in range(initial,max+1):
 			url_target=""
 			url_2=""
 			target=""
@@ -414,7 +414,7 @@ def indexSeries(url,initial,max,plot,rating,genre,cast,year,duration,writer,dire
 
 def indexEgyptian(url,initial,max,plot,rating,genre,cast,year,duration,writer,director):
 	try:
-		for counter in range(initial,max):
+		for counter in range(initial,max+1):
 			
 			dlg = xbmcgui.DialogProgress()
 			line1 = 'Getting the movies...'
