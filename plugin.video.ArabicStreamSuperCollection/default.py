@@ -36,7 +36,32 @@ def mainDir():
 	addDir('Mashup Arabic Streams','https://raw.github.com/mash2k3/MashUpStreams/master/CrusadersDir.xml',5,'http://www.mirrorservice.org/sites/addons.superrepo.org/Frodo/.metadata/plugin.video.movie25.jpg')
 	addDir('TvIraq.net','http://www.tviraq.net/',8,'http://4.bp.blogspot.com/-mAFM9C7G3x8/Urg65k7EBsI/AAAAAAAADBU/FJ1UVeYz-5s/s1600/al+jazeera+mubasher++tv+live+logo.png')
 	addDir('Arabichannels.com (Free channels)','http://www.arabichannels.com/',11,'http://www.arabichannels.com/images/general.jpg')
+	addDir('OtherSources',' ',13,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
 	
+def otherSourcesCat():
+	addDir('Entertainment','http://jinnahtv.com/apps_mng/service_files/arab_tv_entertainment_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
+	addDir('Relegious','http://jinnahtv.com/apps_mng/service_files/live_tv_religious_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
+	addDir('News','http://jinnahtv.com/apps_mng/service_files/live_tv_news_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
+	addDir('Sports','http://jinnahtv.com/apps_mng/service_files/live_tv_sports_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
+	
+def GetOtherChannels(url):
+    
+	req = urllib2.Request(url)
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	response = urllib2.urlopen(req)
+	link=response.read()
+	response.close()
+	chName=(re.compile(' <title>(.+?)</title>').findall(link))
+	chName.pop(0)
+	chPath=(re.compile('<otherUrl url="(.+?)" />').findall(link))
+	for elements,items in itertools.izip(chName,chPath):
+		myChannelName=str( elements).strip()
+		myChannelPath=str( items).strip()
+		addLink(myChannelName,myChannelPath,15,'')
+			
+def PlayOtherChannels(url):
+	listItem = xbmcgui.ListItem(path=str(url))
+	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 
 def checkUrl(url):
     p = urlparse(url)
@@ -362,28 +387,24 @@ def index_Teledunet(url):
 	nameArray=[]
 	pathArray=[]
 	global globalIp
+	
 	addLink('MBC','rtmp://www.teledunet.com:1935/teledunet/mbc_1',10,'https://si0.twimg.com/profile_images/1133033554/mbc-fb.JPG')
 	addLink('MBC DRAMA','rtmp://www.teledunet.com:1935/teledunet/mbc_drama',10,'http://www.allied-media.com/ARABTV/images/mbc_drama.jpg')
-	addLink('JSC +1','rtmp://www.teledunet.com:1935/teledunet/jsc_1',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +2','rtmp://www.teledunet.com:1935/teledunet/jsc_2',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +3','rtmp://www.teledunet.com:1935/teledunet/jsc_3',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +4','rtmp://www.teledunet.com:1935/teledunet/jsc_4',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +5','rtmp://www.teledunet.com:1935/teledunet/jsc_5',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +6','rtmp://www.teledunet.com:1935/teledunet/jsc_6',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +7','rtmp://www.teledunet.com:1935/teledunet/jsc_7',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +8','rtmp://www.teledunet.com:1935/teledunet/jsc_8',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +9','rtmp://www.teledunet.com:1935/teledunet/jsc_9',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('JSC +10','rtmp://www.teledunet.com:1935/teledunet/jsc_10',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
+	addLink('beIn Sports 1','rtmp://www.teledunet.com:1935/teledunet/jsc_1',10,'')
+	addLink('beIn Sports 2','rtmp://www.teledunet.com:1935/teledunet/jsc_2',10,'')
+	addLink('beIn Sports 3','rtmp://www.teledunet.com:1935/teledunet/jsc_3',10,'')
+	addLink('beIn Sports 4','rtmp://www.teledunet.com:1935/teledunet/jsc_4',10,'')
+	addLink('beIn Sports 5','rtmp://www.teledunet.com:1935/teledunet/jsc_5',10,'')
+	addLink('beIn Sports 6','rtmp://www.teledunet.com:1935/teledunet/jsc_6',10,'')
+	addLink('beIn Sports 7','rtmp://www.teledunet.com:1935/teledunet/jsc_7',10,'')
+	addLink('beIn Sports 8','rtmp://www.teledunet.com:1935/teledunet/jsc_8',10,'')
+	addLink('beIn Sports 11','rtmp://www.teledunet.com:1935/teledunet/jsc_9',10,'')
+	addLink('beIn Sports 12','rtmp://www.teledunet.com:1935/teledunet/jsc_10',10,'')
 	addLink('JSC 1 HD','rtmp://www.teledunet.com:1935/teledunet/tele_1_hd',10,'')
 	addLink('JSC 2 HD','rtmp://www.teledunet.com:1935/teledunet/tele_2_hd',10,'')
-	addLink('JSC 3 HD','rtmp://www.teledunet.com:1935/teledunet/tele_3_hd',10,'')
-	addLink('JSC 4 HD','rtmp://www.teledunet.com:1935/teledunet/tele_4_hd',10,'')
 	addLink('Abu Dhabi Al Oula','rtmp://www.teledunet.com:1935/teledunet/abu_dhabi',10,'https://www.zawya.com/pr/images/2009/ADTV_One_RGB_2009_10_08.jpg')
 	addLink('Abu Dhabi Sports','rtmp://www.teledunet.com:1935/teledunet/abu_dhabi_sports_1',10,'https://si0.twimg.com/profile_images/2485587448/2121.png')
 	addLink('Al Jazeera','rtmp://www.teledunet.com:1935/teledunet/aljazeera',10,'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg')
-	addLink('Al Jazeera Sport Global','rtmp://www.teledunet.com:1935/teledunet/aljazeera_sport_global',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('Al Jazeera Sport 1','rtmp://www.teledunet.com:1935/teledunet/aljazeera_sport_1',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
-	addLink('Al Jazeera Sport 2','rtmp://www.teledunet.com:1935/teledunet/aljazeera_sport_2',10,'http://nowwatchtvlive.com/wp-content/uploads/2011/07/AljazeeraSport-264x300.jpg')
 	addLink('Al Jazeera Mubasher Masr','rtmp://www.teledunet.com:1935/teledunet/aljazeera_mubasher_masr',10,'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg')
 	addLink('Al Jazeera Children','rtmp://www.teledunet.com:1935/teledunet/aljazeera_children',10,'http://3.bp.blogspot.com/-UX1XBY8-02g/Uoku7OTIrFI/AAAAAAAAASk/-0eEX7fumJw/s1600/al_jazeera_children.png')
 	addLink('Al Jazeera Documentation','rtmp://www.teledunet.com:1935/teledunet/aljazeera_doc',10,'http://upload.wikimedia.org/wikipedia/en/e/e6/Al_Jazeera_Doc.png')
@@ -403,9 +424,17 @@ def index_Teledunet(url):
 	addLink('Al Masriyah','rtmp://www.teledunet.com:1935/teledunet/al_masriyah',10,'')
 	addLink('Iqra','rtmp://www.teledunet.com:1935/teledunet/Iqra',10,'')
 	addLink('Canal Plus','rtmp://www.teledunet.com:1935/teledunet/canal_plus',10,'')
-	addLink('Euro SPort 1','rtmp://www.teledunet.com:1935/teledunet/euro_sport_1',10,'')
-	addLink('France 2','rtmp://www.teledunet.com:1935/teledunet/france_2',10,'')
-	addLink('Melody Arabia','rtmp://www.teledunet.com:1935/teledunet/melody',10,'')
+	addLink('Melody TV','rtmp://www.teledunet.com:1935/teledunet/melody',10,'')
+	addLink('Alrahma','rtmp://www.teledunet.com:1935/teledunet/alrahma',10,'')
+	addLink('Assadissa','rtmp://www.teledunet.com:1935/teledunet/assadissa',10,'')
+	addLink('Dzair 24','rtmp://www.teledunet.com:1935/teledunet/dzair_24',10,'')
+	addLink('Dzair TV','rtmp://www.teledunet.com:1935/teledunet/dzair_tv',10,'')
+	addLink('M6','rtmp://www.teledunet.com:1935/teledunet/m6',10,'')
+	addLink('Noursat','rtmp://www.teledunet.com:1935/teledunet/noursat',10,'')
+	addLink('ORTB TV','rtmp://www.teledunet.com:1935/teledunet/ortb_tv',10,'')
+	addLink('Roya','rtmp://www.teledunet.com:1935/teledunet/roya',10,'')
+	addLink('TNN','rtmp://www.teledunet.com:1935/teledunet/tnn',10,'')
+	addLink('W9','rtmp://www.teledunet.com:1935/teledunet/w9',10,'')
     
 	for itemNameUrl in nameUrl:
 		myItems=str(itemNameUrl).split(',')
@@ -657,12 +686,6 @@ url=None
 name=None
 mode=None
 
-from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
-try:
-    import json
-except:
-    import simplejson as json
-	
 	
 try:
         url=urllib.unquote_plus(params["url"])
@@ -711,4 +734,10 @@ elif mode==11:
         indexArChannels(url)
 elif mode==12:
         playARCChannel(url)
+elif mode==13:
+        otherSourcesCat()
+elif mode==14:
+        GetOtherChannels(url)
+elif mode==15:
+        PlayOtherChannels(url)
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

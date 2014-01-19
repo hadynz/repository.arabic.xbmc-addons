@@ -30,7 +30,8 @@ The following is a listing of the Arabic XBMC addons available from this reposit
 12 | Alquds Eyes | http://www.alqudseyes.com/ | No | Movies, TV Series
 13 | Arabichannels | http://arabichannels.com/ | No | Live TV
 14 | DramaCafe |http://online.dramacafe.tv/ | No | Movies, TV Series
-14 | Dubai TV |http://vod.dmi.ae/ | No | Movies, TV Series
+15 | Dubai TV |http://vod.dmi.ae/ | No | Movies, TV Series
+16 | Arabic live streams super collection |  | No | Live TV
 ## Installation
 There are two main ways to install this XBMC repository:
 ### 1. Using XBMC HUB's Fusion Server (recommended)
