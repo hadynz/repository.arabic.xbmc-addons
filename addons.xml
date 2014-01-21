@@ -144,6 +144,27 @@
   </extension>
 </addon>
 
+<addon
+  id="plugin.video.cartoonarabi"
+  version="1.0.0"
+  name="CARTOONARABIC "
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>CARTOONARABIC vod Arabic plugin</summary>
+    <description>CARTOONARABIC Arabic plugin</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.dailytube4u.com"
        name="DailyTube4U.com"
        version="1.0.3"

@@ -32,6 +32,7 @@ The following is a listing of the Arabic XBMC addons available from this reposit
 14 | DramaCafe |http://online.dramacafe.tv/ | No | Movies, TV Series
 15 | Dubai TV |http://vod.dmi.ae/ | No | Movies, TV Series
 16 | Arabic live streams super collection |  | No | Live TV
+17 | CARTOONARABI|http://www.cartoonarabi.com| No | Live TV
 ## Installation
 There are two main ways to install this XBMC repository:
 ### 1. Using XBMC HUB's Fusion Server (recommended)
