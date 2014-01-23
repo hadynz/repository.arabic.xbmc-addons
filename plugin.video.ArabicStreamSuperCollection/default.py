@@ -37,6 +37,7 @@ def mainDir():
 	addDir('TvIraq.net','http://www.tviraq.net/',8,'http://4.bp.blogspot.com/-mAFM9C7G3x8/Urg65k7EBsI/AAAAAAAADBU/FJ1UVeYz-5s/s1600/al+jazeera+mubasher++tv+live+logo.png')
 	addDir('Arabichannels.com (Free channels)','http://www.arabichannels.com/',11,'http://www.arabichannels.com/images/general.jpg')
 	addDir('OtherSources',' ',13,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
+	addDir('Livestation','http://www.livestation.com/',16,'http://www.livestation.com/assets/new_logo.png')
 	
 def otherSourcesCat():
 	addDir('Entertainment','http://jinnahtv.com/apps_mng/service_files/arab_tv_entertainment_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
@@ -58,7 +59,37 @@ def GetOtherChannels(url):
 		myChannelName=str( elements).strip()
 		myChannelPath=str( items).strip()
 		addLink(myChannelName,myChannelPath,15,'')
-			
+
+def GetLiveStations(url):
+    req = urllib2.Request(url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    response = urllib2.urlopen(req)
+    link=response.read()
+    base='http://www.livestation.com'
+    url_target=(re.compile('<a href="(.+?)" class="(.+?)" data-action="(.+?)data-label="(.+?)" itemprop="(.+?)src="(.+?)"').findall(link))
+    for items in url_target:
+        if'language_selector' not in str(items):
+            path=base+str( items[0]).strip()
+            name=str( items[3]).strip()
+            img=str( items[5]).strip()
+            addLink(name,path,17,img)
+            
+def playLiveStations(url):
+	req = urllib2.Request(url)
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	response = urllib2.urlopen(req)
+	link=response.read()
+	try:
+		url_target=(re.compile('<video id="(.+?)"video/').findall(link))
+		url_target=str( url_target).split('><source src="')[1]
+		url_target=str( url_target).split('m3u8')[0]+'m3u8'
+		listItem = xbmcgui.ListItem(path=str(url_target))
+		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	except:
+		pass
+
+
+	
 def PlayOtherChannels(url):
 	listItem = xbmcgui.ListItem(path=str(url))
 	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
@@ -740,4 +771,9 @@ elif mode==14:
         GetOtherChannels(url)
 elif mode==15:
         PlayOtherChannels(url)
+elif mode==16:
+        GetLiveStations(url)
+elif mode==17:
+        playLiveStations(url)
+		
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
