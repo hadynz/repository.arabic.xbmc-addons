@@ -44,17 +44,18 @@ def GetCartoonArabiSeries(url):
         addDir(name,path,1,'')
 
 def GetCartoonArabiEpos(url):
-    req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link=response.read()
-    response.close()
-    url_target=(re.compile('<a href="(.+?)" class="(.+?)class="pm-thumb-fix-clip"><img src="(.+?)" alt="(.+?)"').findall(link))
-    for items in url_target:
-        path=str( items[0]).strip()
-        name=str( items[3]).strip()
-        img=str( items[2]).strip()
-        addLink(name,path,2,img)
+	for itr in range(1,6):
+		req = urllib2.Request(url+'&page='+str(itr))
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		link=response.read()
+		response.close()
+		url_target=(re.compile('<a href="(.+?)" class="(.+?)class="pm-thumb-fix-clip"><img src="(.+?)" alt="(.+?)"').findall(link))
+		for items in url_target:
+			path=str( items[0]).strip()
+			name=str( items[3]).strip()
+			img=str( items[2]).strip()
+			addLink(name,path,2,img)
 		
 def decode (page):
     encoding = page.info().get("Content-Encoding")    

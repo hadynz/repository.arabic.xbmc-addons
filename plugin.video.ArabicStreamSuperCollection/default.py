@@ -528,7 +528,7 @@ def getId(channel):
                     
 def PlayTeledunet(url):
 	firstPart=str(url).split('teledunet/')[1]
-	#url='rtmp://www.teledunet.com:1935/teledunet/'+str(firstPart).strip()
+	url='rtmp://www.teledunet.com:1935/teledunet/'+str(firstPart).strip()
 	finalPayPath=url+' app=teledunet swfUrl=http://www.teledunet.com/tv/player.swf?bufferlength=5&repeat=single&autostart=true&id0='+str(getId(firstPart))+'&streamer='+str(url)+'&file='+str(firstPart)+'&provider=rtmp playpath='+str(firstPart)+' live=1 pageUrl=http://www.teledunet.com/tv/?channel='+str(firstPart)+'&no_pub'
 	listItem = xbmcgui.ListItem(path=str(finalPayPath))
 	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
