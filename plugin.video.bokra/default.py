@@ -353,7 +353,8 @@ def VideoLinks(name,url):
 		
 		response.close()
 		
-		url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No"></iframe>').findall(link))
+		url_ch=(re.compile('<iframe class="video_frame" src="(.+?)"').findall(link))
+		
 		if len(str(url_ch))<3:
 				url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="360" height="260" scrolling="No"></iframe>').findall(link))
 			
@@ -364,8 +365,6 @@ def VideoLinks(name,url):
 		url_ch= url_ch.replace("']", "")
 		url_ch= url_ch.strip()
 		url_ch= url_ch.replace(" ", "")
-		
-		
 		
 		if "GetVideoPlayer&ID=" in str(url_ch):
 			req = urllib2.Request(url_ch)
@@ -384,8 +383,7 @@ def VideoLinks(name,url):
 			listItem = xbmcgui.ListItem(path=str(playback_url))
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		else:
-		
-        
+			
 			req = urllib2.Request(url_ch)
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 			req.add_header('Referer', 'http://bokra.net/?ref='+str(url_ch))
@@ -438,7 +436,7 @@ def VideoLinks_Films(name,url):
 	response = urllib2.urlopen(req)
 	link=response.read()
 	response.close()
-	url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No"></iframe>').findall(link))
+	url_ch=(re.compile('<iframe class="video_frame" src="(.+?)"').findall(link))
 	url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
 	url_ch=str(url_ch)
 	url_ch= url_ch.replace("['", "")

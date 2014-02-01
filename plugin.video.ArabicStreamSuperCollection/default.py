@@ -44,7 +44,7 @@ def otherSourcesCat():
 	addDir('Relegious','http://jinnahtv.com/apps_mng/service_files/live_tv_religious_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
 	addDir('News','http://jinnahtv.com/apps_mng/service_files/live_tv_news_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
 	addDir('Sports','http://jinnahtv.com/apps_mng/service_files/live_tv_sports_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
-	
+	#addDir('Different channels','http://steinmann.webs.com/tvhd.xml',18,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
 def GetOtherChannels(url):
     
 	req = urllib2.Request(url)
@@ -524,6 +524,41 @@ def getId(channel):
     nameUrl=(re.compile('time_player=(.+?);').findall(link))
     nameUrl=str( nameUrl).replace("['", '').replace("']", '').replace(".","").replace("E+13","00").strip()
     return nameUrl
+
+def GetHDSITEChannels(url):
+	req = urllib2.Request('http://steinmann.webs.com/tvhd.xml')
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	response = urllib2.urlopen(req)
+	link=response.read()
+   
+	response.close()
+	target= re.findall(r'<items>(.*?)\s(.*?)</items>', link, re.DOTALL)
+	target=str( target).split('<item')
+	name=''
+	img=''
+	path=''
+
+	for itr in target:
+		if ('TV="') in itr:
+			mypath=str( itr).replace('title="', ' DELIM ').replace('coverImage="', ' DELIM ').replace('TV="', ' DELIM ').replace('picture="', ' DELIM ')
+			mypath=str(mypath).split(' DELIM ')
+			for items in mypath:
+				newpath=str( items).split('\r\n')
+				for itr in newpath:
+					if ('http' in str( itr)) or '"' in itr:
+						finalPath=itr.replace('"',"").strip()
+						if 'http://www.cookiesjar.net/letsapp/listen/quran/free.jpg' not in itr:
+							if 'http' in str(finalPath):
+								if "png" in str(finalPath) or "gif" in str(finalPath) or "jpg" in str(finalPath):
+									img=finalPath
+								else:
+									path=finalPath
+							else:
+								name=finalPath
+								name= name[:-4]
+								img= img[:-4]
+								path= path[:-4]
+								addLink('',path,15,img)
 	
                     
 def PlayTeledunet(url):
@@ -776,5 +811,7 @@ elif mode==16:
         GetLiveStations(url)
 elif mode==17:
         playLiveStations(url)
+elif mode==18:
+	GetHDSITEChannels(url)
 		
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

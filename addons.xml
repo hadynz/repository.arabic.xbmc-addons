@@ -125,7 +125,7 @@
 
 <addon
   id="plugin.video.bokra"
-  version="2.9.0"
+  version="3.0.0"
   name="BOKRA"
   provider-name="Bisha">
   <requires>
