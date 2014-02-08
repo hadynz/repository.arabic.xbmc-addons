@@ -31,96 +31,124 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 def CATEGORIES():
 	#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'http://upload.wikimedia.org/wikipedia/he/e/ed/Sonara_logo_.gif'))
 	addDir('مسلسلات رمضان 2013','http://www.sonara.net/videon-85.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('مسلسلات عربية','http://www.sonara.net/videon-49.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('كرتون ','http://www.sonara.net/videon-53.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('افلام عربية','http://www.sonara.net/video_cat-603.html',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('افلام اسود و ابيض','http://www.sonara.net/video_cat-722.html',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('افلام وثائقية','http://www.sonara.net/video_cat-970.html',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('برامج','http://www.sonara.net/videon-52.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('خاص بالصنارة','http://www.sonara.net/videon-54.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('مسلسلات تركية','http://www.sonara.net/videon-50.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('افلام تركية','http://www.sonara.net/video_cat-860.html',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
-	addDir('افلام هندية','http://www.sonara.net/video_cat-604.html',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	addDir('مسلسلات عربية','http://www.sonara.net/vncat/49/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA_%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	addDir('كرتون ','http://www.sonara.net/vncat/53/%D9%83%D8%B1%D8%AA%D9%88%D9%86',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	addDir('افلام عربية','http://www.sonara.net/vcat/603/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	addDir('افلام اسود و ابيض','http://www.sonara.net/vcat/722/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D8%A7%D8%A8%D9%8A%D8%B6_%D9%88%D8%A7%D8%B3%D9%88%D8%AF',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	#addDir('افلام وثائقية','http://www.sonara.net/video_cat-970.html',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	addDir('برامج','http://www.sonara.net/vncat/52/%D8%A8%D8%B1%D8%A7%D9%85%D8%AC',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	#addDir('خاص بالصنارة','http://www.sonara.net/videon-54.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	addDir('مسلسلات تركية','http://www.sonara.net/vncat/50/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA_%D8%AA%D8%B1%D9%83%D9%8A%D8%A9',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	addDir('افلام تركية','http://www.sonara.net/vcat/860/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D8%AA%D8%B1%D9%83%D9%8A%D8%A9',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
+	#addDir('افلام هندية','http://www.sonara.net/video_cat-604.html',4,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
 	
 	
 		
 def listContent(url):
-	try:
-    #url="http://www.sonara.net/videon-50.html"
-		req = urllib2.Request(url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		#req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.1.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
-		req.add_header('Cookie', ' InterstitialAd=1; __utma=261095506.527469422.1375113861.1375113861.1375113861.1; __utmb=261095506.3.10.1375113861; __utmz=261095506.1375113861.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; popupbannerA=1')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		target= re.findall(r'<div class="thumb" style="position: relative;">(.*?)\s(.*?)</a>(.*?)</div>(.*?)</a>', link, re.DOTALL)
-		for items in target:
-			for i in items:
-				
-				if '<a href="video' in str(i):
-					mystring=str(i).split("<")
-					for i in mystring:
-						
-						if len( str(i))>1:
-							if 'img' in str(i):
-								image=str(i).replace('img src="', '').replace('" width="150" height="98">', '').strip()
-							if 'a href="video' in str(i):
-								target=str(i).split('">')
-								name=str( target[1]).strip()
-								path='http://www.sonara.net/'+str( target[0]).replace('a href="',"").strip()
-								if len(name)>1:
-									addDir(name,path,2,image)
-	except:
-		pass
+	  
+    req = urllib2.Request(url)
+    req.add_header('Host', 'www.sonara.net')
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20100101 Firefox/21.0')
+    req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+    req.add_header('Accept-Language', 'en-US,en;q=0.5')
+    req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.1.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
+   
+    
+    req.add_header('Connection', 'keep-alive')
+    response = urllib2.urlopen(req)
+    link=response.read()
+    name = ""
+    img = ""
+    path = ""
+    base = "http://sonara.net"
+    target= re.findall(r"<div class='mediasection'>(.*?)\s(.*?)<div class='footer'>", link, re.DOTALL)
+    for itr in target:
+        myPath=str( itr[1]).split("'>")
+        for items in myPath:
+        
+            if "<a href=" in str( items):
+                path=str( items).split("<a href='")[1]
+                path=base+str( path).strip()
+                
+            if "<img src='" in str( items):
+                img=str( items).split("<img src='")[1]
+                img=str(img).strip()
+                
+            if "<h4>" in str( items):
+                name=str( items).split("</h4></a>")[0]
+                name=str(name).replace("<h4>","").strip()
+                addDir(name,path,2,img)
 
 def listFilmContent(url):
     req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    req.add_header('Cookie', ' InterstitialAd=1; __utma=261095506.527469422.1375113861.1375113861.1375113861.1; __utmb=261095506.3.10.1375113861; __utmz=261095506.1375113861.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; popupbannerA=1')
+    req.add_header('Host', 'www.sonara.net')
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20100101 Firefox/21.0')
+    req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+    req.add_header('Accept-Language', 'en-US,en;q=0.5')
+    req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.1.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
+   
+    
+    req.add_header('Connection', 'keep-alive')
     response = urllib2.urlopen(req)
     link=response.read()
-    target= re.findall(r'<div class="thumb"(.*?)\s(.*?)<td width="800" align="center" style="padding-top: 25px;">', link, re.DOTALL)
-    for epost in target:
-        mystring= epost[1]
-        mystring=str(mystring).split('</a>')
-        #print mystring
-        for items in mystring:
-            if '<img src="' in str(items):
-                target_name=str(items).split('<img src="')
-                mytarget=str(target_name[0]).replace('<a href="', '').replace('" target="_self">', '').replace('</div>', '').replace('<div class="video_holder">', '').replace('<div class="thumb">', '').strip()
-                mytarget=str(mytarget).replace('video-','').replace('.html','').strip()
-                myimage=str(target_name[1]).replace('<img src="', '').replace('" width="192" height="125">', '').strip()
+    name = ""
+    img = ""
+    path = ""
+    base = "http://sonara.net"
+    target= re.findall(r"<div class='video_listrel'>(.*?)\s(.*?)<div class='footer'>", link, re.DOTALL)
+    for itr in target:
+        myPath=str( itr[1]).split("'>")
+        for items in myPath:
+        
+            if "<a href=" in str( items):
+				path=str( items).split("<a href='")[1]
+				path=str( path).strip()
+				path=str( path).split("/")
+				path =str( path[2]).strip()
                 
-            if '<div class="name">' in str(items):
-                target_name=str(items).split('" target="_self">')
-                name=str(target_name[1]).replace('<a href="', '').replace('" target="_self">', '').strip()
-                addLink(name,mytarget,3,myimage)
+            if "<img src='" in str( items):
+                img=str( items).split("<img src='")[1]
+                img=str(img).strip()
+                
+            if "<h4>" in str( items):
+                name=str( items).split("</h4></a>")[0]
+                name=str(name).replace("<h4>","").strip()
+                addLink(name,path,3,img)
                                  
 
 def listEpos(url):
-    try:
-		req = urllib2.Request(url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.1.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
-		response = urllib2.urlopen(req)
-		link=response.read()
-		target= re.findall(r'<div class="thumb">(.*?)\s(.*?)<div class="video_holder">', link, re.DOTALL)
-		
-		target2= re.findall(r'<div class="name">(.*?)\s(.*?)<td width="800" align="center" style="padding-top: 25px;">', link, re.DOTALL)
-		
-		
-		for epost in target:
-			mystring= epost[1]
-			mystring=str(mystring).split('">')
-			name=str( mystring[4]).replace('</a>','').replace('</div>','').strip()
-			path=str( mystring[0]).replace('<a href="','').replace('" target="_self','').strip()
-			path=str(path).replace('video-', '').replace('.html', '').strip()
-			#print 'THIS is video url '+path
-			image=str( mystring[1]).replace('<img src="','').replace('" width="192" height="125','').strip()
-			addLink(name,path,3,image)
-    except:
-		pass
-
+	req = urllib2.Request(url)
+	req.add_header('Host', 'www.sonara.net')
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20100101 Firefox/21.0')
+	req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+	req.add_header('Accept-Language', 'en-US,en;q=0.5')
+	req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.1.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
+	req.add_header('Connection', 'keep-alive')
+	response = urllib2.urlopen(req)
+	link=response.read()
+	name = ""
+	img = ""
+	path = ""
+	base = "http://sonara.net"
+	target= re.findall(r"<div class='long_after_video'></div>(.*?)\s(.*?)<div class='footer'>", link, re.DOTALL)
+	for itr in target:
+		myPath=str( itr[1]).split("'>")
+		for items in myPath:
+			
+			if "<a href=" in str( items):
+				path=str( items).split("<a href='")[1]
+				path=str( path).split("/")
+				path =str( path[2]).strip()
+            
+			if "<img src='" in str( items):
+				img=str( items).split("<img src='")[1]
+				img=str(img).strip()
+            
+			if "<h4>" in str( items):
+				name=str( items).split("</h4></a>")[0]
+				name=str(name).replace("<h4>","").strip()
+				addLink(name,path,3,img)
+    
 
 def getVideoFile(url):
 	try:
@@ -136,10 +164,16 @@ def getVideoFile(url):
 			swfFile=''
 			rtmp=''
 			for itr in target:
+				
 				if 'mp4' in itr:
 					mp4File=str(itr).split("&image=")[0]
 					mp4File=str(mp4File).replace("\'mp4:","").strip()
 					mp4File=str(mp4File).replace("\/","mp4:/").strip()
+				if ("flv") in itr:
+					mp4File = str(itr).split("&image")[0]
+					mp4File=str(mp4File).replace("\'flv:","").strip()
+					mp4File=str(mp4File).replace("\/","flv:/").strip()
+					mp4File = str(mp4File).split("/")[1]
 				if 'SWFObject' in itr:
 					swfFile=str( itr).split("SWFObject")[1]
 					swfFile=str(swfFile).split("http:")[1]
@@ -151,7 +185,8 @@ def getVideoFile(url):
 					rtmp=rtmp[:-1]
 					rtmp="rtmp:"+rtmp
 					swfFile="http://www.sonara.net/mediaplayera/player.swf"
-			playingpath=rtmp+" swfUrl="+swfFile+" playpath="+mp4File
+				
+			playingpath=rtmp+" swfUrl="+swfFile+" playpath="+mp4File+" timeout=15"
 			listItem = xbmcgui.ListItem(path=str(playingpath))
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	except:
@@ -234,7 +269,7 @@ elif mode==1:
 	
 elif mode==2:
         print ""+url
-        listFilmContent(url)
+        listEpos(url)
 elif mode==3:
 	print ""+url
 	getVideoFile(url)

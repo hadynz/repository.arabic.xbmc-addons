@@ -10,6 +10,8 @@ import httplib
 import time
 import xbmcgui
 
+from urllib2 import Request, build_opener, HTTPCookieProcessor, HTTPHandler
+import cookielib
 
 __settings__ = xbmcaddon.Addon(id='plugin.video.bokra')
 __icon__ = __settings__.getAddonInfo('icon')
@@ -101,7 +103,16 @@ def index(url):
 			
 			kurl=orig+'/'+str(counter)
 			req = urllib2.Request(kurl)
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			req = urllib2.Request(url)
+			req.add_header('Host', 'bokra.net')
+			req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+			req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+			req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+			req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+			req.add_header('Cookie', 'PHPSESSID=ta013f7ia9k9ks320m7umo8jj6')
+			
+	
 			response = urllib2.urlopen(req)
 			link=response.read()
 			response.close()
@@ -147,34 +158,52 @@ def index(url):
 
 def indexRamadanSeries(url):
     
-    req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link=response.read()
-    response.close()
+	req = urllib2.Request(url)
+	req = urllib2.Request(url)
+	req.add_header('Host', 'bokra.net')
+	req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+	req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+	req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+	req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+	req.add_header('Cookie', str(getCookies(url)))
+	
+	
+	response = urllib2.urlopen(req)
+	link=response.read()
+	response.close()
     
-    matchSerie = re.compile(' <div class="items">(.+?)<div class="bigBanner">', re.DOTALL).findall(link)
-    for items in matchSerie:
+	matchSerie = re.compile(' <div class="items">(.+?)<div class="bigBanner">', re.DOTALL).findall(link)
+	for items in matchSerie:
         
-        myTarget=str( items).split('<div class="item">')
-        for itr in myTarget:
-            mySecTarget=str( itr).split('/></a></div>')
-            mytempPath= mySecTarget[0] 
-            if 'spacer8' not in str(mytempPath):
-                mypath=str(mytempPath).replace('<div class="pic"><a href="', 'del').replace('onClick="javascript: pageTracker._trackPageview(', 'del').replace(');"><img class="lazy" data-original="',"del").replace('title="','del')
-                mypath=str(mypath).split('del')
-                finalImage=str( mypath[3]).split('" width=')[0]
-                finalName=str( mypath[4]).replace('"', '').strip()
-                finalImage=str(finalImage).strip()
-                finalUrl=str( mypath[1]).replace('"', '').strip()
-                addDir(finalName,finalUrl,2,finalImage)
+		myTarget=str( items).split('<div class="item">')
+		for itr in myTarget:
+			mySecTarget=str( itr).split('/></a></div>')
+			mytempPath= mySecTarget[0] 
+			if 'spacer8' not in str(mytempPath):
+				mypath=str(mytempPath).replace('<div class="pic"><a href="', 'del').replace('onClick="javascript: pageTracker._trackPageview(', 'del').replace(');"><img class="lazy" data-original="',"del").replace('title="','del')
+				mypath=str(mypath).split('del')
+				finalImage=str( mypath[3]).split('" width=')[0]
+				finalName=str( mypath[4]).replace('"', '').strip()
+				finalImage=str(finalImage).strip()
+				finalUrl=str( mypath[1]).replace('"', '').strip()
+				addDir(finalName,finalUrl,2,finalImage)
 
 def indexMySeries(url):
     
 	try:
 	
 		req = urllib2.Request(url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		req = urllib2.Request(url)
+		req.add_header('Host', 'bokra.net')
+		req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+		req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+		req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+		req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+		req.add_header('Cookie',getCookies(url)+ "; __utma=1.2014423701.1391851573.1391851573.1391851573.1; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)")
+	
+	
 		response = urllib2.urlopen(req)
 		link=response.read()
 		response.close()
@@ -199,24 +228,31 @@ def indexMySeries(url):
 				
 def indexNewSeries(url):
     
-    req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link=response.read()
-    response.close()
+	req = urllib2.Request(url)
+	req.add_header('Host', 'bokra.net')
+	req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+	#req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+	req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+	req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+	req.add_header('Cookie',getCookies(url)+ "; __utma=1.2014423701.1391851573.1391851573.1391851573.1; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)")
+	
+	response = urllib2.urlopen(req)
+	link=response.read()
+	response.close()
     
-    matchSerie = re.compile(' <div class="video_box">(.+?)<div class="spacer_videobox"></div>', re.DOTALL).findall(link)
-    for item in matchSerie:
-        myTempTarget=str(item).split('</div>')
-        tempAll= str(myTempTarget[2]).replace('<div class ="textarea">', '').strip()
+	matchSerie = re.compile(' <div class="video_box">(.+?)<div class="spacer_videobox"></div>', re.DOTALL).findall(link)
+	for item in matchSerie:
+		myTempTarget=str(item).split('</div>')
+		tempAll= str(myTempTarget[2]).replace('<div class ="textarea">', '').strip()
        
-        mypath=str(tempAll).replace('onClick="javascript: pageTracker._trackPageview(', 'del').replace(';" title="', 'del').replace('">  <div class="title">',"del")
-        mypath=str(mypath).split('del')
-        myName=str( mypath[2]).strip()
+		mypath=str(tempAll).replace('onClick="javascript: pageTracker._trackPageview(', 'del').replace(';" title="', 'del').replace('">  <div class="title">',"del")
+		mypath=str(mypath).split('del')
+		myName=str( mypath[2]).strip()
        
-        myUrl=str( mypath[0]).replace('<a href="', '').replace('"', '').strip()
-        print myName 
-        addLink(myName,myUrl,3,'')
+		myUrl=str( mypath[0]).replace('<a href="', '').replace('"', '').strip()
+		print myName 
+		addLink(myName,myUrl,3,'')
 		
 def index_films(url):
 	try:
@@ -231,7 +267,16 @@ def index_films(url):
 			kurl=orig+'/'+str(counter)
 		 
 			req = urllib2.Request(kurl)
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+			req = urllib2.Request(url)
+			req.add_header('Host', 'bokra.net')
+			req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+			req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+			req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+			req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+			req.add_header('Cookie', 'PHPSESSID=ta013f7ia9k9ks320m7umo8jj6')
+			
+	
 			response = urllib2.urlopen(req)
 			link=response.read()
 			
@@ -287,13 +332,15 @@ def listSeries(url):
         for counter in range(1,int(maxvalue)):
 			test_url=kurl+'/'+str(counter)
             
-			req = urllib2.Request(test_url)
-			req.add_header('Host', 'www.bokra.net')
+			req = urllib2.Request(url)
+			req.add_header('Host', 'bokra.net')
 			req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36')
-			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+			req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+			req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
 			req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
-			req.add_header('Cookie', '__gads=ID=caaace40ba968885:T=1384540808:S=ALNI_MaJHS-I3T2KjuJwJrFhK-WSSHuOLg; PHPSESSID=o5557ubn6glmber62cpcs0vde4; __utma=1.2064279049.1384540807.1384689773.1384693281.3; __utmb=1.8.10.1384693281; __utmc=1; __utmz=1.1384540807.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; __atuvc=5%7C47')
+			req.add_header('Cookie',getCookies(url)+ "; __utma=1.2014423701.1391851573.1391851573.1391851573.1; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)")
+			
 			response = urllib2.urlopen(req)
 			link=response.read()
            
@@ -346,17 +393,23 @@ def VideoLinks(name,url):
 		temp_url=final_url
 		
 		req = urllib2.Request(final_url)
-		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-		req.add_header('Referer', 'http://bokra.net/?ref='+str(final_url))
+		req.add_header('Host', 'bokra.net')
+		req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+		req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+		req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+		req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+		req.add_header('Cookie', "Skipit=no; PHPSESSID=ta013f7ia9k9ks320m7umo8jj6; __utma=1.434558597.1391814250.1391814250.1391814250.1; __utmb=1.3.10.1391814250; __utmc=1; __utmz=1.1391814250.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __atuvc=3%7C6")
+	
 		response = urllib2.urlopen(req)
 		link=response.read()
 		
 		response.close()
 		
-		url_ch=(re.compile('<iframe class="video_frame" src="(.+?)"').findall(link))
+		url_ch=(re.compile('src="(.+?)" width="385" height="230" scrolling="No" frameborder="0"></iframe>').findall(link))
 		
 		if len(str(url_ch))<3:
-				url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="360" height="260" scrolling="No"></iframe>').findall(link))
+				url_ch=(re.compile('<iframe class="video_frame" src="(.+?)" width="385" height="230" scrolling="No" frameborder="0"></iframe>').findall(link))
 			
 		
 		url_image=(re.compile('<link rel="image_src" href="(.+?)" / >').findall(link))
@@ -368,8 +421,13 @@ def VideoLinks(name,url):
 		
 		if "GetVideoPlayer&ID=" in str(url_ch):
 			req = urllib2.Request(url_ch)
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-			req.add_header('Referer', 'http://bokra.net/?ref='+str(url_ch))
+			req.add_header('Host', 'bokra.net')
+			req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+			req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+			req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+			req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+			req.add_header('Cookie', 'PHPSESSID=ta013f7ia9k9ks320m7umo8jj6')
 			response = urllib2.urlopen(req)
 			link=response.read()
 			#print "LINK " +link
@@ -384,18 +442,9 @@ def VideoLinks(name,url):
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		else:
 			
-			req = urllib2.Request(url_ch)
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-			req.add_header('Referer', 'http://bokra.net/?ref='+str(url_ch))
-			response = urllib2.urlopen(req)
-			link=response.read()
-			#print "LINK " +link
-			response.close()
-			url_ch=(re.compile('video_id=(.+?)&cid=').findall(link))
-			url_ch=str(url_ch)
-			url_ch= url_ch.replace("['", "")
-			url_ch= url_ch.replace("']", "")
-			url_ch= url_ch.strip()
+			url_ch=str( url_ch).split("videoid=")[1]
+			url_ch=str( url_ch).split("&width")[0]
+			url_ch = str(url_ch).strip()
 			
 			
 			final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(temp_url)
@@ -423,8 +472,51 @@ def VideoLinks(name,url):
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 			
     except IndexError:
-        VideoLinks(name,url)
-		
+        pass
+
+def bokra(name,url):
+        try:
+            while True:
+                Cookie = getCookies(url)
+                req = urllib2.Request(url)
+                req.add_header('Host', 'bokra.net')
+                req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+                req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+                req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+                req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+                req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+                req.add_header('Cookie', "Skipit=no; PHPSESSID=ta013f7ia9k9ks320m7umo8jj6; __utma=1.434558597.1391814250.1391814250.1391814250.1; __utmb=1.3.10.1391814250; __utmc=1; __utmz=1.1391814250.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __atuvc=3%7C6")
+                response = urllib2.urlopen(req)
+                link=response.read()
+                response.close()
+                url_ch=(re.compile('<iframe class="video_frame" src="(.+?)&width=').findall(link))
+                url_ch=str( url_ch).split("videoid=")[1]
+                url_ch=str( url_ch).split("&width")[0]
+                url_ch = str(url_ch).replace("']","").strip()
+                if len(url_ch)>1:
+                    
+					final_url="http://front.drubit.com/generalXML.php?autostart=0&videoid="+url_ch+"&ref="+str(url)
+					req = urllib2.Request(final_url)
+					req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+					req.add_header('Referer', 'http://bokra.net/?ref='+str(final_url))
+					response = urllib2.urlopen(req)
+					link=response.read()
+					response.close()
+					url_ch=(re.compile('<file>(.+?)vtraffid').findall(link))
+					url_ch=str(url_ch)
+					url_ch= url_ch.replace("['", "")
+					url_ch= url_ch.replace("']", "")
+					url_ch=url_ch.replace("?","")
+					url_ch= url_ch.strip()
+					listItem = xbmcgui.ListItem(path=str(url_ch))
+					xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+                    
+        except:
+            bokra(name,url)
+
+					
+                    
+
 def VideoLinks_Films(name,url):
 	#print "Before editing "+str(url)
 	
@@ -432,6 +524,7 @@ def VideoLinks_Films(name,url):
 	
 	req = urllib2.Request(url)
 	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
 	req.add_header('Referer', 'http://bokra.net/?ref='+str(url))
 	response = urllib2.urlopen(req)
 	link=response.read()
@@ -499,6 +592,28 @@ def VideoLinks_Films(name,url):
 		listItem = xbmcgui.ListItem(path=str(url_ch))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 
+def getCookies(url):
+    url ="http://bokra.net/Skip/?ref="+str(url)
+    #Create a CookieJar object to hold the cookies
+    cj = cookielib.CookieJar()
+    #Create an opener to open pages using the http protocol and to process cookies.
+    opener = build_opener(HTTPCookieProcessor(cj), HTTPHandler())
+    #create a request object to be used to get the page.
+    req = Request(url)
+    
+    req = urllib2.Request(url)
+    req.add_header('Host', 'bokra.net')
+    req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+    req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+    req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+    req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+    f = opener.open(req)
+    #see the first few lines of the page
+    cj=str(cj).split("for")[0]
+    cj=str(cj).split("Cookie")[2]
+    cj=str(cj).strip()
+    return cj
 
                 
 def get_params():
@@ -580,14 +695,14 @@ elif mode==2:
 			
 elif mode==3:
 	print ""+url
-	VideoLinks(name,url)
+	bokra(name,url)
 elif mode==4:
 	print ""+url
 	index_films(url)
 
 elif mode==5:
 	print ""+url
-	VideoLinks_Films(name,url)
+	bokra(name,url)
 elif mode==6:
 	print ""+url
 	indexRamadanSeries(url)
