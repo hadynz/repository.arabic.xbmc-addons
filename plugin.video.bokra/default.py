@@ -49,7 +49,7 @@ def CATEGORIES():
 	addDir('افلام دينية','http://www.bokra.net/VideoCategory/24/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D8%AF%D9%8A%D9%86%D9%8A%D8%A9.html',4,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	addDir('مسرحيات','http://www.bokra.net/VideoCategory/44/%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A7%D8%AA.html',4,'http://images.bokra.net/bokra/25.10.2011/msr7//DSCF0480.jpg')
 	addDir('كليبات وحفلات','http://www.bokra.net/VideoCategory/118/%D9%83%D9%84%D9%8A%D8%A8%D8%A7%D8%AA_%D9%88%D8%AD%D9%81%D9%84%D8%A7%D8%AA.html',4,'http://images.bokra.net/new/402839.jpg')
-	addDir('برامج تلفزيونية','http://www.bokra.net/VideoCategory/39/%D8%A8%D8%B1%D8%A7%D9%85%D8%AC_%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86.html',6,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
+	addDir('برامج تلفزيونية','http://www.bokra.net/VideoCategory/39/%D8%A8%D8%B1%D8%A7%D9%85%D8%AC_%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86.html',3,'http://images.bokra.net/bokra//25-11-2012/0777777.jpg')
 	addDir('افلام اطفال ','http://www.bokra.net/VideoCategory/57/%D8%A7%D9%81%D9%84%D8%A7%D9%85_%D8%A7%D8%B7%D9%81%D8%A7%D9%84.html',4,'http://images.bokra.net/bokra/15.8.2012/kods//1231.JPG')
 	addDir('بكرا TV','http://www.bokra.net/VideoCategory/113/%D8%A8%D9%83%D8%B1%D8%A7_TV.html',1,'http://www.bokra.net/images//logobokra.png')
 	addDir('مسلسلات كرتون','http://www.bokra.net/VideoCategory/56/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA_%D9%83%D8%B1%D8%AA%D9%88%D9%86.html',3,'http://images.bokra.net/bokra//16-10-2011/0WeddingCartoon1.jpg')
@@ -119,201 +119,211 @@ def getCookies(url):
     return cj
 
 def indexNewSeries(url):
-    
-	req = urllib2.Request(url)
-	req.add_header('Host', 'bokra.net')
-	req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
-	req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
-	#req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
-	req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
-	req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
-	req.add_header('Cookie',getCookies(url)+ "; __utma=1.2014423701.1391851573.1391851573.1391851573.1; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)")
-	
-	response = urllib2.urlopen(req)
-	link=response.read()
-	response.close()
-    
-	matchSerie = re.compile(' <div class="video_box">(.+?)<div class="spacer_videobox"></div>', re.DOTALL).findall(link)
-	for item in matchSerie:
-		myTempTarget=str(item).split('</div>')
-		tempAll= str(myTempTarget[2]).replace('<div class ="textarea">', '').strip()
-       
-		mypath=str(tempAll).replace('onClick="javascript: pageTracker._trackPageview(', 'del').replace(';" title="', 'del').replace('">  <div class="title">',"del")
-		mypath=str(mypath).split('del')
-		myName=str( mypath[2]).strip()
-       
-		myUrl=str( mypath[0]).replace('<a href="', '').replace('"', '').strip()
-		print myName 
-		addLink(myName,myUrl,5,'')
+	match = False
+	while (match == False):
+		req = urllib2.Request(url)
+		req.add_header('Host', 'bokra.net')
+		req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+		#req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+		req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+		req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+		req.add_header('Cookie',getCookies(url)+ "; __utma=1.2014423701.1391851573.1391851573.1391851573.1; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)")
+		
+		response = urllib2.urlopen(req)
+		link=response.read()
+		response.close()
+		
+		matchSerie = re.compile(' <div class="video_box">(.+?)<div class="spacer_videobox"></div>', re.DOTALL).findall(link)
+		for item in matchSerie:
+			myTempTarget=str(item).split('</div>')
+			tempAll= str(myTempTarget[2]).replace('<div class ="textarea">', '').strip()
+		   
+			mypath=str(tempAll).replace('onClick="javascript: pageTracker._trackPageview(', 'del').replace(';" title="', 'del').replace('">  <div class="title">',"del")
+			mypath=str(mypath).split('del')
+			myName=str( mypath[2]).strip()
+		   
+			myUrl=str( mypath[0]).replace('<a href="', '').replace('"', '').strip()
+			match = True 
+			addLink(myName,myUrl,5,'')
 
 
 	
 def index(url):
 	cookie = getCookies(url)
-	try:
-		counter=0
-		orig=url
-		kurl=url
-		maxvalue=int(retrive_max_page(kurl))+14
-		final_items=[]
-		for counter in range(0,int(maxvalue)):
-			
-			kurl=orig+'/'+str(counter)
-			req = urllib2.Request(kurl)
-			req.add_header('Host', 'www.bokra.net')
-			req.add_header('Cache-Control', 'max-age=0')
-			req.add_header('max-age=0', 'www.bokra.net')
-			req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
-			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-			req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
-			req.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=4&apv_40_www14=4&cpv_40_www14=1; '+str(cookie)+ ' ; noadvtday=0; nopopatall=1392067134; __utma=1.2014423701.1391851573.1391984583.1392066633.5; __utmb=1.9.10.1392066633; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
-			response = urllib2.urlopen(req)
-			link=response.read()
-			response.close()
-			
-			url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="(.+?);"><img class="lazy" data-original="(.+?)" width="(.+?)" title="').findall(link))
-			if len(str(url_ch))<3:
-				url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img class="lazy" data-original="(.+?)" width="139" height="96"').findall(link))
-			
-			for items in url_ch:
-			   
-				for elements in items:
-					
-					for i in items:
-						url= items[0].strip()
-						name= items[1].replace("pageTracker._trackPageview('/VideoAlbum/","")
-						name=name.replace("html","")
-						name=name.replace(".')","")
-						name=name.rsplit("/",1)
-						name = name[1].strip() 
+	match = False
+	while (match == False):
+		try:
+			counter=0
+			orig=url
+			kurl=url
+			maxvalue=int(retrive_max_page(kurl))+14
+			final_items=[]
+			for counter in range(0,int(maxvalue)):
+				
+				kurl=orig+'/'+str(counter)
+				req = urllib2.Request(kurl)
+				req.add_header('Host', 'www.bokra.net')
+				req.add_header('Cache-Control', 'max-age=0')
+				req.add_header('max-age=0', 'www.bokra.net')
+				req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+				req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+				req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
+				req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+				req.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=5&apv_40_www14=5&cpv_40_www14=2; __atuvc=6%7C7; __utma=1.2014423701.1391851573.1392150214.1392152127.9; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; '+str(cookie))
+				response = urllib2.urlopen(req)
+				link=response.read()
+				response.close()
+				
+				url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="(.+?);"><img class="lazy" data-original="(.+?)" width="(.+?)" title="').findall(link))
+				if len(str(url_ch))<3:
+					url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img class="lazy" data-original="(.+?)" width="139" height="96"').findall(link))
+				
+				for items in url_ch:
+				   
+					for elements in items:
 						
-						image= items[2].strip()
-						if image not in final_items:
-							final_items.append(name)
-							final_items.append(url)
-							final_items.append(image)
-			for items in final_items:
-			#print elements
-				if final_items.__len__()>0:
+						for i in items:
+							url= items[0].strip()
+							name= items[1].replace("pageTracker._trackPageview('/VideoAlbum/","")
+							name=name.replace("html","")
+							name=name.replace(".')","")
+							name=name.rsplit("/",1)
+							name = name[1].strip() 
+							
+							image= items[2].strip()
+							if image not in final_items:
+								final_items.append(name)
+								final_items.append(url)
+								final_items.append(image)
+				for items in final_items:
+				#print elements
+					if final_items.__len__()>0:
+						
+						name=final_items.pop(0)
+						
+					if final_items.__len__()>0:
+						
+						url=final_items.pop(0)
+						
+					if final_items.__len__()>0:
+						
+						image=final_items.pop(0)
+						addDir(name,url,8,image)
+						match = True
 					
-					name=final_items.pop(0)
-					
-				if final_items.__len__()>0:
-					
-					url=final_items.pop(0)
-					
-				if final_items.__len__()>0:
-					
-					image=final_items.pop(0)
-					addDir(name,url,8,image)
-					
-	except Exception:
-		print "Film series Exception occured"
+		except Exception:
+			print "Film series Exception occured"
 
 
 def indexRest(url):
 	cookie = getCookies(url)
-	try:
-		counter=0
-		orig=url
-		kurl=url
-		maxvalue=int(retrive_max_page(kurl))+14
-		final_items=[]
-		for counter in range(0,int(maxvalue)):
-			
-			kurl=orig+'/'+str(counter)
-			req = urllib2.Request(kurl)
-			req.add_header('Host', 'www.bokra.net')
-			req.add_header('Cache-Control', 'max-age=0')
-			req.add_header('max-age=0', 'www.bokra.net')
-			req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
-			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-			req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
-			req.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=4&apv_40_www14=4&cpv_40_www14=1; '+str(cookie)+ ' ; noadvtday=0; nopopatall=1392067134; __utma=1.2014423701.1391851573.1391984583.1392066633.5; __utmb=1.9.10.1392066633; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
-			response = urllib2.urlopen(req)
-			link=response.read()
-			response.close()
-			
-			url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="(.+?);"><img class="lazy" data-original="(.+?)" width="(.+?)" title="').findall(link))
-			if len(str(url_ch))<3:
-				url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img class="lazy" data-original="(.+?)" width="139" height="96"').findall(link))
-			
-			for items in url_ch:
-			   
-				for elements in items:
-					
-					for i in items:
-						url= items[0].strip()
-						name= items[1].replace("pageTracker._trackPageview('/VideoAlbum/","")
-						name=name.replace("html","")
-						name=name.replace(".')","")
-						name=name.rsplit("/",1)
-						name = name[1].strip() 
+	match = False
+	while (match == False):
+		try:
+			counter=0
+			orig=url
+			kurl=url
+			maxvalue=int(retrive_max_page(kurl))+14
+			final_items=[]
+			for counter in range(0,int(maxvalue)):
+				
+				kurl=orig+'/'+str(counter)
+				req = urllib2.Request(kurl)
+				req.add_header('Host', 'www.bokra.net')
+				req.add_header('Cache-Control', 'max-age=0')
+				req.add_header('max-age=0', 'www.bokra.net')
+				req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+				req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+				req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
+				req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+				req.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=5&apv_40_www14=5&cpv_40_www14=2; __atuvc=6%7C7; __utma=1.2014423701.1391851573.1392150214.1392152127.9; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; '+str(cookie))
+				response = urllib2.urlopen(req)
+				link=response.read()
+				response.close()
+				
+				url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="(.+?);"><img class="lazy" data-original="(.+?)" width="(.+?)" title="').findall(link))
+				if len(str(url_ch))<3:
+					url_ch=(re.compile('<div class="pic"><a href="(.+?)" onClick="javascript:(.+?);"><img class="lazy" data-original="(.+?)" width="139" height="96"').findall(link))
+				
+				for items in url_ch:
+				   
+					for elements in items:
 						
-						image= items[2].strip()
-						if image not in final_items:
-							final_items.append(name)
-							final_items.append(url)
-							final_items.append(image)
-			for items in final_items:
-			#print elements
-				if final_items.__len__()>0:
+						for i in items:
+							url= items[0].strip()
+							name= items[1].replace("pageTracker._trackPageview('/VideoAlbum/","")
+							name=name.replace("html","")
+							name=name.replace(".')","")
+							name=name.rsplit("/",1)
+							name = name[1].strip() 
+							
+							image= items[2].strip()
+							if image not in final_items:
+								final_items.append(name)
+								final_items.append(url)
+								final_items.append(image)
+				for items in final_items:
+				#print elements
+					if final_items.__len__()>0:
+						
+						name=final_items.pop(0)
+						
+					if final_items.__len__()>0:
+						
+						url=final_items.pop(0)
+						
+					if final_items.__len__()>0:
+						
+						image=final_items.pop(0)
+						match = True
+						addDir(name,url,8,image)
 					
-					name=final_items.pop(0)
-					
-				if final_items.__len__()>0:
-					
-					url=final_items.pop(0)
-					
-				if final_items.__len__()>0:
-					
-					image=final_items.pop(0)
-					addDir(name,url,8,image)
-					
-	except Exception:
-		print "Film series Exception occured"
+		except Exception:
+			print "Film series Exception occured"
 		
 		
 def indexRamadanSeries(url):
-    
-	req = urllib2.Request(url)
-	req = urllib2.Request(url)
-	req.add_header('Host', 'bokra.net')
-	req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
-	req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
-	req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
-	req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
-	req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
-	req.add_header('Cookie', str(getCookies(url)))
-	
-	
-	response = urllib2.urlopen(req)
-	link=response.read()
-	response.close()
-    
-	matchSerie = re.compile(' <div class="items">(.+?)<div class="bigBanner">', re.DOTALL).findall(link)
-	for items in matchSerie:
-        
-		myTarget=str( items).split('<div class="item">')
-		for itr in myTarget:
-			mySecTarget=str( itr).split('/></a></div>')
-			mytempPath= mySecTarget[0] 
-			if 'spacer8' not in str(mytempPath):
-				mypath=str(mytempPath).replace('<div class="pic"><a href="', 'del').replace('onClick="javascript: pageTracker._trackPageview(', 'del').replace(');"><img class="lazy" data-original="',"del").replace('title="','del')
-				mypath=str(mypath).split('del')
-				finalImage=str( mypath[3]).split('" width=')[0]
-				finalName=str( mypath[4]).replace('"', '').strip()
-				finalImage=str(finalImage).strip()
-				finalUrl=str( mypath[1]).replace('"', '').strip()
-				addDir(finalName,finalUrl,2,finalImage)
+	match = False
+	while (match == False):
+		req = urllib2.Request(url)
+		req = urllib2.Request(url)
+		req.add_header('Host', 'bokra.net')
+		req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
+		req.add_header('Referer', 'http://bokra.net/Skip/?ref='+str(url))
+		req.add_header('Accept-Encoding', ' gzip,deflate,sdch')
+		req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
+		req.add_header('Cookie', ' WRUID=699958697.415178061; __CT_Data=gpv=5&apv_40_www14=5&cpv_40_www14=2; __atuvc=6%7C7; PHPSESSID=vomd239ho3eupgo6cdt1chcnm7; __utma=1.2014423701.1391851573.1392152127.1392226590.10; __utmb=1.5.10.1392226590; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0')
+		
+		
+		response = urllib2.urlopen(req)
+		link=response.read()
+		response.close()
+		
+		matchSerie = re.compile(' <div class="items">(.+?)<div class="bigBanner">', re.DOTALL).findall(link)
+		for items in matchSerie:
+			
+			myTarget=str( items).split('<div class="item">')
+			for itr in myTarget:
+				mySecTarget=str( itr).split('/></a></div>')
+				mytempPath= mySecTarget[0] 
+				if 'spacer8' not in str(mytempPath):
+					mypath=str(mytempPath).replace('<div class="pic"><a href="', 'del').replace('onClick="javascript: pageTracker._trackPageview(', 'del').replace(');"><img class="lazy" data-original="',"del").replace('title="','del')
+					mypath=str(mypath).split('del')
+					finalImage=str( mypath[3]).split('" width=')[0]
+					finalName=str( mypath[4]).replace('"', '').strip()
+					finalImage=str(finalImage).strip()
+					finalUrl=str( mypath[1]).replace('"', '').strip()
+					match = True
+					addDir(finalName,finalUrl,2,finalImage)
 
 			
 			
 				
 		
 def index_films(url):
+	
 	
 	try:
 		counter=0
@@ -334,7 +344,7 @@ def index_films(url):
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
 			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
 			req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
-			req.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=4&apv_40_www14=4&cpv_40_www14=1; '+getCookies(url)+ ' ; noadvtday=0; nopopatall=1392067134; __utma=1.2014423701.1391851573.1391984583.1392066633.5; __utmb=1.9.10.1392066633; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
+			#req.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=5&apv_40_www14=5&cpv_40_www14=2; __atuvc=6%7C7; __utma=1.2014423701.1391851573.1392150214.1392152127.9; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; '+str(cookie))
 
 			response = urllib2.urlopen(req)
 			link=response.read()
@@ -403,7 +413,7 @@ def listSeries(url):
 			req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
 			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
 			req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
-			req.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=4&apv_40_www14=4&cpv_40_www14=1; '+getCookies(url)+ ' ; noadvtday=0; nopopatall=1392067134; __utma=1.2014423701.1391851573.1391984583.1392066633.5; __utmb=1.9.10.1392066633; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
+			req.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=5&apv_40_www14=5&cpv_40_www14=2; __atuvc=6%7C7; __utma=1.2014423701.1391851573.1392150214.1392152127.9; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; '+str(cookie))
 			response = urllib2.urlopen(req)
 			link=response.read()
 			response.close()
@@ -485,6 +495,7 @@ def getBokraRamadanEpos(url):
 		ctr = 0
 		start_time = datetime.datetime.now()
 		diff = start_time - start_time  ## initialize at zero
+		cookie = str(getCookies(url))
 		while (match == False) or (diff < stop):
 			ctr += 1
 			diff = datetime.datetime.now() - start_time 
@@ -496,7 +507,7 @@ def getBokraRamadanEpos(url):
 			req3.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1700.107 Safari/537.36')
 			req3.add_header('Accept-Encoding', 'gzip,deflate,sdch')
 			req3.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.6,en;q=0.4')
-			req3.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=4&apv_40_www14=4&cpv_40_www14=1; '+getCookies(url)+ ' ; noadvtday=0; nopopatall=1392067134; __utma=1.2014423701.1391851573.1391984583.1392066633.5; __utmb=1.9.10.1392066633; __utmc=1; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)')
+			req3.add_header('Cookie', 'WRUID=699958697.415178061; __CT_Data=gpv=5&apv_40_www14=5&cpv_40_www14=2; __atuvc=6%7C7; __utma=1.2014423701.1391851573.1392150214.1392152127.9; __utmz=1.1391851573.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); noadvtday=0; '+str(cookie))
 			response3 = urllib2.urlopen(req3)
 			link=response3.read()
 			response3.close()
