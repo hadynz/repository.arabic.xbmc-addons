@@ -12,10 +12,9 @@ import xbmcgui
 from urllib2 import Request, build_opener, HTTPCookieProcessor, HTTPHandler
 import cookielib
 import datetime
+import socket
 
-
-
-
+socket.setdefaulttimeout(60)
 __settings__ = xbmcaddon.Addon(id='plugin.video.bokra')
 __icon__ = __settings__.getAddonInfo('icon')
 __fanart__ = __settings__.getAddonInfo('fanart')
