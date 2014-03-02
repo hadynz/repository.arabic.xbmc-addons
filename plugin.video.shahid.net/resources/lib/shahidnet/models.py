@@ -1,10 +1,16 @@
-from resources.lib.common.utils import isEnglish
+from utils import isEnglish
 
 
 class MediaType:
     EPISODE = 'episodes'
     CLIP = 'clips'
     PROGRAM = 'programs'
+
+
+class FilterType:
+    GENRE = 'genre'
+    DIALECT = 'dialect'
+    PROGRAM_Type = 'program'
 
 
 class ChannelItem:

@@ -1,3 +1,7 @@
+3.1.0 (23.11.2013)
+ - added the ability for user to set and browse Shahid by filters
+ - added locale language support
+
 3.0.0 (17.11.2013)
  - added browsing by date released
  - added browsing by most popular

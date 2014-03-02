@@ -1,6 +1,6 @@
 import re
 from models import ChannelItem, ProgramItem, MediaItem
-from resources.lib.common.utils import json
+from utils import json
 
 
 API_KEY = '4cd216240b9e47c3d97450b9b4866d3f'

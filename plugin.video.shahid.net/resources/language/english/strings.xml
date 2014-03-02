@@ -1,0 +1,31 @@
+<strings>
+
+    <!-- MENUS -->
+    <string id="30000">Filter</string>
+    <string id="30001">Channels</string>
+    <string id="30002">Search...</string>
+    <string id="30003">Most Popular</string>
+    <string id="30004">Date Released</string>
+
+    <string id="30005">Add Filter</string>
+    <string id="30006">Program Type</string>
+    <string id="30007">Genre</string>
+    <string id="30008">Dialect</string>
+    <string id="30009">Save</string>
+    <string id="30010">Latest Episodes</string>
+    <string id="30011">Latest Programs</string>
+    <string id="30012">Latest Clips</string>
+    <string id="30013">Most Popular Episodes</string>
+    <string id="30014">Most Popular Clips</string>
+
+    <!-- CONTEXT MENU -->
+    <string id="30100">Remove Filter</string>
+
+    <!-- DIALOGS -->
+    <string id="30110">Remove Filter</string>
+    <string id="30111">Are you sure want to remove the chosen filter?</string>
+    <string id="30112">Success</string>
+    <string id="30113">Filter created successfully</string>
+    <string id="30114">Search Shahid.Net</string>
+
+</strings>

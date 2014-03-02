@@ -1,4 +1,4 @@
-from scraper import get_most_watched
+from scraper import get_most_watched, get_filtered_programs
 from webservice import (get_channels, get_channel_programs, get_program_media, get_media_stream_by_media_id, get_media_stream_by_url, search)
 
 
@@ -50,3 +50,6 @@ class ShahidNetAPI:
 
     def search(self, search_term, limit=20):
         return search(search_term, limit)
+
+    def get_filtered_programs(self, dialectId, genreId, typeId):
+        return get_filtered_programs(dialectId, genreId, typeId)
