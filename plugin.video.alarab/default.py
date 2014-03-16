@@ -184,9 +184,6 @@ def list_films(url):
 				name=name.replace("بدون", "")
 				name=name.replace("كامل", "")
 				name=name.strip()
-				print name
-				print items[0]
-				print elements[0]
 				addLink(name,"http://tv1.alarab.net"+str(items[0]),3,elements[0])
 	except Exception:
 		print "Exception in list_films "
@@ -217,23 +214,21 @@ def get_epos_video(url,name):
 		image=str(image).replace("['", "")
 		image=str(image).replace("']", "").strip()
 		
-		print video
-		print image
 		if "www.youtube" in video:
 			video=video.split("v=")
 			print "youtube after split: "+str(video)
 			video_id=str(video[1])
 			video_id=video_id.replace(".flv","").strip()
 			print "first item of youtube: "+str(video_id)
-			playback_url = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % video_id
+			playback_url = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % video_id 
 			
 			listItem = xbmcgui.ListItem(path=str(playback_url))
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 			
 			
-				
 		else:
-			listItem = xbmcgui.ListItem(path=str(video))
+			video = str(video)+'|Referer=http://alarabplayers.alarab.net/jwplayer/player.swf'
+			listItem = xbmcgui.ListItem(path=video)
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 			
 	except Exception:
