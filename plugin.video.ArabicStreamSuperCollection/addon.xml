@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.ArabicStreamSuperCollection"
-  version="1.5.0"
+  version="1.6.0"
   name="Arabic Live Stream Super Collection"
   provider-name="Bisha">
   <requires>

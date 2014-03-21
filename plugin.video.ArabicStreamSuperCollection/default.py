@@ -35,7 +35,7 @@ def mainDir():
 	addDir('Arabic Filmon Channels','https://www.filmon.com/group/arabic-tv',3,'http://static.filmon.com/couch/channels/689/extra_big_logo.png')
 	addDir('Mashup Arabic Streams','https://raw.github.com/mash2k3/MashUpStreams/master/CrusadersDir.xml',5,'http://www.mirrorservice.org/sites/addons.superrepo.org/Frodo/.metadata/plugin.video.movie25.jpg')
 	addDir('TvIraq.net','http://www.tviraq.net/',8,'http://4.bp.blogspot.com/-mAFM9C7G3x8/Urg65k7EBsI/AAAAAAAADBU/FJ1UVeYz-5s/s1600/al+jazeera+mubasher++tv+live+logo.png')
-	addDir('Arabichannels.com (Free channels)','http://www.arabichannels.com/',11,'http://www.arabichannels.com/images/general.jpg')
+	#addDir('hdarabic.com (Free channels)','http://www.hdarabic.com/',11,'http://www.hdarabic.com/images/general.jpg')
 	addDir('OtherSources',' ',13,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
 	addDir('Livestation','http://www.livestation.com/',16,'http://www.livestation.com/assets/new_logo.png')
 	
@@ -44,7 +44,7 @@ def otherSourcesCat():
 	addDir('Relegious','http://jinnahtv.com/apps_mng/service_files/live_tv_religious_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
 	addDir('News','http://jinnahtv.com/apps_mng/service_files/live_tv_news_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
 	addDir('Sports','http://jinnahtv.com/apps_mng/service_files/live_tv_sports_channels.php',14,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
-	#addDir('Different channels','http://steinmann.webs.com/tvhd.xml',18,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
+	addDir('Different channels','http://steinmann.webs.com/tvhd.xml',18,'http://t1.ftcdn.net/jpg/00/29/62/30/400_F_29623050_hk7Oy2QPH8ZS6qa2vrYXz28O65G248ic.jpg')
 def GetOtherChannels(url):
     
 	req = urllib2.Request(url)
@@ -419,53 +419,53 @@ def index_Teledunet(url):
 	pathArray=[]
 	global globalIp
 	
-	addLink('MBC','rtmp://www.teledunet.com:1935/teledunet/mbc_1',10,'https://si0.twimg.com/profile_images/1133033554/mbc-fb.JPG')
-	addLink('MBC DRAMA','rtmp://www.teledunet.com:1935/teledunet/mbc_drama',10,'http://www.allied-media.com/ARABTV/images/mbc_drama.jpg')
-	addLink('beIn Sports 1','rtmp://www.teledunet.com:1935/teledunet/jsc_1',10,'')
-	addLink('beIn Sports 2','rtmp://www.teledunet.com:1935/teledunet/jsc_2',10,'')
-	addLink('beIn Sports 3','rtmp://www.teledunet.com:1935/teledunet/jsc_3',10,'')
-	addLink('beIn Sports 4','rtmp://www.teledunet.com:1935/teledunet/jsc_4',10,'')
-	addLink('beIn Sports 5','rtmp://www.teledunet.com:1935/teledunet/jsc_5',10,'')
-	addLink('beIn Sports 6','rtmp://www.teledunet.com:1935/teledunet/jsc_6',10,'')
-	addLink('beIn Sports 7','rtmp://www.teledunet.com:1935/teledunet/jsc_7',10,'')
-	addLink('beIn Sports 8','rtmp://www.teledunet.com:1935/teledunet/jsc_8',10,'')
-	addLink('beIn Sports 11','rtmp://www.teledunet.com:1935/teledunet/jsc_9',10,'')
-	addLink('beIn Sports 12','rtmp://www.teledunet.com:1935/teledunet/jsc_10',10,'')
-	addLink('JSC 1 HD','rtmp://www.teledunet.com:1935/teledunet/tele_1_hd',10,'')
-	addLink('JSC 2 HD','rtmp://www.teledunet.com:1935/teledunet/tele_2_hd',10,'')
-	addLink('Abu Dhabi Al Oula','rtmp://www.teledunet.com:1935/teledunet/abu_dhabi',10,'https://www.zawya.com/pr/images/2009/ADTV_One_RGB_2009_10_08.jpg')
-	addLink('Abu Dhabi Sports','rtmp://www.teledunet.com:1935/teledunet/abu_dhabi_sports_1',10,'https://si0.twimg.com/profile_images/2485587448/2121.png')
-	addLink('Al Jazeera','rtmp://www.teledunet.com:1935/teledunet/aljazeera',10,'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg')
-	addLink('Al Jazeera Mubasher Masr','rtmp://www.teledunet.com:1935/teledunet/aljazeera_mubasher_masr',10,'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg')
-	addLink('Al Jazeera Children','rtmp://www.teledunet.com:1935/teledunet/aljazeera_children',10,'http://3.bp.blogspot.com/-UX1XBY8-02g/Uoku7OTIrFI/AAAAAAAAASk/-0eEX7fumJw/s1600/al_jazeera_children.png')
-	addLink('Al Jazeera Documentation','rtmp://www.teledunet.com:1935/teledunet/aljazeera_doc',10,'http://upload.wikimedia.org/wikipedia/en/e/e6/Al_Jazeera_Doc.png')
-	addLink('ART Cinema','rtmp://www.teledunet.com:1935/teledunet/art_aflam_1',10,'http://www.lyngsat-logo.com/hires/aa/art_cinema.png')
-	addLink('ART Aflam 2','rtmp://www.teledunet.com:1935/teledunet/art_aflam_2',10,'http://www.invision.com.sa/en/sites/default/files/imagecache/216x216/channels/2011/10/11/1138.jpg')
-	addLink('Cartoon Network','rtmp://www.teledunet.com:1935/teledunet/cartoon_network',10,'http://upload.wikimedia.org/wikipedia/commons/b/bb/Cartoon_Network_Arabic_logo.png')
-	addLink('MTV Lebanon','rtmp://www.teledunet.com:1935/teledunet/mtv',10,'http://mtv.com.lb/images/mtv-social-logo1.jpg')
-	addLink('AlJadeed','rtmp://www.teledunet.com:1935/teledunet/aljaded_sat',10,'')
-	addLink('NBN','rtmp://www.teledunet.com:1935/teledunet/nbn',10,'http://upload.wikimedia.org/wikipedia/en/1/14/Nbn_lebanon.png')
-	addLink('Otv Lebanon','rtmp://www.teledunet.com:1935/teledunet/otv_lebanon',10,'http://www.worldmedia.com.au/Portals/0/Images/Logo_s/otv.png')
-	addLink('Al Hayat','rtmp://www.teledunet.com:1935/teledunet/alhayat_1',10,'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg')
-	addLink('Al Hayat Cinema','rtmp://www.teledunet.com:1935/teledunet/alhayat_cinema',10,'http://www.lyngsat-logo.com/hires/aa/alhayat_cinema.png')
-	addLink('Alarabiya','rtmp://www.teledunet.com:1935/teledunet/alarabiya',10,'http://www.debbieschlussel.com/archives/alarabiya2.jpg')
-	addLink('Tele Sports','rtmp://www.teledunet.com:1935/teledunet/tele_sports',10,'http://www.itwebsystems.co.uk/resources/icon.png')
-	addLink('Noursat','rtmp://www.teledunet.com:1935/teledunet/noursat',10,'')
-	addLink('TF1','rtmp://www.teledunet.com:1935/teledunet/tf1',10,'')
-	addLink('Al Masriyah','rtmp://www.teledunet.com:1935/teledunet/al_masriyah',10,'')
-	addLink('Iqra','rtmp://www.teledunet.com:1935/teledunet/Iqra',10,'')
-	addLink('Canal Plus','rtmp://www.teledunet.com:1935/teledunet/canal_plus',10,'')
-	addLink('Melody TV','rtmp://www.teledunet.com:1935/teledunet/melody',10,'')
-	addLink('Alrahma','rtmp://www.teledunet.com:1935/teledunet/alrahma',10,'')
-	addLink('Assadissa','rtmp://www.teledunet.com:1935/teledunet/assadissa',10,'')
-	addLink('Dzair 24','rtmp://www.teledunet.com:1935/teledunet/dzair_24',10,'')
-	addLink('Dzair TV','rtmp://www.teledunet.com:1935/teledunet/dzair_tv',10,'')
-	addLink('M6','rtmp://www.teledunet.com:1935/teledunet/m6',10,'')
-	addLink('Noursat','rtmp://www.teledunet.com:1935/teledunet/noursat',10,'')
-	addLink('ORTB TV','rtmp://www.teledunet.com:1935/teledunet/ortb_tv',10,'')
-	addLink('Roya','rtmp://www.teledunet.com:1935/teledunet/roya',10,'')
-	addLink('TNN','rtmp://www.teledunet.com:1935/teledunet/tnn',10,'')
-	addLink('W9','rtmp://www.teledunet.com:1935/teledunet/w9',10,'')
+	addLink('MBC','rtmp://5.135.134.110:1935/teledunet/mbc_1',10,'https://si0.twimg.com/profile_images/1133033554/mbc-fb.JPG')
+	addLink('MBC DRAMA','rtmp://5.135.134.110:1935/teledunet/mbc_drama',10,'http://www.allied-media.com/ARABTV/images/mbc_drama.jpg')
+	addLink('beIn Sports 1','rtmp://5.135.134.110:1935/teledunet/jsc_1',10,'')
+	addLink('beIn Sports 2','rtmp://5.135.134.110:1935/teledunet/jsc_2',10,'')
+	addLink('beIn Sports 3','rtmp://5.135.134.110:1935/teledunet/jsc_3',10,'')
+	addLink('beIn Sports 4','rtmp://5.135.134.110:1935/teledunet/jsc_4',10,'')
+	addLink('beIn Sports 5','rtmp://5.135.134.110:1935/teledunet/jsc_5',10,'')
+	addLink('beIn Sports 6','rtmp://5.135.134.110:1935/teledunet/jsc_6',10,'')
+	addLink('beIn Sports 7','rtmp://5.135.134.110:1935/teledunet/jsc_7',10,'')
+	addLink('beIn Sports 8','rtmp://5.135.134.110:1935/teledunet/jsc_8',10,'')
+	addLink('beIn Sports 11','rtmp://5.135.134.110:1935/teledunet/jsc_9',10,'')
+	addLink('beIn Sports 12','rtmp://5.135.134.110:1935/teledunet/jsc_10',10,'')
+	addLink('JSC 1 HD','rtmp://5.135.134.110:1935/teledunet/tele_1_hd',10,'')
+	addLink('JSC 2 HD','rtmp://5.135.134.110:1935/teledunet/tele_2_hd',10,'')
+	addLink('Abu Dhabi Al Oula','rtmp://5.135.134.110:1935/teledunet/abu_dhabi',10,'https://www.zawya.com/pr/images/2009/ADTV_One_RGB_2009_10_08.jpg')
+	addLink('Abu Dhabi Sports','rtmp://5.135.134.110:1935/teledunet/abu_dhabi_sports_1',10,'https://si0.twimg.com/profile_images/2485587448/2121.png')
+	addLink('Al Jazeera','rtmp://5.135.134.110:1935/teledunet/aljazeera',10,'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg')
+	addLink('Al Jazeera Mubasher Masr','rtmp://5.135.134.110:1935/teledunet/aljazeera_mubasher_masr',10,'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg')
+	addLink('Al Jazeera Children','rtmp://5.135.134.110:1935/teledunet/aljazeera_children',10,'http://3.bp.blogspot.com/-UX1XBY8-02g/Uoku7OTIrFI/AAAAAAAAASk/-0eEX7fumJw/s1600/al_jazeera_children.png')
+	addLink('Al Jazeera Documentation','rtmp://5.135.134.110:1935/teledunet/aljazeera_doc',10,'http://upload.wikimedia.org/wikipedia/en/e/e6/Al_Jazeera_Doc.png')
+	addLink('ART Cinema','rtmp://5.135.134.110:1935/teledunet/art_aflam_1',10,'http://www.lyngsat-logo.com/hires/aa/art_cinema.png')
+	addLink('ART Aflam 2','rtmp://5.135.134.110:1935/teledunet/art_aflam_2',10,'http://www.invision.com.sa/en/sites/default/files/imagecache/216x216/channels/2011/10/11/1138.jpg')
+	addLink('Cartoon Network','rtmp://5.135.134.110:1935/teledunet/cartoon_network',10,'http://upload.wikimedia.org/wikipedia/commons/b/bb/Cartoon_Network_Arabic_logo.png')
+	addLink('MTV Lebanon','rtmp://5.135.134.110:1935/teledunet/mtv',10,'http://mtv.com.lb/images/mtv-social-logo1.jpg')
+	addLink('AlJadeed','rtmp://5.135.134.110:1935/teledunet/aljaded_sat',10,'')
+	addLink('NBN','rtmp://5.135.134.110:1935/teledunet/nbn',10,'http://upload.wikimedia.org/wikipedia/en/1/14/Nbn_lebanon.png')
+	addLink('Otv Lebanon','rtmp://5.135.134.110:1935/teledunet/otv_lebanon',10,'http://www.worldmedia.com.au/Portals/0/Images/Logo_s/otv.png')
+	addLink('Al Hayat','rtmp://5.135.134.110:1935/teledunet/alhayat_1',10,'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg')
+	addLink('Al Hayat Cinema','rtmp://5.135.134.110:1935/teledunet/alhayat_cinema',10,'http://www.lyngsat-logo.com/hires/aa/alhayat_cinema.png')
+	addLink('Alarabiya','rtmp://5.135.134.110:1935/teledunet/alarabiya',10,'http://www.debbieschlussel.com/archives/alarabiya2.jpg')
+	addLink('Tele Sports','rtmp://5.135.134.110:1935/teledunet/tele_sports',10,'http://www.itwebsystems.co.uk/resources/icon.png')
+	addLink('Noursat','rtmp://5.135.134.110:1935/teledunet/noursat',10,'')
+	addLink('TF1','rtmp://5.135.134.110:1935/teledunet/tf1',10,'')
+	addLink('Al Masriyah','rtmp://5.135.134.110:1935/teledunet/al_masriyah',10,'')
+	addLink('Iqra','rtmp://5.135.134.110:1935/teledunet/Iqra',10,'')
+	addLink('Canal Plus','rtmp://5.135.134.110:1935/teledunet/canal_plus',10,'')
+	addLink('Melody TV','rtmp://5.135.134.110:1935/teledunet/melody',10,'')
+	addLink('Alrahma','rtmp://5.135.134.110:1935/teledunet/alrahma',10,'')
+	addLink('Assadissa','rtmp://5.135.134.110:1935/teledunet/assadissa',10,'')
+	addLink('Dzair 24','rtmp://5.135.134.110:1935/teledunet/dzair_24',10,'')
+	addLink('Dzair TV','rtmp://5.135.134.110:1935/teledunet/dzair_tv',10,'')
+	addLink('M6','rtmp://5.135.134.110:1935/teledunet/m6',10,'')
+	addLink('Noursat','rtmp://5.135.134.110:1935/teledunet/noursat',10,'')
+	addLink('ORTB TV','rtmp://5.135.134.110:1935/teledunet/ortb_tv',10,'')
+	addLink('Roya','rtmp://5.135.134.110:1935/teledunet/roya',10,'')
+	addLink('TNN','rtmp://5.135.134.110:1935/teledunet/tnn',10,'')
+	addLink('W9','rtmp://5.135.134.110:1935/teledunet/w9',10,'')
     
 	for itemNameUrl in nameUrl:
 		myItems=str(itemNameUrl).split(',')
@@ -475,7 +475,7 @@ def index_Teledunet(url):
 			globalIp=str( path).split('teledunet')[0]
 			globalIp=str(globalIp).replace("1935/","1935")
 			#print globalIp
-		#path=str(path).replace("rtmp://www.teledunet.com:1935/",str(globalIp))
+		#path=str(path).replace("rtmp://5.135.134.110:1935/",str(globalIp))
 		nameArray.append(name) 
 		pathArray.append(path) 
     
@@ -563,13 +563,13 @@ def GetHDSITEChannels(url):
                     
 def PlayTeledunet(url):
 	firstPart=str(url).split('teledunet/')[1]
-	url='rtmp://www.teledunet.com:1935/teledunet/'+str(firstPart).strip()
+	url='rtmp://5.135.134.110:1935/teledunet/'+str(firstPart).strip()
 	finalPayPath=url+' app=teledunet swfUrl=http://www.teledunet.com/tv/player.swf?bufferlength=5&repeat=single&autostart=true&id0='+str(getId(firstPart))+'&streamer='+str(url)+'&file='+str(firstPart)+'&provider=rtmp playpath='+str(firstPart)+' live=1 pageUrl=http://www.teledunet.com/tv/?channel='+str(firstPart)+'&no_pub'
 	listItem = xbmcgui.ListItem(path=str(finalPayPath))
 	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	
 
-############################################ ARABICHANNELS.COM################################################################
+############################################ hdarabic.com################################################################
 
 def getCookiesARC(url):
 
@@ -579,12 +579,12 @@ def getCookiesARC(url):
     opener = build_opener(HTTPCookieProcessor(cj), HTTPHandler())
     #create a request object to be used to get the page.
     req = Request(url)
-    req.add_header('Host', 'www.arabichannels.com')
+    req.add_header('Host', 'www.hdarabic.com')
     req.add_header('Cache-Control', 'max-age=0')
     req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
     req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
     req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-    req.add_header('Referer', 'http://www.arabichannels.com/')
+    req.add_header('Referer', 'http://www.hdarabic.com/')
     req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
     f = opener.open(req)
     #see the first few lines of the page
@@ -594,47 +594,60 @@ def getCookiesARC(url):
 
 def indexArChannels(url):
 	req = urllib2.Request(url)
-	req.add_header('Host', 'www.arabichannels.com')
-	req.add_header('Cache-Control', 'max-age=0')
-	req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
-	req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
-	req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-	req.add_header('Referer', 'http://www.arabichannels.com/')
-	req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-	req.add_header('Cookie', '  tzLogin='+str(getCookiesARC('http://www.arabichannels.com/')))
 	response = urllib2.urlopen(req)
 	link=response.read()
-	matchObj=(re.compile('<div class="(.+?)"><a href="#" onclick="document.getElementById(.+?)><span class="nume"(.+?)</span><img src="(.+?)"/></a></div>').findall(link))
-	for items in matchObj:
-		path=str( items[1]).split("src='")
-		path=path[1]
-		path="http://www.arabichannels.com/"+str(path).replace(';"',"").replace("'", '').strip()
-		name=str( items[2]).replace(">", "").strip()
-		image=str( items[3]).strip()
-		if not "http:"  in image:
-			if "./"  in image:
-				image=str(image).replace("./","")
-				image="http://www.arabichannels.com/"+image
-			elif "/images/" in image:
-				image="http://www.arabichannels.com"+image
-		if "IPTV Receiver" not in str(name):
-			if "ArabiChannels TV" not in str(name):
-				if 'iptv' not in path:
+    
+	req = urllib2.Request(url)
+	req.add_header('Host', 'hdarabic.com')
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+	#req.add_header('Referer', ' http://arabichannels.com/')
+	req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
+	req.add_header('Accept-Encoding', 'identity')
+	req.add_header('Connection', 'close')
+	target= re.findall(r'<ul id="menu">(.*?)\s(.*?)<ul></div> ', link, re.DOTALL)
+    
+	for items in target:
+		myBaseUrl= items[1]
+		myBaseUrl=str(myBaseUrl).split('"/></a></div>')
+		for itr in myBaseUrl:
+			try:
+				theTarget=str( itr).split("src='")[1]
+				theTarget=str(theTarget).replace(';"><span class="nume">', 'DELIM').replace('" alt="','DELIM')
+				theTarget=str(theTarget).split('DELIM')
+				path='http://www.hdarabic.com/'+str( theTarget[0]).replace("'", "").strip()
+				nameImage= str(theTarget[1]).split('</span><img src="')
+				name=str( nameImage[0]).strip()
+				image=str(nameImage[1]).replace("./", "/").strip()
+                
+				if 'http' in str( image):
+					image=image
+				else:
+					image="http://www.hdarabic.com"+image
+                
+				if 'iptv' not in str(path):
 					addLink(name,path,12,image)
+			except:
+				pass
+   
+					
+	
+            
+					
 					
 def playARCChannel(url):
 
 	if ".php" in str(url):
 
 		req = urllib2.Request(url)
-		req.add_header('Host', 'www.arabichannels.com')
+		req.add_header('Host', 'www.hdarabic.com')
 		req.add_header('Cache-Control', 'max-age=0')
 		req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
 		req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
 		req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-		req.add_header('Referer', 'http://www.arabichannels.com/')
+		req.add_header('Referer', 'http://www.hdarabic.com/')
 		req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-		req.add_header('Cookie', '  tzLogin='+str(getCookies('http://www.arabichannels.com/')))
+		req.add_header('Cookie', '  tzLogin='+str(getCookies('http://www.hdarabic.com/')))
 		response = urllib2.urlopen(req)
 		link=response.read()
 		streamer=(re.compile("'streamer':(.+?)',").findall(link))
@@ -650,13 +663,13 @@ def playARCChannel(url):
 		mynr3=randint(100,900)
 		mynr=randint(10000,500000)
 		
-		#complete=streamer + ' swfUrl=http://arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
-		complete=streamer +'/'+fileLoc+ ' swfUrl=http://www.arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
+		#complete=streamer + ' swfUrl=http://hdarabic.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
+		complete=streamer +'/'+fileLoc+ ' swfUrl=http://www.hdarabic.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
 		listItem = xbmcgui.ListItem(path=str(complete))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		time.sleep(6)
 		if xbmc.Player().isPlayingVideo()==False:
-			complete=streamer + ' swfUrl=http://www.arabichannels.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
+			complete=streamer + ' swfUrl=http://www.hdarabic.com' + swf + ' playpath=' + fileLoc +  ' flashVer='+str(mynr1)+'.'+str(mynr2)+'.'+str(mynr3)+' live=1 swfVfy=true pageUrl='+str(url)
 			listItem = xbmcgui.ListItem(path=str(complete))
 			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 		
@@ -668,21 +681,21 @@ def playARCChannel(url):
         
 			myfinalpath=' '
 			req = urllib2.Request(url)
-			req.add_header('Host', 'www.arabichannels.com')
+			req.add_header('Host', 'www.hdarabic.com')
 			req.add_header('Cache-Control', 'max-age=0')
 			req.add_header('Accept', ' text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
 			req.add_header('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36')
 			req.add_header('Accept-Encoding', 'gzip,deflate,sdch')
-			req.add_header('Referer', 'http://www.arabichannels.com/')
+			req.add_header('Referer', 'http://www.hdarabic.com/')
 			req.add_header('Accept-Language', 'sv,en-US;q=0.8,en;q=0.6,en-GB;q=0.4')
-			req.add_header('Cookie', '  tzLogin='+str(getCookies('http://www.arabichannels.com/')))
+			req.add_header('Cookie', '  tzLogin='+str(getCookies('http://www.hdarabic.com/')))
 			#req.add_header('Cookie', '  tzLogin=t5r8fm4vpck03ap6feeakj3of4; __qca=P0-831467814-1383850814929; HstCfa2398318=1383850815237; HstCmu2398318=1383850815237; HstCla2398318=1384292777596; HstPn2398318=1; HstPt2398318=6; HstCnv2398318=3; HstCns2398318=5; MLR72398318=1384292780000; __zlcmid=LodILVkuY96YpR; _pk_id.1.c9f1=ab7e13fd2cf6be07.1383850815.4.1384292879.1384285142.')
 			response = urllib2.urlopen(req)
 			link=response.read()
 			mypath=(re.compile("file: '(.+?)',").findall(link))
 			for item in  mypath:
 				if "smil" in str(item):
-					mydest="http://www.arabichannels.com/"+str( item).strip()
+					mydest="http://www.hdarabic.com/"+str( item).strip()
 					req2 = urllib2.Request(mydest)
 					req2.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
 					response2 = urllib2.urlopen(req2)
@@ -691,7 +704,7 @@ def playARCChannel(url):
 					myfinalpath=(re.compile(' <meta base="(.+?)"/>').findall(link2))
 					myfinalpath=str(myfinalpath).replace("['", "").replace("']", "").strip()
 					videosource=str(videosource).replace("['", "").replace("']", "").replace("'","").strip()
-					myfinalpath=myfinalpath + ' playpath=' + videosource + ' swfUrl=http://www.arabichannels.com/player4/jwplayer.flash.swf live=1 buffer=300000 timeout=15 swfVfy=1 pageUrl=http://www.arabichannels.com'
+					myfinalpath=myfinalpath + ' playpath=' + videosource + ' swfUrl=http://www.hdarabic.com/player4/jwplayer.flash.swf live=1 buffer=300000 timeout=15 swfVfy=1 pageUrl=http://www.hdarabic.com'
 					listItem = xbmcgui.ListItem(path=str(myfinalpath))
 					xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	
