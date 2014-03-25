@@ -99,7 +99,7 @@ def playContent(url):
 		videoFile=str( videoFile).split('file=')[1]
 		videoFile=str(videoFile).split('&image=')[0]
 		videoFile=str( videoFile).strip()
-		playback_url = videoFile
+		playback_url = urllib.unquote ( videoFile )
 		listItem = xbmcgui.ListItem(path=str(playback_url))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 

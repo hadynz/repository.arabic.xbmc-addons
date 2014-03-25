@@ -126,7 +126,6 @@ def GET_VIDEO_FILE(name, url):
 	url="http://www.panet.co.il/Ext/vplayer_lib.php?media="+str(url)+'&start=false'
 	req = urllib2.Request(url)
 	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-	req.add_header('Host',' fms-eu0.panet.co.il')
 	req.add_header('Accept',' text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
 	req.add_header('Accept-Language',' en-US,en;q=0.5')
 	req.add_header('Accept-Encoding', 'deflate')
