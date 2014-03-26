@@ -1,4 +1,4 @@
-# -*- coding: utf9 -*-
+# -*- coding: utf8 -*-
 import urllib,urllib2,re,xbmcplugin,xbmcgui
 import xbmc, xbmcgui, xbmcplugin, xbmcaddon
 from httplib import HTTP
