@@ -1,4 +1,4 @@
-2.0.3 (27.03.2014) - malkhen
+2.1.0 (27.03.2014) - malkhen
 - fixed HTTP request headers to fetch main page
 - fixed channel url scraping
    
