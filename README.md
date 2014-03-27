@@ -1,10 +1,10 @@
 Arabic XBMC Addons Repository
 ======================
 
-* Author: Bisha
-* Twitter: 
+* Author: Hady Osman (hadyos@gmail.com)
+* Twitter: [@hadynz](https://twitter.com/hadynz)
 * Version: 1.0.0
-* Bitbucket: https://bitbucket.org/bisha77/repository.arabic.bisha.xbmc-addons
+* Github: https://github.com/hadynz/repository.arabic.xbmc-addons
 
 ## Introduction
 This repository contains a number of XBMC addons that are focused around providing Arabic streaming content.
@@ -41,7 +41,7 @@ There are two main ways to install this XBMC repository:
 3. Choose: **repository.arabic.xbmc-addons-1.0.0.zip**
 
 ### 2. Manual Download and Installation
-1. Simply download the [repository zip](https://bitbucket.org/bisha77/repository.arabic.bisha.xbmc-addons/downloads/repository.arabic.bisha.xbmc-addons-1.0.0.zip) 
+1. Simply download the [repository zip](https://github.com/downloads/hadynz/repository.arabic.xbmc-addons/repository.arabic.xbmc-addons-1.0.0.zip) 
 and install it in XBMC.
 2. Read the following [guide](http://wiki.xbmc.org/index.php?title=Add-ons#How_to_install_from_zip) 
 on the XBMC wiki to learn how to install addons from a repository.
@@ -53,10 +53,10 @@ This has typically meant that you have downloaded this github repository as a ZI
 in the 'Download Packages' section of the downloads page.
 
 ## Contributors
-* [bisha77](https://github.com/bisha77)
 * [hadynz](https://github.com/hadynz)
-
-
+* [bisha77](https://github.com/bisha77)
+* [Qwin](https://github.com/Qwin)
+* [bbk79](https://github.com/bbk79)
 
 
 ## Contribution
