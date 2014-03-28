@@ -7,24 +7,22 @@ from hardcode import HARDCODED_STREAMS
 
 HEADER_REFERER = 'http://www.teledunet.com/'
 HEADER_HOST = 'www.teledunet.com'
-HEADER_USER_AGENT = 'Mozilla/5.0'
+HEADER_USER_AGENT = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
 TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/tv_/?channel=%s'
 
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
 
 
-def _get(url):
+def _get(request):
     """Performs a GET request for the given url and returns the response"""
-    conn = opener.open(url)
-    resp = conn.read()
-    conn.close()
-    return resp
-
+    return opener.open(request).read()
 
 def _html(url):
     """Downloads the resource at the given url and parses via BeautifulSoup"""
-    return BeautifulSoup(_get(url), convertEntities=BeautifulSoup.HTML_ENTITIES)
+    headers = { "User-Agent": HEADER_USER_AGENT  }
+    request = urllib2.Request (url , headers = headers) 	
+    return BeautifulSoup(_get(request), convertEntities=BeautifulSoup.HTML_ENTITIES)
 
 
 def __get_cookie_session():
@@ -82,7 +80,8 @@ def get_rtmp_params(channel_name):
 
 def get_channels():
     html = _html(HEADER_REFERER)
-    channels = [ChannelItem(el=el) for el in (html.findAll("div", {"class": "div_channel"}))]
+    channel_divs = lambda soup : soup.findAll("div", { "class" : re.compile("div_channel") }) 
+    channels = [ChannelItem(el=el) for el in channel_divs(html)]
 
     # Extend Teledunet list with custom hardcoded list created by community
     channels.extend(__get_hardcoded_streams())

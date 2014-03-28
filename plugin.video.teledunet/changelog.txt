@@ -1,3 +1,7 @@
+2.1.0 (27.03.2014) - malkhen
+- fixed HTTP request headers to fetch main page
+- fixed channel url scraping
+   
 2.0.2 (24.11.2013)
  - added hardcoded streams that were curated by the XBMC community (including Al Jazeera Sport channels)
 
