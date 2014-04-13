@@ -32,7 +32,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 def mainDir():
 	addDir('Teledunet Channels','http://www.teledunet.com/list_chaines.php',9,'http://www.itwebsystems.co.uk/resources/icon.png')
-	addDir('Arabic Filmon Channels','https://www.filmon.com/group/arabic-tv',3,'http://static.filmon.com/couch/channels/689/extra_big_logo.png')
+	addDir('Arabic Filmon Channels','http://www.filmon.com/group/arabic-tv',3,'http://static.filmon.com/couch/channels/689/extra_big_logo.png')
 	addDir('Mashup Arabic Streams','https://raw.github.com/mash2k3/MashUpStreams/master/CrusadersDir.xml',5,'http://www.mirrorservice.org/sites/addons.superrepo.org/Frodo/.metadata/plugin.video.movie25.jpg')
 	addDir('TvIraq.net','http://www.tviraq.net/',8,'http://4.bp.blogspot.com/-mAFM9C7G3x8/Urg65k7EBsI/AAAAAAAADBU/FJ1UVeYz-5s/s1600/al+jazeera+mubasher++tv+live+logo.png')
 	#addDir('hdarabic.com (Free channels)','http://www.hdarabic.com/',11,'http://www.hdarabic.com/images/general.jpg')
@@ -427,18 +427,18 @@ def index_Teledunet(url):
 	
 	addLink('MBC','rtmp://www.teledunet.com:1935/teledunet/mbc_1',10,'https://si0.twimg.com/profile_images/1133033554/mbc-fb.JPG')
 	addLink('MBC DRAMA','rtmp://www.teledunet.com:1935/teledunet/mbc_drama',10,'http://www.allied-media.com/ARABTV/images/mbc_drama.jpg')
-	addLink('beIn Sports 1','rtmp://www.teledunet.com:1935/teledunet/jsc_1',10,'')
-	addLink('beIn Sports 2','rtmp://www.teledunet.com:1935/teledunet/jsc_2',10,'')
-	addLink('beIn Sports 3','rtmp://www.teledunet.com:1935/teledunet/jsc_3',10,'')
-	addLink('beIn Sports 4','rtmp://www.teledunet.com:1935/teledunet/jsc_4',10,'')
-	addLink('beIn Sports 5','rtmp://www.teledunet.com:1935/teledunet/jsc_5',10,'')
-	addLink('beIn Sports 6','rtmp://www.teledunet.com:1935/teledunet/jsc_6',10,'')
-	addLink('beIn Sports 7','rtmp://www.teledunet.com:1935/teledunet/jsc_7',10,'')
-	addLink('beIn Sports 8','rtmp://www.teledunet.com:1935/teledunet/jsc_8',10,'')
-	addLink('beIn Sports 11','rtmp://www.teledunet.com:1935/teledunet/jsc_9',10,'')
-	addLink('beIn Sports 12','rtmp://www.teledunet.com:1935/teledunet/jsc_10',10,'')
-	addLink('JSC 1 HD','rtmp://www.teledunet.com:1935/teledunet/tele_1_hd',10,'')
-	addLink('JSC 2 HD','rtmp://www.teledunet.com:1935/teledunet/tele_2_hd',10,'')
+	#addLink('beIn Sports 1','rtmp://www.teledunet.com:1935/teledunet/jsc_1',10,'')
+	#addLink('beIn Sports 2','rtmp://www.teledunet.com:1935/teledunet/jsc_2',10,'')
+	#addLink('beIn Sports 3','rtmp://www.teledunet.com:1935/teledunet/jsc_3',10,'')
+	#addLink('beIn Sports 4','rtmp://www.teledunet.com:1935/teledunet/jsc_4',10,'')
+	#addLink('beIn Sports 5','rtmp://www.teledunet.com:1935/teledunet/jsc_5',10,'')
+	#addLink('beIn Sports 6','rtmp://www.teledunet.com:1935/teledunet/jsc_6',10,'')
+	#addLink('beIn Sports 7','rtmp://www.teledunet.com:1935/teledunet/jsc_7',10,'')
+	#addLink('beIn Sports 8','rtmp://www.teledunet.com:1935/teledunet/jsc_8',10,'')
+	#addLink('beIn Sports 11','rtmp://www.teledunet.com:1935/teledunet/jsc_9',10,'')
+	#addLink('beIn Sports 12','rtmp://www.teledunet.com:1935/teledunet/jsc_10',10,'')
+	#addLink('JSC 1 HD','rtmp://www.teledunet.com:1935/teledunet/tele_1_hd',10,'')
+	#addLink('JSC 2 HD','rtmp://www.teledunet.com:1935/teledunet/tele_2_hd',10,'')
 	addLink('Abu Dhabi Al Oula','rtmp://www.teledunet.com:1935/teledunet/abu_dhabi',10,'https://www.zawya.com/pr/images/2009/ADTV_One_RGB_2009_10_08.jpg')
 	addLink('Abu Dhabi Sports','rtmp://www.teledunet.com:1935/teledunet/abu_dhabi_sports_1',10,'https://si0.twimg.com/profile_images/2485587448/2121.png')
 	addLink('Al Jazeera','rtmp://www.teledunet.com:1935/teledunet/aljazeera',10,'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg')
@@ -516,28 +516,23 @@ def getCookies(url):
 
 
 def getId(channel):
-	#url="http://www.teledunet.com/?channel="+str(channel)+"&no_pub"
-	url="http://www.teledunet.com/?channel="+str(channel)
-	req = urllib2.Request(url)
-	req.add_header('Host', 'www.teledunet.com')
-	req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:28.0) Gecko/20100101 Firefox/28.0')
-	req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
-	req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.5,en;q=0.3')
-	req.add_header('Accept-Encoding', 'gzip, deflate')
-	req.add_header('Referer', "http://www.teledunet.com/?channel="+str(channel))
-	req.add_header('Cookie', 'GA1.2.1721507211.1397075619; __utma=74355351.1721507211.1397075619.1397237037.1397293642.3; __utmz=74355351.1397075620.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=379be0e497d289e85dc3c817089ef4f3; __utmc=74355351')
-	req.add_header('Connection', ' keep-alive')
-	response = urllib2.urlopen(req,timeout=5)
-	link=response.read()
-	print 'this is link'+str(link)
-	response.close()
-	nameUrl=(re.compile("var(.+?)&id=';").findall(link))
-	#nameUrl=(re.compile("time_player=(.+?);").findall(link))
-	nameUrl = str(nameUrl).split('id0=')[1]
-	nameUrl = str(nameUrl).replace('"]',"").strip()
+    url="http://www.teledunet.com/player/?channel="+channel+"&no_pub"
+    req = urllib2.Request(url)
+    req.add_header('Host', 'www.teledunet.com')
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:28.0) Gecko/20100101 Firefox/28.0')
+    req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+    req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.5,en;q=0.3')
+    req.add_header('Accept-Encoding', 'gzip, deflate')
+    req.add_header('Referer', "http://www.teledunet.com/?channel="+channel)
+    req.add_header('Connection', ' keep-alive')
+    response = urllib2.urlopen(req,timeout=5)
+    link=response.read()
+    response.close()
+    nameUrl=(re.compile("time_player=(.+?);").findall(link))
+    nameUrl = str(nameUrl).replace('"]',"").strip()
+    nameUrl=str( nameUrl).replace("['", '').replace("']", '').replace(".","").replace("E+13","00").strip()
+    return nameUrl
 	
-	nameUrl=str( nameUrl).replace("['", '').replace("']", '').replace(".","").replace("E+13","00").strip()
-	return nameUrl
 
 def GetHDSITEChannels(url):
 	req = urllib2.Request('http://steinmann.webs.com/tvhd.xml')
@@ -574,13 +569,28 @@ def GetHDSITEChannels(url):
 								path= path[:-4]
 								addLink('',path,15,img)
 	
+def getChanelRtmp(channel):
+    url="http://www.teledunet.com/player/?channel="+channel
+    req = urllib2.Request(url)
+    req.add_header('Host', 'www.teledunet.com')
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; rv:28.0) Gecko/20100101 Firefox/28.0')
+    req.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+    req.add_header('Accept-Language', 'sv-SE,sv;q=0.8,en-US;q=0.5,en;q=0.3')
+    req.add_header('Accept-Encoding', 'gzip, deflate')
+    req.add_header('Referer', "http://www.teledunet.com/?channel="+channel)
+    req.add_header('Connection', ' keep-alive')
+    response = urllib2.urlopen(req,timeout=5)
+    link=response.read()
+    
+    response.close()
+    nameUrl=(re.compile("curent_media='(.+?)';").findall(link))
+    return nameUrl[0]
+	
                     
 def PlayTeledunet(url):
-	
 	firstPart=str(url).split('teledunet/')[1]
-	print "my url "+firstPart
-	url='rtmp://www.teledunet.com:1935/teledunet/'+str(firstPart).strip()
-	finalPayPath=url+' app=teledunet swfUrl=http://www.teledunet.com/tv/player.swf?bufferlength=5&repeat=single&autostart=true&id0='+str(getId(firstPart))+'&streamer='+str(url)+'&file='+str(firstPart)+'&provider=rtmp playpath='+str(firstPart)+' live=1 pageUrl=http://www.teledunet.com/tv/?channel='+str(firstPart)+'&no_pub'
+	streamer = getChanelRtmp(firstPart)
+	finalPayPath=streamer+' app=teledunet swfUrl=http://www.teledunet.com/player/player/player_2.swf?bufferlength=5&repeat=single&autostart=true&id0='+str(getId(firstPart))+'&streamer='+streamer+'&file='+str(firstPart)+'&provider=rtmp playpath='+str(firstPart)+' live=1 pageUrl=http://www.teledunet.com/tv/?channel='+str(firstPart)+'&no_pub'
 	listItem = xbmcgui.ListItem(path=str(finalPayPath))
 	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	
