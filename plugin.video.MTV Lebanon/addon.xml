@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.MTV Lebanon"
+	name="MTV Lebanon"
+	version="1.0.1"
+	provider-name="Amio(Relax1000)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">MTV Lebanon Replay Youtube Videos</summary>
+    <description lang="en">MTV Lebanon Replay Youtube Videos</description>
+    <platform>all</platform>
+  </extension>
+</addon>
