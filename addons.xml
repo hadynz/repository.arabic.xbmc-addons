@@ -1,5 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <addons>
+
+</addon>
+<addon
+  id="plugin.video.Al Jadeed News"
+  version="1.0.1"
+  name="Al Jadeed News"
+  provider-name="Amio(Relax1000)">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Al Jadeed Online News Replay</summary>
+    <description>Al Jadeed Online News Replay</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon
   id="plugin.video.alarab"
   version="2.0.0"
