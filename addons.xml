@@ -105,6 +105,29 @@
 </addon>
 
 <addon
+  id="plugin.video.MTV Lebanon"
+  version="1.0.1"
+  name="MTV Lebanon"
+  provider-name="Amio(Relax1000)">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
+    <import addon="plugin.video.youtube"
+            version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Arabic Channels</summary>
+    <description>Arabic Channels</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
   id="plugin.video.ArabicStreamSuperCollection"
   version="1.8.0"
   name="Arabic Live Stream Super Collection"
