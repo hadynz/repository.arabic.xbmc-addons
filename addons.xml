@@ -5,10 +5,10 @@
   version="1.0.1"
   name="Al Jadeed News"
   provider-name="Amio(Relax1000)">
-<requires>
+  <requires>
 	<import version="2.1.0" addon="xbmc.python"/>
 	<import version="3.0.0" addon="plugin.video.youtube"/>
-</requires>
+  </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
     <provides>video</provides>
