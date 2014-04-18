@@ -50,7 +50,6 @@ HARDCODED_STREAMS = [{
                          'title': 'Abu Dhabi Sports',
                          'thumbnail': 'https://si0.twimg.com/profile_images/2485587448/2121.png',
                          'path': 'abu_dhabi_sports_1'},
-
                      {
                          'title': 'Al Jazeera',
                          'thumbnail': 'http://www.chicagonow.com/chicago-sports-media-watch/files/2013/04/Al-Jazeera.jpg',
@@ -61,10 +60,10 @@ HARDCODED_STREAMS = [{
                          'path': 'aljadeed'},
                      {
                          'title': 'OTV Lebanon',
-                         'thumbnail': 'https://si0.twimg.com/profile_images/3386875020/31bfc3b7880c810620288392148323ce.jpeg',
+                         'thumbnail': 'http://www.worldmedia.com.au/Portals/0/Images/Logo_s/otv.png',
                          'path': 'otv_lebanon'},
                      {
-                         'title': 'Al Nahar',
+                         'title': 'Al-Nahar',
                          'thumbnail': 'http://2.bp.blogspot.com/-0Efo2UMoGbA/Tikieupg-9I/AAAAAAAAB3E/ILjst3MG4UU/s200/al-nahar%2Bchaneel.JPG',
                          'path': 'al_nahar'},
                      {
@@ -73,11 +72,11 @@ HARDCODED_STREAMS = [{
                          'path': 'alhayat_1'},
                      {
                          'title': 'Al Hayat Series',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/aa/alhayat_series.png',
                          'path': 'alhayat_series'},
                      {
                          'title': 'Al Hayat Cinema',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/aa/alhayat_cinema.png',
                          'path': 'alhayat_cinema'},
                      {
                          'title': 'ART Aflam 2',
@@ -93,80 +92,84 @@ HARDCODED_STREAMS = [{
                          'path': 'art_aflam_1'},
                      {
                          'title': 'Tele Liban',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Tele_liban222.jpg/132px-Tele_liban222.jpg',
                          'path': 'tele_liban'},
                      {
                          'title': 'Al Hayat 2',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.arabictvnetwork.com/images/MediaBox/Arabic/Al-Hayat/AlHayat2.png',
                          'path': 'alhayat_2'},
                      {
                          'title': 'Alarabiya',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.debbieschlussel.com/archives/alarabiya2.jpg',
                          'path': 'alarabiya'},
                      {
                          'title': 'Al Moutawassit',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://m1.behance.net/rendition/modules/88680547/disp/68836b0b62f9f24ffc0fa74004c6b06c.jpg',
                          'path': 'al_mutawasit'},
                      {
                          'title': 'CBC',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.redbeemedia.com/sites/all/files/images/cbc_egypt_0.jpg',
                          'path': 'cbc'},
                      {
                          'title': 'CBC Extra',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.3arablive.com/wp-content/uploads/2014/01/extra-300x128.jpg',
                          'path': 'cbc_extra'},
                      {
                          'title': 'CBC 2',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
-                         'path': 'cbc_extra'},
+                         'thumbnail': 'http://www.tv14.net/wp-content/uploads/2013/03/CBC-Plus-Egypt-logo.jpg',
+                         'path': 'cbc_two'},
                      {
                          'title': 'CBC Sofra',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'https://lh5.googleusercontent.com/-pbEIctW8Fj4/AAAAAAAAAAI/AAAAAAAACrQ/A_6dJzJhaDY/photo.jpg',
                          'path': 'cbc_sofra'},
                      {
                          'title': 'Al Rafidain',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'https://d2uykijsw1jrmd.cloudfront.net/media/cache/9c/f5/9cf5572f0fb28b5b3a5ca02934175ef2.jpg',
                          'path': 'al_rafidain'},
                      {
                          'title': 'Dzair 24',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.tv-logo.com/pt-data/uploads/images/logo/dzair_24_dz.jpg',
                          'path': 'dzair_24'},
                      {
                          'title': 'NBN',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://thewatchtv.com/wp-content/uploads/2013/07/Watch-NBN-Live-TV-from-Lebanon.jpg',
                          'path': 'nbn'},
                      {
                          'title': 'Panorama Drama 2',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://static.elcinema.com/images/channels/160px/1165.png',
                          'path': 'panorama_drama_2'},
                      {
                          'title': 'Panorama Drama',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'https://static.elcinema.com/images/channels/160px/1164.png',
                          'path': 'panorama_drama'},
                      {
                          'title': 'Panorama Comedy',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.magictvbox.com/wp-content/uploads/2013/05/panormaa-comedy-channeljpg.jpg',
                          'path': 'panorama_comedy'},
                      {
                          'title': 'Sada El Balad +2',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.arabisktv.com/wp-content/uploads/2013/06/sada_el_balad_tv.png',
                          'path': 'sada_albalad'},
                      {
                          'title': 'Libya AlAhrar',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://m.c.lnkd.licdn.com/media/p/1/000/0b1/0d7/075a952.png',
                          'path': 'libya_alahrar'},
                      {
                          'title': 'Libya Alwatania 1',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.giniko.com/logos/190x110/185.jpg',
                          'path': 'libya_alwatania_1'},
                      {
                          'title': 'Dzair TV',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www12.0zz0.com/2013/05/19/19/779272851.jpg',
                          'path': 'dzair_tv'},
                      {
                          'title': 'Sada El Balad',
-                         'thumbnail': 'http://3.bp.blogspot.com/--uP1DsoBB7s/T4EMosYH5uI/AAAAAAAAF9E/RdbY8-E3Riw/s320/Al%2Bhayat.jpg',
+                         'thumbnail': 'http://www.arabisktv.com/wp-content/uploads/2013/06/sada_el_balad_tv.png',
                          'path': 'sada_el_balad'},
+                     {
+                         'title': 'Melody',
+                         'thumbnail': 'http://www.muratzengin.com/MelodyArabia-live.jpg',
+                         'path': 'melody'},
                      {
                          'title': 'Cartoon Network',
                          'thumbnail': 'http://upload.wikimedia.org/wikipedia/commons/b/bb/Cartoon_Network_Arabic_logo.png',
