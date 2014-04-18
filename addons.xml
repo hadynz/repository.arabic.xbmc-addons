@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<<<<<<< HEAD
 <addon
   id="plugin.video.Al Jadeed News"
   version="1.0.1"
@@ -21,6 +22,8 @@
   </extension>
 </addon>
 
+=======
+>>>>>>> 3ae0c627c99b3998ea1ec701a94691c5aa417594
 <addon
   id="plugin.video.alarab"
   version="2.0.0"
