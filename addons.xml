@@ -453,7 +453,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon id="plugin.video.teledunet"
        name="Teledunet.com"
-       version="2.2.0"
+       version="2.2.1"
        provider-name="hadynz">
     <requires>
         <import addon="xbmc.python" version="2.0"/>
