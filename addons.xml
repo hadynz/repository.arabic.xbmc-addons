@@ -1,21 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon
-  id="plugin.video.Al Jadeed News"
-  version="1.0.1"
-  name="Al Jadeed News"
-  provider-name="Amio(Relax1000)">
+<addon id="plugin.video.Al Jadeed News"
+	name="Al Jadeed News"
+	version="1.0.1"
+	provider-name="Amio(Relax1000)">
   <requires>
-	<import version="2.1.0" addon="xbmc.python"/>
-	<import version="3.0.0" addon="plugin.video.youtube"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
   </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
+  <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Al Jadeed Online News Replay</summary>
-    <description>Al Jadeed Online News Replay</description>
+    <summary lang="en">Al Jadeed Online News Replay</summary>
+    <description lang="en">Al Jadeed Online News Replay</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -25,15 +23,15 @@
 	version="1.0.0"
 	provider-name="Amio">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="xbmc.python" version="2.0"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Al Jadeed Programs Online Replay</summary>
-    <description lang="en">Al Jadeed Programs Online Replay</description>
+    <summary lang="en">3alshasha Youtube</summary>
+    <description lang="en">3alshasha Youtube</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -117,28 +115,6 @@
     <summary>Arabic Channels</summary>
     <description>Arabic Channels</description>
 
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon
-  id="plugin.video.MTV Lebanon"
-  version="1.0.1"
-  name="MTV Lebanon"
-  provider-name="Amio(Relax1000)">
-  <requires>
-    <import addon="xbmc.python"
-            version="2.1.0"/>
-    <import addon="plugin.video.youtube"
-            version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Arabic Channels</summary>
-    <description>Arabic Channels</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -327,6 +303,24 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
     <description>GLArab Addon for XBMC - requires the GLArab plugin (proxy) on the local network.</description>
     <platform>all</platform>
     <language>ar</language>
+  </extension>
+</addon>
+
+<addon id="plugin.video.MTV Lebanon"
+	name="MTV Lebanon"
+	version="1.0.1"
+	provider-name="Amio(Relax1000)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">MTV Lebanon Replay Youtube Videos</summary>
+    <description lang="en">MTV Lebanon Replay Youtube Videos</description>
+    <platform>all</platform>
   </extension>
 </addon>
 
