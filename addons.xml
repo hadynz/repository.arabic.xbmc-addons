@@ -16,7 +16,6 @@
   <extension point="xbmc.addon.metadata">
     <summary>Al Jadeed Online News Replay</summary>
     <description>Al Jadeed Online News Replay</description>
-
     <platform>all</platform>
   </extension>
 </addon>
@@ -140,7 +139,6 @@
   <extension point="xbmc.addon.metadata">
     <summary>Arabic Channels</summary>
     <description>Arabic Channels</description>
-
     <platform>all</platform>
   </extension>
 </addon>
