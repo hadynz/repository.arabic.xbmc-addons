@@ -1,0 +1,15 @@
+<strings>
+  
+    <!-- Meta Data -->
+    <string id="32010">Proxy and CDN Setup</string>
+    <string id="32011">Enable Custom Proxy?</string>
+    <string id="32012">Custom Proxy Server Address</string>
+    <string id="32013">CDN Server Selection</string>
+    <string id="32014">CDN Server to Use</string>
+	<string id="32015">Streaming Setup</string>
+	<string id="32016">Site to use?</string>
+		<string id="32017">Livetv Login</string>
+		<string id="32018">User Name</string>
+		<string id="32019">Password</string>
+	<string id="32020">Play first available Channel?</string>
+</strings>

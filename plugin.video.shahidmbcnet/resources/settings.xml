@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="32010">
+    <setting label="32011" type="bool"   id="isProxyEnabled" default="false"/>
+    <setting label="32012" type="text"   id="proxyName" default=""  enable="!eq(-1,false)"  />
+      
+     <setting type="sep"/>
+        <setting label="32014" type="labelenum" id="DefaultCDN" values="Default|l3|xdn|ak" default="Default"/>
+     	 
+     </category>
+<category label="32015">
+ <setting label="32020" type="bool"   id="playFirstChannel" default="false"/>
+
+     
+	   </category>
+	 <category label="32017">
+		<setting label="32018" type="text" id="liveTvLogin" values="" default=""/>
+		<setting label="32019" type="text" id="liveTvPassword" values="" default=""/>  
+	  </category>
+	     
+</settings>

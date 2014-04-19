@@ -390,6 +390,26 @@ This plugin has been re-written to provide XBMC users with an amazing and native
     </extension>
 </addon>
 
+<addon id="plugin.video.shahidmbcnet"
+       name="ShahidMBC.net"
+       version="2.5.4"
+       provider-name="shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.beautifulsoup" version="3.0.8"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>ShahidMBC.net XBMC Client</summary>
+    <description>Watch ShahidMBC.net on your XBMC. This plugin fetches the video sources from ShahidMBC.net and play on XBMC compatible plateforms</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon
   id="plugin.video.sonara"
   version="1.8.0"

@@ -1,0 +1,603 @@
+<streamingInfos>
+
+
+
+
+	<streaminginfo>
+		<cname>Bein Sport News</cname>
+		<item>
+			<title>Bein Sport News</title>
+			<link>http://hls01-06.az.myvideo.az/hls-live/livepkgr/sport6/sport6/sport6.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 1</cname>
+		<item>
+			<title>Bein Sport 1</title>
+			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST1 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 2</cname>
+		<item>
+			<title>Bein Sport 2</title>
+			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST2 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 3</cname>
+		<item>
+			<title>Bein Sport 3</title>
+			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST3 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 4</cname>
+		<item>
+			<title>Bein Sport 4</title>
+			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST4 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 5</cname>
+		<item>
+			<title>Bein Sport 5</title>
+			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST5 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 6</cname>
+		<item>
+			<title>Bein Sport 6</title>
+			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST6 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 7</cname>
+		<item>
+			<title>Bein Sport 7</title>
+			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST7 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 8</cname>
+		<item>
+			<title>Bein Sport 8</title>
+			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST8 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 9</cname>
+		<item>
+			<title>Bein Sport 9</title>
+			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST9 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 10</cname>
+		<item>
+			<title>Bein Sport 10</title>
+			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST10 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 11</cname>
+		<item>
+			<title>Bein Sport 11</title>
+			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST11 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 12</cname>
+		<item>
+			<title>Bein Sport 12</title>
+			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST12 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 13</cname>
+		<item>
+			<title>Bein Sport 13</title>
+			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST13 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 14</cname>
+		<item>
+			<title>Bein Sport 14</title>
+			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST14 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 15</cname>
+		<item>
+			<title>Bein Sport 15</title>
+			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST15 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>BAHRAIN SPORTS</cname>
+		<item>
+			<title>BAHRAIN SPORTS</title>
+			<link>rtmp://alayam.netromedia.net/btv3/btv3</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Sport</cname>
+		<item>
+			<title>Nile Sport</title>
+			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileSport playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=sport</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>KTV SPORT</cname>
+		<item>
+			<title>KTV SPORT</title>
+			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch3.sdp</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>AL EQTESADIA TV</cname>
+		<item>
+			<title>AL EQTESADIA TV</title>
+			<link>mms://38.96.148.75/Eqtisadia</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ANN</cname>
+		<item>
+			<title>ANN</title>
+			<link>rtmp://ns8.indexforce.com/ann/ann</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Sharqiya News</cname>
+		<item>
+			<title>Al Sharqiya News</title>
+			<link>rtmp://ns8.indexforce.com/alsharqiyalive/mystream</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>France 24 ARABIC</cname>
+		<item>
+			<title>France 24 ARABIC</title>
+			<link>rtmp://stream2.france24.yacast.net:80/france24_live/frda/f24_livefrda</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alrai</cname>
+		<item>
+			<title>Alrai</title>
+			<link>mms://62.215.216.130/wmtencoder/alrai350.wmv</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tunisia national 1</cname>
+		<item>
+			<title>Tunisia national 1</title>
+			<link>rtmp://94.32.97.12/satchannel1 playpath=tvtunisi.stream swfUrl=http://video.tiscali.it/inc/TiscaliVideo.swf?v=hghpl]&amp;vURL=http://video.tiscali.it/asx/73878.asx&amp;autoplay=1&amp; live=1 pageUrl=http://tnmedias.perso.sfr.fr/tv7.html</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tunisia national 1</cname>
+		<item>
+			<title>Tunisia national 1 (mms)</title>
+			<link>mms://vipmms.yacast.net/nationale1</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>nbn lebanon</cname>
+		<item>
+			<title>nbn lebanon</title>
+			<link>rtmp://lived.nbn.com.lb/nbn?hghpl]=keylive72-229-239-1302013-08-25-05-32-36/ playpath=mpegts.stream swfUrl=http://www.elahmad.com/tv/swf/player.swf?file=nbnlb&amp;autostart=true&amp;%2F%5B0%5D%5BDYNAMIC%5D%5B0%5D pageUrl=http://www.elahmad.com/tv/nbn-lebanon.php swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Kuwait</cname>
+		<item>
+			<title>Kuwait</title>
+			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch1.sdp</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>KTV 2</cname>
+		<item>
+			<title>KTV 2</title>
+			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch2.sdp</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>KTV ARABE</cname>
+		<item>
+			<title>KTV ARABE</title>
+			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch5.sdp</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>KTV ETRAA</cname>
+		<item>
+			<title>KTV ETRAA</title>
+			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch4.sdp</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>KTV PLUS</cname>
+		<item>
+			<title>KTV PLUS</title>
+			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch6.sdp</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Sharqiya</cname>
+		<item>
+			<title>Al Sharqiya</title>
+			<link>rtmp://ns8.indexforce.com/home/mystream </link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>IRAQIA</cname>
+		<item>
+			<title>IRAQIA</title>
+			<link>mms://212.7.196.74/iraqia</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALTAGHEER TV</cname>
+		<item>
+			<title>ALTAGHEER TV</title>
+			<link>http://stream.joinvisions.net:1935/taglive/taghier/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>AL RASHEED</cname>
+		<item>
+			<title>AL RASHEED</title>
+			<link>mmsh://77.67.107.89/alrasheedtv?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>AL MASAR</cname>
+		<item>
+			<title>AL MASAR</title>
+			<link>rtmp://msr1tv.flashmediacast.com:2071/live/livestream</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Majd</cname>
+		<item>
+			<title>Al Majd</title>
+			<link>rtmp://majdg.pwlstation.com/live/majdg/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/#docoment swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALMAJAD ALMAIA</cname>
+		<item>
+			<title>ALMAJAD ALMAIA</title>
+			<link>rtmp://majdsc.pwlstation.com/live/majdsc/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/#docoment swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALMAJD MASSAH </cname>
+		<item>
+			<title>ALMAJD MASSAH </title>
+			<link>rtmp://majdd.pwlstation.com/live/majdd/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Haneen Channel</cname>
+		<item>
+			<title>Haneen Channel</title>
+			<link>mmsh://stream.watchislam.com/ramadan</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>KSA 1</cname>
+		<item>
+			<title>KSA 1</title>
+			<link>rtsp://38.96.148.74/CH1TV</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>KSA 2</cname>
+		<item>
+			<title>KSA 2</title>
+			<link>rtsp://38.96.148.74/CH2TV</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Quran TV ksa</cname>
+		<item>
+			<title>Quran TV ksa</title>
+			<link>rtsp://38.96.148.75/Quran?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>sunnah TV</cname>
+		<item>
+			<title>sunnah TV</title>
+			<link>rtsp://38.96.148.75/Sunnah?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Wesal Tv</cname>
+		<item>
+			<title>Wesal Tv</title>
+			<link>rtmp://109.123.123.82:1935/wesal playpath=wesal1 swfUrl=http://www.elahmad.com/tv/swf/wesaltv.swf?autostart=true pageUrl=http://www.elahmad.com/tv/wesaltv.htm</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>M3Ali Tv</cname>
+		<item>
+			<title>M3Ali Tv</title>
+			<link>rtmp://free.flashwebtown.com:1935/bashaclick playpath=myStream.sdp swfUrl=http://www.elahmad.com/tv/swf/player.swf?file=m3alitv&amp;autostart=true pageUrl=http://www.elahmad.com/tv/m3alitv.php</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Cinema</cname>
+		<item>
+			<title>Nile Cinema</title>
+			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileCinema playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=cinema</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Comedy</cname>
+		<item>
+			<title>Nile Comedy</title>
+			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileComedy/ playpath=livestream swfUrl=http://niletc.tv/player/player.swf pageUrl=http://niletc.tv/stream.php?ch=comedy swfVfy=true live=true timeout=60</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Family</cname>
+		<item>
+			<title>Nile Family</title>
+			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileFamily playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=family</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Life</cname>
+		<item>
+			<title>Nile Life</title>
+			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileLife playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=life</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Drama</cname>
+		<item>
+			<title>Nile Drama</title>
+			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileDrama playpath=livestream?ch=drama swfUrl=http://ntn.onlinehorizons.net/player/player.swf pageUrl=http://www.ntnegypt.net/stream.php live=1</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>I Film</cname>
+		<item>
+			<title>I Film</title>
+			<link>mms://93.190.24.114/ifilmtv</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALMAJD KIDS </cname>
+		<item>
+			<title>ALMAJD KIDS </title>
+			<link>rtmp://majdb.pwlstation.com/live/majdb/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALMAJD KIDS 2</cname>
+		<item>
+			<title>ALMAJD KIDS 2</title>
+			<link>rtmp://majdk.pwlstation.com/live/majdk/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALMAJD TAGHARID</cname>
+		<item>
+			<title>ALMAJD TAGHARID</title>
+			<link>rtmp://majdt.pwlstation.com/live/majdt/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALMAJD RODA</cname>
+		<item>
+			<title>ALMAJD RODA</title>
+			<link>rtmp://majdr.pwlstation.com/live/majdr/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALMAJD DOC</cname>
+		<item>
+			<title>ALMAJD DOC</title>
+			<link>rtmp://majddoc.pwlstation.com/live/majddoc/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALMAJD NATURE</cname>
+		<item>
+			<title>ALMAJD NATURE</title>
+			<link>rtmp://majdnat.pwlstation.com/live/majdnat/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/#docoment swfVfy=true live=true timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>DISCOVERY CHANNEL</cname>
+		<item>
+			<title>DISCOVERY CHANNEL</title>
+
+			<link>http://m24.megafun.vn/live.vs?c=vstv044&amp;q=high</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Culture</cname>
+		<item>
+			<title>Nile Culture</title>
+			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileCulture playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=culture</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Learning</cname>
+		<item>
+			<title>Nile Learning</title>
+			<link>rtmp://livestreaming4.onlinehorizons.net/Learning1 playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=Learning</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>I-TELE</cname>
+		<item>
+			<title>I-TELE</title>
+			<link>http://chunk-output-1.live.tv-radio.com/canalplus/android/index/1200/02.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>D8</cname>
+		<item>
+			<title>D8</title>
+			<link>http://chunk-output-1.live.tv-radio.com/canalplus/android/index/1650/01.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>D17</cname>
+		<item>
+			<title>D17</title>
+			<link>http://chunk-output-1.live.tv-radio.com/canalplus/android/index/1710/02.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>France 24 FR</cname>
+		<item>
+			<title>France 24 FR</title>
+			<link>http://tv.flux.france24.com/4684/02.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>GULLI</cname>
+		<item>
+			<title>GULLI</title>
+			<link>http://vipwowza.yacast.net/gulli_live/_definst_/gulli_850.stream/hasbahca.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>FRANCE 0</cname>
+		<item>
+			<title>FRANCE 0</title>
+			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel5.wmv?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>FRANCE 2</cname>
+		<item>
+			<title>FRANCE 2</title>
+			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel1.wmv?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>FRANCE 2</cname>
+		<item>
+			<title>FRANCE 2 high filmon</title>
+			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1717.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
+   <regex>
+     <name>url</name>
+     <expres>rtmp:....([^\\]*)</expres>
+     <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
+   </regex>
+   <regex>
+     <name>key</name>
+     <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+     <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
+   </regex>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>FRANCE 2</cname>
+		<item>
+			<title>FRANCE 2 low filmon</title>
+			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1717.low.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
+   <regex>
+     <name>url</name>
+     <expres>rtmp:....([^\\]*)</expres>
+     <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
+   </regex>
+   <regex>
+     <name>key</name>
+     <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+     <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
+   </regex>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>FRANCE 3</cname>
+		<item>
+			<title>FRANCE 3</title>
+			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel2.wmv?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>FRANCE 4</cname>
+		<item>
+			<title>FRANCE 4</title>
+			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel3.wmv?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>FRANCE 5</cname>
+		<item>
+			<title>FRANCE 5</title>
+			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel4.wmv?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>arte</cname>
+		<item>
+			<title>arte</title>
+			<link>http://frlive.artestras.cshls.lldns.net/artestras/contrib/frlive/frlive_925.m3u8 </link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>arte</cname>
+		<item>
+			<title>arte (filmon low)</title>
+			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1729.low.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
+   <regex>
+     <name>url</name>
+     <expres>rtmp:....([^\\]*)</expres>
+     <page>http://www.filmon.com/tv/channel/export?channel_id=1729</page>
+   </regex>
+   <regex>
+     <name>key</name>
+     <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+     <page>http://www.filmon.com/tv/channel/export?channel_id=1729</page>
+   </regex>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>arte</cname>
+		<item>
+			<title>arte (filmon high)</title>
+			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1729.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
+   <regex>
+     <name>url</name>
+     <expres>rtmp:....([^\\]*)</expres>
+     <page>http://www.filmon.com/tv/channel/export?channel_id=1729</page>
+   </regex>
+   <regex>
+     <name>key</name>
+     <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+     <page>http://www.filmon.com/tv/channel/export?channel_id=1729</page>
+   </regex>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>BFMTV</cname>
+		<item>
+			<title>BFMTV</title>
+			<link>http://bfmlive2-i.akamaihd.net/hls/live/214427/bfmtv/04.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>TV 5 MONDE</cname>
+		<item>
+			<title>TV 5 MONDE</title>
+			<link>http://rm-edge-3.cdn2.streamago.tv/streamagoedge/1924/817/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+
+
+	
+</streamingInfos>

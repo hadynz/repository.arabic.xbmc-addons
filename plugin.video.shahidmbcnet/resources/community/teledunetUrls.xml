@@ -1,0 +1,710 @@
+<streamingInfos>
+	<streaminginfo>
+		<cname>2M</cname>
+		<url>2m</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Abu Dhabi Drama</cname>
+		<url>abu_dhabi_drama</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Abu Dhabi Sports 1</cname>
+		<url>abu_dhabi_sports_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Abu Dhabi</cname>
+		<url>abu_dhabi</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Aghanina</cname>
+		<url>aghanina</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Ajyal</cname>
+		<url>ajyal</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Aoula Maroc</cname>
+		<url>al_aoula_maroc</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Haneen Music</cname>
+		<url>al_haneen_music</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Janoubiya</cname>
+		<url>al_janoubiya</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Karama</cname>
+		<url>al_karama</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Maghribia</cname>
+		<url>al_maghribia</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Majd</cname>
+		<url>al_majd</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Manar</cname>
+		<url>al_manar</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Masriyah</cname>
+		<url>al_masriyah</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Moustakilla</cname>
+		<url>al_moustakilla</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Mutawasit</cname>
+		<url>al_mutawasit</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Rafidain</cname>
+		<url>al_rafidain</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Sharqiya</cname>
+		<url>al_sharqiya</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Sumaria</cname>
+		<url>al_sumaria</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Thaniya</cname>
+		<url>al_thaniya</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Tunisia</cname>
+		<url>al_tunisia</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al mayaden</cname>
+		<url>al_mayaden</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al-Hurria</cname>
+		<url>al_hurria</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al-Nahar Drama</cname>
+		<url>al_nahar_drama</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al-Resalah</cname>
+		<url>al_resalah</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al-hurra Iraq</cname>
+		<url>al_hurra_iraq</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>AlGeria</cname>
+		<url>algeria</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alan</cname>
+		<url>alan</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alarabiya</cname>
+		<url>alarabiya</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Algeria 3</cname>
+		<url>algeria_3</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alhayat 1</cname>
+		<url>alhayat_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alhayat Cinema</cname>
+		<url>alhayat_cinema</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alhayat-Series</cname>
+		<url>alhayat_series</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Aliraqiya</cname>
+		<url>aliraqiya</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Aljadeed</cname>
+		<url>aljadeed</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Aljazeera Children</cname>
+		<url>aljazeera_children</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Aljazeera Doc</cname>
+		<url>aljazeera_doc</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Aljazeera</cname>
+		<url>aljazeera</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alqudis</cname>
+		<url>alqudis</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Rasheed</cname>
+		<url>alrashid</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alriadia Sport</cname>
+		<url>alriadia_sport</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Arabica Music</cname>
+		<url>arabica_music</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Arrabia</cname>
+		<url>arrabia</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Art Aflam 1</cname>
+		<url>art_aflam_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Art Aflam 2</cname>
+		<url>art_aflam_2</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Assadissa</cname>
+		<url>assadissa</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>BBC Arabic</cname>
+		<url>bbc_arabic</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Baghdadia</cname>
+		<url>baghdadia</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bahrain</cname>
+		<url>bahrain</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Baraem</cname>
+		<url>baraem</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 1</cname>
+		<url>bein_sport_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 10</cname>
+		<url>bein_sport_10</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 2</cname>
+		<url>bein_sport_2</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 3</cname>
+		<url>bein_sport_3</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 4</cname>
+		<url>bein_sport_4</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 5</cname>
+		<url>bein_sport_5</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 6</cname>
+		<url>bein_sport_6</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 7</cname>
+		<url>bein_sport_7</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 8</cname>
+		<url>bein_sport_8</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Aghani</cname>
+		<url>bein_sport_9</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>CBC 2</cname>
+		<url>cbc_2</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>CBC Drama</cname>
+		<url>cbc_drama</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>CBC Extra</cname>
+		<url>cbc_extra</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>CBC Sofra</cname>
+		<url>cbc_sofra</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>CBC Tv</cname>
+		<url>cbc_tv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>CBC</cname>
+		<url>cbc</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>CCTV Arabic</cname>
+		<url>cctv_arabic</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Cairo Cinema</cname>
+		<url>cairo_cinema</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Cairo Drama</cname>
+		<url>cairo_drama</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Canal plus</cname>
+		<url>canal_plus</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Cartoon Network</cname>
+		<url>cartoon_network</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Cima</cname>
+		<url>cima</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Coran</cname>
+		<url>coran</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Dream 1</cname>
+		<url>dream_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Dubai One</cname>
+		<url>dubai_one</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Dubai Sport 1</cname>
+		<url>dubai_sport_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Dubai Sport 2</cname>
+		<url>dubai_sport_2</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Dubai</cname>
+		<url>dubai</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Dzair 24</cname>
+		<url>dzair_24</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Echorouk Tv</cname>
+		<url>echorouk_tv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Fatafeat</cname>
+		<url>fatafeat</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Fox Movies</cname>
+		<url>fox_movies</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Fox</cname>
+		<url>fox</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>France24 Arabic</cname>
+		<url>france24_arabic</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Funoon</cname>
+		<url>funoon</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Fx Arabia</cname>
+		<url>fx_arabia</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Ghinwa</cname>
+		<url>ghinwa</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Hanibal</cname>
+		<url>hanibal</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Iqra</cname>
+		<url>iqra</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Jordan</cname>
+		<url>jordan</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>KSA 1</cname>
+		<url>ksa_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Kalsan Tv</cname>
+		<url>kalsan_tv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Kuwait</cname>
+		<url>kuwait</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>LBC</cname>
+		<url>lbc</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>LLBN</cname>
+		<url>llbn</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Lbc Europe</cname>
+		<url>lbc_europe</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Libya</cname>
+		<url>libya</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>M6</cname>
+		<url>m6</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC 1</cname>
+		<url>mbc_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC 2</cname>
+		<url>mbc_2</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC 3</cname>
+		<url>mbc_3</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC 4</cname>
+		<url>mbc_4</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC Action</cname>
+		<url>mbc_action</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC Bollywood</cname>
+		<url>mbc_bollywood</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC Drama</cname>
+		<url>mbc_drama</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC Masr</cname>
+		<url>mbc_masr</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC Max</cname>
+		<url>mbc_max</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MBC Persia</cname>
+		<url>mbc_persia</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>MTV</cname>
+		<url>mtv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Maghreb 1</cname>
+		<url>maghreb_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Masrawi Aflam</cname>
+		<url>masrawi_aflam</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Mauritanie</cname>
+		<url>mauritanie</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Mazeka zoom</cname>
+		<url>mazeka_zoom</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Mazzika</cname>
+		<url>mazzika</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Medi 1 Sat</cname>
+		<url>medi_1_sat</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Mehwar</cname>
+		<url>mehwar</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Melody</cname>
+		<url>melody</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Moga Comedy</cname>
+		<url>moga_comedy</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>NBN</cname>
+		<url>nbn</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>National Geo Ad</cname>
+		<url>national_geo_ad</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nessma</cname>
+		<url>nessma</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Cinema</cname>
+		<url>nile_cinema</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Comedy</cname>
+		<url>nile_comedy</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Drama 2</cname>
+		<url>nile_drama_2</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Drama</cname>
+		<url>nile_drama</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Family</cname>
+		<url>nile_family</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Life</cname>
+		<url>nile_life</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile News</cname>
+		<url>nile_news</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Sport</cname>
+		<url>nile_sport</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nile Tv</cname>
+		<url>nile_tv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Noor Dubai</cname>
+		<url>noor_dubai</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Noursat</cname>
+		<url>noursat</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>OTV Lebanon</cname>
+		<url>otv_lebanon</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>On TV</cname>
+		<url>on_tv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Rotana Aflam</cname>
+		<url>rotana_aflam</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Rotana Classic</cname>
+		<url>rotana_classic</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Rotana Clip</cname>
+		<url>rotana_clip</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Rotana Khaligi</cname>
+		<url>rotana_khaligi</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Rotana Masriya</cname>
+		<url>rotana_masriya</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Rotana Music</cname>
+		<url>rotana_music</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Rotana cinema</cname>
+		<url>rotana_cinema</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Roya</cname>
+		<url>roya</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Royali Somali</cname>
+		<url>royali_somali</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Russia Alyaum</cname>
+		<url>russia_alyaum</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Sama Dubai</cname>
+		<url>sama_dubai</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Samira Tv</cname>
+		<url>samira_tv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Sharjah</cname>
+		<url>sharjah</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Somali Channel</cname>
+		<url>somali_channel</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Somsat Tv</cname>
+		<url>somsat_tv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Spacetoon</cname>
+		<url>spacetoon</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Star Cinema</cname>
+		<url>star_cinema</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Sudan TV</cname>
+		<url>sudan_tv</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Syria Drama</cname>
+		<url>syria_drama</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Syria</cname>
+		<url>syria</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>TF1</cname>
+		<url>tf1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>TNN</cname>
+		<url>tnn</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>TVP 1 HD</cname>
+		<url>tvp_1_hd</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>TVP 2 HD</cname>
+		<url>tvp_2_hd</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>TVS</cname>
+		<url>tvs</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tamazigh Algeria</cname>
+		<url>tamazigh_algeria</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tchad</cname>
+		<url>tchad</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tele Liban</cname>
+		<url>tele_liban</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tele Sports</cname>
+		<url>tele_sports</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Time Comedy</cname>
+		<url>time_comedy</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Top Movies</cname>
+		<url>top_movies</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tounesna</cname>
+		<url>tounesna</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Toyor Al Janah</cname>
+		<url>toyor_al_janah</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Toyor baby</cname>
+		<url>toyor_baby</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tunisia national 1</cname>
+		<url>tunisia_national_1</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tunisia national 2</cname>
+		<url>tunisia_national_2</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Tv Polonia</cname>
+		<url>tv_polonia</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Wanasah</cname>
+		<url>wanasah</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Yemen</cname>
+		<url>yemen</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Zagros</cname>
+		<url>zagros</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Zaitouna</cname>
+		<url>zaitouna</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Zee Aflam</cname>
+		<url>zee_aflam</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Zee Alwan</cname>
+		<url>zee_alwan</url>
+	</streaminginfo>
+</streamingInfos>

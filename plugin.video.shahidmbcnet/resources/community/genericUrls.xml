@@ -1,0 +1,71 @@
+<streamingInfos>
+
+
+	<streaminginfo>
+		<cname>Melody Hits</cname>	
+		<item>
+			<title>Melody Hits.206</title>
+			<thumbnail>https://lh3.ggpht.com/-DE3GqoUaC4g/UuNmaROcywI/AAAAAAAABDM/trn-g__hU7M/s1600/melody_hits.png</thumbnail>
+			<link>rtmp://38.96.148.206/Melody/ playpath=MHitsWeb swfUrl=http://p.jwpcdn.com/6/7/jwplayer.flash.swf pageUrl=http://freetv247.com/content/melody-hits-channel live=1 timeout=15</link>
+		</item>
+	</streaminginfo>
+
+	<streaminginfo>
+		<cname>Melody Hits</cname>
+
+		<item>
+			<title>Melody Hits .24 sab9a</title>
+			<thumbnail>https://lh3.ggpht.com/-DE3GqoUaC4g/UuNmaROcywI/AAAAAAAABDM/trn-g__hU7M/s1600/melody_hits.png</thumbnail>
+			<link>http://38.96.148.24//MelodyHits/MHits_576p/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+
+        	<streaminginfo>
+        
+		<cname>Echorouk Tv</cname>
+        <item>
+    <title>Echorouk Tv</title>
+<link>rtmp://live.echoroukonline.com/live/EchoroukTV</link>
+<thumbnail></thumbnail>
+</item>
+</streaminginfo>
+
+    	<streaminginfo>
+        
+		<cname>Al Baghdadia Drama</cname>
+        <item>
+    <title>Al Baghdadia 2</title>
+<link>rtmp://cp44832.live.edgefcs.net/live playpath=albag2_500@90978 swfUrl=http://player.longtailvideo.com/player.swf live=true timeout=15 pageUrl=http://freetv247.com/tags/al-baghdadia-2-live-tv</link>
+<thumbnail>http://a1.mzstatic.com/us/r1000/107/Purple/cf/aa/5c/mzl.bjffmkul.jpg</thumbnail>
+</item>
+</streaminginfo>
+	<streaminginfo>
+		<cname>Melody Arabia</cname>
+
+		<item>
+			<title>Melody arabia HD.24 sab9a</title>
+			<thumbnail>http://www.lyngsat-logo.com/hires/mm/melody_arabia.png</thumbnail>
+			<link>http://38.96.148.24/MelodyArabia/MArabia_576p/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+
+	<streaminginfo>
+		<cname>Melody Arabia</cname>
+
+		<item>
+			<title>Melody arabia HD.206</title>
+			<thumbnail>http://www.lyngsat-logo.com/hires/mm/melody_arabia.png</thumbnail>
+			<link>rtmp://38.96.148.206/Melody/ playpath=MArabiaWeb swfUrl=http://p.jwpcdn.com/6/7/jwplayer.flash.swf pageUrl=http://freetv247.com/content/melody-hits-channel live=1 swfVfy=1 timeout=15</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Magharibia</cname>
+
+		<item>
+			<title>Al Magharibia (Direct)</title>
+			<thumbnail>http://almagharibia.tv/neue/web/assets/almagharibia.png</thumbnail>
+			<link>rtmp://37.130.230.45/livepkgr/ playpath=livestream swfUrl=http://p.jwpcdn.com/6/8/jwplayer.flash.swf live=true timeout=15 pageUrl=http://almagharibia.tv/livestream</link>
+		</item>
+	</streaminginfo>
+
+</streamingInfos>
