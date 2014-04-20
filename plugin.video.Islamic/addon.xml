@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.Islamic"
 	name="Khotba Youtube"
-	version="2.0.0"
+	version="1.0.0"
 	provider-name="Amio">
   <requires>
     <import addon="xbmc.python" version="2.0"/>

@@ -326,7 +326,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon id="plugin.video.Islamic"
 	name="Khotba Youtube"
-	version="2.0.0"
+	version="1.0.0"
 	provider-name="Amio">
   <requires>
     <import addon="xbmc.python" version="2.0"/>
@@ -404,7 +404,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon id="plugin.video.samiratvYoutube"
 	name="Samira TV Youtube"
-	version="2.0.0"
+	version="1.0.0"
 	provider-name="Amio">
   <requires>
     <import addon="xbmc.python" version="2.0"/>
