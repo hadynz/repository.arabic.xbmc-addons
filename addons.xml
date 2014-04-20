@@ -402,7 +402,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   </extension>
 </addon>
 
-<addon id="plugin.video.samiratvYoutube"
+<addon id="plugin.video.SamiraTVYoutube"
 	name="Samira TV Youtube"
 	version="1.0.0"
 	provider-name="Amio">
