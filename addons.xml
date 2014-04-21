@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
 <addon id="plugin.video.3alshasha"
-	name="3alshasha Arabic movies on Youtube"
+	name="3alshasha Arabic Movies"
 	version="1.0.1"
 	provider-name="Amio(Hassuni/xbmcarabic.com)">
   <requires>
