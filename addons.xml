@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.3alshashaYoutube"
-	name="3alshasha Youtube"
-	version="1.0.0"
-	provider-name="Amio">
+<addon id="plugin.video.3alshasha"
+	name="3alshasha Arabic movies on Youtube"
+	version="1.0.1"
+	provider-name="Amio(Hassuni/xbmcarabic.com)">
   <requires>
-    <import addon="xbmc.python" version="2.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">3alshasha Youtube</summary>
-    <description lang="en">3alshasha Youtube</description>
+    <summary lang="en">3alshasha a Youtube Channel dedicated to Arabic movies and films.</summary>
+    <description lang="en">3alshasha a Youtube Channel dedicated to Arabic movies and films.</description>
     <platform>all</platform>
   </extension>
 </addon>
