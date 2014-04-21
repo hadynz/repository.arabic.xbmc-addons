@@ -1,6 +1,6 @@
 HARDCODED_STREAMS = [{
                          'title': 'MBC',
-                         'thumbnail': 'https://si0.twimg.com/profile_images/1133033554/mbc-fb.JPG',
+                         'thumbnail': 'http://www.teledunet.com//tv_/icones/mbc_1.jpg',
                          'path': 'mbc_1'},
                      {
                          'title': 'BeIn Sport 1',
@@ -170,6 +170,54 @@ HARDCODED_STREAMS = [{
                          'title': 'Melody',
                          'thumbnail': 'http://www.muratzengin.com/MelodyArabia-live.jpg',
                          'path': 'melody'},
+                     {
+                         'title': 'MBC 3',
+                         'thumbnail': 'http://www.teledunet.com//tv_/icones/mbc_3.jpg',
+                         'path': 'mbc_3'},
+                     {
+                         'title': 'MBC Drama',
+                         'thumbnail': 'http://www.teledunet.com//tv_/icones/mbc_drama.jpg',
+                         'path': 'mbc_drama'},
+                     {
+                         'title': 'MBC Masr',
+                         'thumbnail': 'http://www.teledunet.com//tv_/icones/mbc_masr.jpg',
+                         'path': 'mbc_masr'},
+                     {
+                         'title': 'On Tv',
+                         'thumbnail': 'http://www.teledunet.com//tv_/icones/on_tv.jpg',
+                         'path': 'on_tv'},
+                     {
+                         'title': 'Oromia TV',
+                         'thumbnail': 'http://www.orto.gov.et/images/arma.gif',
+                         'path': 'oromia_tv'},
+                     {
+                         'title': 'Tchad',
+                         'thumbnail': 'http://moskovskoe.tv/wp-content/uploads/2012/09/tele_tchad.jpg',
+                         'path': 'tchad'},
+                     {
+                         'title': 'Wanasah',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/ww/wanasah_tv.png',
+                         'path': 'wanasah'},
+                     {
+                         'title': 'Roya',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/rr/roya_tv_jo.png',
+                         'path': 'roya'},
+                     {
+                         'title': 'Kalsan TV',
+                         'thumbnail': 'http://radioalfurqaan.com/wp-content/uploads/2013/07/Kalsantv.jpg',
+                         'path': 'kalsan_tv'},
+                     {
+                         'title': 'Eriteria TV',
+                         'thumbnail': 'http://hornofafrica.de/wp-content/uploads/2012/02/EriTV-logo_3d.png',
+                         'path': 'eriteria_tv'},
+                     {
+                         'title': 'El Djazairia',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/ee/el_djazairia_tv_dz.png',
+                         'path': 'el_djazairia'},
+                     {
+                         'title': 'Al Ekhbariyah Al Syria',
+                         'thumbnail': 'http://upload.wikimedia.org/wikipedia/en/6/69/Syria_News_TV_Logo.png',
+                         'path': 'al_ikhbaria'},
                      {
                          'title': 'Cartoon Network',
                          'thumbnail': 'http://upload.wikimedia.org/wikipedia/commons/b/bb/Cartoon_Network_Arabic_logo.png',
