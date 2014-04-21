@@ -18,10 +18,45 @@
 		</item>
 	</streaminginfo>
 	<streaminginfo>
+		<cname>Bein Sport 1</cname>
+		<item>
+			<title>Bein Sport 1 HQ 2ndserver</title>
+			<link>http://cms.prosatiptv.com/getChannel?channelId=09&amp;sn=12576902&amp;byPass=987</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 1</cname>
+		<item>
+			<title>Bein Sport 1 HD 3rd server</title>
+			<link>http://202.75.23.37:8800/live/ch18/04.m3u8</link>
+		</item>
+	</streaminginfo>  
+         <streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>
-			<title>Bein Sport 2</title>
+			<title>Bein Sport </title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST2 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 2</cname>
+		<item>
+			<title>Bein Sport 2 (ustream)</title>
+			<link>http://iphone-streaming.ustream.tv/ustreamVideo/17718592/streams/live?v=720p/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 2</cname>
+		<item>
+			<title>Bein Sport 2 2 HQ 2ndserver</title>
+			<link>http://cms.prosatiptv.com/getChannel?channelId=10&amp;sn=12576902&amp;byPass=987</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 2</cname>
+		<item>
+			<title>Bein Sport 2 HD 3rd server</title>
+			<link>http://202.75.23.37:8800/live/ch19/03.m3u8</link>
 		</item>
 	</streaminginfo>
 	<streaminginfo>
@@ -32,10 +67,24 @@
 		</item>
 	</streaminginfo>
 	<streaminginfo>
+		<cname>Bein Sport 3</cname>
+		<item>
+			<title>Bein Sport 3 2 HQ 2ndserver</title>
+			<link>http://cms.prosatiptv.com/getChannel?channelId=11&amp;sn=12576902&amp;byPass=987</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
 		<cname>Bein Sport 4</cname>
 		<item>
 			<title>Bein Sport 4</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST4 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Bein Sport 4</cname>
+		<item>
+			<title>Bein Sport 4 2 HQ 2ndserver</title>
+			<link>http://cms.prosatiptv.com/getChannel?channelId=12&amp;sn=12576902&amp;byPass=987</link>
 		</item>
 	</streaminginfo>
 	<streaminginfo>
@@ -137,6 +186,15 @@
 		</item>
 	</streaminginfo>
 	<streaminginfo>
+		<cname>Al Resoul TV</cname>
+		<item>
+			<title>Al Resoul TV</title>
+			<link>http://iphone-streaming.ustream.tv/ustreamVideo/12677236/streams/live?v=720p/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+	
 		<cname>AL EQTESADIA TV</cname>
 		<item>
 			<title>AL EQTESADIA TV</title>
@@ -185,6 +243,14 @@
 			<link>mms://vipmms.yacast.net/nationale1</link>
 		</item>
 	</streaminginfo>
+	<streaminginfo>
+		<cname>EnnaharTV algerie</cname>
+		<item>
+			<title>nahar algerie</title>
+			<link>rtmp://87.98.155.194/live playpath=EnnaharTV swfUrl=http://www.ennahartv.net/live/player.swf live=1 pageUrl=http://www.ennahartv.net/ar/live/</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>nbn lebanon</cname>
 		<item>
@@ -571,16 +637,16 @@
 		<item>
 			<title>arte (filmon high)</title>
 			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1729.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
-   <regex>
-     <name>url</name>
-     <expres>rtmp:....([^\\]*)</expres>
-     <page>http://www.filmon.com/tv/channel/export?channel_id=1729</page>
-   </regex>
-   <regex>
-     <name>key</name>
-     <expres>rtmp[^?]*(\?id=[^"]*)</expres>
-     <page>http://www.filmon.com/tv/channel/export?channel_id=1729</page>
-   </regex>
+           <regex>
+            <name>url</name>
+            <expres>rtmp:....([^\\]*)</expres>
+            <page>http://www.filmon.com/tv/channel/export?channel_id=1729</page>
+           </regex>
+           <regex>
+            <name>key</name>
+            <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+            <page>http://www.filmon.com/tv/channel/export?channel_id=1729</page>
+           </regex>
 		</item>
 	</streaminginfo>
 	<streaminginfo>
@@ -597,7 +663,5 @@
 			<link>http://rm-edge-3.cdn2.streamago.tv/streamagoedge/1924/817/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
-
-
 	
 </streamingInfos>

@@ -1,4 +1,53 @@
 <streamingInfos>
+<streaminginfo>
+<cname>Palestine</cname>
+<url>palestine</url>
+</streaminginfo>
+
+
+<streaminginfo>
+<cname>El Djazairia</cname>
+<url>el_djazairia</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>Dzair tv</cname>
+<url>dzair_tv</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>Alhayat2</cname>
+<url>alhayet_2</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>Al Ikhbaria</cname>
+<url>al_ikhbaria</url>
+</streaminginfo>
+
+	 <streaminginfo>
+		<cname>Sada Al Balad2</cname>
+		<url>sada_albalad</url>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Sada Al Balad</cname>
+		<url>sada_el_balad</url>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Panorama Comedy</cname>
+		<url>panorama_comedy</url>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Panorama Drama</cname>
+		<url>panorama_drama</url>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Panorama Drama2</cname>
+		<url>panorama_drama_2</url>
+	</streaminginfo>
 	<streaminginfo>
 		<cname>2M</cname>
 		<url>2m</url>

@@ -11,5 +11,13 @@
 		<string id="32017">Livetv Login</string>
 		<string id="32018">User Name</string>
 		<string id="32019">Password</string>
-	<string id="32020">Play first available Channel?</string>
+	<string id="32020">Play first available Channel Source?</string>
+	<string id="32021">Source order</string>
+	<string id="32022">First Preference</string>
+	<string id="32023">Second Preference</string>
+	<string id="32024">Third Preference</string>
+	<string id="32025">Fourth Preference</string>
+	<string id="32026">Fifth Preference</string>
+	
+	
 </strings>

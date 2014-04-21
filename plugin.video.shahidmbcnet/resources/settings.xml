@@ -10,12 +10,18 @@
      </category>
 <category label="32015">
  <setting label="32020" type="bool"   id="playFirstChannel" default="false"/>
-
+   <setting label="32021" type="lsep"/>
+		<setting label="32022" type="labelenum" id="order1" values="Teledunet.com|livetv.tn|Shani|PC|Zombi" default="Teledunet.com"/>
+		<setting label="32023" type="labelenum" id="order2" values="Teledunet.com|livetv.tn|Shani|PC|Zombi" default="livetv.tn"/>
+		<setting label="32024" type="labelenum" id="order3" values="Teledunet.com|livetv.tn|Shani|PC|Zombi" default="Shani"/>
+		<setting label="32025" type="labelenum" id="order4" values="Teledunet.com|livetv.tn|Shani|PC|Zombi" default="PC"/>
+		<setting label="32026" type="labelenum" id="order5" values="Teledunet.com|livetv.tn|Shani|PC|Zombi" default="Zombi"/>
      
 	   </category>
 	 <category label="32017">
 		<setting label="32018" type="text" id="liveTvLogin" values="" default=""/>
 		<setting label="32019" type="text" id="liveTvPassword" values="" default=""/>  
 	  </category>
+
 	     
 </settings>

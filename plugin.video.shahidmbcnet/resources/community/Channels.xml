@@ -1,5 +1,94 @@
 <channels>
+<channel>
+<cname>Palestine</cname>
+<imageurl>http://www.lyngsat-logo.com/hires/pp/palestine_satellite_channel.png</imageurl>
+<enabled>True</enabled>
+<assignedcategory>
+<category>sham</category>
+</assignedcategory>
+</channel>
 
+<channel>
+<cname>El Djazairia</cname>
+<imageurl>http://www.lyngsat-logo.com/hires/ee/el_djazairia_tv_dz.png</imageurl>
+<enabled>True</enabled>
+<assignedcategory>
+<category>magreb</category>
+</assignedcategory>
+</channel>
+
+<channel>
+<cname>Dzair tv</cname>
+<imageurl>http://www.lyngsat-logo.com/logo/tv/dd/dzair_tv_dz.png</imageurl>
+<enabled>True</enabled>
+<assignedcategory>
+<category>magreb</category>
+</assignedcategory>
+</channel>
+
+<channel>
+<cname>Alhayat2</cname>
+<imageurl>http://www.lyngsat-logo.com/logo/tv/aa/alhayat_2.jpg</imageurl>
+<enabled>True</enabled>
+<assignedcategory>
+<category>egypt</category>
+</assignedcategory>
+</channel>
+<channel>
+<cname>Al Ikhbaria</cname>
+<imageurl>http://www.lyngsat-logo.com/logo/tv/aa/al_ikhbaria_sy.png</imageurl>
+<enabled>True</enabled>
+<assignedcategory>
+<category>sham</category>
+</assignedcategory>
+</channel>
+
+	<channel>
+		<cname>Sada Al Balad2</cname>
+		<imageurl>http://www.lyngsat-logo.com/hires/ss/sada_el_balad_drama_plus2.png</imageurl>
+		<enabled>True</enabled>
+		<assignedcategory>
+			<category>egypt</category>
+		</assignedcategory>
+	</channel>
+
+	<channel>
+		<cname>Sada Al Balad</cname>
+		<imageurl>http://www.lyngsat-logo.com/hires/ss/sada_el_balad_tv.png</imageurl>
+		<enabled>True</enabled>
+		<assignedcategory>
+			<category>egypt</category>
+		</assignedcategory>
+	</channel>
+    
+    <channel>
+		<cname>Panorama Comedy</cname>
+		<imageurl>http://www.teledunet.com//player/icones/panorama_comedy.jpg</imageurl>
+		<enabled>True</enabled>
+		<assignedcategory>
+			<category>egypt</category>
+		</assignedcategory>
+	</channel>
+
+	<channel>
+		<cname>Panorama Drama</cname>
+		<imageurl>http://www.lyngsat-logo.com/logo/tv/pp/panorama_drama.png</imageurl>
+		<enabled>True</enabled>
+		<assignedcategory>
+			<category>egypt</category>
+		</assignedcategory>
+	</channel>
+	
+	<channel>
+		<cname>Panorama Drama2</cname>
+		<imageurl>http://www.lyngsat-logo.com/logo/tv/pp/panorama_drama_2.png</imageurl>
+		<enabled>True</enabled>
+		<assignedcategory>
+			<category>egypt</category>
+		</assignedcategory>
+	</channel>
+	
+    
 	<channel>
 		<cname>Al Baghdadia Drama</cname>
 		<imageurl>http://albaghdadiagroup.com/modules/mod_image_show_gk4/cache/demo.image_show.P-b2gk-is-93.png</imageurl>
@@ -161,6 +250,22 @@
 		<assignedcategory>
 			<category>magreb</category>
 		</assignedcategory>
+	</channel>
+	<channel>
+		<cname>EnnaharTV algerie</cname>
+		<imageurl>https://i.imgur.com/YEjgYpX.png</imageurl>
+		<enabled>True</enabled>
+		<assignedcategory>
+			<category>magreb</category>
+		</assignedcategory>
+	</channel>
+	<channel>
+		<cname>Al Resoul TV</cname>
+		<imageurl>http://www.lyngsat-logo.com/logo/tv/aa/al_resoul_tv.png</imageurl>
+		<enabled>True</enabled>
+		<assignedcategory>
+			<category>islam</category>
+                </assignedcategory>
 	</channel>
 	<channel>
 		<cname>Al Karama</cname>

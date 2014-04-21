@@ -288,11 +288,36 @@
 
 
 <streaminginfo>
+		<cname>MBC Action</cname>
+
+<item>
+<title>MBC Action</title>
+<link>rtmp://83.149.124.200/live playpath=EFEDFzddac?id=149861 conn=S:OK swfUrl=http://mips.tv/content/scripts/eplayer.swf live=true timeout=15 pageUrl=http://mips.tv/embedplayer/EFEDFzddac/1/600/380</link>
+<thumbnail>http://upload.wikimedia.org/wikipedia/ar/3/37/MBC-Action.jpg</thumbnail>
+</item>
+</streaminginfo>
+
+<streaminginfo>
+		<cname>MBC 4</cname>
+
+<item>
+<title>MBC 4</title>
+<link>rtmp://95.211.148.203/live playpath=trhtgfjhgjhg?id=147478 conn=S:OK swfUrl=http://mips.tv/content/scripts/eplayer.swf live=true timeout=15 pageUrl=http://mips.tv/embedplayer/trhtgfjhgjhg/1/600/380</link>
+<thumbnail>https://si0.twimg.com/profile_images/1133002857/mbc4.jpg</thumbnail>
+</item>
+</streaminginfo>
+
+<streaminginfo>
 		<cname>MBC Bollywood</cname>
 <item> 
 <title>MBC Bollywood (Alternative Source)</title>
 <link>rtmp://206.190.129.12/live playpath=aflam4youddd?id=152675 swfUrl=http://mips.tv/content/scripts/eplayer.swf live=1 conn=S:OK --live</link>
 <thumbnail>http://www.waleg.com/images/mbc-bollywood.jpg</thumbnail>
+</item>
+
+<item>
+<title>MBC Bollywood (Alternative)</title>
+<link>rtmp://83.149.124.200/live playpath=aflam4youddd?id=152675 conn=S:OK swfUrl=http://www.mips.tv/content/scripts/eplayer.swf pageUrl=http://www.mips.tv/embedplayer/aflam4youddd/1/600/380  live=1 timeout=15</link> 
 </item>
 </streaminginfo>
 
@@ -808,7 +833,7 @@
 		<cname>2M</cname>
 <item>  
 <title>2M (Alternative Source)</title>
-<link>rtmp://2mmarocRTMP.giniko.com:1935/livepkgr/ playpath=2mmaroc?adbe-live-event=liveevent&adbe-record-mode=record swfUrl=http://www.giniko.com/dvr/jwplayer/jwplayer.flash.swf pageUrl=http://www.giniko.com/dvr/?gid=4 live=1</link> 
+<link>rtmp://50.23.65.36/live playpath=fezfezaf?id=149849 swfUrl=http://www.mips.tv/content/scripts/eplayer.swf pageUrl=http://www.mips.tv/embedplayer/fezfezaf/1/600/380  conn=S:OK live=1 timeout=15</link> 
 </item>
 </streaminginfo>
 

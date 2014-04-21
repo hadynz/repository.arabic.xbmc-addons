@@ -1,9 +1,36 @@
 <streaminginfos>
+<streaminginfo>
+<cname>Palestine</cname>
+<url>ch100</url>
+</streaminginfo>
 
+<streaminginfo>
+		<cname>Sada Al Balad2</cname>
+		<chnumber>ch77</chnumber>
+	</streaminginfo> 
+	<streaminginfo>
+		<cname>Sada Al Balad</cname>
+		<chnumber>ch78</chnumber>
+	</streaminginfo> 
+    
+    <streaminginfo>
+		<cname>Panorama Comedy</cname>
+		<chnumber>ch114</chnumber>
+	</streaminginfo> 
+	<streaminginfo>
+		<cname>Panorama Drama</cname>
+		<chnumber>ch17</chnumber>
+	</streaminginfo> 
+<streaminginfo>
+		<cname>Panorama Drama2</cname>
+		<chnumber>ch115</chnumber>
+	</streaminginfo>
+    
 <streaminginfo>
 <cname>Aghani</cname>
 <chnumber>ch294</chnumber>
 </streaminginfo>
+
 	<streaminginfo>
 		<cname>Tunisia national 1</cname>
 		<chnumber>ch1</chnumber>

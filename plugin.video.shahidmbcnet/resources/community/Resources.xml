@@ -8,6 +8,7 @@
 	<file fname="livetvUrls.xml"/>	
 	<file fname="genericPlayer.py"/>	
 	<file fname="genericUrls.xml"/>	
+	<file fname="YoutubeSources.xml"/>	
 	<file fname="palestinecoolUrls.xml" url="http://goo.gl/yNlwCM"/>
 	<file fname="ZombiList.xml" url="https://raw.githubusercontent.com/zombiB/Replay/master/zombiList.xml"/>	
 </resources>

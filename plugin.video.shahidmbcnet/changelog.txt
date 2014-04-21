@@ -44,3 +44,7 @@
 - Name display when playing generic
 [B]Version 2.5.4[/B]
 - Gotham support
+[B]Version 2.6.0[/B]
+- Renamed Addon and many links, Added support for ordering, youtube links and other changes
+[B]Version 2.6.1[/B]
+- dependency problem fixed
