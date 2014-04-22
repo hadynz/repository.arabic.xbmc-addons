@@ -9,6 +9,7 @@ import os
 import sys
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
 import xml.etree.ElementTree as etree
+import json
 
 __addon__       = xbmcaddon.Addon()
 __addonname__   = __addon__.getAddonInfo('name')
@@ -21,6 +22,7 @@ communityStreamPath = os.path.join(addonPath,'resources/community')
 
  
 mainurl='http://shahid.mbc.net'
+apikey='AIzaSyCl5mHLlE0mwsyG4uvNHu5k1Ej1LQ_3RO4'
 
 def getMainUrl():
 	rMain=mainurl
@@ -81,7 +83,7 @@ def Colored(text = '', colorid = '', isBold = False):
 		text = '[B]' + text + '[/B]'
 	return '[COLOR ' + color + ']' + text + '[/COLOR]'	
 	
-def addDir(name,url,mode,iconimage	,showContext=False,isItFolder=True,pageNumber="", isHTML=True):
+def addDir(name,url,mode,iconimage	,showContext=False,isItFolder=True,pageNumber="", isHTML=True,addIconForPlaylist=False ):
 #	print name
 #	name=name.decode('utf-8','replace')
 	if isHTML:
@@ -101,6 +103,8 @@ def addDir(name,url,mode,iconimage	,showContext=False,isItFolder=True,pageNumber
 	u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(rname)
 	if len(pageNumber):
 		u+="&pagenum="+pageNumber
+	if addIconForPlaylist:
+		u+="&addIconForPlaylist=yes"
 	ok=True
 #	print iconimage
 	liz=xbmcgui.ListItem(rname, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
@@ -151,33 +155,78 @@ def Addtypes():
 	return
 
 def AddYoutubeLanding(url):
-	directories=getETreeFromUrl(url)
+	if not url.lower().startswith('http'):
+		if url=='LOCAL':
+			filename=selfAddon.getSetting( "localyoutubexmlpath" )
+		else:
+			filename=url
+		print 'filename',filename
+		if len(filename)>0:
+			data = open(filename, "r").read()
+			print data
+			directories=getETreeFromString(data)
+		else:
+			dialog = xbmcgui.Dialog()
+			ok = dialog.ok('XBMC', 'File not defined')
+			return
+	else:
+		directories=getETreeFromUrl(url)
 	for dir in directories.findall('dir'):
 		name = dir.find('name').text
-		link= dir.find('link').text
+		link= dir.find('link')
+		if not link==None: link=link.text
+		videouser= dir.find('youtubeuser')
+		if not videouser==None: videouser=videouser.text
+		
+		channelID= dir.find('channelid')
+		if not channelID==None: channelID=channelID.text
+		
+		thumbnail= dir.find('thumbnail')
+		if not thumbnail==None: thumbnail=thumbnail.text
+		
+		
 		print name,link
 		thumbnail= dir.find('thumbnail').text
 		if thumbnail==None:
 			thumbnail=''
 		print 'thumbnail',thumbnail
 		type = dir.find('type')
+
 		if type==None:
 			#check the link and decide
-			if link.endswith('playlists'):
-				type='playlist'
-			elif link.endswith('uploads'):
-				type='videos'
-			elif 'watch?v' in link:
-				type='video'
+			if not link==None:
+				if link.endswith('playlists'):
+					type='playlist'
+				elif link.endswith('uploads'):
+					type='videos'
+				elif 'watch?v' in link:
+					type='video'
+				else:
+					type='dir'
 			else:
 				type='dir'
 		else:
 			type=type.text
-		
+		print 'channelID',channelID
+		if type=='playlist' or  type=='videos':
+			if channelID==None or  len(channelID)==0:
+				if videouser==None:
+					#get it from the link
+					link=link.split('/')[-2]
+				else:
+					link=videouser
+				print 'link for Channelid',link
+				link=getChannelIdByUserName(link)#passusername
+			else:
+				link=channelID
+		icon=addonArt+'/video.png'
+		if (not thumbnail==None) and len(thumbnail)>0:
+			icon=thumbnail
+		print 'icon',icon
 		if type=='playlist':
 			addDir(name ,link ,22,addonArt+'/playlist.png',isHTML=False) 
 		elif type=='videos':
-			addDir(name ,link ,20,addonArt+'/video.png',isHTML=False)
+			addDir(name ,link ,20,icon,isHTML=False)
 		elif type=='video':
 			addDir(name ,link  ,21,thumbnail,isItFolder=False, isHTML=False)		#name,url,mode,icon
 		else:
@@ -410,9 +459,16 @@ def AddChannels(liveURL):
 	return	
 	
 def AddYoutubeSources(url):
+	addDir('Most Popular' ,'MOSTPOP' ,23,addonArt+'/top.png',isHTML=False)
+	addDir('Most Popular Today' ,'MOSTPOPToday' ,23,addonArt+'/toptday.png',isHTML=False)
+	#addDir('Most Viewed' ,'https://gdata.youtube.com/feeds/api/standardfeeds/most_popular?orderby=viewCount' ,20,addonArt+'/topview.png',isHTML=False)
 	data=getYoutubeSources()
+	addDir('Your Videos' ,'LOCAL' ,19,addonArt+'/yourtube.png',isItFolder=True, isHTML=False)		#name,url,mode,icon
+
 	for stuff in data:
 		addDir(stuff[0] ,stuff[1] ,19,stuff[2],isItFolder=True, isHTML=False)		#name,url,mode,icon
+	
+
 
 
 def getYoutubeSources():
@@ -434,54 +490,77 @@ def PlayYoutube(url):
 	uurl = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s' % youtubecode
 	xbmc.executebuiltin("xbmc.PlayMedia("+uurl+")")
 
-def AddYoutubePlaylists(url):
-	playlists,next_page=getYouTubePlayList(url);
+def AddYoutubePlaylists(channelId):
+	#if not username.startswith('https://www.googleapis'):
+	#	channelId=getChannelIdByUserName(username)#passusername
+	#else:
+	#	channelId=username
+	#channelId=username
+	playlists,next_page=getYouTubePlayList(channelId);
 	for playList in playlists:
 		print playList
-		addDir(playList[0] ,playList[1] ,20,playList[2],isItFolder=True, isHTML=False)		#name,url,mode,icon
+		addDir(playList[0] ,playList[1] ,23,playList[2],isItFolder=True, isHTML=False)		#name,url,mode,icon
 	if next_page:
 		addDir('Next' ,next_page ,22,addonArt+'/next.png',isItFolder=True)		#name,url,mode,icon
+	
 		
-		
-def getYouTubePlayList(video_url):
-
-	doc=getETreeFromUrl(video_url)
-	nextItem= doc.findall('{http://www.w3.org/2005/Atom}link')
-	if len(nextItem)>0:
-		print 'finding next'
-		nextItem=getFirstElement(nextItem,'rel','next')
-	next_url=None
-	if not nextItem==None:
-		next_url= nextItem.attrib['href']
+def getYouTubePlayList(channelId):
+	if not channelId.startswith('https://www.googleapis'):
+		u_url='https://www.googleapis.com/youtube/v3/playlists?part=snippet&channelId=%s&maxResults=25&key=%s'%(channelId,apikey)
+	else:
+		u_url=channelId
+	doc=getJson(u_url)
 	ret=[]
-	for en in doc.findall('{http://www.w3.org/2005/Atom}entry'):
-		print 'processing entry'
-		title= en.find('{http://www.w3.org/2005/Atom}title').text
-		group= en.find( '{http://search.yahoo.com/mrss/}group' )
-		for c in group:
-			print c.tag,c.attrib
+	for playlist_item in doc['items']:
+		title = playlist_item["snippet"]["title"]
+		id = playlist_item["id"]
+		if not title=='Private video':
+			imgurl=''
+			try:
+				imgurl= playlist_item["snippet"]["thumbnails"]["default"]["url"]
+			except: pass
 
-		feedLink=en.find('{http://schemas.google.com/g/2005}feedLink' )
-		url= feedLink.attrib['href']
-		img=group.find('{http://search.yahoo.com/mrss/}thumbnail' )
-		imgurl=''
-		if not img==None:
-			imgurl=img.attrib['url']
-		print 'imgurl',imgurl
-		ret.append([title,url,imgurl])
-	return ret,next_url;
+			ret.append([title,id,imgurl])
+	nextItem=None
+	if 'nextPageToken' in doc:
+		nextItem=doc["nextPageToken"]
+	else:
+		nextItem=None
+		
+	nextUrl=None
+	if nextItem:
+		if not '&pageToken' in u_url:
+			nextUrl=u_url+'&pageToken='+nextItem
+		else:
+			nextUrl=u_url.split('&pageToken=')[0]+'&pageToken='+nextItem
+		
+	return ret,nextUrl;
+	
+def AddYoutubeVideosByChannelID(channelId,addIconForPlaylist):
+	AddPlayListIcon=True #add all the time
+	#if AddPlayListIcon="yes":
+	#	AddPlayListIcon=True
+	#channelId=getChannelIdByUserName(url)#passusername
+	playlist=getUploadPlaylist(channelId)
+	AddYoutubeVideosByPlaylist(playlist,AddPlayListIcon,channelId)
 
-
-def AddYoutubeVideos(url,index):
+def AddYoutubeVideosByPlaylist(playListId,AddPlayListIcon=False, channelid=None):
 	print 'AddYoutube',url
-	#url='http://gdata.youtube.com/feeds/api/users/aljadeedonline/uploads'
-	videos,next_page=getYoutubeVideos(url);
+	if playListId=='MOSTPOP':
+		videos,next_page=getYoutubeVideosPopular();
+	elif playListId=='MOSTPOPToday':
+		videos,next_page=getYoutubeVideosPopular(True);
+	else:
+		videos,next_page=getYoutubeVideosByPlaylist(playListId);
+	if AddPlayListIcon:
+		addDir('Playlists' ,channelid ,22,addonArt+'/playlist.png',isHTML=False) 
+	
 	for video in videos:
 		#print chName
 		print video
 		addDir(video[0] ,video[1] ,21,video[2],isItFolder=False, isHTML=False)		#name,url,mode,icon
 	if next_page:
-		addDir('Next' ,next_page ,20,addonArt+'/next.png',isItFolder=True)		#name,url,mode,icon
+		addDir('Next' ,next_page ,23,addonArt+'/next.png',isItFolder=True)		#name,url,mode,icon
 
 def getFirstElement(elements,attrib, val):
 	for el in elements:
@@ -491,35 +570,79 @@ def getFirstElement(elements,attrib, val):
 			return el
 	return None
 
-def getYoutubeVideos(video_url):
+def getJson(url):
+	req = urllib2.Request(url)
+	req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
+	response = urllib2.urlopen(req)
+	#link=response.read()
+	#response.close()
+	decoded = json.load(response)
+	return decoded
+	
+	
+def getChannelIdByUserName(username):
+	u_url='https://www.googleapis.com/youtube/v3/channels?part=id&forUsername=%s&key=%s'%(username,apikey)
+	channelData=getJson(u_url)
+	return channelData['items'][0]['id']
 
-	video_url=video_url
+def getUploadPlaylist(mainChannel):
+	u_url='https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=%s&key=%s'%(mainChannel,apikey)
+	doc=getJson(u_url)
+	upload_feed=doc['items'][0]['contentDetails']['relatedPlaylists']['uploads']
+	return upload_feed
 
-	doc=getETreeFromUrl(video_url)
-	nextItem= doc.findall('{http://www.w3.org/2005/Atom}link')
-	if len(nextItem)>0:
-		print 'finding next'
-		nextItem=getFirstElement(nextItem,'rel','next')
-	next_url=None
-	if not nextItem==None:
-		next_url= nextItem.attrib['href']
+	
+def getYoutubeVideosByPlaylist(playlistId):
+	if playlistId.startswith('https://www'):
+		#nextpage
+		u_url=playlistId
+	else:
+		u_url='https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=%s&key=%s'%(playlistId,apikey)
+	videos=getJson(u_url)
+	return prepareYoutubeVideoItems(videos,u_url)
+
+def getYoutubeVideosPopular(today=False):
+	if not today:
+		u_url='https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=viewCount&type=video&key=%s'%(apikey)
+	else:
+		import datetime
+		t=datetime.datetime.utcnow()-datetime.timedelta(days=1)
+		yesterday=t.strftime("%Y-%m-%dT%H:%M:%SZ")
+		u_url='https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=viewCount&type=video&key=%s&publishedAfter=%s'%(apikey,yesterday)
+	videos=getJson(u_url)
+	return prepareYoutubeVideoItems(videos,u_url)
+
+
+
+
+def prepareYoutubeVideoItems(videos,urlUsed):
+	print 'urlUsed',urlUsed
+	if 'nextPageToken' in videos:
+		nextItem=videos["nextPageToken"]
+	else:
+		nextItem=None
 	ret=[]
-	for en in doc.findall('{http://www.w3.org/2005/Atom}entry'):
-
-		title= en.find('{http://www.w3.org/2005/Atom}title').text
-		group= en.find( '{http://search.yahoo.com/mrss/}group' )
-
-		player=group.find('{http://search.yahoo.com/mrss/}player' )
-		if not player==None:
-			url= player.attrib['url']
-			print 'url',url
-			url= re.findall('watch\?v=(.*?)&', url)[0]
-			img=group.find('{http://search.yahoo.com/mrss/}thumbnail' )
+	for playlist_item in videos["items"]:
+		title = playlist_item["snippet"]["title"]
+		print 'urlUsed',urlUsed
+		if not 'search?part=snippet' in urlUsed:
+			video_id = playlist_item["snippet"]["resourceId"]["videoId"]
+		else:
+			video_id =playlist_item["id"]["videoId"]
+		if not title=='Private video':
 			imgurl=''
-			if not img==None:
-				imgurl=img.attrib['url']
-			ret.append([title,url,imgurl])
-	return ret,next_url;
+			try:
+				imgurl= playlist_item["snippet"]["thumbnails"]["default"]["url"]
+			except: pass
+		#print "%s (%s)" % (title, video_id)
+			ret.append([title,video_id,imgurl])
+	nextUrl=None
+	if nextItem:
+		if not '&pageToken' in urlUsed:
+			nextUrl=urlUsed+'&pageToken='+nextItem
+		else:
+			nextUrl=urlUsed.split('&pageToken=')[0]+'&pageToken='+nextItem
+	return ret,nextUrl;
 
 def AddStreams():
 	match=getStreams();
@@ -593,7 +716,7 @@ def getSourceAndStreamInfo(channelId, returnOnFirst):
 		Ssoup=getSoup('Sources.xml');
 		sources=Ssoup('source')
 		orderlist={}
-		for n in range(5):
+		for n in range(6):
 			val=selfAddon.getSetting( "order"+str(n+1) )
 			if val and not val=="":
 				orderlist[val]=n*100
@@ -609,9 +732,18 @@ def getSourceAndStreamInfo(channelId, returnOnFirst):
 				sid = source.id.text
 				sname = source.sname.text
 				print 'sid',sid,xmlfile
+				isAbSolutePath=False
+				if sname=="Local":
+					#
+					isAbSolutePath=True
+					isEnabled="false"
+					filename=selfAddon.getSetting( "localstreampath" )
+					if filename and len(filename)>0:
+						isEnabled="true"
+						xmlfile=filename
 				if isEnabled=="true":
 					#print 'source is enabled',sid
-					csoup=getSoup(xmlfile);
+					csoup=getSoup(xmlfile,isAbSolutePath);
 					#ccsoup = csoup("streaminginfo")
 					#print 'csoup',csoup,channelId
 					#print csoup 
@@ -844,8 +976,11 @@ def addCommunityChannels(catType):
 
 	
 	
-def getSoup(fileName):
-	data = open(os.path.join(communityStreamPath, fileName), "r").read()
+def getSoup(fileName, isabsolutePath=False):
+	strpath=os.path.join(communityStreamPath, fileName)
+	if isabsolutePath:
+		strpath=fileName
+	data = open(strpath, "r").read()
 	return BeautifulSOAP(data, convertEntities=BeautifulStoneSoup.XML_ENTITIES)
 
 def getETreeFromUrl(video_url):
@@ -855,9 +990,10 @@ def getETreeFromUrl(video_url):
 	data=response.read()
 	response.close()
 	#print data
-	return etree.fromstring(data)
+	return getETreeFromString(data)
 	#return BeautifulSOAP(data)
-
+def getETreeFromString(str):
+	return etree.fromstring(str)
 	
 def getStreams():
 	defaultStream="All"
@@ -1106,6 +1242,13 @@ try:
 except:
 	pass
 
+addIconForPlaylist=""
+try:
+	addIconForPlaylist=args.get('addIconForPlaylist', '')[0]
+except:
+	pass
+
+
 
 print 	mode,pageNumber
 
@@ -1158,7 +1301,7 @@ try:
 		AddYoutubeLanding(url)
 	elif mode==20: #add communutycats
 		print "youtube url is "+url,mode
-		AddYoutubeVideos(url,pageNumber);	
+		AddYoutubeVideosByChannelID(url,addIconForPlaylist);	
 	elif mode==21: #add communutycats
 		print "play youtube url is "+url,mode
 		PlayYoutube(url);	
@@ -1167,7 +1310,7 @@ try:
 		AddYoutubePlaylists(url);	
 	elif mode==23: #add communutycats
 		print "play youtube url is "+url,mode
-		AddYoutubeVideosFromPlaylist(url);	
+		AddYoutubeVideosByPlaylist(url);	
 except:
 	print 'somethingwrong'
 	traceback.print_exc(file=sys.stdout)

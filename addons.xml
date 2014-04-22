@@ -446,7 +446,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon id="plugin.video.shahidmbcnet"
        name="Shahid Arabic"
-       version="2.6.1"
+       version="2.6.2"
        provider-name="shani">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>

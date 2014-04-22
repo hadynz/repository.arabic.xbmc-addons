@@ -48,3 +48,5 @@
 - Renamed Addon and many links, Added support for ordering, youtube links and other changes
 [B]Version 2.6.1[/B]
 - dependency problem fixed
+[B]Version 2.6.2[/B]
+- Support local youtube and streaming links 

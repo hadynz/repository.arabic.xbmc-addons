@@ -46,6 +46,15 @@
 <imageurl>http://mylogo.com</imageurl>
 <processor>genericPlayer.py</processor>
 </source>
+<source>
+<id>generic</id>
+<sname>Local</sname>
+<baseurl>http://website.com</baseurl>
+<enabled>True</enabled>
+<urlfile></urlfile>
+<imageurl>http://mylogo.com</imageurl>
+<processor>genericPlayer.py</processor>
+</source>
 </streamingsources>
 
 
