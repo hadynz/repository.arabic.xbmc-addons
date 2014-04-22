@@ -219,6 +219,10 @@ HARDCODED_STREAMS = [{
                          'thumbnail': 'http://upload.wikimedia.org/wikipedia/en/6/69/Syria_News_TV_Logo.png',
                          'path': 'al_ikhbaria'},
                      {
+                         'title': 'MTV LB',
+                         'thumbnail': 'http://www.teledunet.com//player/icones/mtv.jpg',
+                         'path': 'mtv'},
+                     {
                          'title': 'Cartoon Network',
                          'thumbnail': 'http://upload.wikimedia.org/wikipedia/commons/b/bb/Cartoon_Network_Arabic_logo.png',
                          'path': 'cartoon_network'}]
