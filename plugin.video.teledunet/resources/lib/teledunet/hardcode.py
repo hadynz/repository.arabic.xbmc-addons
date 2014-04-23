@@ -117,7 +117,7 @@ HARDCODED_STREAMS = [{
                      {
                          'title': 'CBC 2',
                          'thumbnail': 'http://www.tv14.net/wp-content/uploads/2013/03/CBC-Plus-Egypt-logo.jpg',
-                         'path': 'cbc_two'},
+                         'path': 'cbc_2'},
                      {
                          'title': 'CBC Sofra',
                          'thumbnail': 'https://lh5.googleusercontent.com/-pbEIctW8Fj4/AAAAAAAAAAI/AAAAAAAACrQ/A_6dJzJhaDY/photo.jpg',
