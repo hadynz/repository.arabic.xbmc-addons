@@ -50,3 +50,5 @@
 - dependency problem fixed
 [B]Version 2.6.2[/B]
 - Support local youtube and streaming links 
+[B]Version 2.6.3[/B]
+- HD pictures for youtube videos

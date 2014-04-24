@@ -20,17 +20,11 @@
 	<streaminginfo>
 		<cname>Bein Sport 1</cname>
 		<item>
+
 			<title>Bein Sport 1 HQ 2ndserver</title>
-			<link>http://cms.prosatiptv.com/getChannel?channelId=09&amp;sn=12576902&amp;byPass=987</link>
+			<link>rtmp://31.220.0.134:1935/live playpath=b1r pageUrl=http://www.eucast.tv/embedstv39#EXTINF:123</link>
 		</item>
 	</streaminginfo>
-	<streaminginfo>
-		<cname>Bein Sport 1</cname>
-		<item>
-			<title>Bein Sport 1 HD 3rd server</title>
-			<link>http://202.75.23.37:8800/live/ch18/04.m3u8</link>
-		</item>
-	</streaminginfo>  
          <streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>

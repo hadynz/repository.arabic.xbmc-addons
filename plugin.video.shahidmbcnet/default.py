@@ -512,14 +512,18 @@ def getYouTubePlayList(channelId):
 	doc=getJson(u_url)
 	ret=[]
 	for playlist_item in doc['items']:
+		
 		title = playlist_item["snippet"]["title"]
 		id = playlist_item["id"]
 		if not title=='Private video':
 			imgurl=''
 			try:
-				imgurl= playlist_item["snippet"]["thumbnails"]["default"]["url"]
+				imgurl= playlist_item["snippet"]["thumbnails"]["high"]["url"]
 			except: pass
-
+			if imgurl=='':
+				try:
+					imgurl= playlist_item["snippet"]["thumbnails"]["default"]["url"]
+				except: pass
 			ret.append([title,id,imgurl])
 	nextItem=None
 	if 'nextPageToken' in doc:
@@ -632,8 +636,12 @@ def prepareYoutubeVideoItems(videos,urlUsed):
 		if not title=='Private video':
 			imgurl=''
 			try:
-				imgurl= playlist_item["snippet"]["thumbnails"]["default"]["url"]
+				imgurl= playlist_item["snippet"]["thumbnails"]["high"]["url"]
 			except: pass
+			if imgurl=='':
+				try:
+					imgurl= playlist_item["snippet"]["thumbnails"]["default"]["url"]
+				except: pass
 		#print "%s (%s)" % (title, video_id)
 			ret.append([title,video_id,imgurl])
 	nextUrl=None

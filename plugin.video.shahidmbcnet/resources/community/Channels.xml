@@ -40,6 +40,7 @@
 <enabled>True</enabled>
 <assignedcategory>
 <category>sham</category>
+<category>news</category>
 </assignedcategory>
 </channel>
 
@@ -101,7 +102,7 @@
     
 	<channel>
 		<cname>Al Magharibia</cname>
-		<imageurl>http://almagharibia.tv/neue/web/assets/almagharibia.png</imageurl>
+		<imageurl>http://www.lyngsat-logo.com/hires/aa/al_magharibia.png</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>magreb</category>
@@ -267,14 +268,7 @@
 			<category>islam</category>
                 </assignedcategory>
 	</channel>
-	<channel>
-		<cname>Al Karama</cname>
-		<imageurl>http://www.teledunet.com/player/icones/al_karama.jpg</imageurl>
-		<enabled>True</enabled>
-		<assignedcategory>
-			<category>oth</category>
-		</assignedcategory>
-	</channel>
+
 	<channel>
 		<cname>Al Maghribia</cname>
 		<imageurl>http://www.teledunet.com/player/icones/al_maghribia.jpg</imageurl>
@@ -848,7 +842,7 @@
 	</channel>	
 	<channel>
 		<cname>CBC 2</cname>
-		<imageurl>http://www.teledunet.com/player/icones/cbc_2.jpg</imageurl>
+		<imageurl>http://s27.postimg.org/e9cmp7dzn/cbc_2_channel.jpg</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>egypt</category>
@@ -864,7 +858,7 @@
 	</channel>
 	<channel>
 		<cname>CBC Extra</cname>
-		<imageurl>http://www.teledunet.com/player/icones/cbc_extra.jpg</imageurl>
+		<imageurl>http://www.lyngsat-logo.com/logo/tv/cc/cbc_eg_extra.png</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>egypt</category>
@@ -872,7 +866,7 @@
 	</channel>
 	<channel>
 		<cname>CBC Sofra</cname>
-		<imageurl>http://www.teledunet.com/player/icones/cbc_sofra.jpg</imageurl>
+		<imageurl>http://s28.postimg.org/5zx4neaex/Sofra.jpg</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>cook</category>
@@ -1441,7 +1435,7 @@
 	</channel>
 	<channel>
 		<cname>Nile Tv</cname>
-		<imageurl>http://www.teledunet.com/player/icones/nile_tv.jpg</imageurl>
+		<imageurl>http://www.lyngsat-logo.com/hires/nn/nile_tv_international_eg.png</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>egypt</category>
@@ -1660,30 +1654,6 @@
 		</assignedcategory>
 	</channel>
 	<channel>
-		<cname>TVP 1 HD</cname>
-		<imageurl>http://www.teledunet.com/player/icones/tvp_1_hd.jpg</imageurl>
-		<enabled>True</enabled>
-		<assignedcategory>
-			<category>oth</category>
-		</assignedcategory>
-	</channel>
-	<channel>
-		<cname>TVP 2 HD</cname>
-		<imageurl>http://www.teledunet.com/player/icones/tvp_2_hd.jpg</imageurl>
-		<enabled>True</enabled>
-		<assignedcategory>
-			<category>oth</category>
-		</assignedcategory>
-	</channel>
-	<channel>
-		<cname>TVS</cname>
-		<imageurl>http://www.teledunet.com/player/icones/tvs.jpg</imageurl>
-		<enabled>True</enabled>
-		<assignedcategory>
-			<category>oth</category>
-		</assignedcategory>
-	</channel>
-	<channel>
 		<cname>Tamazigh Algeria</cname>
 		<imageurl>http://www.teledunet.com/player/icones/tamazigh_algeria.jpg</imageurl>
 		<enabled>True</enabled>
@@ -1693,7 +1663,7 @@
 	</channel>
 	<channel>
 		<cname>Tchad</cname>
-		<imageurl>http://www.teledunet.com/player/icones/tchad.jpg</imageurl>
+		<imageurl>http://www.lyngsat-logo.com/logo/tv/tt/tele_tchad.png</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>africa</category>
@@ -1771,14 +1741,7 @@
 			<category>magreb</category>
 		</assignedcategory>
 	</channel>
-	<channel>
-		<cname>Tv Polonia</cname>
-		<imageurl>http://www.teledunet.com/player/icones/tv_polonia.jpg</imageurl>
-		<enabled>True</enabled>
-		<assignedcategory>
-			<category>oth</category>
-		</assignedcategory>
-	</channel>
+	
 	<channel>
 		<cname>nbn lebanon</cname>
 		<imageurl>http://www.teledunet.com/player/icones/tunisia_national_1.jpg</imageurl>
@@ -1917,7 +1880,7 @@
 	</channel>
 	<channel>
 		<cname>Al Oula Maroc</cname>
-		<imageurl>http://www.livetv.tn/images/icons/55.gif</imageurl>
+		<imageurl>http://1.bp.blogspot.com/-GM0C8-mLVWc/UuNmI-ka1II/AAAAAAAAA68/PXmTdRgeY9Y/s1600/aloula.png</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>africa</category>
@@ -1957,7 +1920,7 @@
 	</channel>
 	<channel>
 		<cname>Mcm France</cname>
-		<imageurl>http://www.livetv.tn/images/icons/258.gif</imageurl>
+		<imageurl>http://www.lyngsat-logo.com/hires/mm/mcm_fr.png</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>french</category>
@@ -2123,7 +2086,7 @@
 	</channel>
 	<channel>
 		<cname>Nile Learning</cname>
-		<imageurl>http://www.livetv.tn/images/icons/279.gif</imageurl>
+		<imageurl>http://www.lyngsat-logo.com/logo/tv/nn/nile_educational3.jpg</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>doc</category>
@@ -2159,7 +2122,7 @@
 
 	<channel>
 		<cname>DISCOVERY CHANNEL</cname>
-		<imageurl>http://www.livetv.tn/images/icons/279.gif</imageurl>
+		<imageurl>http://www.lyngsat-logo.com/logo/tv/dd/discovery_it_plus1.jpg</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>doc</category>
@@ -2259,7 +2222,7 @@
 	</channel>
 	<channel>
 		<cname>Haneen Channel</cname>
-		<imageurl>http://www.livetv.tn/images/icons/279.gif</imageurl>
+		<imageurl>http://s21.postimg.org/6a4z3uft3/Alhanne1.png</imageurl>
 		<enabled>True</enabled>
 		<assignedcategory>
 			<category>islam</category>

@@ -84,10 +84,7 @@
 		<cname>Al Janoubiya</cname>
 		<url>al_janoubiya</url>
 	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Karama</cname>
-		<url>al_karama</url>
-	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Al Maghribia</cname>
 		<url>al_maghribia</url>
@@ -672,18 +669,7 @@
 		<cname>TNN</cname>
 		<url>tnn</url>
 	</streaminginfo>
-	<streaminginfo>
-		<cname>TVP 1 HD</cname>
-		<url>tvp_1_hd</url>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>TVP 2 HD</cname>
-		<url>tvp_2_hd</url>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>TVS</cname>
-		<url>tvs</url>
-	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Tamazigh Algeria</cname>
 		<url>tamazigh_algeria</url>
@@ -728,10 +714,7 @@
 		<cname>Tunisia national 2</cname>
 		<url>tunisia_national_2</url>
 	</streaminginfo>
-	<streaminginfo>
-		<cname>Tv Polonia</cname>
-		<url>tv_polonia</url>
-	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Wanasah</cname>
 		<url>wanasah</url>
