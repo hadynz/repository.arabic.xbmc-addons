@@ -162,7 +162,7 @@ def AddYoutubeLanding(url):
 			filename=url
 		print 'filename',filename
 		if len(filename)>0:
-			data = open(filename, "r").read()
+			data = open(filename.decode('utf-8'), "r").read()
 			print data
 			directories=getETreeFromString(data)
 		else:
@@ -271,7 +271,7 @@ def RefreshResources(auto=False):
 	totalFile = len(resources)
 	
 	for rfile in resources:
-		progr = (totalFile/totalFile)*80
+		progr = (fileno/totalFile)*80
 		fname = rfile['fname']
 		remoteUrl=None
 		try:
@@ -292,6 +292,7 @@ def RefreshResources(auto=False):
 			pDialog.update(20+progr, 'imported ...'+fname)
 		else:
 			pDialog.update(20+progr, 'Failed..zero byte.'+fname)
+        fileno+=1
 	pDialog.close()
 	dialog = xbmcgui.Dialog()
 	ok = dialog.ok('XBMC', 'Download finished. Close close Addon and come back')
@@ -403,7 +404,8 @@ def AddEnteries(Fromurl,pageNumber=0):
 		#print 'a3'
 		#finalName+=cname[3]
 		#print 'a4'
-		
+        
+		print cname[2]
 		addDir(finalName ,getMainUrl()+cname[0] ,5,cname[2],showContext=True,isItFolder=False)
 		
 		
@@ -745,7 +747,7 @@ def getSourceAndStreamInfo(channelId, returnOnFirst):
 					#
 					isAbSolutePath=True
 					isEnabled="false"
-					filename=selfAddon.getSetting( "localstreampath" )
+					filename=selfAddon.getSetting( "localstreampath" ).decode('utf-8')
 					if filename and len(filename)>0:
 						isEnabled="true"
 						xmlfile=filename

@@ -1,722 +1,766 @@
 <streaminginfos>
-<streaminginfo>
-<cname>Palestine</cname>
-<url>ch100</url>
-</streaminginfo>
 
-<streaminginfo>
-		<cname>Sada Al Balad2</cname>
-		<chnumber>ch77</chnumber>
-	</streaminginfo> 
-	<streaminginfo>
-		<cname>Sada Al Balad</cname>
-		<chnumber>ch78</chnumber>
-	</streaminginfo> 
-    
     <streaminginfo>
-		<cname>Panorama Comedy</cname>
-		<chnumber>ch114</chnumber>
-	</streaminginfo> 
-	<streaminginfo>
-		<cname>Panorama Drama</cname>
-		<chnumber>ch17</chnumber>
-	</streaminginfo> 
-<streaminginfo>
-		<cname>Panorama Drama2</cname>
-		<chnumber>ch115</chnumber>
-	</streaminginfo>
-    
-<streaminginfo>
-<cname>Aghani</cname>
-<chnumber>ch294</chnumber>
-</streaminginfo>
+        <cname>TMC</cname>
+        <chnumber>ch298</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>NT1</cname>
+        <chnumber>ch300</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>NRJ 12</cname>
+        <chnumber>ch297</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>LCP</cname>
+        <chnumber>ch306</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>FRANCE 5</cname>
+        <chnumber>ch304</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>FRANCE 3</cname>
+        <chnumber>ch302</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>FRANCE 2</cname>
+        <chnumber>ch303</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>FRANCE 0</cname>
+        <chnumber>ch305</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BFMTV</cname>
+        <chnumber>ch299</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>arte</cname>
+        <chnumber>ch301</chnumber>
+    </streaminginfo>
 
-	<streaminginfo>
-		<cname>Tunisia national 1</cname>
-		<chnumber>ch1</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Tunisia national 2</cname>
-		<chnumber>ch2</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Tunisia</cname>
-		<chnumber>ch3</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nessma</cname>
-		<chnumber>ch5</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Hanibal</cname>
-		<chnumber>ch6</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Janoubiya</cname>
-		<chnumber>ch7</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>tounesna</cname>
-		<chnumber>ch8</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Zaitouna</cname>
-		<chnumber>ch9</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Telvza TV</cname>
-		<chnumber>ch10</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Moutawaset TV</cname>
-		<chnumber>ch11</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BeIn Sport 1</cname>
-		<chnumber>ch12</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BeIn Sport 2</cname>
-		<chnumber>ch13</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BeIn Sport 3</cname>
-		<chnumber>ch14</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BeIn Sport 4</cname>
-		<chnumber>ch15</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BeIn Sport 5</cname>
-		<chnumber>ch16</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BeIn Sport 6</cname>
-		<chnumber>ch17</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BeIn Sport 7</cname>
-		<chnumber>ch201</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BeIn Sport 8</cname>
-		<chnumber>ch18</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Dubai Sport 1</cname>
-		<chnumber>ch274</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Dubai Sport 2</cname>
-		<chnumber>ch275</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Alriadia Sport</cname>
-		<chnumber>ch276</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Bein 1 FR</cname>
-		<chnumber>ch277</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Bein 2 FR</cname>
-		<chnumber>ch278</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Alhayat-Series</cname>
-		<chnumber>ch21</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>CBC Drama</cname>
-		<chnumber>ch22</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>CBC TV</cname>
-		<chnumber>ch23</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Dream 1</cname>
-		<chnumber>ch24</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Dubai TV</cname>
-		<chnumber>ch25</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>FataFeat</cname>
-		<chnumber>ch26</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Fox Movies</cname>
-		<chnumber>ch27</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>LBC</cname>
-		<chnumber>ch28</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Mazzika</cname>
-		<chnumber>ch29</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC 1</cname>
-		<chnumber>ch30</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC 2</cname>
-		<chnumber>ch31</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC 3</cname>
-		<chnumber>ch32</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC 4</cname>
-		<chnumber>ch33</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC Action</cname>
-		<chnumber>ch34</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC Bollywood</cname>
-		<chnumber>ch35</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC Drama</cname>
-		<chnumber>ch36</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC Masr</cname>
-		<chnumber>ch37</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC MAX</cname>
-		<chnumber>ch38</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MBC Persia</cname>
-		<chnumber>ch39</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>ART Aflam 1</cname>
-		<chnumber>ch40</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>ART Aflam 2</cname>
-		<chnumber>ch41</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Rotana Masriya</cname>
-		<chnumber>ch42</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Rotana Music</cname>
-		<chnumber>ch43</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Rotana Classic</cname>
-		<chnumber>ch44</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Rotana Cinema</cname>
-		<chnumber>ch45</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Rotana Aflam</cname>
-		<chnumber>ch46</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Time Comedy</cname>
-		<chnumber>ch47</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Zee Alwan</cname>
-		<chnumber>ch48</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>SpaceToon</cname>
-		<chnumber>ch49</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Baraem</cname>
-		<chnumber>ch50</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Aljazeera Children</cname>
-		<chnumber>ch51</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Aljazeera Doc</cname>
-		<chnumber>ch52</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Alarabiya</cname>
-		<chnumber>ch53</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Abu Dhabi Drama</cname>
-		<chnumber>ch54</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Oula Maroc</cname>
-		<chnumber>ch55</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Maghribia</cname>
-		<chnumber>ch56</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Majd</cname>
-		<chnumber>ch57</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Manar</cname>
-		<chnumber>ch58</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Nahar Drama</cname>
-		<chnumber>ch59</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Algeria</cname>
-		<chnumber>ch60</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Arabica Music</cname>
-		<chnumber>ch61</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Bahrain</cname>
-		<chnumber>ch62</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Cairo Cinema</cname>
-		<chnumber>ch63</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Cairo Drama</cname>
-		<chnumber>ch64</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Cartoon Network</cname>
-		<chnumber>ch65</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Yemen</cname>
-		<chnumber>ch66</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Moga Comedy</cname>
-		<chnumber>ch67</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile Comedy</cname>
-		<chnumber>ch68</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile Drama</cname>
-		<chnumber>ch69</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile Family</cname>
-		<chnumber>ch70</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Syria Drama</cname>
-		<chnumber>ch71</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Tamazigh Maroc</cname>
-		<chnumber>ch72</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Toyor Al Janah</cname>
-		<chnumber>ch73</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Zee Aflam</cname>
-		<chnumber>ch74</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>TF1</cname>
-		<chnumber>ch75</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>2M</cname>
-		<chnumber>ch76</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Abu Dhabi Sports 1</cname>
-		<chnumber>ch79</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Abu Dhabi</cname>
-		<chnumber>ch80</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Aghanina</cname>
-		<chnumber>ch81</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Ajyal</cname>
-		<chnumber>ch82</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Haneen Music</cname>
-		<chnumber>ch83</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Masriyah</cname>
-		<chnumber>ch84</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Moustakilla</cname>
-		<chnumber>ch85</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Sharqiya</cname>
-		<chnumber>ch87</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Sumaria</cname>
-		<chnumber>ch88</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Thaniya</cname>
-		<chnumber>ch89</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Mayaden</cname>
-		<chnumber>ch90</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al-Hurria</cname>
-		<chnumber>ch91</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al-Resalah</cname>
-		<chnumber>ch92</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al-hurra Iraq</cname>
-		<chnumber>ch93</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Alan</cname>
-		<chnumber>ch94</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Algeria 3</cname>
-		<chnumber>ch95</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Alhayat 1</cname>
-		<chnumber>ch96</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Alhayat Cinema</cname>
-		<chnumber>ch97</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Alarabiya</cname>
-		<chnumber>ch98</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Aljadeed</cname>
-		<chnumber>ch99</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Toyor baby</cname>
-		<chnumber>ch101</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Top Movies</cname>
-		<chnumber>ch102</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>TNN</cname>
-		<chnumber>ch103</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>M6</cname>
-		<chnumber>ch104</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Libya</cname>
-		<chnumber>ch105</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>France24 Arabic</cname>
-		<chnumber>ch106</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Fox</cname>
-		<chnumber>ch107</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Coran</cname>
-		<chnumber>ch108</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Cima</cname>
-		<chnumber>ch109</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Dubai One</cname>
-		<chnumber>ch111</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Baghdadia</cname>
-		<chnumber>ch112</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>BBC Arabic</cname>
-		<chnumber>ch113</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Algerie 24</cname>
-		<chnumber>ch116</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Echorouk Tv</cname>
-		<chnumber>ch118</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Funoon</cname>
-		<chnumber>ch119</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Fx Arabia</cname>
-		<chnumber>ch120</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Ghinwa</cname>
-		<chnumber>ch121</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Kuwait</cname>
-		<chnumber>ch124</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>LBC Europe</cname>
-		<chnumber>ch125</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Maghreb 1</cname>
-		<chnumber>ch126</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Masrawi Aflam</cname>
-		<chnumber>ch127</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Mazeka zoom</cname>
-		<chnumber>ch129</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Melody Aflem</cname>
-		<chnumber>ch130</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile Cinema</cname>
-		<chnumber>ch131</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile Drama 2</cname>
-		<chnumber>ch132</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile News</cname>
-		<chnumber>ch133</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile Sport</cname>
-		<chnumber>ch134</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Rotana Clip</cname>
-		<chnumber>ch135</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Rotana Khaligi</cname>
-		<chnumber>ch136</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Roya</cname>
-		<chnumber>ch137</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Sama Dubai</cname>
-		<chnumber>ch138</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Samira TV</cname>
-		<chnumber>ch139</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Sharjah</cname>
-		<chnumber>ch140</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Star Cinema</cname>
-		<chnumber>ch141</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>On TV</cname>
-		<chnumber>ch144</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>MTV</cname>
-		<chnumber>ch145</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>NBN</cname>
-		<chnumber>ch146</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Melody</cname>
-		<chnumber>ch147</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Mehwar</cname>
-		<chnumber>ch148</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>KSA 1</cname>
-		<chnumber>ch149</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Iqra</cname>
-		<chnumber>ch154</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Jordan</cname>
-		<chnumber>ch155</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Rasheed</cname>
-		<chnumber>ch156</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>LLBN</cname>
-		<chnumber>ch157</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Zagros</cname>
-		<chnumber>ch158</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Nahar</cname>
-		<chnumber>ch250</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Rafidain</cname>
-		<chnumber>ch253</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>CBC 2</cname>
-		<chnumber>ch254</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>CBC Extra</cname>
-		<chnumber>ch255</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>CBC Sofra</cname>
-		<chnumber>ch256</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Wanasah</cname>
-		<chnumber>ch257</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Mcm France</cname>
-		<chnumber>ch258</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile Life</cname>
-		<chnumber>ch259</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Nile TV</cname>
-		<chnumber>ch260</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Somsat Tv</cname>
-		<chnumber>ch261</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Tchad</cname>
-		<chnumber>ch265</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Tele Liban</cname>
-		<chnumber>ch266</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Somali Channel</cname>
-		<chnumber>ch268</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Mauritanie</cname>
-		<chnumber>ch270</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>National Geo Ad</cname>
-		<chnumber>ch271</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Medi 1 Sat</cname>
-		<chnumber>ch272</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Kalsan TV</cname>
-		<chnumber>ch273</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Canal Cinema</cname>
-		<chnumber>ch280</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al 9ahira Wal Nas 2</cname>
-		<chnumber>ch281</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>SadacAlBalad Drama</cname>
-		<chnumber>ch282</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Nahar 2</cname>
-		<chnumber>ch283</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al-Nahar Drama</cname>
-		<chnumber>ch284</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Nahar Sport</cname>
-		<chnumber>ch400</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Al Hiwar Ettounsi</cname>
-		<chnumber>ch444</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>ONT</cname>
-		<chnumber>ch293</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>OTV Lebanon</cname>
-		<chnumber>ch292</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Cine Majesti</cname>
-		<chnumber>ch29</chnumber>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>Bein 2 FR</cname>
-		<chnumber>ch279</chnumber>
-	</streaminginfo> 
+
+
+    <streaminginfo>
+        <cname>Palestine</cname>
+        <url>ch100</url>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Sada Al Balad2</cname>
+        <chnumber>ch77</chnumber>
+    </streaminginfo> 
+    <streaminginfo>
+        <cname>Sada Al Balad</cname>
+        <chnumber>ch78</chnumber>
+    </streaminginfo> 
+
+    <streaminginfo>
+        <cname>Panorama Comedy</cname>
+        <chnumber>ch114</chnumber>
+    </streaminginfo> 
+    <streaminginfo>
+        <cname>Panorama Drama</cname>
+        <chnumber>ch17</chnumber>
+    </streaminginfo> 
+    <streaminginfo>
+        <cname>Panorama Drama2</cname>
+        <chnumber>ch115</chnumber>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Aghani</cname>
+        <chnumber>ch294</chnumber>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Tunisia national 1</cname>
+        <chnumber>ch1</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Tunisia national 2</cname>
+        <chnumber>ch2</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Tunisia</cname>
+        <chnumber>ch3</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nessma</cname>
+        <chnumber>ch5</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Hanibal</cname>
+        <chnumber>ch6</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Janoubiya</cname>
+        <chnumber>ch7</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>tounesna</cname>
+        <chnumber>ch8</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Zaitouna</cname>
+        <chnumber>ch9</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Telvza TV</cname>
+        <chnumber>ch10</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Moutawaset TV</cname>
+        <chnumber>ch11</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 1</cname>
+        <chnumber>ch12</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 2</cname>
+        <chnumber>ch13</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 3</cname>
+        <chnumber>ch14</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 4</cname>
+        <chnumber>ch15</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 5</cname>
+        <chnumber>ch16</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 6</cname>
+        <chnumber>ch17</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 7</cname>
+        <chnumber>ch201</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 8</cname>
+        <chnumber>ch18</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dubai Sport 1</cname>
+        <chnumber>ch274</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dubai Sport 2</cname>
+        <chnumber>ch275</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alriadia Sport</cname>
+        <chnumber>ch276</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Bein 1 FR</cname>
+        <chnumber>ch277</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Bein 2 FR</cname>
+        <chnumber>ch278</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alhayat-Series</cname>
+        <chnumber>ch21</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>CBC Drama</cname>
+        <chnumber>ch22</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>CBC TV</cname>
+        <chnumber>ch23</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dream 1</cname>
+        <chnumber>ch24</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dubai TV</cname>
+        <chnumber>ch25</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>FataFeat</cname>
+        <chnumber>ch26</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Fox Movies</cname>
+        <chnumber>ch27</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>LBC</cname>
+        <chnumber>ch28</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Mazzika</cname>
+        <chnumber>ch29</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC 1</cname>
+        <chnumber>ch30</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC 2</cname>
+        <chnumber>ch31</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC 3</cname>
+        <chnumber>ch32</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC 4</cname>
+        <chnumber>ch33</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC Action</cname>
+        <chnumber>ch34</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC Bollywood</cname>
+        <chnumber>ch35</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC Drama</cname>
+        <chnumber>ch36</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC Masr</cname>
+        <chnumber>ch37</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC MAX</cname>
+        <chnumber>ch38</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MBC Persia</cname>
+        <chnumber>ch39</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>ART Aflam 1</cname>
+        <chnumber>ch40</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>ART Aflam 2</cname>
+        <chnumber>ch41</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Rotana Masriya</cname>
+        <chnumber>ch42</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Rotana Music</cname>
+        <chnumber>ch43</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Rotana Classic</cname>
+        <chnumber>ch44</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Rotana Cinema</cname>
+        <chnumber>ch45</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Rotana Aflam</cname>
+        <chnumber>ch46</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Time Comedy</cname>
+        <chnumber>ch47</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Zee Alwan</cname>
+        <chnumber>ch48</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>SpaceToon</cname>
+        <chnumber>ch49</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Baraem</cname>
+        <chnumber>ch50</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Aljazeera Children</cname>
+        <chnumber>ch51</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Aljazeera Doc</cname>
+        <chnumber>ch52</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alarabiya</cname>
+        <chnumber>ch53</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Abu Dhabi Drama</cname>
+        <chnumber>ch54</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Oula Maroc</cname>
+        <chnumber>ch55</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Maghribia</cname>
+        <chnumber>ch56</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Majd</cname>
+        <chnumber>ch57</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Manar</cname>
+        <chnumber>ch58</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Nahar Drama</cname>
+        <chnumber>ch59</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Algeria</cname>
+        <chnumber>ch60</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Arabica Music</cname>
+        <chnumber>ch61</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Bahrain</cname>
+        <chnumber>ch62</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Cairo Cinema</cname>
+        <chnumber>ch63</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Cairo Drama</cname>
+        <chnumber>ch64</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Cartoon Network</cname>
+        <chnumber>ch65</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Yemen</cname>
+        <chnumber>ch66</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Moga Comedy</cname>
+        <chnumber>ch67</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile Comedy</cname>
+        <chnumber>ch68</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile Drama</cname>
+        <chnumber>ch69</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile Family</cname>
+        <chnumber>ch70</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Syria Drama</cname>
+        <chnumber>ch71</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Tamazigh Maroc</cname>
+        <chnumber>ch72</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Toyor Al Janah</cname>
+        <chnumber>ch73</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Zee Aflam</cname>
+        <chnumber>ch74</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>TF1</cname>
+        <chnumber>ch75</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>2M</cname>
+        <chnumber>ch76</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Abu Dhabi Sports 1</cname>
+        <chnumber>ch79</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Abu Dhabi</cname>
+        <chnumber>ch80</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Aghanina</cname>
+        <chnumber>ch81</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Ajyal</cname>
+        <chnumber>ch82</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Haneen Music</cname>
+        <chnumber>ch83</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Masriyah</cname>
+        <chnumber>ch84</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Moustakilla</cname>
+        <chnumber>ch85</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Sharqiya</cname>
+        <chnumber>ch87</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Sumaria</cname>
+        <chnumber>ch88</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Thaniya</cname>
+        <chnumber>ch89</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Mayaden</cname>
+        <chnumber>ch90</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al-Hurria</cname>
+        <chnumber>ch91</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al-Resalah</cname>
+        <chnumber>ch92</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al-hurra Iraq</cname>
+        <chnumber>ch93</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alan</cname>
+        <chnumber>ch94</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Algeria 3</cname>
+        <chnumber>ch95</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alhayat 1</cname>
+        <chnumber>ch96</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alhayat Cinema</cname>
+        <chnumber>ch97</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alarabiya</cname>
+        <chnumber>ch98</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Aljadeed</cname>
+        <chnumber>ch99</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Toyor baby</cname>
+        <chnumber>ch101</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Top Movies</cname>
+        <chnumber>ch102</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>TNN</cname>
+        <chnumber>ch103</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>M6</cname>
+        <chnumber>ch104</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Libya</cname>
+        <chnumber>ch105</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>France24 Arabic</cname>
+        <chnumber>ch106</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Fox</cname>
+        <chnumber>ch107</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Coran</cname>
+        <chnumber>ch108</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Cima</cname>
+        <chnumber>ch109</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dubai One</cname>
+        <chnumber>ch111</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Baghdadia</cname>
+        <chnumber>ch112</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BBC Arabic</cname>
+        <chnumber>ch113</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Algerie 24</cname>
+        <chnumber>ch116</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Echorouk Tv</cname>
+        <chnumber>ch118</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Funoon</cname>
+        <chnumber>ch119</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Fx Arabia</cname>
+        <chnumber>ch120</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Ghinwa</cname>
+        <chnumber>ch121</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Kuwait</cname>
+        <chnumber>ch124</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>LBC Europe</cname>
+        <chnumber>ch125</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Maghreb 1</cname>
+        <chnumber>ch126</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Masrawi Aflam</cname>
+        <chnumber>ch127</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Mazeka zoom</cname>
+        <chnumber>ch129</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Melody Aflem</cname>
+        <chnumber>ch130</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile Cinema</cname>
+        <chnumber>ch131</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile Drama 2</cname>
+        <chnumber>ch132</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile News</cname>
+        <chnumber>ch133</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile Sport</cname>
+        <chnumber>ch134</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Rotana Clip</cname>
+        <chnumber>ch135</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Rotana Khaligi</cname>
+        <chnumber>ch136</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Roya</cname>
+        <chnumber>ch137</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Sama Dubai</cname>
+        <chnumber>ch138</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Samira TV</cname>
+        <chnumber>ch139</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Sharjah</cname>
+        <chnumber>ch140</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Star Cinema</cname>
+        <chnumber>ch141</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>On TV</cname>
+        <chnumber>ch144</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>MTV</cname>
+        <chnumber>ch145</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>NBN</cname>
+        <chnumber>ch146</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Melody</cname>
+        <chnumber>ch147</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Mehwar</cname>
+        <chnumber>ch148</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>KSA 1</cname>
+        <chnumber>ch149</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Iqra</cname>
+        <chnumber>ch154</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Jordan</cname>
+        <chnumber>ch155</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Rasheed</cname>
+        <chnumber>ch156</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>LLBN</cname>
+        <chnumber>ch157</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Zagros</cname>
+        <chnumber>ch158</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Nahar</cname>
+        <chnumber>ch250</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Rafidain</cname>
+        <chnumber>ch253</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>CBC 2</cname>
+        <chnumber>ch254</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>CBC Extra</cname>
+        <chnumber>ch255</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>CBC Sofra</cname>
+        <chnumber>ch256</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Wanasah</cname>
+        <chnumber>ch257</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Mcm France</cname>
+        <chnumber>ch258</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile Life</cname>
+        <chnumber>ch259</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nile TV</cname>
+        <chnumber>ch260</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Somsat Tv</cname>
+        <chnumber>ch261</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Tchad</cname>
+        <chnumber>ch265</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Tele Liban</cname>
+        <chnumber>ch266</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Somali Channel</cname>
+        <chnumber>ch268</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Mauritanie</cname>
+        <chnumber>ch270</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>National Geo Ad</cname>
+        <chnumber>ch271</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Medi 1 Sat</cname>
+        <chnumber>ch272</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Kalsan TV</cname>
+        <chnumber>ch273</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Canal Cinema</cname>
+        <chnumber>ch280</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al 9ahira Wal Nas 2</cname>
+        <chnumber>ch281</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>SadacAlBalad Drama</cname>
+        <chnumber>ch282</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Nahar 2</cname>
+        <chnumber>ch283</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al-Nahar Drama 2</cname>
+        <chnumber>ch284</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Nahar Sport</cname>
+        <chnumber>ch400</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Hiwar Ettounsi</cname>
+        <chnumber>ch444</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>ONT</cname>
+        <chnumber>ch293</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>OTV Lebanon</cname>
+        <chnumber>ch292</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Cine Majesti</cname>
+        <chnumber>ch295</chnumber>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Bein 2 FR</cname>
+        <chnumber>ch279</chnumber>
+    </streaminginfo> 
 </streaminginfos>

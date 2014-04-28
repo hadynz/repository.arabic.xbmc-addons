@@ -8,6 +8,7 @@ import traceback
 import os
 import cookielib
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
+import datetime
 __addon__       = xbmcaddon.Addon()
 __addonname__   = __addon__.getAddonInfo('name')
 __icon__        = __addon__.getAddonInfo('icon')
@@ -21,7 +22,7 @@ communityStreamPath = os.path.join(addonPath,'resources/community')
 def PlayStream(sourceSoup, urlSoup, name, url):
 
 	playpath=urlSoup.chnumber.text
-	code=getcode();
+	code=getcode(shoudforceLogin());
 	print 'firstCode',code
 	if not code or code[0:1]=="w":
 		code=getcode(True);
@@ -78,4 +79,27 @@ def performLogin():
 	post={'pseudo':userName,'xpass':password}
 	post = urllib.urlencode(post)
 	response = urllib2.urlopen(req,post)
+	now_datetime=datetime.datetime.now()
+	selfAddon.setSetting( id="lastLivetvLogin" ,value=now_datetime.strftime("%Y-%m-%d %H:%M:%S"))
 	return cookieJar;
+
+
+def shoudforceLogin():
+    try:
+#        import dateime
+        lastUpdate=selfAddon.getSetting( "lastLivetvLogin" )
+        print 'lastUpdate',lastUpdate
+        do_login=False
+        now_datetime=datetime.datetime.now()
+        if lastUpdate==None or lastUpdate=="":
+            do_login=True
+        else:
+            print 'lastlogin',lastUpdate
+            lastUpdate=datetime.datetime.strptime(lastUpdate)
+            t=(now_datetime-lastUpdate).seconds#/60
+            print 't',t
+            if t>60:
+                do_login=True
+        print 'do_login',do_login
+        return do_login
+    except: return True

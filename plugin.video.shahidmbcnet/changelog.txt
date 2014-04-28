@@ -1,3 +1,12 @@
+[B]Version 2.6.5[/B]
+- unicode path issue
+
+[B]Version 2.6.4[/B]
+- added some more channesl and livetv login expiry in every 1 hr
+
+
+--OLD enteries
+
 [B]Version 1.0[/B]
 - First version 1
 [B]Version 1.2[/B]
