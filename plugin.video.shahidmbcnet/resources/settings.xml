@@ -27,6 +27,17 @@
 		<setting label="32028" type="file" id="localyoutubexmlpath" source="files" values="" default=""/>
 		<setting label="32029" type="file" id="localstreampath" source="files" values="" default=""/>  
 	  </category>
+	   <category label="32031">
+          <setting label="32038" type="lsep"/>
+
+		<setting label="32032" type="bool"   id="isTeledunetcomSourceDisabled" default="false"/>
+        <setting label="32033" type="bool"   id="islivetvtnSourceDisabled" default="false"/>
+        <setting label="32034" type="bool"   id="isShaniSourceDisabled" default="false"/>
+        <setting label="32035" type="bool"   id="isPCSourceDisabled" default="false"/>
+        <setting label="32036" type="bool"   id="isZombiSourceDisabled" default="false"/>
+        <setting label="32037" type="bool"   id="isLocalSourceDisabled" default="false"/>        
+
+	  </category>
 
 	     
 </settings>

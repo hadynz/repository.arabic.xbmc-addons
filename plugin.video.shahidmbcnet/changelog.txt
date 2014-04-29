@@ -1,3 +1,12 @@
+[B]Version 2.7.0[/B]
+- Shows selection if the default source failed to play
+
+[B]Version 2.6.7[/B]
+- Texting formatting.
+
+[B]Version 2.6.6[/B]
+- Settings to disable the sources. This way you can manage a downtime of certain resources without any issue.
+
 [B]Version 2.6.5[/B]
 - unicode path issue
 

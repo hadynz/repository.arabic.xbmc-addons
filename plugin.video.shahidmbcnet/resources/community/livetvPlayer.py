@@ -9,6 +9,11 @@ import os
 import cookielib
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
 import datetime
+import sys
+import time
+import CustomPlayer
+
+
 __addon__       = xbmcaddon.Addon()
 __addonname__   = __addon__.getAddonInfo('name')
 __icon__        = __addon__.getAddonInfo('icon')
@@ -20,22 +25,38 @@ communityStreamPath = os.path.join(addonPath,'resources/community')
 
 
 def PlayStream(sourceSoup, urlSoup, name, url):
+	try:
+		playpath=urlSoup.chnumber.text
+		code=getcode(shoudforceLogin());
+		print 'firstCode',code
+		if not code or code[0:1]=="w":
+			code=getcode(True);
+			print 'secondCode',code
+		liveLink= sourceSoup.rtmpstring.text;
 
-	playpath=urlSoup.chnumber.text
-	code=getcode(shoudforceLogin());
-	print 'firstCode',code
-	if not code or code[0:1]=="w":
-		code=getcode(True);
-		print 'secondCode',code
-	liveLink= sourceSoup.rtmpstring.text;
-
-	print 'rtmpstring',liveLink
-	#liveLink=liveLink%(playpath,match)
-	liveLink=liveLink%(playpath,code)
-	name+='-LiveTV'
-	print 'liveLink',liveLink
-	listitem = xbmcgui.ListItem( label = str(name), iconImage = "DefaultVideo.png", thumbnailImage = xbmc.getInfoImage( "ListItem.Thumb" ), path=liveLink )
-	xbmc.Player().play( liveLink,listitem)
+		print 'rtmpstring',liveLink
+		#liveLink=liveLink%(playpath,match)
+		liveLink=liveLink%(playpath,code)
+		name+='-LiveTV'
+		print 'liveLink',liveLink
+		listitem = xbmcgui.ListItem( label = str(name), iconImage = "DefaultVideo.png", thumbnailImage = xbmc.getInfoImage( "ListItem.Thumb" ), path=liveLink )
+		player = CustomPlayer.MyXBMCPlayer()
+		start = time.time()
+		#xbmc.Player().play( liveLink,listitem)
+		player.play( liveLink,listitem)
+		while player.is_active:
+			xbmc.sleep(200)
+		#return player.urlplayed
+		#done = time.time()
+		done = time.time()
+		elapsed = done - start
+		if player.urlplayed and elapsed>=3:
+			return True
+		else:
+			return False 
+	except:
+		traceback.print_exc(file=sys.stdout)    
+	return False    
 
 def getcode(forceLogin=False):
 	#url = urlSoup.url.text
@@ -95,11 +116,17 @@ def shoudforceLogin():
             do_login=True
         else:
             print 'lastlogin',lastUpdate
-            lastUpdate=datetime.datetime.strptime(lastUpdate)
-            t=(now_datetime-lastUpdate).seconds#/60
+            try:
+                lastUpdate=datetime.datetime.strptime(lastUpdate,"%Y-%m-%d %H:%M:%S")
+            except TypeError:
+                lastUpdate = datetime.datetime.fromtimestamp(time.mktime(time.strptime(lastUpdate, "%Y-%m-%d %H:%M:%S")))
+        
+            t=(now_datetime-lastUpdate).seconds/60
             print 't',t
             if t>60:
                 do_login=True
         print 'do_login',do_login
         return do_login
-    except: return True
+    except:
+        traceback.print_exc(file=sys.stdout)
+    return True

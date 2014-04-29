@@ -7,48 +7,64 @@ import json
 import traceback
 import os
 from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
-
+import time
+import sys
+import  CustomPlayer
 __addon__       = xbmcaddon.Addon()
 __addonname__   = __addon__.getAddonInfo('name')
 __icon__        = __addon__.getAddonInfo('icon')
 
 def PlayStream(sourceSoup, urlSoup, name, url):
-	#url = urlSoup.url.text
-	title=''
-	link=''
-	sc=''
 	try:
-		title=urlSoup.item.title.text
-		
-		link=urlSoup.item.link.text
-		sc=sourceSoup.sname.text
-	except: pass
-	if link=='':
-		time = 2000  #in miliseconds
-		line1="couldn't read title and link"
-		xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
-		return 
-	regexs = urlSoup.find('regex')
-	if (not regexs==None) and len(regexs)>0:
-		liveLink=	getRegexParsed(urlSoup,link)
-	else:
-		liveLink=	link
-	if len(liveLink)==0:
-		time = 2000  #in miliseconds
-		line1="couldn't read title and link"
-		xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
-		return 
-		
-	time = 2000  #in miliseconds
-	line1="Resource found,playing now."
-	xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
+		#url = urlSoup.url.text
+		title=''
+		link=''
+		sc=''
+		try:
+			title=urlSoup.item.title.text
+			
+			link=urlSoup.item.link.text
+			sc=sourceSoup.sname.text
+		except: pass
+		if link=='':
+			timeD = 2000  #in miliseconds
+			line1="couldn't read title and link"
+			xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, timeD, __icon__))
+			return False
+		regexs = urlSoup.find('regex')
+		if (not regexs==None) and len(regexs)>0:
+			liveLink=	getRegexParsed(urlSoup,link)
+		else:
+			liveLink=	link
+		if len(liveLink)==0:
+			timeD = 2000  #in miliseconds
+			line1="couldn't read title and link"
+			xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, timeD, __icon__))
+			return False
+			
+		timeD = 2000  #in miliseconds
+		line1="Resource found,playing now."
+		xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, timeD, __icon__))
 
-	name+='-'+sc+':'+title
-	print 'liveLink',liveLink
-	listitem = xbmcgui.ListItem( label = str(name), iconImage = "DefaultVideo.png", thumbnailImage = xbmc.getInfoImage( "ListItem.Thumb" ), path=liveLink )
-	xbmc.Player().play( liveLink,listitem)
-	return
-
+		name+='-'+sc+':'+title
+		print 'liveLink',liveLink
+		listitem = xbmcgui.ListItem( label = str(name), iconImage = "DefaultVideo.png", thumbnailImage = xbmc.getInfoImage( "ListItem.Thumb" ), path=liveLink )
+		player = CustomPlayer.MyXBMCPlayer()
+		start = time.time() 
+		#xbmc.Player().play( liveLink,listitem)
+		player.play( liveLink,listitem)
+		while player.is_active:
+			xbmc.sleep(200)
+		#return player.urlplayed
+		done = time.time()
+		elapsed = done - start
+		if player.urlplayed and elapsed>=3:
+			return True
+		else:
+			return False  
+	except:
+		traceback.print_exc(file=sys.stdout)    
+	return False  
 
 def getRegexParsed(regexs, url,cookieJar=None,forCookieJarOnly=False,recursiveCall=False):#0,1,2 = URL, regexOnly, CookieJarOnly
 

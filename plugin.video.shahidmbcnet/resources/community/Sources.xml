@@ -17,7 +17,7 @@
 <urlfile>livetvUrls.xml</urlfile>
 <imageurl>http://www.livetv.tn/images/logoc.png</imageurl>
 <processor>livetvPlayer.py</processor>
-<rtmpstring>rtmp://tdsiptv.ddns.me/live playpath=%s?code=%s swfUrl=http://www.livetv.tn/flowplayer-3.2.7.swf pageUrl=http://www.livetv.tn/index.php  flashVer=WIN12.0.0.77 timeout=10 live=true</rtmpstring>
+<rtmpstring>rtmp://tdsiptv.ddns.me/live playpath=%s?code=%s swfUrl=http://www.livetv.tn/flowplayer-3.2.7.swf pageUrl=http://www.livetv.tn/Abu-Dhabi-Drama-en-direct-live.html  flashVer=WIN12,0,0,77 timeout=10 live=true</rtmpstring>
 </source>
 <source>
 <id>generic</id>
