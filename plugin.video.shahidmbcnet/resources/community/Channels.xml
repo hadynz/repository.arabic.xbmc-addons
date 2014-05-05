@@ -1,4 +1,23 @@
 <channels>
+ <channel>
+        <cname>Bein2 HD</cname>
+        <imageurl>http://2.bp.blogspot.com/-90vek3OtDyE/UsOgqFDWjqI/AAAAAAAAHzQ/Z_gUKJpB6dQ/s1600/f_beIN+Sports+HD2+%5Bbein2%5D.png</imageurl>
+        <enabled>True</enabled>
+        <assignedcategory>
+            <category>sports</category>
+        </assignedcategory>
+    </channel>
+    
+     <channel>
+        <cname>Bein9 HD</cname>
+        <imageurl>http://2.bp.blogspot.com/-2-XDROOByCs/UsOgsr564eI/AAAAAAAAHz8/00jdQ4GuBFw/s1600/f_beIN+Sports+HD9+%5Bbein2%5D.png</imageurl>
+        <enabled>True</enabled>
+        <assignedcategory>
+            <category>sports</category>
+        </assignedcategory>
+    </channel>
+    
+    
     <channel>
         <cname>TMC</cname>
         <imageurl>http://i1064.photobucket.com/albums/u379/zombiB/tmc_zps97f4794e.png</imageurl>
@@ -1695,14 +1714,7 @@
             <category>magreb</category>
         </assignedcategory>
     </channel>
-    <channel>
-        <cname>Tamazigh Algeria</cname>
-        <imageurl>http://i1064.photobucket.com/albums/u379/zombiB/8mrd_zpsadeff3a5.png</imageurl>
-        <enabled>True</enabled>
-        <assignedcategory>
-            <category>magreb</category>
-        </assignedcategory>
-    </channel>
+    
     <channel>
         <cname>Tchad</cname>
         <imageurl>http://i1064.photobucket.com/albums/u379/zombiB/ched_zpsbd76ae44.png</imageurl>
@@ -1921,7 +1933,7 @@
         </assignedcategory>
     </channel>
     <channel>
-        <cname>Al Oula Maroc</cname>
+        <cname>Al oula Maroc</cname>
         <imageurl>http://i1064.photobucket.com/albums/u379/zombiB/maroc1_zps8bc33870.png</imageurl>
         <enabled>True</enabled>
         <assignedcategory>

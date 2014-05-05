@@ -97,7 +97,7 @@ def performLogin():
 	opener = urllib2.install_opener(opener)
 	req = urllib2.Request('http://www.livetv.tn/login.php')
 	req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
-	post={'pseudo':userName,'xpass':password}
+	post={'pseudo':userName,'mpass':password}
 	post = urllib.urlencode(post)
 	response = urllib2.urlopen(req,post)
 	now_datetime=datetime.datetime.now()
@@ -106,6 +106,7 @@ def performLogin():
 
 
 def shoudforceLogin():
+    return True
     try:
 #        import dateime
         lastUpdate=selfAddon.getSetting( "lastLivetvLogin" )
