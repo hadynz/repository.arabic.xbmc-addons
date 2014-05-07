@@ -59,10 +59,10 @@
 
 <addon id="plugin.video.AlJadeedPrograms"
 	name="Al Jadeed Programs"
-	version="1.0.0"
+	version="1.0.1"
 	provider-name="Amio">
   <requires>
-    <import addon="xbmc.python" version="2.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -77,10 +77,10 @@
 
 <addon id="plugin.video.alqaheraalyoum"
        name="AlQaheraAlYoum"
-       version="2.0.0"
+       version="2.0.1"
        provider-name="hadynz">
     <requires>
-        <import addon="xbmc.python" version="2.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.beautifulsoup" version="3.0.8"/>
         <import addon="script.module.xbmcswift2" version="1.1.1" />
         <import addon="plugin.video.youtube" version="3.2.0"/>
@@ -160,10 +160,10 @@
 
 <addon id="plugin.video.atnnetwork"
        name="ATNNetwork"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="hadynz">
     <requires>
-        <import addon="xbmc.python" version="2.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.beautifulsoup" version="3.0.8"/>
     </requires>
     <extension point="xbmc.python.pluginsource"
@@ -306,10 +306,10 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon id="plugin.video.glarab"
        name="GLArab"
-       version="0.0.3"
+       version="0.0.4"
        provider-name="babak">
   <requires>
-    <import addon="xbmc.python" version="1.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.beautifulsoup" version="3.0.8"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
@@ -326,10 +326,10 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon id="plugin.video.Islamic"
 	name="Khotba Youtube"
-	version="1.0.0"
+	version="1.0.1"
 	provider-name="Amio">
   <requires>
-    <import addon="xbmc.python" version="2.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -402,12 +402,12 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   </extension>
 </addon>
 
-<addon id="plugin.video.SamiraTVYoutube"
+<addon id="plugin.video.samiratvYoutube"
 	name="Samira TV Youtube"
-	version="1.0.0"
+	version="1.0.1"
 	provider-name="Amio">
   <requires>
-    <import addon="xbmc.python" version="2.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
     <import addon="plugin.video.youtube" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
@@ -489,10 +489,10 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon id="plugin.video.sotwesoora.tv"
        name="Sotwesoora.tv"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="hadynz">
     <requires>
-        <import addon="xbmc.python" version="2.0"/>
+        <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.beautifulsoup" version="3.0.8"/>
     </requires>
     <extension point="xbmc.python.pluginsource"
