@@ -14,12 +14,16 @@ class ChannelItem:
 
         self.title = str(anchorEl.findAll('span')[-1].contents[0])  # Copy out channel name, and not reference
         self.thumbnail = anchorEl.find('img')['src']
+        if self.thumbnail: self.thumbnail=self.thumbnail.replace('tv_/icones','logo')
+        if not self.thumbnail.startswith('http'): self.thumbnail='http://www.teledunet.com/'+self.thumbnail
         self.path = match_channel_name.group(1)
         self.isHD = len(anchorEl.findAll('font')) > 2
 
     def __parseJSON(self, json):
         self.title = json['title']
         self.thumbnail = json['thumbnail']
+        if self.thumbnail: self.thumbnail=self.thumbnail.replace('tv_/icones','logo')
+        if not self.thumbnail.startswith('http'): self.thumbnail='http://www.teledunet.com/'+self.thumbnail
         self.path = json['path']
         self.isHD = False
 

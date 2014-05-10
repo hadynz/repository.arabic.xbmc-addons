@@ -9,7 +9,7 @@ from hardcode import HARDCODED_STREAMS
 HEADER_REFERER = 'http://www.teledunet.com/list_chaines.php'
 HEADER_HOST = 'www.teledunet.com'
 HEADER_USER_AGENT = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/player/?channel=%s'
+TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/mobile/?con'
 PPV_CHANNEL_URL='rtmp://5.135.134.110:1935/teledunet/'
 
 cj = cookielib.CookieJar()
@@ -29,7 +29,7 @@ def _html(url):
 
 def __get_cookie_session():
     # Fetch the main Teledunet website to be given a Session ID
-    _html('http://www.teledunet.com')
+    _html('http://www.teledunet.com/')
 
     for cookie in cj:
         if cookie.name == 'PHPSESSID':
@@ -39,7 +39,8 @@ def __get_cookie_session():
 
 
 def __get_channel_time_player(channel_name):
-    url = TELEDUNET_TIMEPLAYER_URL % channel_name
+    url = TELEDUNET_TIMEPLAYER_URL# % channel_name
+    print url
     # Set custom header parameters to simulate request is coming from website
     req = urllib2.Request(url)
     req.add_header('Referer', HEADER_REFERER)
@@ -48,14 +49,16 @@ def __get_channel_time_player(channel_name):
     req.add_header('Cookie', __get_cookie_session())
 
     html = _get(req)
-    m = re.search('time_player=(.*);', html, re.M | re.I)
+    m = re.search('aut=\'\?id0=(.*?)\'', html, re.M | re.I)
     time_player_str = eval(m.group(1))
 
-    m = re.search('curent_media=\'(.*)\';', html, re.M | re.I)
-    if 'bein_sport' in channel_name:
+    print 'set_favoris\(\''+channel_name+'\'.*?rtmp://(.*?)\''
+    m = re.search('rtmp://(.*?)/%s\''%channel_name, html, re.M | re.I)
+    if 'bein_sport' in channel_name or  m ==None:
         rtmp_url=PPV_CHANNEL_URL+channel_name
     else:
         rtmp_url = m.group(1)
+        rtmp_url='rtmp://%s/%s'%(rtmp_url,channel_name)
     play_path = rtmp_url[rtmp_url.rfind("/") + 1:]
     return rtmp_url, play_path, repr(time_player_str).rstrip('0').rstrip('.')
 
