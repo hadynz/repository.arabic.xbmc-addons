@@ -200,7 +200,7 @@
 
 <addon
   id="plugin.video.cartoonarabi"
-  version="1.2.0"
+  version="1.2.1"
   name="CARTOONARABIC "
   provider-name="Bisha">
   <requires>

@@ -24,7 +24,7 @@ def patch_http_response_read(func):
             return e.partial
 
     return inner
-	
+
 httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
@@ -37,7 +37,7 @@ def GetCartoonArabiSeries(url):
     response.close()
     myNames=[]
     url_target=(re.compile('<li class=""><a href="(.+?)" class="">(.+?)</a>').findall(link))
-    
+
     for items in url_target:
         path=str( items[0]).strip()
         name=str( items[1]).strip()
@@ -56,9 +56,9 @@ def GetCartoonArabiEpos(url):
 			name=str( items[3]).strip()
 			img=str( items[2]).strip()
 			addLink(name,path,2,img)
-		
+
 def decode (page):
-    encoding = page.info().get("Content-Encoding")    
+    encoding = page.info().get("Content-Encoding")
     if encoding in ('gzip', 'x-gzip', 'deflate'):
         content = page.read()
         if encoding == 'deflate':
@@ -69,7 +69,7 @@ def decode (page):
 
     return page
 
-        
+
 def playContent(url):
 	req = urllib2.Request(url)
 	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
@@ -91,15 +91,24 @@ def playContent(url):
 		url2=url2[0]
 		url2=str(url2).replace("('", '').strip()
 		opener = urllib2.build_opener()
-		opener.addheaders = [('Referer', 'http://www.4shared.com'),('User-Agent', ' Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.69 Safari/537.36'), ('Accept-Encoding', 'gzip,deflate')]
+		opener.addheaders = [('Referer', 'http://www.4shared.com'),('User-Agent', 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36'), ('Accept-Encoding', 'gzip,deflate,sdch')]
 		usock = opener.open(url2)
 		url2 = usock.geturl()
-		usock.close() 
+		usock.close()
 		videoFile=str( url2).split('&streamer=')[0]
-		videoFile=str( videoFile).split('file=')[1]
+		videoFile=str( videoFile).split('fileId=')[1]
 		videoFile=str(videoFile).split('&image=')[0]
+		videoFile=str(videoFile).split('&apiURL=')[0]
 		videoFile=str( videoFile).strip()
-		playback_url = urllib.unquote ( videoFile )
+		restUrl = str ('http://www.4shared.com/web/rest/files/' + videoFile + '/embed/meta.xml')
+		req = urllib2.Request(restUrl)
+		req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+		response = urllib2.urlopen(req)
+		videoLink=response.read()
+		response.close()
+		videoLink = str( videoLink ).split('</previewUrl>')[0]
+		videoLink = str( videoLink ).split('<previewUrl>')[1]
+		playback_url = urllib.unquote ( videoLink )
 		listItem = xbmcgui.ListItem(path=str(playback_url))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 
@@ -112,7 +121,7 @@ def addLink(name,url,mode,iconimage):
     liz.setProperty("IsPlayable","true");
     ok=xbmcplugin.addDirectoryItem(handle=_thisPlugin,url=u,listitem=liz,isFolder=False)
     return ok
-	
+
 
 
 def addDir(name,url,mode,iconimage):
@@ -138,16 +147,16 @@ def get_params():
                         splitparams=pairsofparams[i].split('=')
                         if (len(splitparams))==2:
                                 param[splitparams[0]]=splitparams[1]
-                                
+
         return param
-              
+
 params=get_params()
 url=None
 name=None
 mode=None
 
 
-	
+
 try:
         url=urllib.unquote_plus(params["url"])
 except:
@@ -168,11 +177,11 @@ print "Name: "+str(name)
 if mode==None or url==None or len(url)<1:
         print ""
         GetCartoonArabiSeries('http://www.cartoonarabi.com/newvideos.php?&page=1')
-       
+
 elif mode==1:
         print ""+url
         GetCartoonArabiEpos(url)
-	
+
 elif mode==2:
 		print ""+url
 		playContent(url)
