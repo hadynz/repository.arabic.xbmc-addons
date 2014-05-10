@@ -1,163 +1,359 @@
 <streamingInfos>
 
-
-
-
-	<streaminginfo>
+    <streaminginfo>
 		<cname>Bein Sport News</cname>
 		<item>
-			<title>Bein Sport News</title>
-			<link>http://hls01-06.az.myvideo.az/hls-live/livepkgr/sport6/sport6/sport6.m3u8</link>
+			<title>Bein Sport News </title>
+			<link>http://85.91.143.23:1935/23688/23688.stream/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 1</cname>
 		<item>
-			<title>Bein Sport 1</title>
+			<title>@zombixbmc on</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/40.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 1</cname>
+		<item>
+			<title>@zombixbmc off</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST1 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 1</cname>
 		<item>
-
-			<title>Bein Sport 1 HQ 2ndserver</title>
-			<link>rtmp://31.220.0.134:1935/live playpath=b1r pageUrl=http://www.eucast.tv/embedstv39#EXTINF:123</link>
+			<title>@zombixbmc on</title>
+			<link>rtmp://31.220.0.82:1935/live playpath=b1r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
-         <streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 1</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/1.ch</link>
+		</item>
+	</streaminginfo>
+	
+	
+	
+	<streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>
-			<title>Bein Sport </title>
+			<title>@zombixbmc off</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST2 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>
-			<title>Bein Sport 2 (ustream)</title>
-			<link>http://iphone-streaming.ustream.tv/ustreamVideo/17718592/streams/live?v=720p/playlist.m3u8</link>
+	   	      <title>@zombixbmc  on</title>
+		      <link>rtmp://31.220.0.134:1935/live playpath=b2r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>
-			<title>Bein Sport 2 2 HQ 2ndserver</title>
-			<link>http://cms.prosatiptv.com/getChannel?channelId=10&amp;sn=12576902&amp;byPass=987</link>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/2.ch</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>
-			<title>Bein Sport 2 HD 3rd server</title>
-			<link>http://202.75.23.37:8800/live/ch19/03.m3u8</link>
+	   	        <title>@zombixbmc  ustream off</title>
+		        <link>http://iphone-streaming.ustream.tv/ustreamVideo/17976099/streams/live/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 3</cname>
 		<item>
-			<title>Bein Sport 3</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST3 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 3</cname>
 		<item>
-			<title>Bein Sport 3 2 HQ 2ndserver</title>
-			<link>http://cms.prosatiptv.com/getChannel?channelId=11&amp;sn=12576902&amp;byPass=987</link>
+	   	        <title>@zombixbmc  on</title>
+		        <link>rtmp://31.220.0.134:1935/live playpath=b3r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 3</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/3.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 4</cname>
 		<item>
-			<title>Bein Sport 4</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST4 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 4</cname>
 		<item>
-			<title>Bein Sport 4 2 HQ 2ndserver</title>
-			<link>http://cms.prosatiptv.com/getChannel?channelId=12&amp;sn=12576902&amp;byPass=987</link>
+			<title>@zombixbmc on</title>
+			<link>rtmp://31.220.0.134:1935/live playpath=bb4 swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 4</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/4.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 5</cname>
 		<item>
-			<title>Bein Sport 5</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST5 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 5 </cname>
+		<item>
+			<title>@zombixbmc on</title>
+			<link>rtmp://31.220.0.82:1935/live playpath=b5r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 5</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/5.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 6</cname>
 		<item>
-			<title>Bein Sport 6</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST6 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 6</cname>
+		<item>
+			<title>@zombixbmc on</title>
+			<link>rtmp://31.220.0.134:1935/live playpath=bein altechnoe.comxx6 swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 6</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/6.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 7</cname>
 		<item>
-			<title>Bein Sport 7</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST7 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 7</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/7.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 8</cname>
 		<item>
-			<title>Bein Sport 8</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST8 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 8</cname>
+		<item>
+			<title>@zombixbmc on</title>
+			<link>rtmp://31.220.0.82:1935/live playpath=b8r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 8</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/8.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 9</cname>
 		<item>
-			<title>Bein Sport 9</title>
+			<title>@zombixbmc </title>
+			<link>http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/14.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 9</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/9.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 9</cname>
+		<item>
+			<title>@zombixbmc OFF</title>
 			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST9 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 9</cname>
+		<item>
+			<title>@zombixbmc  </title>
+			<link>http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/15.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 10</cname>
 		<item>
-			<title>Bein Sport 10</title>
+			<title>@zombixbmc OFF</title>
 			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST10 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 10</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/10.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 11</cname>
 		<item>
-			<title>Bein Sport 11</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST11 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 11</cname>
+		<item>
+			<title>@zombixbmc on</title>
+			<link>rtmp://31.220.0.82:1935/live playpath=b11r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 11</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/11.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 12</cname>
 		<item>
-			<title>Bein Sport 12</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST12 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 12</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://31.220.0.134:1935/live playpath=b12r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 12</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/12.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 13</cname>
 		<item>
-			<title>Bein Sport 13</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST13 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 13</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/13.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 14</cname>
 		<item>
-			<title>Bein Sport 14</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST14 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 14</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/14.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Bein Sport 15</cname>
 		<item>
-			<title>Bein Sport 15</title>
+			<title>@zombixbmc</title>
 			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST15 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Bein Sport 15</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/15.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>BAHRAIN SPORTS</cname>
 		<item>
@@ -165,6 +361,7 @@
 			<link>rtmp://alayam.netromedia.net/btv3/btv3</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Nile Sport</cname>
 		<item>
@@ -172,6 +369,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileSport playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=sport</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>KTV SPORT</cname>
 		<item>
@@ -179,6 +377,7 @@
 			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch3.sdp</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Al Resoul TV</cname>
 		<item>
@@ -189,7 +388,7 @@
 	
 	<streaminginfo>
 	
-		<cname>AL EQTESADIA TV</cname>
+		<cname>AL EQTESADIA TVC</cname>
 		<item>
 			<title>AL EQTESADIA TV</title>
 			<link>mms://38.96.148.75/Eqtisadia</link>
@@ -227,14 +426,31 @@
 		<cname>Tunisia national 1</cname>
 		<item>
 			<title>Tunisia national 1</title>
-			<link>rtmp://94.32.97.12/satchannel1 playpath=tvtunisi.stream swfUrl=http://video.tiscali.it/inc/TiscaliVideo.swf?v=hghpl]&amp;vURL=http://video.tiscali.it/asx/73878.asx&amp;autoplay=1&amp; live=1 pageUrl=http://tnmedias.perso.sfr.fr/tv7.html</link>
+			<link>http://streamer.fss.tiscali.com/satchannel1/tvtunisi.stream/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>Tunisia national 1</cname>
 		<item>
-			<title>Tunisia national 1 (mms)</title>
-			<link>mms://vipmms.yacast.net/nationale1</link>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/18.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Tunisia national 2</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/19.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Tunisia national 1</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://ca-edge-1.cdn2.streamago.tv:80/streamagoedge/1052/224/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
 	<streaminginfo>
@@ -371,6 +587,15 @@
 			<link>rtsp://38.96.148.75/Quran?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Quran TV ksa</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://iphone-streaming.ustream.tv/ustreamVideo/17904315/streams/live/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>sunnah TV</cname>
 		<item>
@@ -502,21 +727,41 @@
 		<cname>I-TELE</cname>
 		<item>
 			<title>I-TELE</title>
-			<link>http://chunk-output-1.live.tv-radio.com/canalplus/android/index/1200/02.m3u8</link>
+			<link>http://chkg.tdf-cdn.com/6317/02.m3u8</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>I-TELE</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1726.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
+            <regex>
+             <name>url</name>
+              <expres>rtmp:....([^\\]*)</expres>
+               <page>http://www.filmon.com/tv/channel/export?channel_id=1726</page>
+            </regex>
+            <regex>
+            <name>key</name>
+               <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+                 <page>http://www.filmon.com/tv/channel/export?channel_id=1726</page>
+            </regex>
+		</item>
+		
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>D8</cname>
 		<item>
 			<title>D8</title>
-			<link>http://chunk-output-1.live.tv-radio.com/canalplus/android/index/1650/01.m3u8</link>
+			<link>http://chkg.tdf-cdn.com/6318/02.m3u8</link>
 		</item>
 	</streaminginfo>
 	<streaminginfo>
 		<cname>D17</cname>
 		<item>
 			<title>D17</title>
-			<link>http://chunk-output-1.live.tv-radio.com/canalplus/android/index/1710/02.m3u8</link>
+			<link>http://chkg.tdf-cdn.com/6319/02.m3u8</link>
 		</item>
 	</streaminginfo>
 	<streaminginfo>
@@ -533,6 +778,15 @@
 			<link>http://vipwowza.yacast.net/gulli_live/_definst_/gulli_850.stream/hasbahca.m3u8</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 0</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://free:free@matchfree1to10.no-ip.net/33.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>FRANCE 0</cname>
 		<item>
@@ -540,17 +794,11 @@
 			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel5.wmv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>FRANCE 2</cname>
 		<item>
-			<title>FRANCE 2</title>
-			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel1.wmv?MSWMExt=.asf</link>
-		</item>
-	</streaminginfo>
-	<streaminginfo>
-		<cname>FRANCE 2</cname>
-		<item>
-			<title>FRANCE 2 high filmon</title>
+			<title>@zombixbmc -high filmon</title>
 			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1717.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
    <regex>
      <name>url</name>
@@ -567,7 +815,7 @@
 	<streaminginfo>
 		<cname>FRANCE 2</cname>
 		<item>
-			<title>FRANCE 2 low filmon</title>
+			<title>@zombixbmc -low filmon</title>
 			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1717.low.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
    <regex>
      <name>url</name>
@@ -581,6 +829,58 @@
    </regex>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 2</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/11.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 2</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net:38000/18.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 2</cname>
+		<item>
+			<title>FRANCE 2</title>
+			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel1.wmv?MSWMExt=.asf</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 3</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1723.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
+            <regex>
+             <name>url</name>
+              <expres>rtmp:....([^\\]*)</expres>
+               <page>http://www.filmon.com/tv/channel/export?channel_id=1723</page>
+            </regex>
+            <regex>
+            <name>key</name>
+               <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+                 <page>http://www.filmon.com/tv/channel/export?channel_id=1723</page>
+            </regex>
+		</item>
+		
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 3</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://free:free@matchfree1to10.no-ip.net/22.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>FRANCE 3</cname>
 		<item>
@@ -588,6 +888,15 @@
 			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel2.wmv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 4</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>hhttp://free:free@matchfree1to10.no-ip.net/23.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>FRANCE 4</cname>
 		<item>
@@ -595,6 +904,34 @@
 			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel3.wmv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 5</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1720.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
+            <regex>
+             <name>url</name>
+              <expres>rtmp:....([^\\]*)</expres>
+               <page>http://www.filmon.com/tv/channel/export?channel_id=1720</page>
+            </regex>
+            <regex>
+            <name>key</name>
+               <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+                 <page>http://www.filmon.com/tv/channel/export?channel_id=1720</page>
+            </regex>
+		</item>
+		
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>FRANCE 5</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://free:free@matchfree1to10.no-ip.net/24.ch</link>
+		</item>
+	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>FRANCE 5</cname>
 		<item>
@@ -650,11 +987,438 @@
 			<link>http://bfmlive2-i.akamaihd.net/hls/live/214427/bfmtv/04.m3u8</link>
 		</item>
 	</streaminginfo>
+	
 	<streaminginfo>
 		<cname>TV 5 MONDE</cname>
 		<item>
 			<title>TV 5 MONDE</title>
 			<link>http://rm-edge-3.cdn2.streamago.tv/streamagoedge/1924/817/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>TF1</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/16.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MBC 1</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/1.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MBC 2</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/2.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MBC 3</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/3.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MBC 4</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/4.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MBC Drama</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/5.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MBC Action</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/6.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MBC Bollywood</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/9.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MBC Max</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/10.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Art Aflam 1</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/12.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Art Aflam 2</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/13.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>ART Cinema</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://free:free@matchfree1to10.no-ip.net/20.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>ART hykayet1</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://free:free@matchfree1to10.no-ip.net/14.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>ART hykayet2</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://free:free@matchfree1to10.no-ip.net/15.ch</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Nessma</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/11.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Hanibal</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/7.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Al Tunisia</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://free:free@matchfree1to10.no-ip.net/8.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Al Maghribia</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://ca-edge-2.cdn2.streamago.tv:80/streamagoedge/1922/815/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>ALFALASTINIAH</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://46.43.64.166:1935/flv/flv</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Dubai</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://wms03.endavomedia.com:1935/dmilivedubaitv/dmilivedubaitv_1</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>MTV</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtsp://livestreaming1.itworkscdn.net/mtvlive/murrtelevision_160p</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>AlYawm</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://839156450.e.541833257.r.w6cdn.com/541833257//mp4:freeegeYSbQLHNsFZa timeout=15</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>AlYawm</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://iphone-streaming.ustream.tv/ustreamVideo/12786066/streams/live/playlist.m3u8 timeout=15</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Canal plus</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://iphone-streaming.ustream.tv/ustreamVideo/11378037/streams/live/playlist.m3u8 timeout=15</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>2M</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://iphone-streaming.ustream.tv/ustreamVideo/8312072/streams/live/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>France 24 FR</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=298.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
+            <regex>
+             <name>url</name>
+              <expres>rtmp:....([^\\]*)</expres>
+               <page>http://www.filmon.com/tv/channel/export?channel_id=298</page>
+            </regex>
+            <regex>
+            <name>key</name>
+               <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+                 <page>http://www.filmon.com/tv/channel/export?channel_id=298</page>
+            </regex>
+		</item>
+		
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>AlFajer Gaza</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://82.102.232.165:1935/alfajertv_gaza/alfajertv_1</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Alfajr Int</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>rtmp://vstream2.hadara.ps:1935/unlimitedalfajer/unlimited_1</link>
+		</item>
+	</streaminginfo>
+	
+	
+
+<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN:OSN First HD</title>
+			<link> 
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/23.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN MOVIES PREMIERE</title>
+			<link> 
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/80.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN MOVIES 1</title>
+			<link> 
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/74.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN MOVIES 2</title>
+			<link> 
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/75.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN MOVIES 3</title>
+			<link> 
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/76.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN MOVIES 4</title>
+			<link> 
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/77.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN MOVIES PREMIERE</title>
+			<link> 
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/80.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN MOVIES HD</title>
+			<link> 
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/17.ch</link>
+		</item>
+	</streaminginfo>
+			
+<streaminginfo>
+		<cname>OSN Ar</cname>
+		<item>
+			<title>@zombixbmc OSN:OSN YAHALA HD</title>
+			<link>
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/18.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN Ar</cname>
+		<item>
+			<title>@zombixbmc OSN_Shabab</title>
+			<link>
+http://iptvfannansat.dyndns.tv/vachelzhan/vachelzhan/17.ch</link>
+		</item>
+	</streaminginfo>
+			
+<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN:OSN movieHD+2</title>
+			<link>
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/20.ch</link>
+		</item>
+	</streaminginfo>
+			
+<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc OSN:OSNmovie action</title>
+			<link>
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/21.ch</link>
+		</item>
+	</streaminginfo>
+			
+<streaminginfo>
+		<cname>OSN Ar</cname>
+		<item>
+			<title>@zombixbmc OSN:OSN YH drama</title>
+			<link>
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/19.ch</link>
+		</item>
+	</streaminginfo>
+			
+<streaminginfo>
+		<cname>OSN Ar</cname>
+		<item>
+			<title>@zombixbmc OSN:0SN yh HD+2</title>
+			<link>
+http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>M6</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://free:free@matchfree1to10.no-ip.net/21.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>W9</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://free:free@matchfree1to10.no-ip.net/37.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Telvza TV</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>rtmp://41.231.53.11:8888/thd/ playpath=telvza swfUrl=http://streaminghd.tn/video/player.swf?random=1664158234 live=1 pageUrl=http://www.direct4live.com/2013/10/telvza-tv-en-direct-live.html</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Tounesna</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>rtmp://41.231.53.11:8888/thd playpath=tunisna swfUrl=http://streaminghd.tn/video/player.swf?random=1578550586 live=1 pageUrl=http://www.direct4live.com/2014/02/tounesna-tv-direct-live.html</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Al Tunisia</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>rtmp://iptv.web-medias.net/live playpath=al_tunisia swfUrl=http://www.web-medias.net/jwplayer.swf live=1 pageUrl=http://www.web-medias.net/ettounsiya-tv-en-direct-live</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>alwatan</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://alwatan_hls-lh.akamaihd.net/i/alwatan_ar@91111/master.m3u8</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>SkyNewsArabia</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://iptvfannansat.dyndns.tv/vachelzhan/vachelzhan/85.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Roya</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://stream.joinvisions.net:1935/royalive/roya_2/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
 	

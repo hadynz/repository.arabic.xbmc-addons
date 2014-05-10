@@ -1,15 +1,57 @@
 <streaminginfos>
 
 <streaminginfo>
+        <cname>Libya</cname>
+        <chnumber>ch110</chnumber>
+    </streaminginfo>
+    
+<streaminginfo>
+        <cname>Panorama Drama</cname>
+        <chnumber>ch117</chnumber>
+    </streaminginfo>
+    
+<streaminginfo>
         <cname>Bein2 HD</cname>
         <chnumber>ch296</chnumber>
     </streaminginfo>
     
-    <streaminginfo>
-        <cname>Bein9 HD</cname>
-        <chnumber>ch307</chnumber>
+ <streaminginfo>
+        <cname>Bein6 HD</cname>
+        <chnumber>ch500</chnumber>
     </streaminginfo>
     
+    <streaminginfo>
+        <cname>Bein7 HD</cname>
+        <chnumber>ch501</chnumber>
+    </streaminginfo>
+    
+    <streaminginfo>
+        <cname>Bein8 HD</cname>
+        <chnumber>ch502</chnumber>
+    </streaminginfo>
+    
+    <streaminginfo>
+        <cname>Bein9 HD</cname>
+        <chnumber>ch503</chnumber>
+    </streaminginfo>
+    
+    <streaminginfo>
+        <cname>Bein10 HD</cname>
+        <chnumber>ch504</chnumber>
+    </streaminginfo>
+    
+    <streaminginfo>
+        <cname>Bein11 HD</cname>
+        <chnumber>ch505</chnumber>
+    </streaminginfo>
+    
+    <streaminginfo>
+        <cname>Bein12 HD</cname>
+        <chnumber>ch506</chnumber>
+    </streaminginfo>
+    
+    
+
     <streaminginfo>
         <cname>TMC</cname>
         <chnumber>ch298</chnumber>
@@ -770,7 +812,7 @@
         <chnumber>ch295</chnumber>
     </streaminginfo>
     <streaminginfo>
-        <cname>Bein 2 FR</cname>
+        <cname>Canal plus</cname>
         <chnumber>ch279</chnumber>
     </streaminginfo> 
 </streaminginfos>

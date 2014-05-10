@@ -1,8 +1,15 @@
 
 <streamingInfos>
+	<streaminginfo>
+		<cname>Melody Hits</cname>
 
-
-
+		<item>
+			<title>Melody Hits youtube</title>
+			<thumbnail>https://lh3.ggpht.com/-DE3GqoUaC4g/UuNmaROcywI/AAAAAAAABDM/trn-g__hU7M/s1600/melody_hits.png</thumbnail>
+			<link>plugin://plugin.video.youtube/?action=play_video&amp;videoid=FBBLhRgrw0o</link>
+		</item>
+	</streaminginfo>
+	
 
 	<streaminginfo>
 		<cname>Melody Hits</cname>
@@ -13,7 +20,6 @@
 			<link>http://38.96.148.24//MelodyHits/MHits_576p/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
-
 
 	<streaminginfo>
 		<cname>Melody Arabia</cname>
@@ -26,7 +32,7 @@
 	</streaminginfo>
 
 
-	
+
 
 
 
@@ -110,7 +116,7 @@
 		<cname>Aljazeera Mubasher Masr</cname>
 <item> 
 <title>Al Jazeera Mubasher MASR(Alternative Source 3)</title> 
-<link>rtmp://aljazeeraflashlivefs.fplive.net:1935/aljazeeraflashlive-live?videoId=1237551997001&lineUpId=&pubId=864352179001&playerId=1294374627001&affiliateId= playpath=aljazeera_misr_high?videoId=1237551997001&lineUpId=&pubId=864352179001&playerId=1294374627001&affiliateId= swfUrl=http://admin.brightcove.com/viewer/us20140123.0946/federatedVideoUI/BrightcovePlayer.swf?uid=1390706379776 pageUrl=http://mubasher-misr.aljazeera.net/livestream/</link>  
+<link>rtmp://aljazeeraflashlivefs.fplive.net:1935/aljazeeraflashlive-live?videoId=1237551997001&amp;lineUpId=&amp;pubId=864352179001&amp;playerId=1294374627001&amp;affiliateId= playpath=aljazeera_misr_high?videoId=1237551997001&amp;lineUpId=&amp;pubId=864352179001&amp;playerId=1294374627001&amp;affiliateId= swfUrl=http://admin.brightcove.com/viewer/us20140123.0946/federatedVideoUI/BrightcovePlayer.swf?uid=1390706379776 pageUrl=http://mubasher-misr.aljazeera.net/livestream/</link>  
 </item>
 </streaminginfo>
 
@@ -135,25 +141,6 @@
 
 
 <streaminginfo>
-		<cname>Alarabiya Ahdas</cname>
-<item>  
-<title>Alarabiya AHDASorHADAS (Alternative Source)</title>
-<link>http://livestream2.alarabiya.tv/files/hadath.m3u8</link>  
-</item>
-</streaminginfo>
-
-
-
-<streaminginfo>
-		<cname>Al mayaden</cname>
-
-<item>  
-<title>Al Mayadeen (Alternative Source)</title>
-<link>rtmp://livestreaming3.itworkscdn.net/mayadeenlive/ playpath=mayadsat swfUrl=http://www.almayadeen.net/content/jwplayer/jwplayer.flash.swf pageUrl=http://www.almayadeen.net/ar/Live swfVfy=true live=true timeout=live</link>  
-</item>
-</streaminginfo>
-
-<streaminginfo>
 		<cname>Al mayaden</cname>
 
 <item> 
@@ -164,6 +151,17 @@
 
 <streaminginfo>
 		<cname>Al mayaden</cname>
+
+<item>  
+<title>Al Mayadeen (Alternative Source)</title>
+<link>rtmp://livestreaming3.itworkscdn.net/mayadeenlive/ playpath=mayadsat swfUrl=http://www.almayadeen.net/content/jwplayer/jwplayer.flash.swf pageUrl=http://www.almayadeen.net/ar/Live swfVfy=true live=true timeout=live</link>  
+</item>
+</streaminginfo>
+
+
+
+<streaminginfo>
+		<cname>Al mayaden</cname>
 <item> 
 <title>Al Mayadeen (Alternative Source)</title>
 <link>rtmp://livestreaming3.itworkscdn.net/mayadeenlive playpath=mayadsat swfUrl=http://www.almayadeen.net/content/jwplayer/jwplayer.flash.swf live=1 timeout=15 pageUrl=http://www.almayadeen.net/live</link>
@@ -171,41 +169,7 @@
 </streaminginfo>
 
 
-<streaminginfo>
-		<cname>Al Hiwar</cname>
-<item>
-<title>Al Hiwar (Alternative Source)</title>
-<link>rtmp://185.2.136.148/livepkgr playpath=livestream swfUrl=http://alhiwar.tv/tv/510/player.swf live=true timeout=15 pageUrl=http://translate.googleusercontent.com/translate_c?depth=1&hl=en&prev=/search%3Fq%3Dal%2Bhiwar%26biw%3D1366%26bih%3D615&rurl=translate.google.com&sl=ar&u=http://www.alhiwar.tv/&usg=ALkJrhhSMbPdHP5Qj4XnT0dmn-Nj_rubJg</link>
-<thumbnail>http://www.lyngsat-logo.com/hires/aa/al_hiwar.png</thumbnail>
-</item>
-</streaminginfo>
 
-
-<streaminginfo>
-		<cname>Al Hiwar</cname>
-<item> 
-<title>Al Hiwar (Alternative Source)</title>
-<link>rtmp://185.2.136.148/livepkgr/ playpath=livestream swfUrl=http://p.jwpcdn.com/6/7/jwplayer.flash.swf live=true timeout=15 pageUrl=http://www.alhiwar.tv/android.php</link>  
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Al Manar</cname>
-<item>
-<title>Al Manar (Alternative Source)</title>
-<link>http://72.55.164.21:8000/live</link>
-<thumbnail>http://jira.salamworld.com/wp-content/uploads/2012/11/AL-MANAR.jpg</thumbnail>
-</item>
-</streaminginfo>
-
-
-<streaminginfo>
-		<cname>Russia Alyaum</cname>
-<item> 
-<title>Russia Alyaum (Alternative Source)</title>
-<link>rtmp://russiatoday.fms.visionip.tv/rt/Russia_al_yaum_1000k_1 app=rt/Russia_al_yaum_1000k_1 playpath=1000k_1 swfUrl=http://rt.com/s/swf/player.swf pageUrl=http://www.watchfomny.com/Video/Arabic/RusiyaAl-Yaum/RusiyaAl-Yaum.htm live=true swfVfy=true timeout=10</link>  
-</item>
-</streaminginfo>
 
 <streaminginfo>
 		<cname>Al Alam</cname>
@@ -244,13 +208,6 @@
 </streaminginfo>
 
 
-<streaminginfo>
-		<cname>National Geo Ad</cname>
-<item> 
-<title>National Geo Ad (Alternative Source)</title>
-<link>http://xnatgeoabudhabilivex.api.channel.livestream.com/3.0/playlist.m3u8</link>
-</item>
-</streaminginfo>
 
 <streaminginfo>
 		<cname>Aljazeera Doc</cname>
@@ -272,40 +229,12 @@
 		<cname>Aljazeera Doc</cname>
 <item>  
 <title>Al Jazeera Documentary (Alternative Source)</title>
-<link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_doc_high swfUrl=http://arabichannels.com/player/player.swf?274354545150&arabichannels.com&copyright=2013&provider=rtmp&streamer=rtmp://arabichannels.com pageUrl=http://arabichannels.com/aljazeera_doc.php live=1 timeout=15 swfVfy=1 conn=S:OK</link>  
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>MBC 1</cname>
-
-<item>
-<title>MBC (Alternative Source)</title>
-<link>rtmp://206.190.138.68/live playpath=fregregerg?id=181857 conn=S:OK swfUrl=http://mips.tv/content/scripts/eplayer.swf live=true timeout=15 pageUrl=http://mips.tv/embedplayer/fregregerg/1/600/380</link>
-<thumbnail>http://www.ilcode.com/photos/www.ilcode.com-mdubdqlswkxrchiaarxirdk-mbc.jpg</thumbnail>
+<link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_doc_high swfUrl=http://arabichannels.com/player/player.swf?274354545150&amp;arabichannels.com&amp;copyright=2013&amp;provider=rtmp&amp;streamer=rtmp://arabichannels.com pageUrl=http://arabichannels.com/aljazeera_doc.php live=1 timeout=15 swfVfy=1 conn=S:OK</link>  
 </item>
 </streaminginfo>
 
 
-<streaminginfo>
-		<cname>MBC Action</cname>
 
-<item>
-<title>MBC Action</title>
-<link>rtmp://83.149.124.200/live playpath=EFEDFzddac?id=149861 conn=S:OK swfUrl=http://mips.tv/content/scripts/eplayer.swf live=true timeout=15 pageUrl=http://mips.tv/embedplayer/EFEDFzddac/1/600/380</link>
-<thumbnail>http://upload.wikimedia.org/wikipedia/ar/3/37/MBC-Action.jpg</thumbnail>
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>MBC 4</cname>
-
-<item>
-<title>MBC 4</title>
-<link>rtmp://95.211.148.203/live playpath=trhtgfjhgjhg?id=147478 conn=S:OK swfUrl=http://mips.tv/content/scripts/eplayer.swf live=true timeout=15 pageUrl=http://mips.tv/embedplayer/trhtgfjhgjhg/1/600/380</link>
-<thumbnail>https://si0.twimg.com/profile_images/1133002857/mbc4.jpg</thumbnail>
-</item>
-</streaminginfo>
 
 <streaminginfo>
 		<cname>MBC Bollywood</cname>
@@ -314,21 +243,8 @@
 <link>rtmp://206.190.129.12/live playpath=aflam4youddd?id=152675 swfUrl=http://mips.tv/content/scripts/eplayer.swf live=1 conn=S:OK --live</link>
 <thumbnail>http://www.waleg.com/images/mbc-bollywood.jpg</thumbnail>
 </item>
-
-<item>
-<title>MBC Bollywood (Alternative)</title>
-<link>rtmp://83.149.124.200/live playpath=aflam4youddd?id=152675 conn=S:OK swfUrl=http://www.mips.tv/content/scripts/eplayer.swf pageUrl=http://www.mips.tv/embedplayer/aflam4youddd/1/600/380  live=1 timeout=15</link> 
-</item>
 </streaminginfo>
 
-
-<streaminginfo>
-		<cname>Al-Nahar Drama</cname>
-<item>  
-<title>Al-Nahar Drama (Alternative Source) </title>
-<link>rtmp://50.7.180.18/nahar1/alnahardrama.stream_480p</link>  
-</item>
-</streaminginfo>
 
 
 <streaminginfo>
@@ -339,30 +255,6 @@
 </item>
 </streaminginfo>
 
-<streaminginfo>
-		<cname>Al Nahar</cname>
-<item> 
-<title>Al-Nahar (Alternative Source) </title>
-<link>rtmp://50.7.180.18/nahar1/nahar1.stream_480p</link> 
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Aljadeed</cname>
-<item> 
-<title>Aljadeed (Alternative Source)</title>
-<link>http://origin.etacdn.com/jadeedlive/smil:live.smil/chunklist_w1449481831_b525000.m3u8?nimblesessionid=124</link>  
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>MTV</cname>
-
-<item>
-<title>MTVtitle>
-<link>rtmp://livestreaming1.itworkscdn.net/mtvlive/murrtelevision_360p app=mtvlive playPath=murrtelevision_360p swfUrl=http://mtv.com.lb/Player/400/jwplayer.flash.swf pageUrl=http://mtv.com.lb/Player/600/400 swfVfy=true live=true timeout=10</link>
-</item>
-</streaminginfo>
 
 
 <streaminginfo>
@@ -389,64 +281,6 @@
 <item>
 <title>Sama Syria (Alternative Source)</title>
 <link>rtmp://sama-tv.net/live playpath=samatv swfUrl=http://www.addounia.tv/live/player.swf live=true timeout=15 pageUrl=http://www.addounia.tv/index.php?page=live</link>  
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>CBC Tv</cname>
-<item>
-<title>CBC Tv (Alternative Source)</title>
-<link>http://iphone-streaming.ustream.tv/ustreamVideo/8707800/streams/live/playlist.m3u8</link>
-</item>
-</streaminginfo>
-
-
-<streaminginfo>
-		<cname>CBC 2</cname>
-
-<item>
-<title>CBC two (2)</title>
-<link>plugin://plugin.video.youtube/?action=play_video&amp;videoid=5iThT5XrzLM</link>
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>CBC +2</cname>
-<item> 
-<title>CBC +2 (Alternative Source)</title>
-<link>http://iphone-streaming.ustream.tv/ustreamVideo/12794820/streams/live/playlist.m3u8</link> 
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Dubai</cname>
-<item> 
-<title>Dubai (Alternative Source)</title>
-<link>rtsp://wms03.endavomedia.com:1935/dmi/_definst_/dmilivedubaitv_bb.stream</link>
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Dubai</cname>
-<item> 
-<title>Dubai (Alternative Source)</title>
-<link>rtmp://dmiLiveDubaiTV.flash.internapcdn.net/ app=dmiLiveDubaiTV/live_1 playpath=dmilivedubaitv_4 swfUrl=http://vod.dmi.ae/bundles/endavoenhance/js/lib/jwplayer/jwplayer.flash.swf live=true timeout=15 pageUrl=http://vod.dmi.ae/jwplayer/player16.php?width=630&height=461&channel=dubaitv</link>   
-</item> 
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Sama Dubai</cname>
-<item>  
-<title>Sama Dubai (Alternative Source)</title>
-<link>rtsp://wms03.endavomedia.com:1935/dmi/_definst_/dmilivesamadubai_bb.stream</link>   
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Sama Dubai</cname>
-<item> 
-<title>Sama Dubai (Alternative Source)</title>
-<link>rtmp://dmiLiveSamaDubai.flash.internapcdn.net/ app=dmiLiveSamaDubai/live_1 playpath=dmilivesamadubai_3 swfUrl=http://vod.dmi.ae/bundles/endavoenhance/js/lib/jwplayer/jwplayer.flash.swf live=true timeout=15 pageUrl=http://vod.dmi.ae/jwplayer/player16.php?width=630&height=461&channel=samadubai</link>  
 </item>
 </streaminginfo>
 
@@ -643,6 +477,8 @@
 </item>
 </streaminginfo>
 
+
+
 <streaminginfo>
 		<cname>OSN Ar</cname>
 <item>
@@ -660,39 +496,6 @@
 </item>
 </streaminginfo>
 
-
-<streaminginfo>
-		<cname>Cinema EN</cname>
-<item>
-<title>Cinema-En</title>
-<link>http://212.68.33.139:8003</link>
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Panorama film</cname>
-<item>
-<title>Panorama film</title>
-<link>http://4.31.30.145:9075</link>
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Time cinema</cname>
-<item>
-<title>Time cinema</title>
-<link>http://4.31.30.145:9062</link>
-</item>
-</streaminginfo>
-
-<streaminginfo>
-		<cname>Alhayat Cinema</cname>
-
-<item>
-<title>Alhayat Cinema</title>
-<link>http://4.31.30.145:9067</link>
-</item>
-</streaminginfo>
 
 
 <streaminginfo>
@@ -829,13 +632,7 @@
 </item>
 </streaminginfo>
 
-<streaminginfo>
-		<cname>2M</cname>
-<item>  
-<title>2M (Alternative Source)</title>
-<link>rtmp://50.23.65.36/live playpath=fezfezaf?id=149849 swfUrl=http://www.mips.tv/content/scripts/eplayer.swf pageUrl=http://www.mips.tv/embedplayer/fezfezaf/1/600/380  conn=S:OK live=1 timeout=15</link> 
-</item>
-</streaminginfo>
+
 
 <streaminginfo>
 		<cname>Dubai Sport 1</cname>
@@ -884,7 +681,7 @@
 
 <item>
 <title>BEIN USA HD 720p</title>
-<link>rtmp://beinsportgeolivefs.fplive.net:1935/beinsportgeolive-live playpath=beinsport_eng_4 swfurl=http://sportsinfonet.info/player/Player.swf live=true timeout=15 pageurl=http://sportsinfonet.info/beinsports.php?n=beinsport_eng_4&vw;=650&vh;=450</link>
+<link>rtmp://beinsportgeolivefs.fplive.net:1935/beinsportgeolive-live playpath=beinsport_eng_4 swfurl=http://sportsinfonet.info/player/Player.swf live=true timeout=15 pageurl=http://sportsinfonet.info/beinsports.php?n=beinsport_eng_4&amp;vw;=650&amp;vh;=450</link>
 </item>
 </streaminginfo>
 
@@ -892,7 +689,7 @@
 		<cname>BEIN ESP</cname>
 <item>
 <title>BEIN SPANISH HD 720p</title>
-<link>rtmp://beinsportgeolivefs.fplive.net:1935/beinsportgeolive-live playpath=beinsport_spa_4 swfurl=http://sportsinfonet.info/player/Player.swf live=true timeout=15 pageurl=http://sportsinfonet.info/beinsports.php?n=beinsport_spa_4&vw;=650&vh;=450</link>
+<link>rtmp://beinsportgeolivefs.fplive.net:1935/beinsportgeolive-live playpath=beinsport_spa_4 swfurl=http://sportsinfonet.info/player/Player.swf live=true timeout=15 pageurl=http://sportsinfonet.info/beinsports.php?n=beinsport_spa_4&amp;vw;=650&amp;vh;=450</link>
 </item>
 </streaminginfo>
 

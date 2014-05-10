@@ -7,8 +7,28 @@ import json
 import traceback
 import os
 import sys
-from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
-import xml.etree.ElementTree as etree
+from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP, Tag,NavigableString
+try:
+  from lxml import etree
+  print("running with lxml.etree")
+except ImportError:
+	try:
+	  # Python 2.5
+	  import xml.etree.ElementTree as etree
+	  print("running with ElementTree on Python 2.5+")
+	except ImportError:
+	  try:
+		# normal cElementTree install
+		import cElementTree as etree
+		print("running with cElementTree")
+	  except ImportError:
+		try:
+		  # normal ElementTree install
+		  import elementtree.ElementTree as etree
+		  print("running with ElementTree")
+		except ImportError:
+		  print("Failed to import ElementTree from any known place")
+
 import json
 
 __addon__       = xbmcaddon.Addon()
@@ -19,7 +39,7 @@ selfAddon = xbmcaddon.Addon(id=addon_id)
 addonPath = xbmcaddon.Addon().getAddonInfo("path")
 addonArt = os.path.join(addonPath,'resources/images')
 communityStreamPath = os.path.join(addonPath,'resources/community')
-
+profile_path =  xbmc.translatePath(selfAddon.getAddonInfo('profile'))
  
 mainurl='http://shahid.mbc.net'
 apikey='AIzaSyCl5mHLlE0mwsyG4uvNHu5k1Ej1LQ_3RO4'
@@ -83,7 +103,7 @@ def Colored(text = '', colorid = '', isBold = False):
 		text = '[B]' + text + '[/B]'
 	return '[COLOR ' + color + ']' + text + '[/COLOR]'	
 	
-def addDir(name,url,mode,iconimage	,showContext=False,isItFolder=True,pageNumber="", isHTML=True,addIconForPlaylist=False ):
+def addDir(name,url,mode,iconimage	,showContext=False,isItFolder=True,pageNumber="", isHTML=True,addIconForPlaylist=False, AddRemoveMyChannels=None):
 #	print name
 #	name=name.decode('utf-8','replace')
 	if isHTML:
@@ -115,8 +135,15 @@ def addDir(name,url,mode,iconimage	,showContext=False,isItFolder=True,pageNumber
 		cmd2 = "XBMC.RunPlugin(%s&cdnType=%s)" % (u, "xdn")
 		cmd3 = "XBMC.RunPlugin(%s&cdnType=%s)" % (u, "ak")
 		liz.addContextMenuItems([('Play using L3 Cdn',cmd1),('Play using XDN Cdn',cmd2),('Play using AK Cdn',cmd3)])
-	
-	
+
+	if not AddRemoveMyChannels==None:
+		if AddRemoveMyChannels:
+			cmd1 = "XBMC.RunPlugin(%s&AddRemoveMyChannels=add)" % (u)
+			liz.addContextMenuItems([('Add to My Channels',cmd1)])
+		else:
+			cmd1 = "XBMC.RunPlugin(%s&AddRemoveMyChannels=remove)" % (u)
+			liz.addContextMenuItems([('Remove from My Channels',cmd1)])
+			
 	ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=isItFolder)
 	return ok
 	
@@ -160,10 +187,10 @@ def AddYoutubeLanding(url):
 			filename=selfAddon.getSetting( "localyoutubexmlpath" )
 		else:
 			filename=url
-		print 'filename',filename
+		#print 'filename',filename
 		if len(filename)>0:
 			data = open(filename.decode('utf-8'), "r").read()
-			print data
+			#print data
 			directories=getETreeFromString(data)
 		else:
 			dialog = xbmcgui.Dialog()
@@ -185,11 +212,11 @@ def AddYoutubeLanding(url):
 		if not thumbnail==None: thumbnail=thumbnail.text
 		
 		
-		print name,link
+		#print name,link
 		thumbnail= dir.find('thumbnail').text
 		if thumbnail==None:
 			thumbnail=''
-		print 'thumbnail',thumbnail
+		#print 'thumbnail',thumbnail
 		type = dir.find('type')
 
 		if type==None:
@@ -207,7 +234,7 @@ def AddYoutubeLanding(url):
 				type='dir'
 		else:
 			type=type.text
-		print 'channelID',channelID
+		#print 'channelID',channelID
 		if type=='playlist' or  type=='videos':
 			if channelID==None or  len(channelID)==0:
 				if videouser==None:
@@ -215,14 +242,14 @@ def AddYoutubeLanding(url):
 					link=link.split('/')[-2]
 				else:
 					link=videouser
-				print 'link for Channelid',link
+				#print 'link for Channelid',link
 				link=getChannelIdByUserName(link)#passusername
 			else:
 				link=channelID
 		icon=addonArt+'/video.png'
 		if (not thumbnail==None) and len(thumbnail)>0:
 			icon=thumbnail
-		print 'icon',icon
+		#print 'icon',icon
 		if type=='playlist':
 			addDir(name ,link ,22,addonArt+'/playlist.png',isHTML=False) 
 		elif type=='videos':
@@ -243,7 +270,7 @@ def checkAndRefresh():
 		if lastUpdate==None or lastUpdate=="":
 			do_update=True
 		else:
-			print 'lastUpdate',lastUpdate,now_date
+			#print 'lastUpdate',lastUpdate,now_date
 			if not now_date==lastUpdate:
 				do_update=True
 		selfAddon.setSetting( id="lastupdate" ,value=now_date)
@@ -273,7 +300,7 @@ def RefreshResources(auto=False):
 	totalFile = len(resources)
 	
 	for rfile in resources:
-		progr = (fileno/totalFile)*80
+		progr = (fileno*80)/totalFile
 		fname = rfile['fname']
 		remoteUrl=None
 		try:
@@ -283,7 +310,7 @@ def RefreshResources(auto=False):
 			fileToDownload = remoteUrl
 		else:
 			fileToDownload = baseUrlForDownload+fname
-		print fileToDownload
+		#print fileToDownload
 		req = urllib2.Request(fileToDownload)
 		req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
 		response = urllib2.urlopen(req)
@@ -294,7 +321,7 @@ def RefreshResources(auto=False):
 			pDialog.update(20+progr, 'imported ...'+fname)
 		else:
 			pDialog.update(20+progr, 'Failed..zero byte.'+fname)
-        fileno+=1
+		fileno+=1
 	pDialog.close()
 	dialog = xbmcgui.Dialog()
 	ok = dialog.ok('XBMC', 'Download finished. Close close Addon and come back')
@@ -309,26 +336,7 @@ def ShowSettings(Fromurl):
 	selfAddon.openSettings()
 	removeLoginFile()
 	return
-	ret=[]
-	Ssoup=getSoup('livetvUrls.xml');
-	csoup=getSoup('Channels.xml');
-	sources=Ssoup('streaminginfo')
-	#print csoup
 	
-	for source in sources:
-		#print 'source',source
-		cname = source.cname.text
-		print cname
-		sInfo=csoup.find('channel',{'cname':re.compile("^"+cname+"$", re.I) })
-		if sInfo==None  or  len(sInfo)==0: #add
-			print 'not exists',cname
-			ret.append(cname)
-	cstream=''
-	if len(ret)>0:
-		for name in ret:
-			cstream+='<channel><cname>%s</cname><imageurl>%s</imageurl><enabled>True</enabled></channel>'%(name,'newchannel')
-	print cstream
-
 def AddSeries(Fromurl,pageNumber=""):
 #	print Fromurl
 	req = urllib2.Request(Fromurl)
@@ -413,7 +421,7 @@ def AddEnteries(Fromurl,pageNumber=0):
 		#finalName+=cname[3]
 		#print 'a4'
         
-		print cname[2]
+		#print cname[2]
 		addDir(finalName ,getMainUrl()+cname[0] ,5,cname[2],showContext=True,isItFolder=False)
 		
 		
@@ -482,14 +490,14 @@ def AddYoutubeSources(url):
 
 
 def getYoutubeSources():
-	Ssoup=getSoup('YoutubeSources.xml');
-	sources=Ssoup('source')
+	#Ssoup=getSoup('YoutubeSources.xml');
+	sources=getEtreeFromFile('YoutubeSources.xml');
 	ret=[]
 	try:
-		for source in sources:
-			isEnabled = source.enabled.text.lower()
+		for source in sources.findall('source'):
+			isEnabled = source.findtext('enabled').lower()
 			if isEnabled=="true":
-				ret.append([source.sname.text,source.url.text,source.imageurl.text])
+				ret.append([source.findtext('sname'),source.findtext('url'),source.findtext('imageurl')])
 	except:
 		traceback.print_exc(file=sys.stdout)
 		pass
@@ -508,7 +516,7 @@ def AddYoutubePlaylists(channelId):
 	#channelId=username
 	playlists,next_page=getYouTubePlayList(channelId);
 	for playList in playlists:
-		print playList
+		#print playList
 		addDir(playList[0] ,playList[1] ,23,playList[2],isItFolder=True, isHTML=False)		#name,url,mode,icon
 	if next_page:
 		addDir('Next' ,next_page ,22,addonArt+'/next.png',isItFolder=True)		#name,url,mode,icon
@@ -559,7 +567,7 @@ def AddYoutubeVideosByChannelID(channelId,addIconForPlaylist):
 	AddYoutubeVideosByPlaylist(playlist,AddPlayListIcon,channelId)
 
 def AddYoutubeVideosByPlaylist(playListId,AddPlayListIcon=False, channelid=None):
-	print 'AddYoutube',url
+	#print 'AddYoutube',url
 	if playListId=='MOSTPOP':
 		videos,next_page=getYoutubeVideosPopular();
 	elif playListId=='MOSTPOPToday':
@@ -571,14 +579,14 @@ def AddYoutubeVideosByPlaylist(playListId,AddPlayListIcon=False, channelid=None)
 	
 	for video in videos:
 		#print chName
-		print video
+		#print video
 		addDir(video[0] ,video[1] ,21,video[2],isItFolder=False, isHTML=False)		#name,url,mode,icon
 	if next_page:
 		addDir('Next' ,next_page ,23,addonArt+'/next.png',isItFolder=True)		#name,url,mode,icon
 
 def getFirstElement(elements,attrib, val):
 	for el in elements:
-		print el.attrib[attrib]
+		#print el.attrib[attrib]
 		if el.attrib[attrib]==val:
 			print 'found next'
 			return el
@@ -630,7 +638,7 @@ def getYoutubeVideosPopular(today=False):
 
 
 def prepareYoutubeVideoItems(videos,urlUsed):
-	print 'urlUsed',urlUsed
+	#print 'urlUsed',urlUsed
 	if 'nextPageToken' in videos:
 		nextItem=videos["nextPageToken"]
 	else:
@@ -638,7 +646,7 @@ def prepareYoutubeVideoItems(videos,urlUsed):
 	ret=[]
 	for playlist_item in videos["items"]:
 		title = playlist_item["snippet"]["title"]
-		print 'urlUsed',urlUsed
+		#print 'urlUsed',urlUsed
 		if not 'search?part=snippet' in urlUsed:
 			video_id = playlist_item["snippet"]["resourceId"]["videoId"]
 		else:
@@ -691,8 +699,8 @@ def AddStreams():
 			infostream+='<streaminginfo><id>%s</id><url>%s</url></streaminginfo>'%(chUrl,chUrl)
 	cstream+='</channels>'
 	infostream+='</streamingInfos>'
-	print cstream
-	print infostream
+	#print cstream
+	#print infostream
 	return
 	
 def PlayStream(url, name, mode):
@@ -722,34 +730,37 @@ def PlayStream(url, name, mode):
 
 		liveLink='rtmp://5.135.134.110:1935/teledunet playpath=%s swfUrl=http://www.teledunet.com/tv_/player.swf?id0=%s&skin=bekle/bekle.xml&channel=%s  pageUrl=http://www.teledunet.com/tv_/?channel=%s&no_pub live=1  timeout=15'%(url,match,url,url)
 		
-	print 'liveLink',liveLink
+	#print 'liveLink',liveLink
 
 	listitem = xbmcgui.ListItem( label = str(name), iconImage = "DefaultVideo.png", thumbnailImage = xbmc.getInfoImage( "ListItem.Thumb" ), path=liveLink )
 	xbmc.Player().play( liveLink,listitem)
 
 
-def getSourceAndStreamInfo(channelId, returnOnFirst):
+def getSourceAndStreamInfo(channelId, returnOnFirst,pDialog):
 	try:
 		ret=[]
-		Ssoup=getSoup('Sources.xml');
-		sources=Ssoup('source')
+		#Ssoup=getSoup('Sources.xml');
+		sourcesXml=getEtreeFromFile('Sources.xml');
 		orderlist={}
 		for n in range(6):
 			val=selfAddon.getSetting( "order"+str(n+1) )
 			if val and not val=="":
 				orderlist[val]=n*100
-		print orderlist
+		#print orderlist
 		#print 'sources',sources
 		num=0
+		pDialog.update(30, 'Looping on sources')
+		sources=sourcesXml.findall('source')
 		for source in sources:
 			num+=1
+			pDialog.update(30+(num*70)/len(sources) , 'Checking ..'+source.findtext('sname'))
 			try:
-				print 'source....................',source
-				xmlfile = source.urlfile.text
-				isEnabled = source.enabled.text.lower()
-				sid = source.id.text
-				sname = source.sname.text
-				print 'sid',sid,xmlfile
+				#print 'source....................',source
+				xmlfile = source.findtext('urlfile')
+				isEnabled = source.findtext('enabled').lower()
+				sid = source.findtext('id')
+				sname = source.findtext('sname')
+				#print 'sid',sid,xmlfile
 				isAbSolutePath=False
 				if sname=="Local":
 					#
@@ -761,21 +772,29 @@ def getSourceAndStreamInfo(channelId, returnOnFirst):
 						xmlfile=filename
 				settingname="is"+sname.replace('.','')+"SourceDisabled"
 				settingDisabled=selfAddon.getSetting(settingname)  
-				print 'settingDisabled',settingDisabled
+				#print 'settingDisabled',settingDisabled
 				if isEnabled=="true" and not settingDisabled=="true":
 					#print 'source is enabled',sid
-					csoup=getSoup(xmlfile,isAbSolutePath);
+					#csoup=getSoup(xmlfile,isAbSolutePath);
+					streamingxml=getEtreeFromFile(xmlfile,isAbSolutePath);
 					#ccsoup = csoup("streaminginfo")
 					#print 'csoup',csoup,channelId
 					#print csoup 
-					sInfo=csoup.findAll('streaminginfo',{'cname':re.compile("^"+channelId+"$", re.I)})
+					#sInfo=csoup.findAll('streaminginfo',{'cname':re.compile("^"+channelId+"$", re.I)})
+					#sInfo=csoup.findAll('streaminginfo',{'cname':channelId})
+					#sInfo=csoup.findAll('streaminginfo',{'cname':channelId})
+					sInfos=streamingxml.findall('streaminginfo')
+					sInfo=[]
+					for inf in sInfos:
+						if inf.findtext('cname')==channelId:
+							sInfo.append(inf)
 					name_find=sname
 					if name_find in orderlist:
 						order= orderlist[name_find]
 					else:
 						order=1000
 					order+=num
-					if not sInfo==None:
+					if not sInfo==None and len(sInfo)>0:
 						#print 'sInfo...................',len(sInfo)
 						
 						for single in sInfo:
@@ -788,24 +807,26 @@ def getSourceAndStreamInfo(channelId, returnOnFirst):
 	except:
 		traceback.print_exc(file=sys.stdout)
 		pass
-	print 'unsorted ret',ret
+	#print 'unsorted ret',ret
 	return sorted(ret,key=lambda x:x[2])
 
 def selectSource(sources):
     if 1==1 or len(sources) > 1:
-        print 'total sources',len(sources)
+        #print 'total sources',len(sources)
         dialog = xbmcgui.Dialog()
         titles = []
         for source in sources:
             (s,i,o) =source
             #print 'i',i.id,i
-            if s.id.text=="generic":
+            if s.findtext('id')=="generic":
                 try:
-                    titles.append(s.sname.text+': '+i.title.text)
+                    print 'trying generic name'
+                    titles.append(s.findtext('sname')+': '+i.find('item').findtext('title'))
+                    print 'trying generic name end '
                 except:
-                    titles.append(s.sname.text)
+                    titles.append(s.findtext('sname'))
             else:
-                titles.append(s.sname.text)
+                titles.append(s.findtext('sname'))
         index = dialog.select('Choose your stream', titles)
         if index > -1:
             return sources[index]
@@ -814,59 +835,56 @@ def selectSource(sources):
 
 def PlayCommunityStream(channelId, name, mode):
 	try:
-		print 'PlayCommunityStream'
+		#print 'PlayCommunityStream'
 		xbmcplugin.endOfDirectory(int(sys.argv[1]))
 		pDialog = xbmcgui.DialogProgress()
 		ret = pDialog.create('XBMC', 'Finding available resources...')
-		print 'channelId',channelId
+		#print 'channelId',channelId
 		playFirst=selfAddon.getSetting( "playFirstChannel" )
 		if playFirst==None or playFirst=="" or playFirst=="false":
 			playFirst=False
 		else:
 			playFirst=True
 		playFirst=bool(playFirst)
-		pDialog.update(60, 'Found sources..')
-		providers=getSourceAndStreamInfo(channelId,playFirst)
+		pDialog.update(20, 'Finding sources..')
+		providers=getSourceAndStreamInfo(channelId,playFirst,pDialog)
 		if len(providers)==0:
 			pDialog.close()
 			time = 2000  #in miliseconds
 			line1="No sources found"
 			xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
 			return
-		pDialog.update(80, 'Processing sources..')
+		pDialog.update(30, 'Processing sources..')
 		pDialog.close()
 		#source=providers[""]
 
 		
 		enforceSourceSelection=False
-		print 'playFirst',playFirst
+		#print 'playFirst',playFirst
 		done_playing=False
 		while not done_playing:
-			print 'trying again',enforceSourceSelection
+			#print 'trying again',enforceSourceSelection
 			ret = pDialog.create('XBMC', 'Trying to play the source')
-			print 'dialogue creation'
+			#print 'dialogue creation'
 			done_playing=True
 			if enforceSourceSelection or (len (providers)>1 and not playFirst):
-				print 'select sources'
+				#print 'select sources'
 				selectedprovider=selectSource(providers)
 				if not selectedprovider:
 					return
 			else:
 				selectedprovider=providers[0]
 				enforceSourceSelection=True
-			print 'picking source'
+			#print 'picking source'
 			(source,sInfo,order)=selectedprovider #pick first one
 			#print source
-			xmlfile = source.urlfile.text
-			processor = source.processor.text
-			sourcename = source.sname.text
-			print xmlfile
 
-			print 'streaminginfo',sInfo
-			#processor=os.path.join(communityStreamPath, processor)
+			processor = source.findtext('processor')
+			sourcename = source.findtext('sname')
+
 			if communityStreamPath not in sys.path:
 				sys.path.append(communityStreamPath)
-			print processor
+			#print processor
 		
 		
 			#from importlib import import_module
@@ -875,13 +893,14 @@ def PlayCommunityStream(channelId, name, mode):
 		
 			pDialog.update(60, 'Trying to play..')
 			pDialog.close()
-			done_playing=processorObject.PlayStream(source,sInfo,name,channelId)
-			print 'done_playing',done_playing
+			sinfoSoup= BeautifulSOAP(etree.tostring(sInfo), convertEntities=BeautifulStoneSoup.XML_ENTITIES)
+			done_playing=processorObject.PlayStream(source,sinfoSoup,name,channelId)
+			#print 'done_playing',done_playing
 			if not done_playing:
 				time = 2000  #in miliseconds
 				line1="Failed playing from "+sourcename
 				xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
-			print 'donexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+			#print 'donexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 		return 
 	except:
 		traceback.print_exc(file=sys.stdout)
@@ -941,25 +960,25 @@ def PlayShowLink ( url ):
 	defaultCDN="Default"
 	defaultCDN=selfAddon.getSetting( "DefaultCDN" )
 	
-	print 'default CDN',defaultCDN,cdnType
+	#print 'default CDN',defaultCDN,cdnType
 	changeCDN=""
 	
-	print 'tesing if cdn change is rquired'
+	#print 'tesing if cdn change is rquired'
 	if cdnType=="l3" or (cdnType=="" and defaultCDN=="l3"):
 		changeCDN="l3"
 	elif cdnType=="xdn" or (cdnType=="" and defaultCDN=="xdn"):
 		changeCDN="xdn"
 	elif cdnType=="ak" or (cdnType=="" and defaultCDN=="ak"):
 		changeCDN="ak"
-	print 'changeCDN',changeCDN
+	#print 'changeCDN',changeCDN
 	if len(changeCDN)>0:
-		print 'Changing CDN based on critertia',changeCDN
+		#print 'Changing CDN based on critertia',changeCDN
 		#http://l3md.shahid.net/web/mediaDelivery/media/12af648b9ffe4423a64e8ab8c0100701.m3u8?cdn=l3
-		print 'url received',url
+		#print 'url received',url
 		playURL= re.findall('\/media\/(.*?)\.', url)
 		url="http://%smd.shahid.net/web/mediaDelivery/media/%s.m3u8?cdn=%s" % (changeCDN,playURL[0],changeCDN)
 		
-		print 'new url',url
+		#print 'new url',url
 		line1 = "Using the CDN %s" % changeCDN
 		time = 2000  #in miliseconds
 		xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
@@ -970,40 +989,114 @@ def PlayShowLink ( url ):
 	#print "playing stream name: " + str(cName) 
 	listitem.setInfo( type="video", infoLabels={ "Title": cName, "Path" : url } )
 	listitem.setInfo( type="video", infoLabels={ "Title": cName, "Plot" : cName, "TVShowTitle": cName } )
-	print 'playurl',url
+	#print 'playurl',url
 	xbmc.Player().play( url,listitem)
 	#print 'ol..'
 	return
 
+def addToMyChannels(cname):
+	try:
+		fileName=os.path.join(profile_path, 'MyChannels.xml')
+		print fileName
+		MyChannelList=getSoup(fileName,True)
+	except: MyChannelList=None
+	if not MyChannelList:
+		MyChannelList= BeautifulSOAP('<channels></channels>')
+	
+	val=MyChannelList.find("channel",{"cname":cname})
+	print 'val is ',val
+	if not val:
+		channeltag = Tag(MyChannelList, "channel")
+		channeltag['cname']=cname
+		#cnametag = Tag(MyChannelList, "cname")
+		#ctext = NavigableString(cname)
+		#cnametag.insert(0, ctext)
+		#channeltag.insert(0, cnametag)
+		MyChannelList.channels.insert(0, channeltag)
+		print MyChannelList.prettify()
+
+		with open(fileName, "wb") as filewriter:
+			filewriter.write(str(MyChannelList))
+
+def removeFromMyChannels(cname):
+	try:
+		fileName=os.path.join(profile_path, 'MyChannels.xml')
+		print fileName
+		MyChannelList=getSoup(fileName,True)
+	except: return
+	if not MyChannelList:
+		return
+	
+	val=MyChannelList.find("channel",{"cname":cname})
+	if val:
+		print 'val to be deleted',val
+		val.extract()
+
+		with open(fileName, "wb") as filewriter:
+			filewriter.write(str(MyChannelList))
 
 def addCommunityCats():
-	soup=getSoup('Categories.xml');
-	cats=soup('category')
+	#soup=getSoup('Categories.xml');
+	cats=getEtreeFromFile('Categories.xml');
 #	print cats 
-	for cat in cats:
-		chName=cat.catname.text
-		chUrl = cat.id.text;
-		imageUrl = cat.imageurl.text;
+
+	addDir('My Channels' ,'My Channels' ,15,addonArt+'/mychannels.png', False,isItFolder=True)		#name,url,mode,icon
+
+	for cat in cats.findall('category'):
+		chName=cat.findtext('catname')
+		chUrl = cat.findtext('id')
+		imageUrl = cat.findtext('imageurl')
 		addDir(chName ,chUrl ,15,imageUrl, False,isItFolder=True)		#name,url,mode,icon
 	return
 
 def getCommunityChannels(catType):
-	soup=getSoup('Channels.xml');
-	channels=soup('channel')
+	#soup=getSoup('Channels.xml');#changetoEtree
+	Channelsxml=getEtreeFromFile('Channels.xml')
+	#channels=soup('channel')
 	retVal=[]
 		
-	for channel in channels:
+	#for channel in channels:
+	searchCall='channel'
+	#if not catType=="all":
+	searchCall='.//category'
+	print searchCall
+	MyChannelList=None
+	if catType=="My Channels":
+		try:
+			fileName=os.path.join(profile_path, 'MyChannels.xml')
+			print fileName
+			MyChannelList=getSoup(fileName,True)
+			print MyChannelList
+		except: MyChannelList=None
+		
+	for channel in Channelsxml.findall('channel'):
 		#print channel
-		if not catType=="all":
-			if not channel.assignedcategory==None:
-				if not channel.assignedcategory.findAll(text=[catType]):
-					continue
-			else:
-				continue
+		chName=channel.findtext('cname')
+		if 1==1:
+			if not catType=="all":
+				exists=False
+				if not catType=="My Channels":
+					supportCats= channel.findall(searchCall)
+					if len(supportCats)==0:
+						continue
 					
-		chName=channel.cname.text
+					for c in supportCats:
+						if c.text==catType:
+							exists=True
+							break
+				else:
+					#check if channel exists in file
+					if MyChannelList:
+						val=MyChannelList.find("channel",{"cname":chName})
+						if val:
+							exists=True
+				if not exists:
+					continue
+			
+
+		
 		#chUrl = channel.id.text
-		imageUrl = channel.imageurl.text
+		imageUrl =channel.findtext('imageurl')
  		retVal.append([chName,chName,imageUrl])
 	return retVal
 	
@@ -1015,17 +1108,25 @@ def addCommunityChannels(catType):
 		chName=channel[1]
 		chUrl = channel[0]
 		imageUrl = channel[2]
- 		addDir(chName ,chUrl ,16,imageUrl, False,isItFolder=False)		#name,url,mode,icon
+		addRemoveMyChannel=not catType=="My Channels"
+ 		addDir(chName ,chUrl ,16,imageUrl, False,isItFolder=False,AddRemoveMyChannels=addRemoveMyChannel)		#name,url,mode,icon
 	return
 
-	
-	
+def getEtreeFromFile(fileName, isabsolutePath=False):
+	strpath=os.path.join(communityStreamPath, fileName)
+	if isabsolutePath:
+		strpath=fileName
+	data = open(strpath, "r").read()
+	return getETreeFromString(data)
+
+#obselete
 def getSoup(fileName, isabsolutePath=False):
 	strpath=os.path.join(communityStreamPath, fileName)
 	if isabsolutePath:
 		strpath=fileName
 	data = open(strpath, "r").read()
-	return BeautifulSOAP(data, convertEntities=BeautifulStoneSoup.XML_ENTITIES)
+	return BeautifulSOAP(data)#, convertEntities=BeautifulStoneSoup.XML_ENTITIES)
+	#return BeautifulStoneSoup(data,convertEntities=BeautifulStoneSoup.XML_ENTITIES);
 
 def getETreeFromUrl(video_url):
 	req = urllib2.Request(video_url)
@@ -1033,7 +1134,7 @@ def getETreeFromUrl(video_url):
 	response = urllib2.urlopen(req)
 	data=response.read()
 	response.close()
-	#print data
+
 	return getETreeFromString(data)
 	#return BeautifulSOAP(data)
 def getETreeFromString(str):
@@ -1260,7 +1361,7 @@ name=None
 mode=None
 linkType=None
 pageNumber=None
-
+AddRemoveMyChannels=None
 try:
 	url=urllib.unquote_plus(params["url"])
 except:
@@ -1293,10 +1394,34 @@ except:
 	pass
 
 
+AddRemoveMyChannels=None
+try:
+	AddRemoveMyChannels=args.get('AddRemoveMyChannels', None)[0]
+except:
+	pass
+
+	
+
+
 
 print 	mode,pageNumber
 
 try:
+	if not AddRemoveMyChannels==None:
+		if AddRemoveMyChannels=="add":
+			addToMyChannels(url)
+			line1 = 'Channel has been added to My Channels list'
+			time = 2000  #in miliseconds
+			xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
+			mode=-1
+		else:
+			removeFromMyChannels(url)
+			line1 = 'Channel has been removed from My Channels list'
+			time = 2000  #in miliseconds
+			xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
+			mode=15
+			url="My Channels"
+			print mode
 	if mode==None or url==None or len(url)<1:
 		print "InAddTypes"
 		checkAndRefresh()        

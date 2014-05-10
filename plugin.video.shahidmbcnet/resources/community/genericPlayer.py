@@ -14,9 +14,12 @@ __addon__       = xbmcaddon.Addon()
 __addonname__   = __addon__.getAddonInfo('name')
 __icon__        = __addon__.getAddonInfo('icon')
 
-def PlayStream(sourceSoup, urlSoup, name, url):
+def PlayStream(sourceEtree, urlSoup, name, url):
 	try:
 		#url = urlSoup.url.text
+		pDialog = xbmcgui.DialogProgress()
+		pDialog.create('XBMC', 'Parsing the xml file')
+		pDialog.update(10, 'fetching channel info')
 		title=''
 		link=''
 		sc=''
@@ -24,7 +27,7 @@ def PlayStream(sourceSoup, urlSoup, name, url):
 			title=urlSoup.item.title.text
 			
 			link=urlSoup.item.link.text
-			sc=sourceSoup.sname.text
+			sc=sourceEtree.findtext('sname')
 		except: pass
 		if link=='':
 			timeD = 2000  #in miliseconds
@@ -32,6 +35,7 @@ def PlayStream(sourceSoup, urlSoup, name, url):
 			xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, timeD, __icon__))
 			return False
 		regexs = urlSoup.find('regex')
+		pDialog.update(80, 'Parsing info')
 		if (not regexs==None) and len(regexs)>0:
 			liveLink=	getRegexParsed(urlSoup,link)
 		else:
@@ -44,10 +48,11 @@ def PlayStream(sourceSoup, urlSoup, name, url):
 			
 		timeD = 2000  #in miliseconds
 		line1="Resource found,playing now."
-		xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, timeD, __icon__))
+		pDialog.update(80, line1)
 
 		name+='-'+sc+':'+title
 		print 'liveLink',liveLink
+		pDialog.close()
 		listitem = xbmcgui.ListItem( label = str(name), iconImage = "DefaultVideo.png", thumbnailImage = xbmc.getInfoImage( "ListItem.Thumb" ), path=liveLink )
 		player = CustomPlayer.MyXBMCPlayer()
 		start = time.time() 

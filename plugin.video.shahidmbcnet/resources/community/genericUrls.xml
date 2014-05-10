@@ -1,5 +1,14 @@
 <streamingInfos>
 
+<streaminginfo>
+		<cname>Maghreb24 Entertainment</cname>	
+		<item>
+			<title>Maghreb24 Entertainment</title>
+			<thumbnail>http://www.maghreb24tv.com/commons/images/m24Entertainment.png</thumbnail>
+			<link>rtmp://maghreb24.tv:1935/view/8_261/stream8 swfUrl=http://www.maghreb24.tv/public/flash/expressInstall.swf live=true pageUrl=http://www.television.maghreb24tv.com/m24channel.php?dsTp=OurChannels&amp;dsId=136&amp;lang=fr</link>
+		</item>
+	</streaminginfo>
+
 
 	<streaminginfo>
 		<cname>Melody Hits</cname>	
