@@ -3,108 +3,115 @@
     <streaminginfo>
 		<cname>Bein Sport News</cname>
 		<item>
-			<title>Bein Sport News </title>
-			<link>http://85.91.143.23:1935/23688/23688.stream/playlist.m3u8</link>
+			<title>Bein Sport News off</title>
+			<link></link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 1</cname>
 		<item>
-			<title>@zombixbmc on</title>
+			<title>@zombixbmc </title>
 			<link>http://free:free@matchfree1to10.no-ip.net/40.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 1</cname>
 		<item>
-			<title>@zombixbmc off</title>
-			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST1 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 1</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/9.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 1</cname>
 		<item>
-			<title>@zombixbmc on</title>
+			<title>@zombixbmc </title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/1.ch</link>
+		</item>
+	</streaminginfo>
+
+	
+	<streaminginfo>
+		<cname>Bein Sport 1</cname>
+		<item>
+			<title>@zombixbmc </title>
 			<link>rtmp://31.220.0.82:1935/live playpath=b1r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 1</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/1.ch</link>
-		</item>
-	</streaminginfo>
-	
-	
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>
-			<title>@zombixbmc off</title>
-			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST2 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 2</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/10.ch</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 2</cname>
-		<item>
-	   	      <title>@zombixbmc  on</title>
-		      <link>rtmp://31.220.0.134:1935/live playpath=b2r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
-		</item>
-	</streaminginfo>
-	
+
 	<streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>
 			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/2.ch</link>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/2.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 2</cname>
 		<item>
-	   	        <title>@zombixbmc  ustream off</title>
-		        <link>http://iphone-streaming.ustream.tv/ustreamVideo/17976099/streams/live/playlist.m3u8</link>
+	   	    <title>@zombixbmc </title>
+		    <link>rtmp://31.220.0.134:1935/live playpath=b2r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
-	
+
+	<streaminginfo>
+		<cname>Bein Sport 3</cname>
+		<item>
+			<title>@zombixbmc HD 3</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/11.ch</link>
+		</item>
+	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Bein Sport 3</cname>
 		<item>
 			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST3 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/3.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 3</cname>
 		<item>
-	   	        <title>@zombixbmc  on</title>
-		        <link>rtmp://31.220.0.134:1935/live playpath=b3r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
+	   	    <title>@zombixbmc </title>
+		    <link>rtmp://31.220.0.134:1935/live playpath=b3r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 3</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/3.ch</link>
-		</item>
-	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 4</cname>
 		<item>
-			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST4 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 4</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/12.ch</link>
 		</item>
 	</streaminginfo>
+
+	<streaminginfo>
+		<cname>Bein Sport 4</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/4.ch</link>
+		</item>
+	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 4</cname>
@@ -113,22 +120,24 @@
 			<link>rtmp://31.220.0.134:1935/live playpath=bb4 swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 4</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/4.ch</link>
-		</item>
-	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 5</cname>
 		<item>
-			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST5 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 5</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/13.ch</link>
 		</item>
 	</streaminginfo>
+
+	<streaminginfo>
+		<cname>Bein Sport 5</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/5.ch</link>
+		</item>
+	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 5 </cname>
@@ -137,22 +146,24 @@
 			<link>rtmp://31.220.0.82:1935/live playpath=b5r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 5</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/5.ch</link>
-		</item>
-	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 6</cname>
 		<item>
-			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST6 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 6</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/14.ch</link>
 		</item>
 	</streaminginfo>
+
+	<streaminginfo>
+		<cname>Bein Sport 6</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/6.ch</link>
+		</item>
+	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 6</cname>
@@ -161,22 +172,23 @@
 			<link>rtmp://31.220.0.134:1935/live playpath=bein altechnoe.comxx6 swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
-	
+
 	<streaminginfo>
-		<cname>Bein Sport 6</cname>
+		<cname>Bein Sport 7</cname>
 		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/6.ch</link>
+			<title>@zombixbmc HD 7</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/15.ch</link>
 		</item>
 	</streaminginfo>
-	
+
 	<streaminginfo>
 		<cname>Bein Sport 7</cname>
 		<item>
 			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST7 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/7.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 7</cname>
@@ -185,14 +197,24 @@
 			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/7.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 8</cname>
 		<item>
-			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.38:1935/redirect playpath=BST8 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 8</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/16.ch</link>
 		</item>
 	</streaminginfo>
+
+	<streaminginfo>
+		<cname>Bein Sport 8</cname>
+		<item>
+			<title>@zombixbmc</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/8.ch</link>
+		</item>
+	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 8</cname>
@@ -201,70 +223,36 @@
 			<link>rtmp://31.220.0.82:1935/live playpath=b8r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
+
 	
-	<streaminginfo>
-		<cname>Bein Sport 8</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/8.ch</link>
-		</item>
-	</streaminginfo>
 	
 	<streaminginfo>
 		<cname>Bein Sport 9</cname>
 		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/14.ch</link>
+			<title>@zombixbmc HD 9</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/17.ch</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 9</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/9.ch</link>
-		</item>
-	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 9</cname>
-		<item>
-			<title>@zombixbmc OFF</title>
-			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST9 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
-		</item>
-	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 9</cname>
-		<item>
-			<title>@zombixbmc  </title>
-			<link>http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/15.ch</link>
-		</item>
-	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 10</cname>
 		<item>
-			<title>@zombixbmc OFF</title>
-			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST10 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 10</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/18.ch</link>
 		</item>
 	</streaminginfo>
+
 	
-	<streaminginfo>
-		<cname>Bein Sport 10</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/10.ch</link>
-		</item>
-	</streaminginfo>
 	
 	<streaminginfo>
 		<cname>Bein Sport 11</cname>
 		<item>
-			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST11 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 11</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/19.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 11</cname>
@@ -273,22 +261,17 @@
 			<link>rtmp://31.220.0.82:1935/live playpath=b11r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
+
 	
-	<streaminginfo>
-		<cname>Bein Sport 11</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/11.ch</link>
-		</item>
-	</streaminginfo>
 	
 	<streaminginfo>
 		<cname>Bein Sport 12</cname>
 		<item>
-			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST12 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 12</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/20.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 12</cname>
@@ -297,62 +280,35 @@
 			<link>rtmp://31.220.0.134:1935/live playpath=b12r swfUrl=http://www.eucast.tv/player5.9.swf live=1 pageUrl=http://www.eucast.tv/</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 12</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/12.ch</link>
-		</item>
-	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 13</cname>
 		<item>
-			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST13 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 13</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/21.ch</link>
 		</item>
 	</streaminginfo>
+
 	
-	<streaminginfo>
-		<cname>Bein Sport 13</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/13.ch</link>
-		</item>
-	</streaminginfo>
 	
 	<streaminginfo>
 		<cname>Bein Sport 14</cname>
 		<item>
-			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST14 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<title>@zombixbmc HD 14</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/22.ch</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 14</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/14.ch</link>
-		</item>
-	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Bein Sport 15</cname>
 		<item>
 			<title>@zombixbmc</title>
-			<link>rtmpe://46.246.124.13:1935/redirect playpath=BST15 swfUrl=http://www.hdcast.org/aplayer/jwplayer.flash.swf live=1 pageUrl=http://www.hdcast.org/</link>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/23.ch</link>
 		</item>
 	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>Bein Sport 15</cname>
-		<item>
-			<title>@zombixbmc </title>
-			<link>http://iptvfannansat.dyndns.tv/32204d1bc5/b33d0c2254/15.ch</link>
-		</item>
-	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>BAHRAIN SPORTS</cname>
@@ -361,6 +317,7 @@
 			<link>rtmp://alayam.netromedia.net/btv3/btv3</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Nile Sport</cname>
@@ -369,6 +326,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileSport playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=sport</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>KTV SPORT</cname>
@@ -377,6 +335,7 @@
 			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch3.sdp</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Al Resoul TV</cname>
@@ -385,6 +344,7 @@
 			<link>http://iphone-streaming.ustream.tv/ustreamVideo/12677236/streams/live?v=720p/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 	
@@ -394,6 +354,7 @@
 			<link>mms://38.96.148.75/Eqtisadia</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ANN</cname>
 		<item>
@@ -401,6 +362,7 @@
 			<link>rtmp://ns8.indexforce.com/ann/ann</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Al Sharqiya News</cname>
 		<item>
@@ -408,6 +370,7 @@
 			<link>rtmp://ns8.indexforce.com/alsharqiyalive/mystream</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>France 24 ARABIC</cname>
 		<item>
@@ -415,6 +378,7 @@
 			<link>rtmp://stream2.france24.yacast.net:80/france24_live/frda/f24_livefrda</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Alrai</cname>
 		<item>
@@ -422,6 +386,7 @@
 			<link>mms://62.215.216.130/wmtencoder/alrai350.wmv</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Tunisia national 1</cname>
 		<item>
@@ -429,6 +394,7 @@
 			<link>http://streamer.fss.tiscali.com/satchannel1/tvtunisi.stream/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Tunisia national 1</cname>
@@ -437,6 +403,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/18.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Tunisia national 2</cname>
@@ -445,6 +412,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/19.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Tunisia national 1</cname>
@@ -453,6 +421,7 @@
 			<link>http://ca-edge-1.cdn2.streamago.tv:80/streamagoedge/1052/224/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>EnnaharTV algerie</cname>
 		<item>
@@ -460,6 +429,7 @@
 			<link>rtmp://87.98.155.194/live playpath=EnnaharTV swfUrl=http://www.ennahartv.net/live/player.swf live=1 pageUrl=http://www.ennahartv.net/ar/live/</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>nbn lebanon</cname>
@@ -468,6 +438,7 @@
 			<link>rtmp://lived.nbn.com.lb/nbn?hghpl]=keylive72-229-239-1302013-08-25-05-32-36/ playpath=mpegts.stream swfUrl=http://www.elahmad.com/tv/swf/player.swf?file=nbnlb&amp;autostart=true&amp;%2F%5B0%5D%5BDYNAMIC%5D%5B0%5D pageUrl=http://www.elahmad.com/tv/nbn-lebanon.php swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Kuwait</cname>
 		<item>
@@ -475,6 +446,7 @@
 			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch1.sdp</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>KTV 2</cname>
 		<item>
@@ -482,6 +454,7 @@
 			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch2.sdp</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>KTV ARABE</cname>
 		<item>
@@ -489,6 +462,7 @@
 			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch5.sdp</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>KTV ETRAA</cname>
 		<item>
@@ -496,6 +470,7 @@
 			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch4.sdp</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>KTV PLUS</cname>
 		<item>
@@ -503,6 +478,7 @@
 			<link>rtmp://62.215.183.1/rtmplive/rtpencoder/ch6.sdp</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Al Sharqiya</cname>
 		<item>
@@ -510,6 +486,7 @@
 			<link>rtmp://ns8.indexforce.com/home/mystream </link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>IRAQIA</cname>
 		<item>
@@ -517,6 +494,7 @@
 			<link>mms://212.7.196.74/iraqia</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALTAGHEER TV</cname>
 		<item>
@@ -524,6 +502,7 @@
 			<link>http://stream.joinvisions.net:1935/taglive/taghier/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>AL RASHEED</cname>
 		<item>
@@ -531,6 +510,7 @@
 			<link>mmsh://77.67.107.89/alrasheedtv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>AL MASAR</cname>
 		<item>
@@ -538,6 +518,7 @@
 			<link>rtmp://msr1tv.flashmediacast.com:2071/live/livestream</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Al Majd</cname>
 		<item>
@@ -545,6 +526,7 @@
 			<link>rtmp://majdg.pwlstation.com/live/majdg/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/#docoment swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALMAJAD ALMAIA</cname>
 		<item>
@@ -552,6 +534,7 @@
 			<link>rtmp://majdsc.pwlstation.com/live/majdsc/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/#docoment swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALMAJD MASSAH </cname>
 		<item>
@@ -559,6 +542,7 @@
 			<link>rtmp://majdd.pwlstation.com/live/majdd/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Haneen Channel</cname>
 		<item>
@@ -566,6 +550,7 @@
 			<link>mmsh://stream.watchislam.com/ramadan</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>KSA 1</cname>
 		<item>
@@ -573,6 +558,7 @@
 			<link>rtsp://38.96.148.74/CH1TV</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>KSA 2</cname>
 		<item>
@@ -580,6 +566,7 @@
 			<link>rtsp://38.96.148.74/CH2TV</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Quran TV ksa</cname>
 		<item>
@@ -587,6 +574,7 @@
 			<link>rtsp://38.96.148.75/Quran?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Quran TV ksa</cname>
@@ -595,6 +583,7 @@
 			<link>http://iphone-streaming.ustream.tv/ustreamVideo/17904315/streams/live/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>sunnah TV</cname>
@@ -603,6 +592,7 @@
 			<link>rtsp://38.96.148.75/Sunnah?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Wesal Tv</cname>
 		<item>
@@ -610,6 +600,7 @@
 			<link>rtmp://109.123.123.82:1935/wesal playpath=wesal1 swfUrl=http://www.elahmad.com/tv/swf/wesaltv.swf?autostart=true pageUrl=http://www.elahmad.com/tv/wesaltv.htm</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>M3Ali Tv</cname>
 		<item>
@@ -617,6 +608,7 @@
 			<link>rtmp://free.flashwebtown.com:1935/bashaclick playpath=myStream.sdp swfUrl=http://www.elahmad.com/tv/swf/player.swf?file=m3alitv&amp;autostart=true pageUrl=http://www.elahmad.com/tv/m3alitv.php</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Nile Cinema</cname>
 		<item>
@@ -624,6 +616,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileCinema playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=cinema</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Nile Comedy</cname>
 		<item>
@@ -631,6 +624,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileComedy/ playpath=livestream swfUrl=http://niletc.tv/player/player.swf pageUrl=http://niletc.tv/stream.php?ch=comedy swfVfy=true live=true timeout=60</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Nile Family</cname>
 		<item>
@@ -638,6 +632,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileFamily playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=family</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Nile Life</cname>
 		<item>
@@ -645,6 +640,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileLife playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=life</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Nile Drama</cname>
 		<item>
@@ -652,6 +648,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileDrama playpath=livestream?ch=drama swfUrl=http://ntn.onlinehorizons.net/player/player.swf pageUrl=http://www.ntnegypt.net/stream.php live=1</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>I Film</cname>
 		<item>
@@ -659,6 +656,7 @@
 			<link>mms://93.190.24.114/ifilmtv</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALMAJD KIDS </cname>
 		<item>
@@ -666,6 +664,7 @@
 			<link>rtmp://majdb.pwlstation.com/live/majdb/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALMAJD KIDS 2</cname>
 		<item>
@@ -673,6 +672,7 @@
 			<link>rtmp://majdk.pwlstation.com/live/majdk/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALMAJD TAGHARID</cname>
 		<item>
@@ -680,6 +680,7 @@
 			<link>rtmp://majdt.pwlstation.com/live/majdt/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALMAJD RODA</cname>
 		<item>
@@ -687,6 +688,7 @@
 			<link>rtmp://majdr.pwlstation.com/live/majdr/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALMAJD DOC</cname>
 		<item>
@@ -694,6 +696,7 @@
 			<link>rtmp://majddoc.pwlstation.com/live/majddoc/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/ swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ALMAJD NATURE</cname>
 		<item>
@@ -701,6 +704,7 @@
 			<link>rtmp://majdnat.pwlstation.com/live/majdnat/ playpath=2_livestream swfUrl=http://pwlstation.com/wp-content/uploads/jw-player-plugin-for-wordpress/player/player.swf pageUrl=http://almajdtv.tv/live/#docoment swfVfy=true live=true timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>DISCOVERY CHANNEL</cname>
 		<item>
@@ -709,6 +713,7 @@
 			<link>http://m24.megafun.vn/live.vs?c=vstv044&amp;q=high</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Nile Culture</cname>
 		<item>
@@ -716,6 +721,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileCulture playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=culture</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Nile Learning</cname>
 		<item>
@@ -723,6 +729,7 @@
 			<link>rtmp://livestreaming4.onlinehorizons.net/Learning1 playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=Learning</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>I-TELE</cname>
 		<item>
@@ -730,6 +737,7 @@
 			<link>http://chkg.tdf-cdn.com/6317/02.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>I-TELE</cname>
@@ -749,6 +757,7 @@
 		</item>
 		
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>D8</cname>
@@ -757,6 +766,7 @@
 			<link>http://chkg.tdf-cdn.com/6318/02.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>D17</cname>
 		<item>
@@ -764,6 +774,7 @@
 			<link>http://chkg.tdf-cdn.com/6319/02.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>France 24 FR</cname>
 		<item>
@@ -771,6 +782,7 @@
 			<link>http://tv.flux.france24.com/4684/02.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>GULLI</cname>
 		<item>
@@ -778,6 +790,7 @@
 			<link>http://vipwowza.yacast.net/gulli_live/_definst_/gulli_850.stream/hasbahca.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 0</cname>
@@ -786,6 +799,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/33.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 0</cname>
@@ -794,41 +808,44 @@
 			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel5.wmv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 2</cname>
 		<item>
 			<title>@zombixbmc -high filmon</title>
 			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1717.high.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
-   <regex>
-     <name>url</name>
-     <expres>rtmp:....([^\\]*)</expres>
-     <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
-   </regex>
-   <regex>
-     <name>key</name>
-     <expres>rtmp[^?]*(\?id=[^"]*)</expres>
-     <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
-   </regex>
+            <regex>
+             <name>url</name>
+             <expres>rtmp:....([^\\]*)</expres>
+             <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
+             </regex>
+            <regex>
+             <name>key</name>
+              <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+              <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
+            </regex>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>FRANCE 2</cname>
 		<item>
 			<title>@zombixbmc -low filmon</title>
 			<link>rtmp://$doregex[url] app=live/$doregex[key] playpath=1717.low.stream swfUrl=http://www.filmon.com/tv/modules/FilmOnTV/files/flashapp/filmon/FilmonPlayer.swf pageUrl=http://www.filmon.com live=true timeout=15</link>
-   <regex>
-     <name>url</name>
-     <expres>rtmp:....([^\\]*)</expres>
-     <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
-   </regex>
-   <regex>
-     <name>key</name>
-     <expres>rtmp[^?]*(\?id=[^"]*)</expres>
-     <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
-   </regex>
+           <regex>
+             <name>url</name>
+             <expres>rtmp:....([^\\]*)</expres>
+             <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
+           </regex>
+            <regex>
+             <name>key</name>
+              <expres>rtmp[^?]*(\?id=[^"]*)</expres>
+               <page>http://www.filmon.com/tv/channel/export?channel_id=1717</page>
+            </regex>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 2</cname>
@@ -837,6 +854,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/11.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 2</cname>
@@ -845,6 +863,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net:38000/18.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 2</cname>
@@ -853,6 +872,7 @@
 			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel1.wmv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 3</cname>
@@ -872,6 +892,7 @@
 		</item>
 		
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 3</cname>
@@ -880,6 +901,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/22.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 3</cname>
@@ -888,6 +910,7 @@
 			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel2.wmv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 4</cname>
@@ -896,6 +919,7 @@
 			<link>hhttp://free:free@matchfree1to10.no-ip.net/23.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 4</cname>
@@ -904,6 +928,7 @@
 			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel3.wmv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 5</cname>
@@ -923,6 +948,7 @@
 		</item>
 		
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 5</cname>
@@ -931,6 +957,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/24.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>FRANCE 5</cname>
@@ -939,6 +966,7 @@
 			<link>mmsh://wm.live.tv-radio.com/bouygues/all/channel4.wmv?MSWMExt=.asf</link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>arte</cname>
 		<item>
@@ -946,6 +974,7 @@
 			<link>http://frlive.artestras.cshls.lldns.net/artestras/contrib/frlive/frlive_925.m3u8 </link>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>arte</cname>
 		<item>
@@ -963,6 +992,7 @@
    </regex>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>arte</cname>
 		<item>
@@ -980,6 +1010,7 @@
            </regex>
 		</item>
 	</streaminginfo>
+
 	<streaminginfo>
 		<cname>BFMTV</cname>
 		<item>
@@ -987,6 +1018,7 @@
 			<link>http://bfmlive2-i.akamaihd.net/hls/live/214427/bfmtv/04.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>TV 5 MONDE</cname>
@@ -995,6 +1027,7 @@
 			<link>http://rm-edge-3.cdn2.streamago.tv/streamagoedge/1924/817/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>TF1</cname>
@@ -1003,6 +1036,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/16.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>MBC 1</cname>
@@ -1011,7 +1045,15 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/1.ch</link>
 		</item>
 	</streaminginfo>
-	
+
+	<streaminginfo>
+		<cname>MBC 1</cname>
+		<item>
+	<title>@zombixbmc MBC 1</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/36.ch</link>
+		</item>
+	</streaminginfo>
+
 	<streaminginfo>
 		<cname>MBC 2</cname>
 		<item>
@@ -1019,6 +1061,15 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/2.ch</link>
 		</item>
 	</streaminginfo>
+
+	<streaminginfo>
+		<cname>MBC 2</cname>
+		<item>
+	        <title>@zombixbmc MBC 2</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/37.ch</link>
+		</item>
+	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>MBC 3</cname>
@@ -1027,7 +1078,15 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/3.ch</link>
 		</item>
 	</streaminginfo>
-	
+
+	<streaminginfo>
+		<cname>MBC 3</cname>
+		<item>
+	        <title>@zombixbmcMBC3</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/38.ch</link>
+		</item>
+	</streaminginfo>
+
 	<streaminginfo>
 		<cname>MBC 4</cname>
 		<item>
@@ -1035,7 +1094,15 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/4.ch</link>
 		</item>
 	</streaminginfo>
-	
+
+	<streaminginfo>
+		<cname>MBC 4</cname>
+		<item>
+	<title>@zombixbmcMBC 4</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/39.ch</link>
+		</item>
+	</streaminginfo>
+
 	<streaminginfo>
 		<cname>MBC Drama</cname>
 		<item>
@@ -1043,7 +1110,15 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/5.ch</link>
 		</item>
 	</streaminginfo>
-	
+
+	<streaminginfo>
+		<cname>MBC Drama</cname>
+		<item>
+	<title>@zombixbmcMBC Drama</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/41.ch</link>
+		</item>
+	</streaminginfo>
+
 	<streaminginfo>
 		<cname>MBC Action</cname>
 		<item>
@@ -1051,7 +1126,15 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/6.ch</link>
 		</item>
 	</streaminginfo>
-	
+
+	<streaminginfo>
+		<cname>MBC Action</cname>
+		<item>
+	<title>@zombixbmcMBC Action</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/40.ch</link>
+		</item>
+	</streaminginfo>
+
 	<streaminginfo>
 		<cname>MBC Bollywood</cname>
 		<item>
@@ -1059,6 +1142,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/9.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>MBC Max</cname>
@@ -1067,7 +1151,23 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/10.ch</link>
 		</item>
 	</streaminginfo>
-	
+
+	<streaminginfo>
+		<cname>MBC Max</cname>
+		<item>
+	<title>@zombixbmcMBC MAX</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/43.ch</link>
+		</item>
+	</streaminginfo>
+
+	<streaminginfo>
+		<cname>MBC Masr</cname>
+		<item>
+		<title>@zombixbmcMBC Masr</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/42.ch</link>
+		</item>
+	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Art Aflam 1</cname>
 		<item>
@@ -1075,6 +1175,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/12.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Art Aflam 2</cname>
@@ -1083,6 +1184,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/13.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>ART Cinema</cname>
@@ -1091,6 +1193,16 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/20.ch</link>
 		</item>
 	</streaminginfo>
+
+	
+	<streaminginfo>
+		<cname>ART Cinema</cname>
+		<item>
+	        <title>@zombixbmc ART Cinema</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/33.ch</link>
+		</item>
+	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>ART hykayet1</cname>
@@ -1099,14 +1211,32 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/14.ch</link>
 		</item>
 	</streaminginfo>
-	
+
+	<streaminginfo>
+		<cname>ART hykayet1</cname>
+		<item>
+			<title>@zombixbmc </title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/34.ch</link>
+		</item>
+	</streaminginfo>
+
 	<streaminginfo>
 		<cname>ART hykayet2</cname>
 		<item>
-			<title>@zombixbmc </title>
+			<title>@zombixbmc</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/35.ch</link>
+		</item>
+	</streaminginfo>
+
+	<streaminginfo>
+		<cname>ART hykayet2</cname>
+		<item>
+			<title>@zombixbmc</title>
 			<link>http://free:free@matchfree1to10.no-ip.net/15.ch</link>
 		</item>
 	</streaminginfo>
+
+	
 	<streaminginfo>
 		<cname>Nessma</cname>
 		<item>
@@ -1114,6 +1244,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/11.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Hanibal</cname>
@@ -1122,6 +1253,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/7.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Al Tunisia</cname>
@@ -1130,6 +1262,7 @@
 			<link>http://free:free@matchfree1to10.no-ip.net/8.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Al Maghribia</cname>
@@ -1138,6 +1271,7 @@
 			<link>http://ca-edge-2.cdn2.streamago.tv:80/streamagoedge/1922/815/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>ALFALASTINIAH</cname>
@@ -1146,6 +1280,7 @@
 			<link>rtmp://46.43.64.166:1935/flv/flv</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Dubai</cname>
@@ -1154,6 +1289,7 @@
 			<link>rtmp://wms03.endavomedia.com:1935/dmilivedubaitv/dmilivedubaitv_1</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>MTV</cname>
@@ -1162,6 +1298,7 @@
 			<link>rtsp://livestreaming1.itworkscdn.net/mtvlive/murrtelevision_160p</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>AlYawm</cname>
@@ -1170,6 +1307,7 @@
 			<link>rtmp://839156450.e.541833257.r.w6cdn.com/541833257//mp4:freeegeYSbQLHNsFZa timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>AlYawm</cname>
@@ -1178,6 +1316,7 @@
 			<link>http://iphone-streaming.ustream.tv/ustreamVideo/12786066/streams/live/playlist.m3u8 timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Canal plus</cname>
@@ -1186,6 +1325,7 @@
 			<link>http://iphone-streaming.ustream.tv/ustreamVideo/11378037/streams/live/playlist.m3u8 timeout=15</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>2M</cname>
@@ -1194,6 +1334,7 @@
 			<link>http://iphone-streaming.ustream.tv/ustreamVideo/8312072/streams/live/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>France 24 FR</cname>
@@ -1213,6 +1354,7 @@
 		</item>
 		
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>AlFajer Gaza</cname>
@@ -1221,6 +1363,7 @@
 			<link>rtmp://82.102.232.165:1935/alfajertv_gaza/alfajertv_1</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Alfajr Int</cname>
@@ -1229,134 +1372,100 @@
 			<link>rtmp://vstream2.hadara.ps:1935/unlimitedalfajer/unlimited_1</link>
 		</item>
 	</streaminginfo>
+
 	
-	
+	<streaminginfo>
+		<cname>OSN EN</cname>
+		<item>
+			<title>@zombixbmc fb/Iptvosn</title>
+			<link></link>
+		</item>
+	</streaminginfo>
 
 <streaminginfo>
 		<cname>OSN EN</cname>
 		<item>
 			<title>@zombixbmc OSN:OSN First HD</title>
-			<link> 
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/23.ch</link>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/24.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>OSN EN</cname>
 		<item>
-			<title>@zombixbmc OSN MOVIES PREMIERE</title>
-			<link> 
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/80.ch</link>
+			<title>@zombixbmc OSN MOVIES ACTION</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/25.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>OSN EN</cname>
 		<item>
-			<title>@zombixbmc OSN MOVIES 1</title>
-			<link> 
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/74.ch</link>
+			<title>@zombixbmcOSN Movies HD +2</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/26.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>OSN EN</cname>
 		<item>
-			<title>@zombixbmc OSN MOVIES 2</title>
-			<link> 
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/75.ch</link>
+			<title>@zombixbmcOSN Movies Comedy HD</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/27.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>OSN EN</cname>
 		<item>
-			<title>@zombixbmc OSN MOVIES 3</title>
-			<link> 
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/76.ch</link>
+		   <title>@zombixbmcOSN Movies Premiere HD</title>
+		   <link>http://162.246.18.114/Egypt-love/Egypt-love/28.ch</link>
 		</item>
 	</streaminginfo>
-	
+
 	<streaminginfo>
-		<cname>OSN EN</cname>
-		<item>
-			<title>@zombixbmc OSN MOVIES 4</title>
-			<link> 
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/77.ch</link>
-		</item>
-	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>OSN EN</cname>
-		<item>
-			<title>@zombixbmc OSN MOVIES PREMIERE</title>
-			<link> 
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/80.ch</link>
-		</item>
-	</streaminginfo>
-	
-	<streaminginfo>
-		<cname>OSN EN</cname>
-		<item>
-			<title>@zombixbmc OSN MOVIES HD</title>
-			<link> 
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/17.ch</link>
-		</item>
-	</streaminginfo>
-			
-<streaminginfo>
 		<cname>OSN Ar</cname>
 		<item>
-			<title>@zombixbmc OSN:OSN YAHALA HD</title>
-			<link>
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/18.ch</link>
+			<title>@zombixbmc</title>
+			<link></link>
 		</item>
 	</streaminginfo>
+    <streaminginfo>
+		<cname>OSN Ar</cname>
+		<item>
+			<title>@zombixbmcOSN Yahala Drama</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/29.ch</link>
+		</item>
+	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>OSN Ar</cname>
 		<item>
-			<title>@zombixbmc OSN_Shabab</title>
-			<link>
-http://iptvfannansat.dyndns.tv/vachelzhan/vachelzhan/17.ch</link>
+		    <title>@zombixbmcOSN Yahala HD +2</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/30.ch</link>
 		</item>
 	</streaminginfo>
-			
-<streaminginfo>
-		<cname>OSN EN</cname>
-		<item>
-			<title>@zombixbmc OSN:OSN movieHD+2</title>
-			<link>
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/20.ch</link>
-		</item>
-	</streaminginfo>
-			
-<streaminginfo>
-		<cname>OSN EN</cname>
-		<item>
-			<title>@zombixbmc OSN:OSNmovie action</title>
-			<link>
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/21.ch</link>
-		</item>
-	</streaminginfo>
-			
-<streaminginfo>
+
+    <streaminginfo>
 		<cname>OSN Ar</cname>
 		<item>
-			<title>@zombixbmc OSN:OSN YH drama</title>
-			<link>
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/19.ch</link>
+		    <title>@zombixbmc OSN Yahala</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/31.ch</link>
 		</item>
 	</streaminginfo>
-			
-<streaminginfo>
+
+    <streaminginfo>
 		<cname>OSN Ar</cname>
 		<item>
-			<title>@zombixbmc OSN:0SN yh HD+2</title>
-			<link>
-http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
+		    <title>@zombixbmc OSN Shabab</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/32.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>M6</cname>
@@ -1365,6 +1474,7 @@ http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
 			<link>http://free:free@matchfree1to10.no-ip.net/21.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>W9</cname>
@@ -1373,6 +1483,7 @@ http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
 			<link>http://free:free@matchfree1to10.no-ip.net/37.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Telvza TV</cname>
@@ -1381,6 +1492,7 @@ http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
 			<link>rtmp://41.231.53.11:8888/thd/ playpath=telvza swfUrl=http://streaminghd.tn/video/player.swf?random=1664158234 live=1 pageUrl=http://www.direct4live.com/2013/10/telvza-tv-en-direct-live.html</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Tounesna</cname>
@@ -1389,6 +1501,7 @@ http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
 			<link>rtmp://41.231.53.11:8888/thd playpath=tunisna swfUrl=http://streaminghd.tn/video/player.swf?random=1578550586 live=1 pageUrl=http://www.direct4live.com/2014/02/tounesna-tv-direct-live.html</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Al Tunisia</cname>
@@ -1397,6 +1510,7 @@ http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
 			<link>rtmp://iptv.web-medias.net/live playpath=al_tunisia swfUrl=http://www.web-medias.net/jwplayer.swf live=1 pageUrl=http://www.web-medias.net/ettounsiya-tv-en-direct-live</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>alwatan</cname>
@@ -1405,6 +1519,7 @@ http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
 			<link>http://alwatan_hls-lh.akamaihd.net/i/alwatan_ar@91111/master.m3u8</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>SkyNewsArabia</cname>
@@ -1413,6 +1528,7 @@ http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
 			<link>http://iptvfannansat.dyndns.tv/vachelzhan/vachelzhan/85.ch</link>
 		</item>
 	</streaminginfo>
+
 	
 	<streaminginfo>
 		<cname>Roya</cname>
@@ -1421,5 +1537,72 @@ http://iptvserver.is-by.us/iptv-panal/free-v3/free-v3/22.ch</link>
 			<link>http://stream.joinvisions.net:1935/royalive/roya_2/playlist.m3u8</link>
 		</item>
 	</streaminginfo>
+
+	
+	<streaminginfo>
+		<cname>Aljazeera Doc</cname>
+		<item>
+	        <title>@zombixbmc AL JAZEERA DOCUMENTARY</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/46.ch</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>OSN ALPHA orbit</cname>
+		<item>
+	        <title>@zombixbmc </title>
+			<link></link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>OSN ALPHA orbit</cname>
+		<item>
+	        <title>@zombixbmc Orbit Cinema 2</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/59.ch</link>
+		</item>
+	</streaminginfo>
+<streaminginfo>
+		<cname>OSN ALPHA orbit</cname>
+		<item>
+	        <title>@zombixbmc Orbit Cinema 1</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/58.ch</link>
+		</item>
+	</streaminginfo>
+<streaminginfo>
+		<cname>OSN ALPHA orbit</cname>
+		<item>
+	        <title>@zombixbmc Orbit Alyawm</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/60.ch</link>
+		</item>
+	</streaminginfo>
+<streaminginfo>
+		<cname>OSN ALPHA orbit</cname>
+		<item>
+	        <title>@zombixbmc Orbit Fann</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/61.ch</link>
+		</item>
+	</streaminginfo>
+<streaminginfo>
+		<cname>OSN ALPHA orbit</cname>
+		<item>
+	        <title>@zombixbmc Orbit Mmousalsalat</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/62.ch</link>
+		</item>
+	</streaminginfo>
+<streaminginfo>
+		<cname>OSN ALPHA orbit</cname>
+		<item>
+	        <title>@zombixbmc Orbit Alsafwa</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/63.ch</link>
+		</item>
+	</streaminginfo>
+<streaminginfo>
+		<cname>OSN ALPHA orbit</cname>
+		<item>
+	        <title>@zombixbmc Orbit MusicNow</title>
+			<link>http://162.246.18.114/Egypt-love/Egypt-love/64.ch</link>
+		</item>
+	</streaminginfo>
+
 	
 </streamingInfos>

@@ -135,7 +135,7 @@ def performLogin():
 
 
 def shoudforceLogin():
-    return False #disable login
+    return True #disable login
     try:
 #        import dateime
         lastUpdate=selfAddon.getSetting( "lastteledunetLogin" )

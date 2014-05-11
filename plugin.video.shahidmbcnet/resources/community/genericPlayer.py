@@ -10,9 +10,16 @@ from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
 import time
 import sys
 import  CustomPlayer
+
 __addon__       = xbmcaddon.Addon()
 __addonname__   = __addon__.getAddonInfo('name')
 __icon__        = __addon__.getAddonInfo('icon')
+addon_id = 'plugin.video.shahidmbcnet'
+selfAddon = xbmcaddon.Addon(id=addon_id)
+addonPath = xbmcaddon.Addon().getAddonInfo("path")
+addonArt = os.path.join(addonPath,'resources/images')
+communityStreamPath = os.path.join(addonPath,'resources/community')
+
 
 def PlayStream(sourceEtree, urlSoup, name, url):
 	try:
@@ -40,6 +47,7 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 			liveLink=	getRegexParsed(urlSoup,link)
 		else:
 			liveLink=	link
+		liveLink=liveLink
 		if len(liveLink)==0:
 			timeD = 2000  #in miliseconds
 			line1="couldn't read title and link"
@@ -49,7 +57,7 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 		timeD = 2000  #in miliseconds
 		line1="Resource found,playing now."
 		pDialog.update(80, line1)
-
+		liveLink=replaceSettingsVariables(liveLink)
 		name+='-'+sc+':'+title
 		print 'liveLink',liveLink
 		pDialog.close()
@@ -156,5 +164,11 @@ def getRegexParsed(regexs, url,cookieJar=None,forCookieJarOnly=False,recursiveCa
 	print 'final url',url
 	return url
 
-
-
+def replaceSettingsVariables(str):
+	retVal=str
+	if '$setting' in str:
+		matches=re.findall('\$(setting_.*?)\$', str)
+		for m in matches:
+			setting_val=selfAddon.getSetting( m )
+			retVal=retVal.replace('$'+m+'$',setting_val)
+	return retVal

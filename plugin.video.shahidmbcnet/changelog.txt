@@ -1,3 +1,8 @@
+[B]Version 2.8.3[/B]
+Small bug in teledunet, its fixed now
+[B]Version 2.8.2[/B]
+iptvosn login details support and generic player to use settings
+
 [B]Version 2.8.1[/B]
 - Better support for Teledunet. Support for free/premium account, most channels are working
 

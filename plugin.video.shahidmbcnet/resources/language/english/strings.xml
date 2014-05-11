@@ -36,5 +36,10 @@
 	<string id="32039">Teledunet User Name</string>
     <string id="32040">Teledunet Password</string>
     <string id="32041">LiveTv Login</string>
+	<string id="32042">iptvosn Login</string>
+	<string id="32043">iptvosn User Name</string>
+	<string id="32044">iptvosn Password</string>
+	
+	
 	
 </strings>
