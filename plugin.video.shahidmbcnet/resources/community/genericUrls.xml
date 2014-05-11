@@ -1,6 +1,63 @@
 <streamingInfos>
 
 <streaminginfo>
+   	<cname>Sama Cinema</cname>
+   	<title>Sama Cinema</title>
+	<item>
+	<link>http://cdn-streamer1.magictvbox.com/live/10144.stream/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+   	<cname>Melody Drama</cname>
+	<item>
+	<title>24</title>
+	<link>http://38.96.148.24//MelodyDrama/MDrama_576p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Melody Drama</cname>
+	<item>
+	<title>26</title>
+	<link>http://38.96.148.24//MelodyDrama/MDrama_576p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Melody Classic</cname>
+	<item>
+	<title>24</title>
+	<link>http://38.96.148.24//MelodyClassic/MClassic_576p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Melody Classic</cname>
+	<item>
+	<title>26</title>
+	<link>http://38.96.148.26//MelodyClassic/MClassic_576p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Melody Aflem</cname>
+	<item>
+	<title>24</title>
+	<link>http://38.96.148.24//MelodyAflam/MAflam_576p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Melody Aflem</cname>
+	<item>
+	<title>26</title>
+	<link>http://38.96.148.26//MelodyAflam/MAflam_576p/playlist.m3u8</link>
+	</item>
+	</streaminginfo>
+
+<streaminginfo>
 		<cname>Maghreb24 Entertainment</cname>	
 		<item>
 			<title>Maghreb24 Entertainment</title>

@@ -1,4 +1,23 @@
 <channels>
+    <channel>
+        <cname>Sama Cinema</cname>
+        <imageurl>http://s18.postimg.org/cradfbeo9/samacinema.jpg</imageurl>
+        <enabled>True</enabled>
+        <assignedcategory>
+            <category>egypt</category>
+            <category>drama</category>
+        </assignedcategory>
+    </channel>
+    <channel>
+        <cname>OSN ALPHA orbit</cname>
+        <imageurl>https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t1.0-1/1378503_569711983083437_144631773_n.jpg</imageurl>
+        <enabled>True</enabled>
+        <assignedcategory>
+            <category>egypt</category>
+            <category>drama</category>
+        </assignedcategory>
+    </channel>
+    
  <channel>
         <cname>Maghreb24 Entertainment</cname>
         <imageurl>http://www.maghreb24tv.com/commons/images/m24Entertainment.png</imageurl>

@@ -20,9 +20,15 @@
      
 	   </category>
 	 <category label="32017">
+		   <setting label="32041" type="lsep"/>
 		<setting label="32018" type="text" id="liveTvLogin" values="" default=""/>
 		<setting label="32019" type="text" id="liveTvPassword" values="" default=""/>  
+		   <setting label="32038" type="lsep"/>
+		<setting label="32039" type="text" id="teledunetTvLogin" values="" default=""/>
+		<setting label="32040" type="text" id="teledunetTvPassword" values="" default=""/>  
+		
 	  </category>
+	  
 	   <category label="32027">
 		<setting label="32028" type="file" id="localyoutubexmlpath" source="files" values="" default=""/>
 		<setting label="32029" type="file" id="localstreampath" source="files" values="" default=""/>  

@@ -331,6 +331,10 @@ def removeLoginFile():
 		COOKIEFILE = communityStreamPath+'/livePlayerLoginCookie.lwp'
 		os.remove(COOKIEFILE)
 	except: pass
+	try:
+		COOKIEFILE = communityStreamPath+'/teletdunetPlayerLoginCookie.lwp'
+		os.remove(COOKIEFILE)
+	except: pass
 
 def ShowSettings(Fromurl):
 	selfAddon.openSettings()
@@ -786,7 +790,7 @@ def getSourceAndStreamInfo(channelId, returnOnFirst,pDialog):
 					sInfos=streamingxml.findall('streaminginfo')
 					sInfo=[]
 					for inf in sInfos:
-						if inf.findtext('cname')==channelId:
+						if inf.findtext('cname').lower()==channelId.lower():
 							sInfo.append(inf)
 					name_find=sname
 					if name_find in orderlist:
@@ -1081,7 +1085,7 @@ def getCommunityChannels(catType):
 						continue
 					
 					for c in supportCats:
-						if c.text==catType:
+						if c.text.lower()==catType.lower():
 							exists=True
 							break
 				else:
