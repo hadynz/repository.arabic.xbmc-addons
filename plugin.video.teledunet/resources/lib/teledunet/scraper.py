@@ -10,7 +10,10 @@ HEADER_REFERER = 'http://www.teledunet.com/list_chaines.php'
 HEADER_HOST = 'www.teledunet.com'
 HEADER_USER_AGENT = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
 TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/mobile/?con'
+PPV_CHANNEL_URL='rtmp://178.33.241.201:1935/'
+PPV_CHANNEL_URL='rtmp://www.teledunet.com:1935/'
 PPV_CHANNEL_URL='rtmp://5.135.134.110:1935/teledunet/'
+PPV_CHANNEL_URL='rtmp://www.teledunet.com:1935/teledunet/'
 
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
