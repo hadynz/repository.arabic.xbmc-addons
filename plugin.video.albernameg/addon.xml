@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.albernameg"
+       name="Al Bernameg"
+       version="1.0.0"
+       provider-name="Moe">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="2.9.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>alBernameg.com</summary>
+    <description>الحلقات الكاملة من برنامج البرنامج مع باسم يوسف</description>
+    <platform>all</platform>
+  </extension>
+</addon>
