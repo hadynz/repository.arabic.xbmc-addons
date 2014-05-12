@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+   
+	 <category label="32017">
+
+		   <setting label="32038" type="lsep"/>
+		<setting label="32039" type="text" id="teledunetTvLogin" values="" default=""/>
+		<setting label="32040" type="text" id="teledunetTvPassword" values="" default=""/>  
+
+	  </category>
+
+
+</settings>
