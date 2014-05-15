@@ -96,7 +96,7 @@ def get_rtmp_params(channel_name):
         'swf_url': ('http://www.teledunet.com/player.swf?'
                     'id0=%(time_player)s&'
                    ) % {'time_player': time_player_id, 'channel_name': play_path, 'rtmp_url': rtmp_url},
-        'video_page_url': 'http://www.teledunet.com/player/?channel=%s' % play_path,
+        'video_page_url': 'http://www.teledunet.com/player/?channel=%s flashVer=WIN12,0,0,77' % play_path,
         'live': '1'
     }
 
