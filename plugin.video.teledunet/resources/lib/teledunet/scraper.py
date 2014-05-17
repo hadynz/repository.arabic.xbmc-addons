@@ -78,7 +78,13 @@ def __get_channel_time_player(channel_name):
     #print 'set_favoris\(\''+channel_name+'\'.*?rtmp://(.*?)\''
     m = re.search('rtmp://(.*?)/%s\''%channel_name, html, re.M | re.I)
     if  m ==None:
-        rtmp_url=PPV_CHANNEL_URL+channel_name
+        print 'geting from backup file'
+        req = urllib2.Request("https://dl.dropboxusercontent.com/s/ku3n4n53qphqnmn/Frame-code.txt")
+        html = _get(req)
+        m = re.search('rtmp://(.*?)/%s\''%channel_name, html, re.M | re.I)
+
+    if  m ==None:
+        rtmp_url=PPV_CHANNEL_URL+channel_name        
     else:
         rtmp_url = m.group(1)
         rtmp_url='rtmp://%s/%s'%(rtmp_url,channel_name)
