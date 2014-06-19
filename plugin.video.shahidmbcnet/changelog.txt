@@ -1,3 +1,60 @@
+[B]Version 3.2.5[/B]
+Colouring and postfix for default sources
+
+[B]Version 3.2.4[/B]
+Added Official source and support for multiple channels for non generic sources
+
+[B]Version 3.2.3[/B]
+Added FilmOn source
+
+[B]Version 3.2.2[/B]
+Added EmadMahdi source
+
+[B]Version 3.2.1[/B]
+if a channel like Rotana Music, has two PC sources, then select anyone as default will play that one only.
+
+[B]Version 3.2.0[/B]
+Added GLArab,magicbox and iptvosn as sources, add to fav is back and you can clear default source,if setup, plus you can set retry settings for teledunet
+
+[B]Version 3.1.1[/B]
+Teledunet caching support - small bug
+
+[B]Version 3.1.0[/B]
+Teledunet caching support
+
+[B]Version 3.0.1[/B]
+small fix for play
+
+[B]Version 3.0.1[/B]
+fixed the hide/unhide button
+
+[B]Version 3.0.0[/B]
+View/hide channels in categories, define default view and set default source for the individual channels
+
+[B]Version 2.9.7[/B]
+Properly stopped the free acces with return
+
+[B]Version 2.9.6[/B]
+Stop Livetv.tn free account access, till we resolve the differences.
+
+[B]Version 2.9.5[/B]
+Setting for clearing the session data.
+
+[B]Version 2.9.4[/B]
+Livetv cat and mouse... lol he is feeding me, keeps my intrest level high, what next? :)
+
+[B]Version 2.9.3[/B]
+small player change to see if osn solves for few people
+
+[B]Version 2.9.2[/B]
+Livestream small fix and settings text for premium code
+
+[B]Version 2.9.1[/B]
+Support for Premium Code. reusing non premium code. 
+
+[B]Version 2.9.0[/B]
+LiveTV login catchpa support, the login session files are not deleted when you goto settings and some other tweaking. 
+
 [B]Version 2.8.3[/B]
 Small bug in teledunet, its fixed now
 [B]Version 2.8.2[/B]

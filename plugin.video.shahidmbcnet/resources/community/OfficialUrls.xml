@@ -1,0 +1,497 @@
+
+<streamingInfos>
+
+
+
+  
+<streaminginfo>
+        <cname>sunnah TV</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://46.245.160.224/medine/medine/gmswf.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+    <cname>Aljazeera Balkans</cname>
+	<item><title>Low</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_low swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link><thumbnail></thumbnail></item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Aljazeera Balkans</cname>
+	<item><title>Original Source Med</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_med swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link><thumbnail></thumbnail></item>
+</streaminginfo>
+
+<streaminginfo>
+    <cname>Aljazeera Balkans</cname>
+	<item><title> Original Source High</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_high swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link><thumbnail></thumbnail></item>
+</streaminginfo>
+<streaminginfo>
+	<cname>ERI.TV</cname>
+	<item>
+	<title>Original source</title>
+	<link>rtmp://173.192.70.133:1935/live playpath=myStream swfUrl=http://player.longtailvideo.com/player5.9.swf pageUrl=http://eri.tv/ timeout=10</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+<cname>Salam</cname>
+<item><title>original source</title><link>http://streamer1.hamuraabi.com:1935/salam/live/playlist.m3u8</link></item>
+</streaminginfo>
+
+<streaminginfo>
+<cname>Aliraqiya</cname>
+<item><title>Original Source</title><link>http://212.7.205.5:1935/Iraqia/live/playlist.m3u8</link></item>
+</streaminginfo>
+
+<streaminginfo>
+    <cname>Al-Hurria</cname>
+<item><title>Original Source</title><link>http://streamer1.hamuraabi.com:1935/hurria/live/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Al Etejah</cname>
+	<item>
+	<title>Original source: You need to install f4m_tester addon from Shani Repo</title>
+	<link>plugin://plugin.video.f4mTester/?url=http://38.96.175.119:1935/aletejahtv/aletejahtv1/manifest.f4m?DVR</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+<cname>The Way_Christian</cname>
+<item><title>Original source</title><link>http://videos.atvsat.com:1935/atvsatlive/atvsatlive1/playlist.m3u8</link></item>
+</streaminginfo>
+
+<streaminginfo>
+<cname>Al Baghdadia</cname>
+<item><title>Original source</title><link>http://albag1.groovygecko.edge01.streammatrix.tv/livealbag1/smil:albag1.smil/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+<cname>AlHayat_Christian</cname>
+<item><title>Arabic Original source</title><link>http://media.islamexplained.com:1935/live/ngrp:ahme.stream_all/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+<cname>AlHayat_Christian</cname>
+<item><title>English Original source</title><link>http://media.islamexplained.com:1935/live/ngrp:ahusa.stream_all/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+<cname>Sat7</cname>
+	<item><title>Original source</title><link>rtmp://unirtmp.tulix.tv:1935/sat7arabic/sat7arabic1 timeout=20</link></item>
+	</streaminginfo>
+<streaminginfo>
+	<cname>Sat7 Kids</cname>
+	<item><title>Original source</title><link>rtmp://unirtmp.tulix.tv:1935/sat7kids/sat7kids1 timeout=20</link></item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Palestine</cname>
+	<item><title>Original Source High</title><link>rtmp://vstream2.hadara.ps:1935/pbc/pbc_1 timeout=20</link><thumbnail></thumbnail></item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Al Dafra</cname>
+	<item><title>Original source</title>
+	<link>http://live.aldafrah.tv:1935/live/aldafrah3/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+     	<cname>Noor Dubai</cname>
+	<item>
+	<title>Original source</title>
+	<link>http://cdnedvrnoordubaitv.endavomedia.com/smil:dmilivenoordubaitvhls.smil/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     	<cname>Sama Dubai</cname>
+	<item>
+	<title>Original source</title>
+	<link>http://cdnedvrsamadubai.endavomedia.com/smil:dmilivesamadubaihls.smil/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     	<cname>Dubai</cname>
+	<item>
+	<title>Original source</title>
+	<link>http://cdnedvrdubaitv.endavomedia.com/smil:dmilivedubaitvhls.smil/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     	<cname>Dubai Sport 3</cname>
+	<item>
+	<title>Original source</title>
+	<link>http://dmilivedubaisports3.ios.internapcdn.net/dmiLiveDubaiSports3/live_1/dmilivedubaisports3_3/CCURstream1029600.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+     <cname>Karbala</cname>
+<item>
+<title>Original source</title>
+<link>rtmp://KarbalaTV.secureflash.internapcdn.net/ app=$doregex[get-app] playpath=karbalatv swfUrl=http://karbalatv.http.internapcdn.net/KarbalaTV/jwplayer58L/player.swf pageUrl=http://www.karbala-tv.net/live.php live=true timeout=15</link>
+<regex>
+<name>get-app</name>
+<expres>rtmp.*net\/([^&amp;]*)</expres>
+<page>http://www.karbala-tv.net/live.php</page>
+</regex>
+</item>
+</streaminginfo>
+
+<streaminginfo>
+     <cname>Egypt 1</cname>
+	<item>
+	<title>Original source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/ app=ERTUCH1 playpath=livestream swfUrl=http://onlinehorizons.net/livestreaming/ertu/player.swf pageUrl=http://onlinehorizons.net/livestreaming/ertu/indexch1.html live=true timeout=15</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     <cname>Al Masriyah</cname>
+<item>
+<title>Original source</title>
+<link>rtmp://livestreaming4.onlinehorizons.net/ app=ERTUEgy playpath=livestream swfUrl=http://onlinehorizons.net/livestreaming/ertu/player.swf pageUrl=http://onlinehorizons.net/livestreaming/ertu/indexch1.html live=true timeout=15</link>
+</item>
+</streaminginfo>
+
+<streaminginfo>
+     <cname>Egypt 2</cname>
+	<item>
+	<title>Original source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/ app=ERTUCH2 playpath=livestream swfUrl=http://onlinehorizons.net/livestreaming/ertu/player.swf pageUrl=http://onlinehorizons.net/livestreaming/ertu/indexch2.html live=true timeout=15</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Aghani</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://mobilestreaming.itworkscdn.com/aghanitv/aghanitv app=aghanitv/ pageUrl=http://www.freetv247.com/content/aghani-aghani-tv swfUrl=http://p.jwpcdn.com/6/7/jwplayer.flash.swf playPath=aghanitv swfVfy=true live=true timeout=10</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Alarabiya</cname>
+	<item>
+	<title>Original source</title>
+	<link>http://livestream2.alarabiya.tv/files/mainarabia.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Albadawiya</cname>
+	<item>
+	<title>Original source: You need to install f4m_tester addon from Shani Repo</title>
+	<link>plugin://plugin.video.f4mTester/?url=http://streamer11.elementssys.com:8080/albadawiyah-800-hdsx/archive/1400931061/now/manifest.f4m</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Russia Alyaum</cname>
+	<item>
+	<title>HD 720p Original source</title>
+	<link>http://odna.octoshape.net/f3f5m2v4/cds/ch3_720p/chunklist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Russia Alyaum</cname>
+	<item>
+	<title>High Quality 420p Original source</title>
+	<link>http://odna.octoshape.net/f3f5m2v4/cds/ch3_480p/chunklist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Russia Alyaum</cname>
+	<item>
+	<title>Medium Quality 320p Original Source</title>
+	<link>http://odna.octoshape.net/f3f5m2v4/cds/ch3_320p/chunklist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    	<cname>Ajyal</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://ib12.islambox.tv/live/?v=hghpl]=a2V5bGl2ZTIxNy0yMzAtMjIzLTIwMjIwMTQtMDUtMjQtMTEtNTAtNDY=/vb008_ajial.stream?</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Al sahraa</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://79.134.137.65:1935/live/Sahraa.stream swfVfy=true live=true</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>CBC Sofra</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://41.196.200.11:9900/live//ssoofra.stream timeout=20</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>New Media</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://130.255.190.142:1935/live/numidia/chunklist_w1397340134.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Sepida</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://sepidehlive.nanocdn.com:1935/live/sepideh256</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Al-hurra Iraq</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://cp51007.live.edgefcs.net:80/live?ovpfv=2.1.6/Alhurra_Flash@15 swfUrl=http://p.jwpcdn.com/6/7/jwplayer.flash.swf live=1 pageUrl=http://www.alhurra.com/info/english/112.html</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Al Alam</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://hd6.lsops.net/live/alalam_ar_928</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Euro News Arabic</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://hd1.lsops.net/live/smil:euronews_ar.smil/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Orient News</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://67.228.105.241/live/ playpath=live3 swfUrl=http://orient-tv.net/live/jwplayer/player.swf pageUrl=http://orient-tv.net/live/ live=true</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Nile Sport</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileSport playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=sport swfVfy=true live=true timeout=60</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+        <cname>Nile Comedy</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileComedy/ playpath=livestream swfUrl=http://niletc.tv/player/player.swf pageUrl=http://niletc.tv/stream.php?ch=comedy swfVfy=true live=true timeout=60</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Nile Cinema</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileCinema playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=cinema</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Nile Culture</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileCulture playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=culture</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Nile Family</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileFamily playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=family</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Nile Life</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileLife playpath=livestream swfUrl=http://niletc.tv/player/player.swf live=1 pageUrl=http://niletc.tv/stream.php?ch=life</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Nile Drama</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://livestreaming4.onlinehorizons.net/NTNNileDrama playpath=livestream?ch=drama swfUrl=http://ntn.onlinehorizons.net/player/player.swf pageUrl=http://www.ntnegypt.net/stream.php live=1</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+        <cname>Al Nahar Sport</cname>
+		<item>
+		<title>Original Source</title>
+		<link>http://50.7.180.18:1935/nahar1/smil:naharsports-smil.smil/playlist.m3u8</link>
+		</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Al Nahar</cname>
+		<item>
+		<title>Original Source</title>
+		<link>http://50.7.180.18:1935/nahar1/smil:nahar1-smil.smil/playlist.m3u8</link>
+		</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Al-Nahar Drama</cname>
+		<item>
+		<title>Original Source</title>
+		<link>http://50.7.180.18:1935/nahar1/smil:alnahardrama-smil.smil/playlist.m3u8</link>
+		</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Al Nahar 2</cname>
+		<item>
+		<title>Original Source</title>
+		<link>http://50.7.180.18:1935/nahar1/smil:alnahar2-smil.smil/playlist.m3u8</link>
+		</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Alwatan Plus</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://alwatan_hls-lh.akamaihd.net/i/alwaplus_ar@91169/master.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Alwatan Ghanawi</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://alwatan_hls-lh.akamaihd.net/i/ghanawi_ar@51110/master.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Oman</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://38.96.148.30:1935/live/omantv1/chunklist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Quran TV ksa</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://208.75.224.165:1935/map-alquraan/map-alquraan.stream</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+        <cname>sunnah TV</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://myafricanmega.tulix.tv:1935/map-alsunnah/map-alsunnah.stream</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Dubai Racing</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://cdnehlsdubairacing2.endavomedia.com/smil:dmilivedubairacing2.smil/gmswf.m3u8</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+        <cname>Dubai One</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://cdnedvrdubaione.endavomedia.com/smil:dmilivedubaione.smil/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Ahlulbayt</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://46.23.67.34:1935/live/livestream1.sdp</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>TRT Arabic</cname>
+	<item>
+	<title>Original Source1</title>
+	<link>rtmp://re.trtcdn.com/tv/ playpath=trtarapca_3 swfUrl=http://gusto.trt.net.tr/VideoPlayer/player.swf live=true pageUrl=http://radyodelisi.blogspot.com/2013/02/trt-arapca.htm</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>TRT Arabic</cname>
+	<item>
+	<title>Original Source2</title>
+	<link>rtmp://si.trtcdn.com/tv/trtarapca?hghpl]=a2V5bGl2ZTY4LTUzLTcxLTQyMDE0LTAyLTI0LTIxLTMyLTI3/trtarapca_3</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+   	<cname>Syria Nour</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://live.rtv.gov.sy/live/Nour/Nour_LQ.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+   	<cname>Syria Talaqie</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://live.rtv.gov.sy/live/Talaqie/Talaqie_LQ.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+   	<cname>Syria</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://82.137.248.16:1935/Sat/livestream1/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+   	<cname>Syria Sedu</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://live.rtv.gov.sy/live/SEdu/SEdu_LQ.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+   	<cname>Syria Drama</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://live.rtv.gov.sy/live/Drama/Drama_MQ.m3u8</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+   	<cname>Al Ikhbaria</cname>
+	<item>
+	<title>Original Source</title>
+	<link>http://live.rtv.gov.sy/live/Snews/Snews_DVR.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+   	<cname>Baraem</cname>
+	<item>
+	<title>m3u8 Source</title>
+	<link>http://78.100.40.198:1935/brm/brm/gmswf.m3u8?keylive87-163-224-792014-05-18-16-28-09&amp;v=hghpl]</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+   	<cname>Baraem</cname>
+	<item>
+	<title>Original Source</title>
+	<link>rtmp://AgendaStreamer2.qna.org.qa/brm/brm</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo><cname>Al Forat</cname><item><title>Original Source</title><link>rtmp://alforatlive.nanocdn.com:1935/live playpath=alforat256 swfUrl=http://www1.alforattv.net/modules/live/js/jwplayer/player.swf pageUrl=http://www1.alforattv.net live=1 swfVfy=1 timeout=10</link></item></streaminginfo> 
+
+
+
+</streamingInfos>

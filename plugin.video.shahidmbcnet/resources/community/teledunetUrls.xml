@@ -1,7 +1,80 @@
 <streamingInfos>
 <streaminginfo>
+	<cname>Melody Aflem</cname>
+	<url>melody_aflam</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Melody Hits</cname>
+	<url>melody_hits</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Bein2 HD</cname>
+	<url>bein_sport_2_hd</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Bein6 HD</cname>
+	<url>bein_sport_6_hd</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>ZDF</cname>
+	<url>zdf</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>Blue Nile</cname>
+<url>blue_nile</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>ETV Ethiopia</cname>
+<url>etv_ethiopia</url>
+</streaminginfo>
+	
+<streaminginfo>
+<cname>OSN Movies Premiere HD</cname>
+<url>osn_moies_prem</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>OSN Movies Comedy</cname>
+<url>osn_moies_comdy</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>OSN Movies HD +2</cname>
+<url>osn_moies_2</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>OSN Movies Action HD</cname>
+<url>osn_moies_action</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>OSN Yahala HD</cname>
+<url>osn_yahala_hd</url>
+</streaminginfo>
+<streaminginfo>
+<cname>OSN Yahala Drama</cname>
+<url>osn_yahala_Drama</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>ART Hekayat</cname>
+<url>art-hek</url>
+</streaminginfo>
+<streaminginfo>
+<cname>ART Hekayat 2</cname>
+<url>art-hek2</url>
+</streaminginfo>
+<streaminginfo>
 <cname>Palestine</cname>
 <url>palestine</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>OSN Ya Hala +2</cname>
+<url>osn_yahala</url>
 </streaminginfo>
 
 
@@ -45,7 +118,7 @@
 	</streaminginfo>
 	
 	<streaminginfo>
-		<cname>Panorama Drama2</cname>
+		<cname>Panorama Drama 2</cname>
 		<url>panorama_drama_2</url>
 	</streaminginfo>
 	<streaminginfo>
@@ -122,7 +195,7 @@
 		<url>al_sumaria</url>
 	</streaminginfo>
 	<streaminginfo>
-		<cname>Al Thaniya</cname>
+		<cname>Egypt 2</cname>
 		<url>al_thaniya</url>
 	</streaminginfo>
 	<streaminginfo>
@@ -306,10 +379,7 @@
 		<cname>CBC Sofra</cname>
 		<url>cbc_sofra</url>
 	</streaminginfo>
-	<streaminginfo>
-		<cname>CBC Tv</cname>
-		<url>cbc_tv</url>
-	</streaminginfo>
+
 	<streaminginfo>
 		<cname>CBC</cname>
 		<url>cbc</url>
@@ -383,7 +453,7 @@
 		<url>fox</url>
 	</streaminginfo>
 	<streaminginfo>
-		<cname>France24 Arabic</cname>
+		<cname>France 24</cname>
 		<url>france24_arabic</url>
 	</streaminginfo>
 	<streaminginfo>
@@ -487,7 +557,7 @@
 		<url>mtv</url>
 	</streaminginfo>
 	<streaminginfo>
-		<cname>Maghreb 1</cname>
+		<cname>Al oula Maroc</cname>
 		<url>maghreb_1</url>
 	</streaminginfo>
 	<streaminginfo>
@@ -707,10 +777,7 @@
 		<cname>Toyor Al Janah</cname>
 		<url>toyor_al_janah</url>
 	</streaminginfo>
-	<streaminginfo>
-		<cname>Toyor baby</cname>
-		<url>toyor_baby</url>
-	</streaminginfo>
+
 	<streaminginfo>
 		<cname>Tunisia national 1</cname>
 		<url>tunisia_national_1</url>

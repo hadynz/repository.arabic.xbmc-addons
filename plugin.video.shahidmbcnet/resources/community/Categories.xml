@@ -7,17 +7,28 @@
 	<category>
 		<id>ent</id>
 		<catname>Entertainment</catname>
-		<imageurl>http://technostacks.com/img/entertaiment.png</imageurl>
+		<imageurl>http://technostacks.com/wp-content/themes/technostacks/img/entertaiment.png</imageurl>
 	</category>
-	<category>
+		<category>
 		<id>news</id>
 		<catname>News</catname>
 		<imageurl>http://icons.iconarchive.com/icons/pelfusion/folded-flat/96/News-icon.png</imageurl>
 	</category>
 	<category>
+		<id>magreb</id>
+		<catname>Maghreb</catname>
+		<imageurl>http://icons.iconarchive.com/icons/hopstarter/flag/256/Tunisia-icon.png</imageurl>
+	</category>
+
+	<category>
 		<id>music</id>
 		<catname>Music</catname>
 		<imageurl>http://icons.iconarchive.com/icons/itzikgur/my-seven/96/Music-Piano-Chello-icon.png</imageurl>
+	</category>
+	<category>
+		<id>cup</id>
+		<catname>WorldCup</catname>
+		<imageurl>https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/t1.0-1/c22.22.276.276/p320x320/733820_695732883775895_938655374_n.png</imageurl>
 	</category>
 	<category>
 		<id>sports</id>
@@ -59,22 +70,23 @@
 		<catname>AlSham</catname>
 		<imageurl>http://icons.iconarchive.com/icons/hopstarter/flag/256/Lebanon-icon.png</imageurl>
 	</category>
-		<category>
+	<category>
 		<id>egypt</id>
 		<catname>Egypt</catname>
 		<imageurl>http://icons.iconarchive.com/icons/hopstarter/flag/256/Egypt-icon.png</imageurl>
 	</category>
-	<category>
-		<id>magreb</id>
-		<catname>Maghreb</catname>
-		<imageurl>http://icons.iconarchive.com/icons/hopstarter/flag/256/Tunisia-icon.png</imageurl>
-	</category>
+	
 	<category>
 		<id>drama</id>
 		<catname>Drama</catname>
 		<imageurl>http://icons.iconarchive.com/icons/arkangl300/zero-folders/256/videos-icon.png</imageurl>
 	</category>
-		<category>
+	<category>
+		<id>english</id>
+		<catname>English Channels</catname>
+		<imageurl>http://www.english-trainer.eu/Bildmaterial/Kugel_Logo.jpg</imageurl>
+	</category>
+	<category>
 		<id>french</id>
 		<catname>French</catname>
 		<imageurl>http://icons.iconarchive.com/icons/hopstarter/flag/256/France-icon.png</imageurl>
@@ -89,4 +101,11 @@
 		<catname>Others</catname>
 		<imageurl>http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Other-Origins-Metro-icon.png</imageurl>
 	</category>
+	
+	<category>
+		<id>christ</id>
+		<catname>Arabic Christian</catname>
+		<imageurl>http://icons.iconarchive.com/icons/designbolts/religious-symbol/256/Christian-cross-icon.png</imageurl>
+	</category>
+	
 </categories>

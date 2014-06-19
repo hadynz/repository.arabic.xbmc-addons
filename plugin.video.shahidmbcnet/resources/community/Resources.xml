@@ -8,7 +8,18 @@
 	<file fname="livetvUrls.xml"/>	
 	<file fname="genericPlayer.py"/>	
 	<file fname="genericUrls.xml"/>	
-	<file fname="YoutubeSources.xml"/>	
+	<file fname="YoutubeSources.xml"/>
+	<file fname="CustomPlayer.py"/>
+    <file fname="iptvosnUrls.xml"/>
+    <file fname="glarabUrls.xml"/>
+    <file fname="magictvBoxUrls.xml"/>
+
+    
+
 	<file fname="palestinecoolUrls.xml" url="http://goo.gl/yNlwCM"/>
 	<file fname="ZombiList.xml" url="https://raw.githubusercontent.com/zombiB/Replay/master/zombiList.xml"/>	
+    <file fname="emadUrls.xml"      url="https://raw.githubusercontent.com/emadmahdi/IPTV/master/ArabicDB/shaniXBMCplugin/emadUrls.xml"/>
+	<file fname="filmonUrls.xml"/> 
+	<file fname="filmonPlayer.py"/> 
+	<file fname="OfficialUrls.xml"/> 
 </resources>
