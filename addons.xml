@@ -381,7 +381,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon
   id="plugin.video.panet"
-  version="1.8.0"
+  version="1.9.0"
   name="Panet"
   provider-name="Bisha">
   <requires>
@@ -394,7 +394,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Panet vod Arabic plugin</summary>
-    <description>Panet Arabic plugin. This plugin is completely FREE , Please DO NOT buy any products from “http://tvtoyz.com/”</description>
+    <description>Panet Arabic plugin. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>

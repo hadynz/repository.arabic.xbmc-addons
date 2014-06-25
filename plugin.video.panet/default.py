@@ -29,8 +29,8 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 def CATEGORIES():
 	#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'http://pschools.haifanet.org.il/abd.relchaj/2010/panet.jpg'))
-	addDir('مسلسلات رمضان 2013','http://www.panet.co.il/Ext/series.php?name=category&id=32&country=NL&page=',29,'',0,0)
-	addDir('مسلسلات سورية ولبنانية','http://www.panet.co.il/Ext/series.php?name=category&id=18&country=NL&page=',29,'',0,0)
+	addDir('مسلسلات رمضان','http://www.panet.co.il/Ext/series.php?name=category&id=34&country=TN&page=',29,'',0,0)
+	addDir('مسلسلات سورية ولبنانية','http://www.panet.co.il/Ext/series.php?name=category&id=18&country=LB&page=',29,'',0,0)
 	addDir('مسلسلات مصرية','http://www.panet.co.il/Ext/series.php?name=category&id=19&country=NL&page=',29,'',0,0)
 	addDir('مسلسلات خليجية','http://www.panet.co.il/Ext/series.php?name=category&id=21&country=NL&page=',29,'',0,0)
 	addDir('افلام عربية ','http://www.panet.co.il/online/video/movies/P-0.html/',1,'',0,30)
@@ -143,7 +143,7 @@ def GET_VIDEO_FILE(name, url):
 	match_url_thumb=match_url_thumb.replace('http://','')
 	match_url_thumb=match_url_thumb.replace('file=','file=http://')
 	match_url_thumb=match_url_thumb.replace("www.panet.co.il/Ext/players/flv/playern.swf?type=http&streamer=start&file=","")
-	match_url_thumb=match_url_thumb+'|Referer=http://www.panet.co.il/Ext/players/flv5/player.swf'
+	match_url_thumb=str(match_url_thumb).replace('%3F','?').replace('%26','&').replace('%3D','=')
 	listItem = xbmcgui.ListItem(path=str(match_url_thumb))
 	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	
@@ -183,15 +183,19 @@ def VIDEOLINKS(url,name):
 	link=response.read()
 	response.close()
 	match2=re.compile('"video_src" href="(.+?)"/>').findall(link)
+	refer = re.compile('<iframe src="(.+?)" width=').findall(link)
+	
 	if len(match2) :
 		filmPath = str(match2).split('type=')[1]
 		filmPath = str(filmPath).split('&image')[0]
 		filmPath = str(filmPath).strip()
 		videoPath= filmPath.replace('%3A',':')
 		videoPath=videoPath.replace('%2F','/')
+		print videoPath
 		videoPath =str(videoPath) .split('file=')[1]
-		videoPath = str(videoPath).strip()
-		listItem = xbmcgui.ListItem(path=str(videoPath))
+		videoPath = str(videoPath).split("il")[1]
+		videoPath = 'http://vod-movies.panet.co.il'+str(videoPath).strip()
+		listItem = xbmcgui.ListItem(path=str(videoPath)+"|Referer=http://www.panet.co.il/Ext/players/flv/playern.swf")
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 			
 
@@ -244,12 +248,6 @@ MINIMUM = None
 MAXIMUM = None
 
 
-from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
-try:
-    import json
-except:
-    import simplejson as json
-	
 	
 try:
         url=urllib.unquote_plus(params["url"])
