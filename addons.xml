@@ -488,7 +488,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon
   id="plugin.video.sonara"
-  version="1.8.0"
+  version="1.9.0"
   name="Sonara"
   provider-name="Bisha">
   <requires>
