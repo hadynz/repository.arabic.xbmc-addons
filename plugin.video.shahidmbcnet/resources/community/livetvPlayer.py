@@ -13,6 +13,8 @@ import sys
 import time
 import CustomPlayer
 import random
+ccodepages=['http://www.livetv.tn/']#,'http://www.livetv.tn/2M-Maroc-en-direct-live.html','http://www.livetv.tn/ARTE-en-direct-live.html',]
+codepage=random.choice(ccodepages)
 
 try:
 	import livetvcaptcha
@@ -35,6 +37,7 @@ profile_path =  xbmc.translatePath(selfAddon.getAddonInfo('profile'))
 def PlayStream(sourceEtree, urlSoup, name, url):
 	try:
 		playpath=urlSoup.chnumber.text
+		page_name=urlSoup.link.text
 		pDialog = xbmcgui.DialogProgress()
 		pDialog.create('XBMC', 'Communicating with Livetv')
 		pDialog.update(40, 'Attempting to Login')
@@ -42,6 +45,13 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 		retryPlay=True
 		liveTvPremiumCode=selfAddon.getSetting( "liveTvPremiumCode" )
 		liveTvNonPremiumCode=selfAddon.getSetting( "liveTvNonPremiumCode" )
+		if liveTvPremiumCode=="" and liveTvNonPremiumCode=="":
+				pDialog.close()
+				Msg="Please login using Livetv login option on main menu."
+				dialog = xbmcgui.Dialog()
+				ok = dialog.ok('Livetv Login', Msg)
+				return False
+
 		lastWorkingCode=selfAddon.getSetting( "lastLivetvWorkingCode" )
 		while retryPlay:
 			retryPlay=False
@@ -49,7 +59,7 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 			disableFreeForNow=True# Tick tock tick tock.. you were lucking that you didn't play the game. but no more games anymore :(
 			#dont worry, its still disable
 			if liveTvPremiumCode=="":
-				if lastWorkingCode=="" and liveTvNonPremiumCode=="":
+				if lastWorkingCode=="" and liveTvNonPremiumCode=="":#this shouldn't happen now
 					#timeD = 2000  #in miliseconds
 					#line1="Login disabled, use Non Premium code"
 					#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, timeD, __icon__))
@@ -69,19 +79,26 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 
 					else:
 						print 'not performing login, reusing cache'
-					code=getcode();
-					if code==None:
+					code=getcode(page_name);
+					if code==None or len(code)==0:
 							timeD = 2000  #in miliseconds
 							line1="Unable to get the code-livetv down? or something changed"
 							xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, timeD, __icon__))
 							return False
 				else:
-					print 'using last working code',lastWorkingCode
-					if not lastWorkingCode=="":
-						code=lastWorkingCode
-						usingLastWorkingCode=True
-					else:
-						code=liveTvNonPremiumCode
+					code=getcode(page_name);
+					if code==None or len(code)==0:
+							timeD = 2000  #in miliseconds
+							line1="Premium page?"
+							xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, timeD, __icon__))
+							#return False
+							code=lastWorkingCode
+					#print 'using last working code',lastWorkingCode
+					#if not lastWorkingCode=="":
+					#	code=lastWorkingCode
+					#	usingLastWorkingCode=True
+					#else:
+					#	code=liveTvNonPremiumCode
 					
 			else:
 				print 'using premium code',lastWorkingCode
@@ -95,7 +112,12 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 			pDialog.update(80, 'Login Completed, now playing')
 			print 'rtmpstring',liveLink
 			if liveTvPremiumCode=="":
-				liveLink=liveLink%(playpath,code)
+				page_url=None
+				try:
+					page_url=urlSoup.link.text
+				except:
+					page_url=makeUrl(urlSoup.cname.text)
+				liveLink=liveLink%(playpath,code,page_url)
 				#liveLink="rtmp://tdsiptv.ddns.me/live/%s?code=%s"%(playpath,code)
 			else:
 				liveLink="rtmp://tdsiptv.ddns.me/live/%s?code=%s"%(playpath,liveTvPremiumCode)
@@ -119,18 +141,20 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 			else:
 				#selfAddon.setSetting( id="lastLivetvWorkingCode" ,value="")
 				lastWorkingCode=""
-				retryPlay=usingLastWorkingCode
+				#retryPlay=usingLastWorkingCode#this is not required
 		return False
 	except:
 		traceback.print_exc(file=sys.stdout)    
 	return False    
 
-ccodepages=['http://www.livetv.tn/']#,'http://www.livetv.tn/2M-Maroc-en-direct-live.html','http://www.livetv.tn/ARTE-en-direct-live.html',]
-codepage=random.choice(ccodepages)
 
-def getcode():
+
+def getcode(page_name=None):
+	global codepage
 	try:
 		#url = urlSoup.url.text
+		if page_name:
+			codepage=page_name
 		print 'codepage',codepage
 		cookieJar=getCookieJar()
 		link=getUrl(codepage,cookieJar)
@@ -211,7 +235,7 @@ def getcode():
 			if link=="":
 				link=getUrl(codepage,cookieJar)
 			link=javascriptUnEscape(link)
-		code =re.findall('\?c=(.*?)[\'\"]', link)
+		code =re.findall('\?c.?.?.?.?=(.*?)[\'\"]', link)
 		if (not code==None) and len(code)>0:
 			#print 'print link is ',link
 			code=code[0]
@@ -274,7 +298,23 @@ def getCookieJar():
 	
 	return cookieJar
 
+
 	
+def getLoginCode():
+	login_code=None
+	try:
+		login_required=shouldforceLogin()
+		if login_required:
+			login_required=not performLogin()
+		if login_required:
+			return False
+		login_code= getcode()
+		print 'login_code',login_code
+	except:
+		print 'login failed'
+		traceback.print_exc(file=sys.stdout)
+	return login_code
+		
 def performLogin():
 	cookieJar=getCookieJar()
 	
@@ -404,7 +444,9 @@ def shoudforceLogin2():
     except:
         traceback.print_exc(file=sys.stdout)
     return True
-
+def makeUrl(cname):
+	return 'http://www.livetv.tn/%s-en-direct-live.html'%cname.replace(' ','-')
+    
 def shouldforceLogin(cookieJar=None, currentPage=None):
     try:
         url=codepage

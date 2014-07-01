@@ -53,15 +53,15 @@
 	<string id="32042">iptvosn Login</string>
 	<string id="32043">iptvosn User Name</string>
 	<string id="32044">iptvosn Password</string>
-	<string id="32046">Premium Account Code</string>	
+	<string id="32046">Premium Code (xml)</string>	
 	<string id="32047">Clear Login Session Data</string>	
-	<string id="32048">Non premium code (when Addon Login not working)</string>	
+	<string id="32048">Web Login Code(when Addon Login not working)</string>	
 	<string id="32049">Misc settings</string>	
 	<string id="32050">Override default view mode</string>	
     <string id="32057">Teledunet retry count</string>	
      <string id="32058">Favourite add mode</string>	
     <string id="32064">Twelfth Preference</string>
-		<string id="32065">Disable Offcial source</string>	
+	<string id="32065">Disable Offcial source</string>	
 
 	
 </strings>

@@ -1,6 +1,16 @@
 <streamingInfos>
 
 <streaminginfo>
+<cname>ERI.TV</cname>
+<url>1793</url>
+</streaminginfo>
+
+<streaminginfo>
+<cname>4Music</cname>
+<url>95</url>
+</streaminginfo>
+
+<streaminginfo>
 <cname>BBC</cname>
 <title>Music Magazine</title>
 <url>1309</url>
@@ -82,7 +92,8 @@
 </streaminginfo>
 
 <streaminginfo>
-	<cname>Rotana Aflam</cname>
+	<cname>Rotana Cinema</cname>
+	<title>link1</title>
 	<url>2618</url>
 </streaminginfo>
 
@@ -100,6 +111,7 @@
 </streaminginfo>
 <streaminginfo>
 	<cname>Rotana Cinema</cname>
+	<title>link2</title>
 	<url>2615</url>
 </streaminginfo>
 <streaminginfo>
@@ -177,7 +189,7 @@
 </streaminginfo>
 
 <streaminginfo>
-	<cname>I Film</cname>
+	<cname>iFilm English</cname>
 	<url>908</url>
 </streaminginfo>
 

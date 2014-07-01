@@ -101,6 +101,11 @@
 		<catname>Others</catname>
 		<imageurl>http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Other-Origins-Metro-icon.png</imageurl>
 	</category>
+	<category>
+		<id>rdio</id>
+		<catname>Radio</catname>
+		<imageurl>http://png.findicons.com/files/icons/2787/beautiful_flat_icons/128/radio.png</imageurl>
+	</category>
 	
 	<category>
 		<id>christ</id>

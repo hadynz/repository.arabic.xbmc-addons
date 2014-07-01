@@ -391,13 +391,6 @@
         </item>
     </streaminginfo>
     <streaminginfo>
-        <cname>Nile Family</cname>
-        <item>
-            <title>Low Quality Glarab</title>
-            <link>http://38.99.146.43:7777/NileFamily.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
-        </item>
-    </streaminginfo>
-    <streaminginfo>
         <cname>Rotana Masriya</cname>
         <item>
             <title>Low Quality Glarab</title>
@@ -419,13 +412,7 @@
             <link>http://38.99.146.43:7777/AlHayatCinema.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
         </item>
     </streaminginfo>
-    <streaminginfo>
-        <cname>Dream 2</cname>
-        <item>
-            <title>Low Quality Glarab</title>
-            <link>http://38.99.146.43:7777/Dream2.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
-        </item>
-    </streaminginfo>
+ 
     <streaminginfo>
         <cname>Tunisia national 1</cname>
         <item>
@@ -511,14 +498,14 @@
         </item>
     </streaminginfo> 
     <streaminginfo>
-        <cname>Libya</cname>
+        <cname>Libya 2</cname>
         <item>
             <title>Low Quality Glarab</title>
             <link>http://38.99.146.43:7777/Libya.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
         </item>
     </streaminginfo> 
     <streaminginfo>
-        <cname>Libya 2</cname>
+        <cname>Libya</cname>
         <item>
             <title>Low Quality Glarab</title>
             <link>http://38.99.146.43:7777/AlAhrar.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
@@ -861,7 +848,7 @@
         </item>
     </streaminginfo> 
     <streaminginfo>
-        <cname>AL MASAR</cname>
+        <cname>Al Masar</cname>
         <item>
             <title>Low Quality Glarab</title>
             <link>http://38.99.146.43:7777/AlMasar.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
@@ -910,7 +897,7 @@
         </item>
     </streaminginfo> 
     <streaminginfo>
-        <cname>Al Amaken</cname>
+        <cname>Al Amaken Drama</cname>
         <item>
             <title>Low Quality Glarab</title>
             <link>http://38.99.146.43:7777/AlAmakenDrama.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
@@ -1100,13 +1087,7 @@
             <link>http://38.99.146.43:7777/LibyaSportChannel1.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
         </item>
     </streaminginfo> 
-    <streaminginfo>
-        <cname>ANB</cname>
-        <item>
-            <title>not working at this time Low Quality Glarab</title>
-            <link>http://38.99.146.43:7777/ANB.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
-        </item>
-    </streaminginfo> 
+ 
     <streaminginfo>
         <cname>Neelain Sport</cname>
         <item>
@@ -1136,7 +1117,7 @@
         </item>
     </streaminginfo>
     <streaminginfo>
-        <cname>I Film</cname>
+        <cname>iFilm Arabic</cname>
         <item>
             <title>Low Quality Glarab</title>
             <link>http://38.99.146.43:7777/iFilm.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
@@ -1282,6 +1263,13 @@
             <link>http://38.99.146.43:7777/RotanaClip.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
         </item>
     </streaminginfo>
+    <streaminginfo>
+        <cname>OTV Lebanon</cname>
+        <item>
+            <title>Low Quality Glarab</title>
+            <link>http://38.99.146.43:7777/OTV.m3u8?session=bdc4847b38fe5ede816551e38b136d11b11d92e4505e5a6a7adfe8e9a6301e82a299017ce29bf1aa&amp;hlsid=HLS_2487419</link>
+        </item>
+    </streaminginfo> 
 
 
 </streaminginfos>

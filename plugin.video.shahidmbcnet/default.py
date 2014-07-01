@@ -207,6 +207,7 @@ def Addtypes():
 	addDir('Shahid Youtube' ,'http://gdata.youtube.com/feeds/api/users/aljadeedonline' ,18,addonArt+'/youtube.png')    
 	addDir('Download Files' ,'cRefresh' ,17,addonArt+'/download-icon.png',isItFolder=False)
 	addDir('Settings' ,'Settings' ,8,addonArt+'/setting.png',isItFolder=False) ##
+	addDir('Livetv.tn Login' ,'Livetv' ,24,addonArt+'/setting.png',isItFolder=False) ##
 	return
 
 def AddYoutubeLanding(url):
@@ -354,7 +355,7 @@ def RefreshResources(auto=False):
 	dialog = xbmcgui.Dialog()
 	ok = dialog.ok('XBMC', 'Download finished. Close Addon and come back')
 
-def removeLoginFile(livePlayer,TeleDunet):
+def removeLoginFile(livePlayer,TeleDunet,showMsg=True):
 	something_done=False
 	try:
 		if livePlayer:
@@ -378,7 +379,7 @@ def removeLoginFile(livePlayer,TeleDunet):
 			COOKIEFILE = communityStreamPath+'/teletdunetPlayerLoginCookie.lwp'
 			os.remove(COOKIEFILE)
 	except: pass
-	if something_done:
+	if something_done and showMsg:
 		time = 2000  #in miliseconds
 		line1="Session data removed!"
 		xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
@@ -393,6 +394,27 @@ def ShowSettings(Fromurl):
 	after_LivePlayerLogin=selfAddon.getSetting( "liveTvLogin" )+selfAddon.getSetting( "liveTvPassword")
 	after_teleDunetLogin=selfAddon.getSetting( "teledunetTvLogin" )+selfAddon.getSetting( "teledunetTvPassword")
 	removeLoginFile(clearLogonSettings=="true" or not current_LivePlayerLogin==after_LivePlayerLogin, clearLogonSettings=="true" or not current_teleDunetLogin==after_teleDunetLogin )
+	return
+
+def LIVETvLogin(Fromurl):
+	Msg=""
+	try:
+	
+		if communityStreamPath not in sys.path:
+				sys.path.append(communityStreamPath)
+		removeLoginFile(True,False,showMsg=False)
+		processorObject=import_module('livetvPlayer')
+		new_code=processorObject.getLoginCode()
+		if new_code:
+			selfAddon.setSetting( id="liveTvNonPremiumCode" ,value=new_code)
+			Msg="Login successful"
+		else:
+			Msg="Login failed.If login not working then enter the code manually in the settings."
+	except:
+		traceback.print_exc(file=sys.stdout)
+		Msg="Login failed.If login not working then enter the code manually in the settings."
+	dialog = xbmcgui.Dialog()
+	ok = dialog.ok('Livetv Login', Msg)
 	return
 	
 def AddSeries(Fromurl,pageNumber=""):
@@ -870,7 +892,7 @@ def getSourceAndStreamInfo(channelId, returnOnFirst,pDialog):
 							source_title=''
 							if match_title<>'':
 								try:
-									if source.findtext('sname')=='generic':
+									if source.findtext('id')=='generic':
 										source_title=inf.find('item').findtext('title')
 									else:
 										source_title=inf.findtext('title')
@@ -894,7 +916,7 @@ def getSourceAndStreamInfo(channelId, returnOnFirst,pDialog):
 							source_title=''
 							if match_title<>'':
 								try:
-									if source.findtext('sname')=='generic':
+									if source.findtext('id')=='generic':
 										source_title=single.find('item').findtext('title')
 									else:
 										source_title=single.findtext('title')
@@ -1706,6 +1728,9 @@ try:
 	elif mode==8:
 		print "Play url is "+url,mode
 		ShowSettings(url)
+	elif mode==24:
+		print "Play url is "+url,mode
+		LIVETvLogin(url)
 	elif mode==9:
 		print "Play url is "+url,mode
 		AddStreams();

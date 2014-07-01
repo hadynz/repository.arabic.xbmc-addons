@@ -1,1053 +1,1177 @@
 <streaminginfos>
 <streaminginfo>
+        <cname>First TV</cname>
+        <chnumber>ch828</chnumber>
+<link>http://www.livetv.tn/First-TV-en-direct-live.html</link>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Assadissa</cname>
+        <chnumber>ch405</chnumber>
+<link>http://www.livetv.tn/Assadissa-Maroc-en-direct-live.html</link>
+</streaminginfo>
+<streaminginfo>
+        <cname>Blue Nile</cname>
+        <chnumber>ch410</chnumber>
+<link>http://www.livetv.tn/Blue-Nile-TV-en-direct-live.html</link>
+</streaminginfo>
+
+    <streaminginfo>
+        <cname>Taha</cname>
+        <chnumber>ch807</chnumber>
+        <link>http://www.livetv.tn/Taha-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Ashorooq</cname>
+        <chnumber>ch809</chnumber>
+        <link>http://www.livetv.tn/Al-Chourouk-Sudan-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Oman Sport</cname>
+        <chnumber>ch806</chnumber>
+        <link>http://www.livetv.tn/Oman-Sport-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>SkyNewsArabia</cname>
+        <chnumber>ch720</chnumber>
+        <link>http://www.livetv.tn/Sky-News-Arabia-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Coran Time</cname>
+        <chnumber>ch804</chnumber>
+        <link>http://www.livetv.tn/Time-Quran-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Canal Plus</cname>
+        <title>SRV2</title>
+        <chnumber>ch800</chnumber>
+        <link>http://www.livetv.tn/Canal-Plus-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Canal Cinema</cname>
+        <title>SRV2</title>
+        <chnumber>ch801</chnumber>
+        <link>http://www.livetv.tn/Canal-Cinema-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Cherie 25</cname>
+        <chnumber>ch802</chnumber>
+        <link>http://www.livetv.tn/Cherie-25-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Future TV</cname>
         <chnumber>ch349</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Future-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Equipe 21</cname>
         <chnumber>ch309</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Equipe-21-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>HD1</cname>
         <chnumber>ch310</chnumber>
-</streaminginfo>
-<streaminginfo>
-        <cname>HD1</cname>
-        <chnumber>ch310</chnumber>
-</streaminginfo>
-
-<streaminginfo>
+        <link>http://www.livetv.tn/HD1-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Numero 23</cname>
         <chnumber>ch312</chnumber>
-</streaminginfo>
-
-<streaminginfo>
+        <link>http://www.livetv.tn/Numero23-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>RMC</cname>
         <chnumber>ch314</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/RMC-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>W9</cname>
         <chnumber>ch314</chnumber>
-</streaminginfo>
-<streaminginfo>
-        <cname>Blue Nile TV</cname>
-        <chnumber>ch410</chnumber>
-</streaminginfo>
-<streaminginfo>
-        <cname>Al Azhar</cname>
-        <chnumber>ch322</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/W9-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Sudan TV</cname>
         <chnumber>ch412</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Sudan-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Saudia Sport</cname>
         <chnumber>ch344</chnumber>
-</streaminginfo>
-
-<streaminginfo>
+        <link>http://www.livetv.tn/Saudia-Sport-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Quran TV ksa</cname>
         <chnumber>ch345</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Saudi-Quaran-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>sunnah TV</cname>
         <chnumber>ch346</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Saudi-Sunnah-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Libya Kids</cname>
         <chnumber>ch328</chnumber>
-</streaminginfo>
-<streaminginfo>
-        <cname>Tamazigh Maroc</cname>
-        <chnumber>ch327</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Libya-Kids-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>TT1 Tunisie</cname>
         <chnumber>ch326</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/TT1-Tunisie-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Syria Drama</cname>
         <chnumber>ch325</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Syria-Drama-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Jordan Sport</cname>
         <chnumber>ch324</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Jordan-Sport-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Tamazigh Algeria</cname>
+        <chnumber>ch72</chnumber>
+        <link>http://www.livetv.tn/Algeria-Tamazigh-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Sada Al Balad Drama</cname>
         <chnumber>ch339</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Sada-Al-Balad-Drama-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Alhayat2</cname>
         <chnumber>ch338</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Al-Hayat-2-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>AlQahera W Elnas 2</cname>
         <chnumber>ch343</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Kahera-Wal-Nass-2-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>AlQahera W Elnas 1</cname>
+        <chnumber>ch343</chnumber>
+        <link>http://www.livetv.tn/Kahera-Wal-Nass-1-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Alnahar Alyoum</cname>
         <chnumber>ch341</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Al-Nahar-Alyawm-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>GearOne</cname>
         <chnumber>ch342</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Gear-One-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Al Nahar</cname>
         <chnumber>ch337</chnumber>
-</streaminginfo>
+        <link>http://www.livetv.tn/Al-Nahar-en-direct-live.html</link>
+    </streaminginfo>
 
-<streaminginfo>
+    <streaminginfo>
         <cname>Al Nahar 2</cname>
         <chnumber>ch336</chnumber>
-</streaminginfo>
+        <link>http://www.livetv.tn/Al-Nahar-2-en-direct-live.html</link>
+    </streaminginfo>
 
-<streaminginfo>
+    <streaminginfo>
         <cname>Cairo Film</cname>
         <chnumber>ch335</chnumber>
-</streaminginfo>
+        <link>http://www.livetv.tn/Cairo-Film-en-direct-live.html</link>
+    </streaminginfo>
 
-<streaminginfo>
+    <streaminginfo>
+        <cname>Almajd Quran</cname>
+        <chnumber>ch404</chnumber>
+        <link>http://www.livetv.tn/Al-Majd-3-Coran-TV-en-direct-live.html</link>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Al Azhar</cname>
+        <chnumber>ch322</chnumber>
+        <link>http://www.livetv.tn/Al-Azhar-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>El Djazairia</cname>
+        <chnumber>ch825</chnumber>
+        <link>http://www.livetv.tn/AL-Djazairia-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Aljazeera En</cname>
         <chnumber>ch334</chnumber>
-</streaminginfo>
-
-<streaminginfo>
+        <link>http://www.livetv.tn/JSC-News-English-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Al Afasy</cname>
         <chnumber>ch333</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Al-Afasy-Channel-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>EnnaharTV algerie</cname>
         <chnumber>ch402</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Ennahar-Algeria-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Cine Majestic</cname>
         <chnumber>ch295</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Cine-Majestic-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Chobra Cima</cname>
         <chnumber>ch406</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Chobra-Cima-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>AlWatan Algerie</cname>
         <chnumber>ch329</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/AlWatan-Algerie-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Al Dafra</cname>
         <chnumber>ch330</chnumber>
-</streaminginfo>
-<streaminginfo>
-        <cname>Qatar</cname>
-        <chnumber>ch401</chnumber>
-</streaminginfo>
-<streaminginfo>
+        <link>http://www.livetv.tn/Al-Dafra-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
         <cname>Aljazeera US</cname>
         <chnumber>ch332</chnumber>
-</streaminginfo>
-<streaminginfo>
-        <cname>Imagines Movies</cname>
-        <chnumber>ch400</chnumber>
-</streaminginfo>
-<streaminginfo>
-        <cname>Al Lubnania</cname>
-        <chnumber>ch321</chnumber>
-</streaminginfo>
-
-<streaminginfo>
-        <cname>Coran</cname>
-        <chnumber>ch323</chnumber>
-</streaminginfo>
-
-<streaminginfo>
-        <cname>Mecca TV</cname>
-        <chnumber>ch322</chnumber>
-</streaminginfo>
-
-<streaminginfo>
-        <cname>Alinsen</cname>
-        <chnumber>ch4</chnumber>
-</streaminginfo>
-
-<streaminginfo>
-        <cname>B4U Aflam</cname>
-        <chnumber>ch331</chnumber>
-</streaminginfo>
-
-
-
-<streaminginfo>
-        <cname>ART Hekayat</cname>
-        <chnumber>ch407</chnumber>
+        <link>http://www.livetv.tn/JSC-News-USA-en-direct-live.html</link>
     </streaminginfo>
-	<streaminginfo>
-        <cname>ART Hekayat 2</cname>
-        <chnumber>ch408</chnumber>
-    </streaminginfo>
-	<streaminginfo>
-        <cname>ART Cinema</cname>
-        <chnumber>409</chnumber>
-    </streaminginfo>
-    
-<streaminginfo>
-        <cname>OSN Movies Premiere HD</cname>
-        <chnumber>ch606</chnumber>
-</streaminginfo>
-	
-	 <streaminginfo>
-        <cname>OSN Movies Comedy</cname>
-        <chnumber>ch603</chnumber>
-    </streaminginfo>
-	
-	 <streaminginfo>
-        <cname>OSN Movies HD +2</cname>
-        <chnumber>ch605</chnumber>
-    </streaminginfo>
-	
-	 <streaminginfo>
-        <cname>OSN Movies Action HD</cname>
-        <chnumber>ch602</chnumber>
-    </streaminginfo>
-	
-	 <streaminginfo>
-        <cname>OSN Yahala Drama</cname>
-        <chnumber>ch608</chnumber>
-    </streaminginfo>
-	
-	 <streaminginfo>
-        <cname>OSN Yahala HD</cname>
-        <chnumber>ch601</chnumber>
-    </streaminginfo>
-
-	 <streaminginfo>
-        <cname>OSN First HD</cname>
-        <chnumber>ch604</chnumber>
-    </streaminginfo>
-	
-		 <streaminginfo>
-        <cname>OSN Ya Hala Shabab HD</cname>
-        <chnumber>ch607</chnumber>
-    </streaminginfo>
-	
-     <streaminginfo>
-        <cname>OSN Ya Hala +2</cname>
-        <chnumber>ch600</chnumber>
-    </streaminginfo>
-    
-     <streaminginfo>
-        <cname>Libya</cname>
-        <chnumber>ch110</chnumber>
-    </streaminginfo>
-    
-<streaminginfo>
-        <cname>Panorama Drama</cname>
-        <chnumber>ch117</chnumber>
-    </streaminginfo>
-    
-<streaminginfo>
-        <cname>Bein2 HD</cname>
-        <chnumber>ch296</chnumber>
-    </streaminginfo>
-    
- <streaminginfo>
-        <cname>Bein6 HD</cname>
-        <chnumber>ch500</chnumber>
-    </streaminginfo>
-    
-    <streaminginfo>
-        <cname>Bein7 HD</cname>
-        <chnumber>ch501</chnumber>
-    </streaminginfo>
-    
-    <streaminginfo>
-        <cname>Bein8 HD</cname>
-        <chnumber>ch502</chnumber>
-    </streaminginfo>
-    
-    <streaminginfo>
-        <cname>Bein9 HD</cname>
-        <chnumber>ch503</chnumber>
-    </streaminginfo>
-    
-    <streaminginfo>
-        <cname>Bein10 HD</cname>
-        <chnumber>ch504</chnumber>
-    </streaminginfo>
-    
-    <streaminginfo>
-        <cname>Bein11 HD</cname>
-        <chnumber>ch505</chnumber>
-    </streaminginfo>
-    
-    <streaminginfo>
-        <cname>Bein12 HD</cname>
-        <chnumber>ch506</chnumber>
-    </streaminginfo>
-    
-    
-
-    <streaminginfo>
-        <cname>TMC</cname>
-        <chnumber>ch298</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>NT1</cname>
-        <chnumber>ch300</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>NRJ 12</cname>
-        <chnumber>ch297</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>LCP</cname>
-        <chnumber>ch306</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>FRANCE 5</cname>
-        <chnumber>ch304</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>FRANCE 3</cname>
-        <chnumber>ch302</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>FRANCE 2</cname>
-        <chnumber>ch303</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>FRANCE 0</cname>
-        <chnumber>ch305</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BFMTV</cname>
-        <chnumber>ch299</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>arte</cname>
-        <chnumber>ch301</chnumber>
-    </streaminginfo>
-
-
-
-    <streaminginfo>
-        <cname>Palestine</cname>
-        <url>ch100</url>
-    </streaminginfo>
-
-    <streaminginfo>
-        <cname>Sada Al Balad2</cname>
-        <chnumber>ch77</chnumber>
-    </streaminginfo> 
-    <streaminginfo>
-        <cname>Sada Al Balad</cname>
-        <chnumber>ch78</chnumber>
-    </streaminginfo> 
-
     <streaminginfo>
         <cname>Panorama Comedy</cname>
         <chnumber>ch114</chnumber>
+        <link>http://www.livetv.tn/Panorama-Comedy-en-direct-live.html</link>
     </streaminginfo> 
     <streaminginfo>
         <cname>Panorama Drama</cname>
         <chnumber>ch17</chnumber>
+        <link>http://www.livetv.tn/Panorama-Drama-en-direct-live.html</link>
     </streaminginfo> 
     <streaminginfo>
         <cname>Panorama Drama 2</cname>
         <chnumber>ch115</chnumber>
+        <link>http://www.livetv.tn/Panorama-Drama-2-en-direct-live.html</link>
     </streaminginfo>
 
     <streaminginfo>
         <cname>Aghani</cname>
-        <chnumber>ch294</chnumber>
-    </streaminginfo>
-
-    <streaminginfo>
-        <cname>Tunisia national 1</cname>
-        <chnumber>ch1</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Tunisia national 2</cname>
-        <chnumber>ch2</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Tunisia</cname>
-        <chnumber>ch3</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Nessma</cname>
-        <chnumber>ch5</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Hanibal</cname>
-        <chnumber>ch6</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Janoubiya</cname>
-        <chnumber>ch7</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>tounesna</cname>
-        <chnumber>ch8</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Zaitouna</cname>
-        <chnumber>ch9</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Telvza TV</cname>
-        <chnumber>ch10</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Mutawasit</cname>
-        <chnumber>ch11</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BeIn Sport 1</cname>
-        <chnumber>ch12</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BeIn Sport 2</cname>
-        <chnumber>ch13</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BeIn Sport 3</cname>
-        <chnumber>ch14</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BeIn Sport 4</cname>
-        <chnumber>ch15</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BeIn Sport 5</cname>
-        <chnumber>ch16</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BeIn Sport 6</cname>
-        <chnumber>ch17</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BeIn Sport 7</cname>
-        <chnumber>ch201</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BeIn Sport 8</cname>
-        <chnumber>ch18</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Dubai Sport 1</cname>
-        <chnumber>ch274</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Dubai Sport 2</cname>
-        <chnumber>ch275</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Alriadia Sport</cname>
-        <chnumber>ch276</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Bein 1 FR</cname>
-        <chnumber>ch507</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Bein 2 FR</cname>
-        <chnumber>ch508</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Alhayat-Series</cname>
-        <chnumber>ch21</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>CBC Drama</cname>
-        <chnumber>ch22</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>CBC</cname>
-        <chnumber>ch23</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Dream 1</cname>
-        <chnumber>ch24</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Dubai</cname>
-        <chnumber>ch25</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>FataFeat</cname>
-        <chnumber>ch26</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Fox Movies</cname>
-        <chnumber>ch27</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>LBC</cname>
-        <chnumber>ch28</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Mazzika</cname>
-        <chnumber>ch29</chnumber>
+        <chnumber>ch823</chnumber>
+        <link>http://www.livetv.tn/Aghani-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC 1</cname>
         <chnumber>ch30</chnumber>
+        <link>http://www.livetv.tn/MBC-1-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC 2</cname>
         <chnumber>ch31</chnumber>
+        <link>http://www.livetv.tn/MBC-2-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC 3</cname>
         <chnumber>ch32</chnumber>
+        <link>http://www.livetv.tn/MBC-3-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC 4</cname>
         <chnumber>ch33</chnumber>
+        <link>http://www.livetv.tn/MBC-4-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC Action</cname>
         <chnumber>ch34</chnumber>
+        <link>http://www.livetv.tn/MBC-Action-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC Bollywood</cname>
         <chnumber>ch35</chnumber>
+        <link>http://www.livetv.tn/MBC-Bollywood-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC Drama</cname>
         <chnumber>ch36</chnumber>
+        <link>http://www.livetv.tn/MBC-Drama-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC Masr</cname>
         <chnumber>ch37</chnumber>
+        <link>http://www.livetv.tn/MBC-Masr-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>MBC MAX</cname>
         <chnumber>ch38</chnumber>
+        <link>http://www.livetv.tn/MBC-MAX-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
-        <cname>MBC Persia</cname>
-        <chnumber>ch39</chnumber>
+        <cname>Mazzika</cname>
+        <chnumber>ch29</chnumber>
+        <link>http://www.livetv.tn/Mazzika-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>ART Aflam 1</cname>
         <chnumber>ch40</chnumber>
+        <link>http://www.livetv.tn/ART-Aflem-1-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>ART Aflam 2</cname>
         <chnumber>ch41</chnumber>
+        <link>http://www.livetv.tn/ART-Aflem-2-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Rotana Masriya</cname>
         <chnumber>ch42</chnumber>
+        <link>http://www.livetv.tn/Rotana-Masria-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Rotana Music</cname>
         <chnumber>ch43</chnumber>
+        <link>http://www.livetv.tn/Rotana-Music-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Rotana Classic</cname>
         <chnumber>ch44</chnumber>
+        <link>http://www.livetv.tn/Rotana-Classic-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Rotana Cinema</cname>
         <chnumber>ch45</chnumber>
+        <link>http://www.livetv.tn/Rotana-Cinema-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Rotana Aflam</cname>
         <chnumber>ch46</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Time Comedy</cname>
-        <chnumber>ch47</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Zee Alwan</cname>
-        <chnumber>ch48</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>SpaceToon</cname>
-        <chnumber>ch49</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Baraem</cname>
-        <chnumber>ch50</chnumber>
+        <link>http://www.livetv.tn/Rotana-Aflem-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Aljazeera Children</cname>
         <chnumber>ch51</chnumber>
+        <link>http://www.livetv.tn/JSC-Children-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Aljazeera Doc</cname>
         <chnumber>ch52</chnumber>
+        <link>http://www.livetv.tn/JSC-Documentaire-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Alarabiya</cname>
         <chnumber>ch53</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Abu Dhabi Drama</cname>
-        <chnumber>ch54</chnumber>
+        <link>http://www.livetv.tn/Al-Arabia-News-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Al Oula Maroc</cname>
+        <title>SRV1</title>
         <chnumber>ch55</chnumber>
+        <link>http://www.livetv.tn/Al-Oula-Maroc-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Al Maghribia</cname>
         <chnumber>ch56</chnumber>
+        <link>http://www.livetv.tn/Al-Maghrebia-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Al Majd</cname>
         <chnumber>ch57</chnumber>
+        <link>http://www.livetv.tn/Al-Majd-3-Coran-TV-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Al Manar</cname>
         <chnumber>ch58</chnumber>
+        <link>http://www.livetv.tn/Al-Manar-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Al Nahar Drama</cname>
         <chnumber>ch59</chnumber>
+        <link>http://www.livetv.tn/Al-Nahar-Drama-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Algeria</cname>
         <chnumber>ch60</chnumber>
+        <link>http://www.livetv.tn/Algeria-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Arabica Music</cname>
         <chnumber>ch61</chnumber>
+        <link>http://www.livetv.tn/Arabica-Music-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Bahrain</cname>
         <chnumber>ch62</chnumber>
+        <link>http://www.livetv.tn/Bahrain-TV-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Cairo Cinema</cname>
         <chnumber>ch63</chnumber>
+        <link>http://www.livetv.tn/Cairo-Cinema-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Cairo Drama</cname>
         <chnumber>ch64</chnumber>
+        <link>http://www.livetv.tn/Cairo-Drama-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Cartoon Network</cname>
         <chnumber>ch65</chnumber>
+        <link>http://www.livetv.tn/Cartoon-Network-AR-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Yemen</cname>
         <chnumber>ch66</chnumber>
+        <link>http://www.livetv.tn/Yemen-TV-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Moga Comedy</cname>
         <chnumber>ch67</chnumber>
+        <link>http://www.livetv.tn/Moga-Comedy-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Nile Comedy</cname>
         <chnumber>ch68</chnumber>
+        <link>http://www.livetv.tn/Nile-Comedy-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Nile Drama</cname>
         <chnumber>ch69</chnumber>
+        <link>http://www.livetv.tn/Nile-Drama-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Nile Family</cname>
         <chnumber>ch70</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Syria Drama</cname>
-        <chnumber>ch71</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Tamazigh Maroc</cname>
-        <chnumber>ch72</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Toyor Al Janah</cname>
-        <chnumber>ch73</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Zee Aflam</cname>
-        <chnumber>ch74</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>TF1</cname>
-        <chnumber>ch75</chnumber>
+        <link>http://www.livetv.tn/Nile-Family-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>2M</cname>
         <chnumber>ch76</chnumber>
+        <link>http://www.livetv.tn/2M-Maroc-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Abu Dhabi Sports 1</cname>
         <chnumber>ch79</chnumber>
+        <link>http://www.livetv.tn/Abu-Dhabi-Sport-en-direct-live.html</link>
+        <link/>
     </streaminginfo>
     <streaminginfo>
         <cname>Abu Dhabi</cname>
         <chnumber>ch80</chnumber>
+        <link>http://www.livetv.tn/Abu-Dhabi-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Aghanina</cname>
         <chnumber>ch81</chnumber>
+        <link>http://www.livetv.tn/Aghanina-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Ajyal</cname>
         <chnumber>ch82</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Haneen Music</cname>
-        <chnumber>ch83</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Masriyah</cname>
-        <chnumber>ch84</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Moustakilla</cname>
-        <chnumber>ch85</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Sharqiya</cname>
-        <chnumber>ch87</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Sumaria</cname>
-        <chnumber>ch88</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Egypt 2</cname>
-        <chnumber>ch89</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Mayaden</cname>
-        <chnumber>ch90</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al-Hurria</cname>
-        <chnumber>ch91</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al-Resalah</cname>
-        <chnumber>ch92</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al-hurra Iraq</cname>
-        <chnumber>ch93</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Alan</cname>
-        <chnumber>ch94</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Algeria 3</cname>
-        <chnumber>ch95</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Alhayat 1</cname>
-        <chnumber>ch96</chnumber>
+        <link>http://www.livetv.tn/Ajyal-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Alhayat Cinema</cname>
         <chnumber>ch97</chnumber>
+        <link>http://www.livetv.tn/Al-Hayat-Cinema-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Aliraqiya</cname>
         <chnumber>ch98</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Aljadeed</cname>
-        <chnumber>ch99</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Toyor baby</cname>
-        <chnumber>ch101</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Top Movies</cname>
-        <chnumber>ch102</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>TNN</cname>
-        <chnumber>ch103</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>M6</cname>
-        <chnumber>ch104</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Libya 2</cname>
-        <chnumber>ch105</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>France 24</cname>
-        <chnumber>ch106</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Fox</cname>
-        <chnumber>ch107</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Coran</cname>
-        <chnumber>ch108</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Cima</cname>
-        <chnumber>ch109</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Dubai One</cname>
-        <chnumber>ch111</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Baghdadia</cname>
-        <chnumber>ch112</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>BBC Arabic</cname>
-        <chnumber>ch113</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Algerie 24</cname>
-        <chnumber>ch116</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Echorouk Tv</cname>
-        <chnumber>ch118</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Funoon</cname>
-        <chnumber>ch119</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Fx Arabia</cname>
-        <chnumber>ch120</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Ghinwa</cname>
-        <chnumber>ch121</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Kuwait</cname>
-        <chnumber>ch124</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>LBC Europe</cname>
-        <chnumber>ch125</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al oula Maroc</cname>
-        <chnumber>ch126</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Masrawi Aflam</cname>
-        <chnumber>ch127</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Mazeka zoom</cname>
-        <chnumber>ch129</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Melody Aflem</cname>
-        <chnumber>ch130</chnumber>
+        <link>http://www.livetv.tn/Al-3ira9iya-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Nile Cinema</cname>
         <chnumber>ch131</chnumber>
+        <link>http://www.livetv.tn/Nile-Cinema-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Nile Drama 2</cname>
         <chnumber>ch132</chnumber>
+        <link>http://www.livetv.tn/Nile-Drama-2-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Nile News</cname>
         <chnumber>ch133</chnumber>
+        <link>http://www.livetv.tn/Nile-News-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Nile Sport</cname>
         <chnumber>ch134</chnumber>
+        <link>http://www.livetv.tn/Nile-Sport-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Rotana Clip</cname>
         <chnumber>ch135</chnumber>
+        <link>http://www.livetv.tn/Rotana-Clip-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Rotana Khaligi</cname>
         <chnumber>ch136</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Roya</cname>
-        <chnumber>ch137</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Sama Dubai</cname>
-        <chnumber>ch138</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Samira TV</cname>
-        <chnumber>ch139</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Sharjah</cname>
-        <chnumber>ch140</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Star Cinema</cname>
-        <chnumber>ch141</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>On TV</cname>
-        <chnumber>ch144</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>MTV</cname>
-        <chnumber>ch145</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>NBN</cname>
-        <chnumber>ch146</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Melody</cname>
-        <chnumber>ch147</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Mehwar</cname>
-        <chnumber>ch148</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>KSA 1</cname>
-        <chnumber>ch149</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Iqra</cname>
-        <chnumber>ch154</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Jordan</cname>
-        <chnumber>ch155</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Rasheed</cname>
-        <chnumber>ch156</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>LLBN</cname>
-        <chnumber>ch157</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Zagros</cname>
-        <chnumber>ch158</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Nahar</cname>
-        <chnumber>ch250</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Al Rafidain</cname>
-        <chnumber>ch253</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>CBC 2</cname>
-        <chnumber>ch254</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>CBC Extra</cname>
-        <chnumber>ch255</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>CBC Sofra</cname>
-        <chnumber>ch256</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Wanasah</cname>
-        <chnumber>ch257</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Mcm France</cname>
-        <chnumber>ch258</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Nile Life</cname>
-        <chnumber>ch259</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Nile TV</cname>
-        <chnumber>ch260</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Somsat Tv</cname>
-        <chnumber>ch261</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Tchad</cname>
-        <chnumber>ch265</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Tele Liban</cname>
-        <chnumber>ch266</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Somali Channel</cname>
-        <chnumber>ch268</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Mauritanie</cname>
-        <chnumber>ch270</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>National Geo Ad</cname>
-        <chnumber>ch271</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Medi 1 Sat</cname>
-        <chnumber>ch272</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>Kalsan TV</cname>
-        <chnumber>ch273</chnumber>
+        <link>http://www.livetv.tn/Rotana-Khaligi-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Canal Cinema</cname>
         <chnumber>ch280</chnumber>
+        <link>http://www.livetv.tn/Canal-Cinema-en-direct-live.html</link>
     </streaminginfo>
+
     <streaminginfo>
-        <cname>AlQahera W Elnas 2</cname>
-        <chnumber>ch281</chnumber>
-    </streaminginfo>
-    <streaminginfo>
-        <cname>SadacAlBalad Drama</cname>
+        <cname>Sada AlBalad Drama</cname>
         <chnumber>ch282</chnumber>
+        <link>http://www.livetv.tn/Sada-Al-Balad-Drama-en-direct-live.html</link>
     </streaminginfo>
     <streaminginfo>
         <cname>Al Nahar 2</cname>
         <chnumber>ch283</chnumber>
+        <link>http://www.livetv.tn/Al-Nahar-2-en-direct-live.html</link>
     </streaminginfo>
+    <streaminginfo>
+        <cname>Sada Al Balad2</cname>
+        <chnumber>ch77</chnumber>
+        <link>http://www.livetv.tn/Sada-Al-Balad-2-HD-en-direct-live.html</link>
+    </streaminginfo> 
+    <streaminginfo>
+        <cname>Tunisia national 1</cname>
+        <chnumber>ch1</chnumber>
+        <link>http://www.livetv.tn/Tunisie-NAT-1-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Tunisia national 2</cname>
+        <chnumber>ch2</chnumber>
+        <link>http://www.livetv.tn/Tunisie-NAT-2-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Tunisia</cname>
+        <chnumber>ch3</chnumber>
+        <link>http://www.livetv.tn/Ettounisia-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Nessma</cname>
+        <chnumber>ch5</chnumber>
+        <link>http://www.livetv.tn/Nessma-Rouge-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Hanibal</cname>
+        <chnumber>ch6</chnumber>
+        <link>http://www.livetv.tn/Hannibal-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Janoubiya</cname>
+        <chnumber>ch7</chnumber>
+        <link>http://www.livetv.tn/Al-Janoubia-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>tounesna</cname>
+        <chnumber>ch8</chnumber>
+        <link>http://www.livetv.tn/Tunisna-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Zaitouna</cname>
+        <chnumber>ch9</chnumber>
+        <link>http://www.livetv.tn/Zaitouna-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Telvza TV</cname>
+        <chnumber>ch10</chnumber>
+        <link>http://www.livetv.tn/Telvza-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Mutawasit</cname>
+        <chnumber>ch11</chnumber>
+        <link>http://www.livetv.tn/Al-Moutawaset-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dubai Sport 1</cname>
+        <chnumber>ch274</chnumber>
+        <link>http://www.livetv.tn/Dubai-Sport-1-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dubai Sport 2</cname>
+        <chnumber>ch275</chnumber>
+        <link>http://www.livetv.tn/Dubai-Sport-2-en-direct-live.html</link>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Alriadia Sport</cname>
+        <chnumber>ch276</chnumber>
+        <link>http://www.livetv.tn/Alriayadia-Sport-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Bein 1 FR</cname>
+        <chnumber>ch507</chnumber>
+        <link>http://www.livetv.tn/Bein-Sport-1-FR-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Bein 2 FR</cname>
+        <chnumber>ch508</chnumber>
+        <link>http://www.livetv.tn/Bein-Sport-2-FR-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alhayat-Series</cname>
+        <chnumber>ch21</chnumber>
+        <link>http://www.livetv.tn/Hayat-Series-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>CBC Drama</cname>
+        <chnumber>ch22</chnumber>
+        <link>http://www.livetv.tn/CBC-Drama-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>CBC</cname>
+        <chnumber>ch23</chnumber>
+        <link>http://www.livetv.tn/CBC-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dream 1</cname>
+        <chnumber>ch24</chnumber>
+        <link>http://www.livetv.tn/Dream-1-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Dubai</cname>
+        <chnumber>ch25</chnumber>
+        <link>http://www.livetv.tn/Dubai-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>FataFeat</cname>
+        <chnumber>ch26</chnumber>
+        <link>http://www.livetv.tn/FataFeat-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Fox Movies</cname>
+        <chnumber>ch27</chnumber>
+        <link>http://www.livetv.tn/Fox-Movies-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>LBC</cname>
+        <chnumber>ch28</chnumber>
+        <link>http://www.livetv.tn/LBC-en-direct-live.html</link>
+    </streaminginfo>
+
+
+    <streaminginfo>
+        <cname>MBC Persia</cname>
+        <chnumber>ch39</chnumber>
+        <link>http://www.livetv.tn/MBC-Persia-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Time Comedy</cname>
+        <chnumber>ch47</chnumber>
+        <link>http://www.livetv.tn/Time-Comedy-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Zee Alwan</cname>
+        <chnumber>ch48</chnumber>
+        <link>http://www.livetv.tn/Zee-Alwen-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>SpaceToon</cname>
+        <chnumber>ch49</chnumber>
+        <link>http://www.livetv.tn/SpaceToon-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Baraem</cname>
+        <chnumber>ch50</chnumber>
+        <link>http://www.livetv.tn/Baraem-en-direct-live.html</link>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Abu Dhabi Drama</cname>
+        <chnumber>ch54</chnumber>
+        <link>http://www.livetv.tn/Abu-Dhabi-Drama-en-direct-live.html</link>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Syria Drama</cname>
+        <chnumber>ch71</chnumber>
+        <link>http://www.livetv.tn/Syria-Drama-en-direct-live.html</link>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Toyor Al Janah</cname>
+        <chnumber>ch73</chnumber>
+        <link>http://www.livetv.tn/Touyour-Al-Jannah-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Zee Aflam</cname>
+        <chnumber>ch74</chnumber>
+        <link>http://www.livetv.tn/Zee-Aflem-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>TF1</cname>
+        <chnumber>ch714</chnumber>
+        <link>http://www.livetv.tn/TF1-en-direct-live.html</link>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Al Haneen Music</cname>
+        <chnumber>ch83</chnumber>
+        <link>http://www.livetv.tn/Haneen-Music-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Masriyah</cname>
+        <chnumber>ch84</chnumber>
+        <link>http://www.livetv.tn/Al-Masria-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Moustakilla</cname>
+        <chnumber>ch85</chnumber>
+        <link>http://www.livetv.tn/Al-Mustaquilla-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Sumaria</cname>
+        <chnumber>ch88</chnumber>
+        <link>http://www.livetv.tn/Al-Sumaria-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Mayaden</cname>
+        <chnumber>ch90</chnumber>
+        <link>http://www.livetv.tn/Al-Mayadeen-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al-Hurria</cname>
+        <chnumber>ch91</chnumber>
+        <link>http://www.livetv.tn/Al-Hurria-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al-Resalah</cname>
+        <chnumber>ch92</chnumber>
+        <link>http://www.livetv.tn/Al-Resalah-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al-hurra Iraq</cname>
+        <chnumber>ch93</chnumber>
+        <link>http://www.livetv.tn/Iraq-Al-Hurra-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alan</cname>
+        <chnumber>ch94</chnumber>
+        <link>http://www.livetv.tn/Alan-TV-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Algeria 3</cname>
+        <chnumber>ch95</chnumber>
+        <link>http://www.livetv.tn/Algeria-3-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Alhayat 1</cname>
+        <chnumber>ch96</chnumber>
+        <link>http://www.livetv.tn/AlHayat-en-direct-live.html</link>
+    </streaminginfo>
+
+    <streaminginfo>
+        <cname>Aljadeed</cname>
+        <chnumber>ch99</chnumber>
+        <link>http://www.livetv.tn/Aljadeed-Sat-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Toyor baby</cname>
+        <chnumber>ch101</chnumber>
+        <link>http://www.livetv.tn/Touyour-Baby-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Top Movies</cname>
+        <chnumber>ch102</chnumber>
+        <link>http://www.livetv.tn/Top-Movies-en-direct-live.html</link>
+    </streaminginfo>
+    <streaminginfo>
+        <cname>TNN</cname>
+        <chnumber>ch103</chnumber>
+        <link>http://www.livetv.tn/TNN-Tunisia-en-direct-live.html</link>
+    </streaminginfo>
+<streaminginfo>
+        <cname>TMC</cname>
+        <chnumber>ch298</chnumber>
+<link>http://www.livetv.tn/TMC-en-direct-live.html</link></streaminginfo>
+<streaminginfo>
+        <cname>NT1</cname>
+        <chnumber>ch300</chnumber>
+    <link>http://www.livetv.tn/NT1-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>NRJ 12</cname>
+        <chnumber>ch297</chnumber>
+    <link>http://www.livetv.tn/NRJ-12-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>LCP</cname>
+        <chnumber>ch306</chnumber>
+    <link>http://www.livetv.tn/LCP-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>FRANCE 5</cname>
+        <chnumber>ch304</chnumber>
+    <link>http://www.livetv.tn/FR5-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>FRANCE 3</cname>
+        <chnumber>ch302</chnumber>
+    <link>http://www.livetv.tn/FR3-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>FRANCE 2</cname>
+        <chnumber>ch303</chnumber>
+    <link>http://www.livetv.tn/FR2-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>FRANCE 0</cname>
+        <chnumber>ch305</chnumber>
+    <link>http://www.livetv.tn/FR-O-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>BFMTV</cname>
+        <chnumber>ch299</chnumber>
+    <link>http://www.livetv.tn/BFM-TV-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>arte</cname>
+        <chnumber>ch301</chnumber>
+    <link>http://www.livetv.tn/ARTE-en-direct-live.html</link>
+	</streaminginfo>
+	
+	  <streaminginfo>
+        <cname>France 24</cname>
+        <chnumber>ch106</chnumber>
+    <link>http://www.livetv.tn/France-24-Arabic-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>Fox</cname>
+        <chnumber>ch107</chnumber>
+    <link>http://www.livetv.tn/Fox-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>Coran</cname>
+        <chnumber>ch108</chnumber>
+    <link>http://www.livetv.tn/Coran-TV-en-direct-live.html</link>
+	</streaminginfo>
+    <streaminginfo>
+        <cname>Cima</cname>
+        <chnumber>ch109</chnumber>
+    <link>http://www.livetv.tn/Cima-en-direct-live.html</link>
+	</streaminginfo>
+	
+    <streaminginfo>
+        <cname>Dubai One</cname>
+        <chnumber>ch111</chnumber>
+    <link>http://www.livetv.tn/Dubai-One-en-direct-live.html</link>
+    	
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Al Baghdadia</cname>
+        <chnumber>ch112</chnumber>
+    <link>http://www.livetv.tn/Baghdadiya-en-direct-live.html</link>
+    	
+    </streaminginfo>
+    <streaminginfo>
+        <cname>BBC Arabic</cname>
+        <chnumber>ch113</chnumber>
+    <link>http://www.livetv.tn/BBC-Arabic-en-direct-live.html</link>
+    	
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Algerie 24</cname>
+        <chnumber>ch116</chnumber>
+    <link>http://www.livetv.tn/Algerie-24-en-direct-live.html</link>
+    	
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Echorouk Tv</cname>
+        <chnumber>ch118</chnumber>
+    <link>http://www.livetv.tn/Echourouk-TV-en-direct-live.html</link>
+    	
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Funoon</cname>
+        <chnumber>ch119</chnumber>
+    <link>http://www.livetv.tn/Founoun-en-direct-live.html</link>
+    	
+    </streaminginfo>
+    <streaminginfo>
+        <cname>Fx Arabia</cname>
+        <chnumber>ch120</chnumber>
+    <link>http://www.livetv.tn/Fx-Arabia-en-direct-live.html</link>
+</streaminginfo>
+    <streaminginfo>
+        <cname>Ghinwa</cname>
+        <chnumber>ch121</chnumber>
+    <link>http://www.livetv.tn/Ghinwa-en-direct-live.html</link>
+</streaminginfo>
+    <streaminginfo>
+        <cname>Kuwait</cname>
+        <chnumber>ch124</chnumber>
+    <link>http://www.livetv.tn/Kuwait-en-direct-live.html</link>
+</streaminginfo>
+    <streaminginfo>
+        <cname>LBC Europe</cname>
+        <chnumber>ch125</chnumber>
+    <link>http://www.livetv.tn/LBC-Europe-en-direct-live.html</link>
+</streaminginfo>
+    <streaminginfo>
+        <cname>Al oula Maroc</cname>
+        <title>SRV2</title>
+        <chnumber>ch126</chnumber>
+<link>http://www.livetv.tn/Al-Oula-Maroc-en-direct-live.html</link>
+</streaminginfo>
+	
+  <streaminginfo>
+        <cname>Samira TV</cname>
+        <chnumber>ch139</chnumber>
+    <link>http://www.livetv.tn/Samira-TV-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Sharjah</cname>
+        <chnumber>ch140</chnumber>
+    <link>http://www.livetv.tn/Sharjah-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Star Cinema</cname>
+        <chnumber>ch141</chnumber>
+    <link>http://www.livetv.tn/Star-Cinema-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>On TV</cname>
+        <chnumber>ch144</chnumber>
+    <link>http://www.livetv.tn/On-TV-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>MTV</cname>
+        <chnumber>ch145</chnumber>
+    <link>http://www.livetv.tn/MTV-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>NBN</cname>
+        <chnumber>ch146</chnumber>
+    <link>http://www.livetv.tn/NBN-TV-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Melody</cname>
+        <chnumber>ch147</chnumber>
+    <link>http://www.livetv.tn/Melody-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Mehwar</cname>
+        <chnumber>ch148</chnumber>
+    <link>http://www.livetv.tn/Mehwer-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>KSA 1</cname>
+        <chnumber>ch149</chnumber>
+    <link>http://www.livetv.tn/KSA-1-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Iqra</cname>
+        <chnumber>ch154</chnumber>
+    <link>http://www.livetv.tn/Iraq-Al-Hurra-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Jordan</cname>
+        <chnumber>ch155</chnumber>
+    <link>http://www.livetv.tn/Jordan-TV-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Al Rasheed</cname>
+        <chnumber>ch156</chnumber>
+    <link>http://www.livetv.tn/Alrashid-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>LLBN</cname>
+        <chnumber>ch157</chnumber>
+    <link>http://www.livetv.tn/LLBN-Lebanon-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Zagros</cname>
+        <chnumber>ch158</chnumber>
+    <link>http://www.livetv.tn/Zagros-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Al Nahar</cname>
+        <chnumber>ch250</chnumber>
+    <link>http://www.livetv.tn/Al-Nahar-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Al Rafidain</cname>
+        <chnumber>ch253</chnumber>
+    <link>http://www.livetv.tn/Al-Rafidain-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>CBC 2</cname>
+        <chnumber>ch254</chnumber>
+    <link>http://www.livetv.tn/CBC-2-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>CBC Extra</cname>
+        <chnumber>ch255</chnumber>
+    <link>http://www.livetv.tn/CBC-Extra-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>CBC Sofra</cname>
+        <chnumber>ch256</chnumber>
+    <link>http://www.livetv.tn/CBC-Sofra-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Wanasah</cname>
+        <chnumber>ch257</chnumber>
+    <link>http://www.livetv.tn/Wanasa-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Mcm France</cname>
+        <chnumber>ch258</chnumber>
+    <link>http://www.livetv.tn/Mcm-France-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Nile Life</cname>
+        <chnumber>ch259</chnumber>
+    <link>http://www.livetv.tn/Nile-Life-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Nile TV</cname>
+        <chnumber>ch260</chnumber>
+    <link>http://www.livetv.tn/Nile-TV-en-direct-live.html</link></streaminginfo>
+
+    <streaminginfo>
+        <cname>Tchad</cname>
+        <chnumber>ch265</chnumber>
+    <link>http://www.livetv.tn/Tchad-TV-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Tele Liban</cname>
+        <chnumber>ch266</chnumber>
+    <link>http://www.livetv.tn/Tele-Liban-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Somali Channel</cname>
+        <chnumber>ch268</chnumber>
+    <link>http://www.livetv.tn/Somal-TV-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Mauritanie</cname>
+        <chnumber>ch270</chnumber>
+    <link>http://www.livetv.tn/Mauritanie-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>National Geo Ad</cname>
+        <chnumber>ch271</chnumber>
+    <link>http://www.livetv.tn/Nat-Geo-AD-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Medi 1 Sat</cname>
+        <chnumber>ch272</chnumber>
+    <link>http://www.livetv.tn/Medi-1-Sat-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Kalsan TV</cname>
+        <chnumber>ch273</chnumber>
+    <link>http://www.livetv.tn/Kalsan-TV-en-direct-live.html</link></streaminginfo>
+  
     <streaminginfo>
         <cname>Al-Nahar Drama 2</cname>
         <chnumber>ch284</chnumber>
-    </streaminginfo>
+    <link>http://www.livetv.tn/Al-Nahar-Drama-2-en-direct-live.html</link></streaminginfo>
     <streaminginfo>
         <cname>Al Nahar Sport</cname>
         <chnumber>ch400</chnumber>
-    </streaminginfo>
+    <link>http://www.livetv.tn/Al-Nahar-Sport-en-direct-live.html</link></streaminginfo>
     <streaminginfo>
         <cname>Al Hiwar Ettounsi</cname>
         <chnumber>ch444</chnumber>
-    </streaminginfo>
+    <link>http://www.livetv.tn/Al-Hiwar-Ettounsi-en-direct-live.html</link></streaminginfo>
     <streaminginfo>
         <cname>ONT</cname>
         <chnumber>ch293</chnumber>
-    </streaminginfo>
+    <link>http://www.livetv.tn/On-TV-en-direct-live.html</link></streaminginfo>
     <streaminginfo>
         <cname>OTV Lebanon</cname>
         <chnumber>ch292</chnumber>
-    </streaminginfo>
+    <link>http://www.livetv.tn/OTV-Lebanon-en-direct-live.html</link></streaminginfo>
     <streaminginfo>
         <cname>Cine Majesti</cname>
         <chnumber>ch295</chnumber>
-    </streaminginfo>
+    <link>http://www.livetv.tn/Cine-Majestic-en-direct-live.html</link></streaminginfo>
     <streaminginfo>
         <cname>Canal plus</cname>
         <chnumber>ch279</chnumber>
-    </streaminginfo> 
+    <link>http://www.livetv.tn/Canal-Plus-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Alarabiya Ahdas</cname>
+        <chnumber>ch805</chnumber>
+    <link>http://www.livetv.tn/Al-Arabia-Hadath-en-direct-live.html</link></streaminginfo> 
+    
+    <streaminginfo>
+        <cname>ART Hekayat</cname>
+        <chnumber>ch407</chnumber>
+    <link>http://www.livetv.tn/ART-Hikayat-1-en-direct-live.html</link></streaminginfo>
+	<streaminginfo>
+        <cname>ART Hekayat 2</cname>
+        <chnumber>ch408</chnumber>
+    <link>http://www.livetv.tn/ART-Hikayat-2-en-direct-live.html</link></streaminginfo>
+	<streaminginfo>
+        <cname>ART Cinema</cname>
+        <chnumber>409</chnumber>
+    <link>http://www.livetv.tn/ART-Cinema-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Coran</cname>
+        <chnumber>ch323</chnumber>
+<link>http://www.livetv.tn/Coran-TV-en-direct-live.html</link></streaminginfo>
+
+<streaminginfo>
+        <cname>Mecca TV</cname>
+        <chnumber>ch322</chnumber>
+<link>http://www.livetv.tn/Mecca-TV-en-direct-live.html</link></streaminginfo>
+
+<streaminginfo>
+        <cname>Alinsen</cname>
+        <chnumber>ch4</chnumber>
+<link>http://www.livetv.tn/Al-Insen-en-direct-live.html</link></streaminginfo>
+
+<streaminginfo>
+        <cname>B4U Aflam</cname>
+        <chnumber>ch331</chnumber>
+<link>http://www.livetv.tn/B4U-Aflem-en-direct-live.html</link></streaminginfo>
+
+<streaminginfo>
+        <cname>Aljazeera</cname>
+        <chnumber></chnumber>
+<link>http://www.livetv.tn/JSC-News-Arabic-en-direct-live.html</link></streaminginfo>
+<streaminginfo>
+        <cname>Panorama Drama</cname>
+        <chnumber>ch117</chnumber>
+    <link>http://www.livetv.tn/Panorama-Drama-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Palestine</cname>
+        <url>ch100</url>
+    <link>http://www.livetv.tn/Palestine-en-direct-live.html</link>
+</streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 1</cname>
+        <chnumber>ch12</chnumber>
+    <link>http://www.livetv.tn/BeIn-1-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 1</cname>
+        <title>SRV2</title>
+        <chnumber>ch829</chnumber>
+    <link>http://www.livetv.tn/Bein-1-Full-HD-en-direct-live.html</link></streaminginfo>
+    
+    <streaminginfo>
+        <cname>BeIn Sport 2</cname>
+        <chnumber>ch13</chnumber>
+    <link>http://www.livetv.tn/BeIn-2-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>BeIn Sport 2</cname>
+        <title>SRV2</title>
+        <chnumber>ch830</chnumber>
+    <link>http://www.livetv.tn/Bein-2-Full-HD-en-direct-live.html</link></streaminginfo>
+	
+   <streaminginfo>
+        <cname>M6</cname>
+        <chnumber>ch104</chnumber>
+    <link>http://www.livetv.tn/M6-en-direct-live.html</link>
+	</streaminginfo>
+ 
+    <streaminginfo>
+        <cname>Masrawi Aflam</cname>
+        <chnumber>ch127</chnumber>
+    <link>http://www.livetv.tn/Masrawi-Aflem-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Mazeka zoom</cname>
+        <chnumber>ch129</chnumber>
+    <link>http://www.livetv.tn/Mazika-Zoom-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Melody Aflem</cname>
+        <chnumber>ch130</chnumber>
+    <link>http://www.livetv.tn/Melody-Aflem-en-direct-live.html</link></streaminginfo>
+    
+    <streaminginfo>
+        <cname>Roya</cname>
+        <chnumber>ch137</chnumber>
+    <link>http://www.livetv.tn/Roya-en-direct-live.html</link></streaminginfo>
+    <streaminginfo>
+        <cname>Sama Dubai</cname>
+        <chnumber>ch138</chnumber>
+    <link>http://www.livetv.tn/Sama-Dubai-en-direct-live.html</link></streaminginfo>
+    
+    <streaminginfo>
+        <cname>Al Sharqiya</cname>
+        <chnumber>ch87</chnumber>
+    <link>http://www.livetv.tn/Al-Shar9ia-en-direct-live.html</link></streaminginfo>
+  	
+    <streaminginfo>
+        <cname>Egypt 2</cname>
+        <chnumber>ch89</chnumber>
+    <link>http://www.livetv.tn/Al-Masria-en-direct-live.html</link></streaminginfo>
+	<streaminginfo>
+        <cname>Blue Nile TV</cname>
+        <chnumber>ch410</chnumber>
+<link>http://www.livetv.tn/Blue-Nile-TV-en-direct-live.html</link></streaminginfo>
+<streaminginfo>
+        <cname>Tamazigh Maroc</cname>
+        <chnumber>ch327</chnumber>
+<link>http://www.livetv.tn/Algeria-Tamazigh-en-direct-live.html</link></streaminginfo>
+	
 </streaminginfos>

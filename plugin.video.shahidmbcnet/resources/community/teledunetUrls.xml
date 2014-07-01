@@ -1,5 +1,162 @@
 <streamingInfos>
 <streaminginfo>
+	<cname>Quran TV ksa</cname>
+	<url>coran</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Noon Kids</cname>
+	<url>noonkids</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Hawas</cname>
+	<url>hawas</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Iraqiya Sport</cname>
+	<url>aliraqiya_sport</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Saudia Sport</cname>
+	<url>saudisport</url>
+</streaminginfo>
+
+
+<streaminginfo>
+	<cname>Al Hiwar</cname>
+	<url>alhewar</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Al Anwar</cname>
+	<url>alanwar</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Alhayat 1</cname>
+	<title>SRV1</title>
+	<url>alhayat_1</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Al Baghdadia Drama</cname>
+	<url>al_bagdadia_2_ch_2</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>AlQahera W Elnas 2</cname>
+	<url>al_kahera_wal_nas_2</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>AlQahera W Elnas</cname>
+	<url>al_kahera_wal_nas</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Egypt 1</cname>
+	<url>al_oula</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Al Nahar</cname>
+	<url>al_nahar</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Bein Sport News</cname>
+	<url>bein_news</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Euro News Arabic</cname>
+	<url>euro_news</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Sada AlBalad Drama</cname>
+	<url>sada_elbalad_drama</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Orient News</cname>
+	<url>orient_news</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Orient News</cname>
+	<url>orient_news</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Telvza TV</cname>
+	<url>telvza_tv</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>alkass</cname>
+	<url>Alkass</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Al Dafra</cname>
+	<url>aldafrah</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Tahrir</cname>
+	<url>altahrer</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Ishtar</cname>
+	<url>ishtar</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Karbala</cname>
+	<url>karbala</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>SkyNewsArabia</cname>
+	<url>skynews</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Star 2 Cinema</cname>
+	<url>star_cinema_2</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Syria Nour</cname>
+	<url>noor_alsham</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Libya Sport 1</cname>
+	<url>libya_alriadya_1</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Libya AlWataniya</cname>
+	<url>libya_alwatania_1</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Libya 2</cname>
+	<url>libya_tv</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Libya</cname>
+	<url>libya_alahrar</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>CNBC Arabic</cname>
+	<url>cnbc_arabia</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Dalel</cname>
+	<url>dalel</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Kanal 4</cname>
+	<url>kanal_4</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>KNN News</cname>
+	<url>knn_news</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Kurdistan</cname>
+	<url>kurdistan</url>
+</streaminginfo>
+
+<streaminginfo>
 	<cname>Melody Aflem</cname>
 	<url>melody_aflam</url>
 </streaminginfo>
@@ -8,11 +165,13 @@
 	<url>melody_hits</url>
 </streaminginfo>
 <streaminginfo>
-	<cname>Bein2 HD</cname>
+	<cname>Bein Sport 2</cname>
+	<title>HD</title>
 	<url>bein_sport_2_hd</url>
 </streaminginfo>
 <streaminginfo>
-	<cname>Bein6 HD</cname>
+	<cname>Bein Sport 6</cname>
+	<title>HD</title>
 	<url>bein_sport_6_hd</url>
 </streaminginfo>
 <streaminginfo>
@@ -90,7 +249,7 @@
 
 <streaminginfo>
 <cname>Alhayat2</cname>
-<url>alhayet_2</url>
+<url>alhayat_2</url>
 </streaminginfo>
 
 <streaminginfo>
@@ -147,6 +306,7 @@
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Al oula Maroc</cname>
+		<title>SRV1</title>
 		<url>al_aoula_maroc</url>
 	</streaminginfo>
 	<streaminginfo>
@@ -240,15 +400,16 @@
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Alhayat 1</cname>
-		<url>alhayat_1</url>
+		<title>SRV2</title>
+		<url>alhayat</url>
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Alhayat Cinema</cname>
-		<url>alhayat_cinema</url>
+		<url>al_hayat_cinema</url>
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Alhayat-Series</cname>
-		<url>alhayat_series</url>
+		<url>al_hayat_series</url>
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Aliraqiya</cname>
@@ -284,7 +445,7 @@
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Arabica Music</cname>
-		<url>arabica_music</url>
+		<url>arabica_tv</url>
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Arrabia</cname>
@@ -410,7 +571,7 @@
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Coran</cname>
-		<url>coran</url>
+		<url>coran_tv</url>
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Dream 1</cname>
@@ -460,6 +621,10 @@
 		<cname>Funoon</cname>
 		<url>funoon</url>
 	</streaminginfo>
+		<streaminginfo>
+		<cname>Future TV</cname>
+		<url>future</url>
+	</streaminginfo>
 	<streaminginfo>
 		<cname>Fx Arabia</cname>
 		<url>fx_arabia</url>
@@ -505,7 +670,7 @@
 		<url>lbc_europe</url>
 	</streaminginfo>
 	<streaminginfo>
-		<cname>Libya</cname>
+		<cname>Libya 2</cname>
 		<url>libya</url>
 	</streaminginfo>
 	<streaminginfo>
@@ -558,6 +723,7 @@
 	</streaminginfo>
 	<streaminginfo>
 		<cname>Al oula Maroc</cname>
+		<title>SRV2</title>
 		<url>maghreb_1</url>
 	</streaminginfo>
 	<streaminginfo>
@@ -811,4 +977,11 @@
 		<cname>Zee Alwan</cname>
 		<url>zee_alwan</url>
 	</streaminginfo>
+	<streaminginfo>
+		<cname>Masria ESC</cname>
+		<url>masria_esc</url>
+	</streaminginfo>
+
+
+
 </streamingInfos>

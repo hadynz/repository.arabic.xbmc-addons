@@ -1,29 +1,1124 @@
-
 <streamingInfos>
+<streaminginfo>
+     <cname>beladi</cname>
+	 <item><title>Med</title>
+	 <link>rtmp://edge3.video.vaughnsoft.net:443/live?tDM41au4l3EQoMkJcnWJkro85HfmznjW/live_beladitv timeout=20</link>
+	 </item>
+</streaminginfo>  
+<streaminginfo>
+     <cname>Libya Alhurra</cname>
+	<item>
+	<title>Med</title>
+	<link>http://108.178.42.58/live/10187.stream/gmswf.m3u8</link>
+	</item>
+</streaminginfo>   
+
+<streaminginfo>
+     <cname>OTV Lebanon</cname>
+	<item>
+	<title>itworkscd Low</title>
+	<link>http://livestreaming.itworkscdn.net:1935/otvmobile/otvlive_160p/playlist.m3u8</link>
+	</item>
+</streaminginfo><streaminginfo>
+     <cname>OTV Lebanon</cname>
+	<item>
+	<title>itworkscd Med</title>
+	<link>http://livestreaming.itworkscdn.net:1935/otvmobile/otvlive_240p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     <cname>OTV Lebanon</cname>
+	<item>
+	<title>itworkscd High</title>
+	<link>http://livestreaming.itworkscdn.net:1935/otvmobile/otvlive_360p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     <cname>OTV Lebanon</cname>
+	<item>
+	<title>itworkscd Highest</title>
+	<link>http://livestreaming.itworkscdn.net:1935/otvmobile/otvlive/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>LBC</cname>
+	<item>
+        <title>Low</title>
+        <link>http://37.48.80.48/lbclive/smil:lbclive.smil/chunklist_w38025370_b240000.m3u8</link>
+	</item>
+</streaminginfo>
 
 
+<streaminginfo>
+	<cname>LBC</cname>
+	<item>
+        <title>Med</title>
+        <link>http://37.48.80.48/lbclive/smil:lbclive.smil/chunklist_w38025370_b360000.m3u8</link>
+	</item>
+</streaminginfo>
 
-  
+<streaminginfo>
+	<cname>LBC</cname>
+	<item>
+        <title>High</title>
+        <link>http://37.48.80.48/lbclive/smil:lbclive.smil/chunklist_w38025370_b525000.m3u8</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+	<cname>LBC</cname>
+	<item>
+        <title>High</title>
+        <link>http://livestreaming.itworkscdn.net/lbclive/smil:lbclive.smil/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>i24News</cname>
+	<item>
+        <title>English</title>
+        <link>http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_english/398/master.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>i24News</cname>
+	<item>
+        <title>French</title>
+        <link>http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_french/412/master.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>i24News</cname>
+	<item>
+        <title>Arabic</title>
+        <link>http://bcoveliveios-i.akamaihd.net/hls/live/215102/master_arabic/391/master.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Alquds Educ</cname>
+	<item>
+        <title>Low</title>
+        <link>rtmp://178.214.64.156:1935/hd1-2/hd1-2 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Alquds Educ</cname>
+	<item>
+        <title>Med</title>
+        <link>rtmp://178.214.64.156:1935/hd1-3/hd1-3 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Alquds Educ</cname>
+	<item>
+        <title>High</title>
+        <link>rtmp://178.214.64.156:1935/live/MyStream timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Nabaa</cname>
+	<item><title>Med</title>
+	<link>rtmp://31.14.40.238:1935/live/Nabaa swfUrl=http://www.serverroom.us/jwplayer5/player.swf pageUrl=http://nabaa.tv/%D9%85%D8%A8%D8%A7%D8%B4%D8%B1/ live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>CNBC Arabic</cname>
+<item>
+<title>livestream High</title>
+<link>$doregex[get-m3u8]|Cookie=$get_cookies$&amp;User-Agent=AppleCoreMedia/1.0.0.11B554a (iPhone; U; CPU OS 7_0_4 like Mac OS X; en_gb)&amp;X-Playback-Session-Id=$GUID$</link>
+<regex>
+<name>get-m3u8</name>
+<expres>76.*\s?(http.*?)\s</expres>
+<page>$doregex[get-page]</page>
+<agent>AppleCoreMedia/1.0.0.11B554a (iPhone; U; CPU OS 7_0_4 like Mac OS X; en_gb)</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>get-page</name>
+<expres>"m3u8_url":"(.*?)"</expres>
+<page>http://new.livestream.com/accounts/3102016/events/1914609</page>
+
+<cookieJar></cookieJar>
+</regex>
+</item>
+</streaminginfo>
+
+<streaminginfo>
+<cname>CNBC Arabic</cname>
+<item>
+<title>livestream low</title>
+<link>$doregex[get-url]</link>
+<regex>
+<name>get-url</name>
+<expres>"rtsp_url":"(.*?)"</expres>
+<page>http://new.livestream.com/accounts/3102016/events/1914609</page>
+<agent>Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</agent>
+</regex>
+</item>
+</streaminginfo>
+<streaminginfo>
+<cname>Alghad Alarabi</cname>
+<item>
+<title>Livestream High</title>
+<link>$doregex[get-m3u8]|Cookie=$get_cookies$&amp;User-Agent=AppleCoreMedia/1.0.0.11B554a (iPhone; U; CPU OS 7_0_4 like Mac OS X; en_gb)&amp;X-Playback-Session-Id=$GUID$</link>
+<regex>
+<name>get-m3u8</name>
+<expres>76.*\s?(http.*?)\s</expres>
+<page>$doregex[get-page]</page>
+<agent>AppleCoreMedia/1.0.0.11B554a (iPhone; U; CPU OS 7_0_4 like Mac OS X; en_gb)</agent>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>get-page</name>
+<expres>"m3u8_url":"(.*?)"</expres>
+<page>http://new.livestream.com/alghadtv/events/2330953</page>
+<cookieJar></cookieJar>
+</regex>
+</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Alan</cname><item><title>Low</title><link>http://livestreaming.itworkscdn.net/alaanlive/alaantv_160p/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Alan</cname><item><title>Med</title><link>http://livestreaming.itworkscdn.net/alaanlive/alaantv_240p/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Alan</cname><item><title>High</title><link>http://livestreaming.itworkscdn.net/alaanlive/alaantv_360p/playlist.m3u8</link></item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Dua</cname><item><title>Lower</title><link>http://live5.haditv.com:1935/liveTrans/mp4:channel5_110k/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Dua</cname><item><title>Low</title><link>http://live5.haditv.com:1935/liveTrans/mp4:channel5_190k/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Dua</cname><item><title>Med</title><link>http://live5.haditv.com:1935/liveTrans/mp4:channel5_450k/playlist.m3u8</link></item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Dua</cname><item><title>High 720p</title><link>http://live5.haditv.com:1935/liveTrans/mp4:channel5_800k/playlist.m3u8</link></item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Rudaw</cname>
+	<item>
+	<title>Low</title>
+	<link>http://livestreaming.itworkscdn.net/rudawlive/rudawtv_160p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Rudaw</cname>
+<item><title>Med</title><link>http://livestreaming.itworkscdn.net/rudawlive/rudawtv_240p/playlist.m3u8</link>
+</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Rudaw</cname>
+	<item>
+	<title>High</title>
+	<link>http://livestreaming.itworkscdn.net/rudawlive/rudawtv_360p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Rudaw</cname>
+<item><title>High rtmp</title><link>rtmp://livestreaming.itworkscdn.net/rudawlive/rudawtv swfUrl=http://rudaw.net/flowplayer/flowplayer.commercial-3.2.16.swf pageUrl=http://rudaw.net/sorani/onair/tv/live</link>
+</item>
+</streaminginfo>
+<streaminginfo>
+<cname>alkass</cname>
+<item>
+<title>Plus SD</title>
+<link>$doregex[get-rtmp] playpath=$doregex[get-playpath] flashver=WIN\2013,0,0,214 pageUrl=http://shoof.alkass.net/shoof/live/live_5.php swfUrl=http://shoof.alkass.net/shoof/jwplayer/player.swf live=1 swfVfy=1 timeout=10</link>
+<regex>
+<name>get-rtmp</name>
+<expres>streamer':'(.*?)'</expres>
+<page>$doregex[get-unpacked]</page>
+</regex>
+
+<regex>
+<name>get-playpath</name>
+<expres>file':'(.*?)'</expres>
+<page>$doregex[get-unpacked]</page>
+</regex>
+
+<regex>
+<name>get-unpacked</name>
+<expres>$pyFunction:get_unpacked('http://shoof.alkass.net/shoof/live/live_5.php','(eval.*)' )</expres>
+<page></page>
+</regex>
+</item>
+</streaminginfo>
+<streaminginfo>
+<cname>alkass</cname>
+<item>
+<title>HD 720p</title>
+<link>$doregex[get-m3u8]</link>
+<regex>
+<name>get-m3u8</name>
+<expres>(http.*?.m3u8)"</expres>
+<page>$doregex[get-unpacked]</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>get-unpacked</name>
+<expres>$pyFunction:get_unpacked('http://shoof.alkass.net/shoof/live/live_2.php','(eval.*)' )</expres>
+<page></page>
+</regex>
+</item>
+</streaminginfo>
+
+<streaminginfo>
+<cname>alkass</cname>
+<item>
+<title>Plus HD 720p</title>
+<link>$doregex[get-m3u8]</link>
+<regex>
+<name>get-m3u8</name>
+<expres>(http.*?.m3u8)"</expres>
+<page>$doregex[get-unpacked]</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>get-unpacked</name>
+<expres>$pyFunction:get_unpacked('http://shoof.alkass.net/shoof/live/live_3.php','(eval.*)' )</expres>
+<page></page>
+</regex>
+</item>
+</streaminginfo>
+<streaminginfo>
+<cname>alkass</cname>
+<item>
+<title>Plus1 720p</title>
+<link>$doregex[get-m3u8]</link>
+<regex>
+<name>get-m3u8</name>
+<expres>(http.*?.m3u8)"</expres>
+<page>$doregex[get-unpacked]</page>
+<cookieJar></cookieJar>
+</regex>
+<regex>
+<name>get-unpacked</name>
+<expres>$pyFunction:get_unpacked('http://shoof.alkass.net/shoof/live/live_4.php','(eval.*)' )</expres>
+<page></page>
+</regex>
+</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Aden live</cname>
+	<item>
+	<title>SD</title>
+	<link>rtmp://50.22.217.194/live/livestream swfUrl=http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf pageUrl=http://adenlivetv.tv/live.html live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>AlBabeleyia</cname>
+	<item>
+	<title>SD</title>
+	<link>rtmp://69.160.44.134:1936/8024/8024 swfUrl=http://fpdownload.adobe.com/strobe/FlashMediaPlayback.swf pageUrl=http://www.albabelyia.net/live/ live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Halab Today</cname>
+	<item>
+	<title>SD</title>
+	<link>rtmp://tulip.wowzacontrol.com:1935/8010/8010 swfUrl=http://www.tootvs.com/streaming/FLVplayer_Custom.swf pageUrl=http://halabtoday.org/ live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>ETV Ethiopia</cname>
+	<item>
+	<title>oromiyaa</title>
+	<link>rtmp://media8.vixtream.net:80/etvlive playpath=oromiyaa.stream swfUrl=http://www.allcomtv.com/vxplayer/player57.swf pageUrl=http://www.allcomtv.com/tv-oromiyaa live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>ETV Ethiopia</cname>
+	<item>
+	<title>ESTV</title>
+	<link>rtmp://media8.vixtream.net:80/etvlive playpath=estv.stream swfUrl=http://www.allcomtv.com/vxplayer/player57.swf pageUrl=http://www.allcomtv.com/estv live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>ETV Ethiopia</cname>
+	<item>
+	<title>ETV3</title>
+	<link>rtmp://media8.vixtream.net:80/etvlive playpath=etv3.stream swfUrl=http://www.allcomtv.com/vxplayer/player57.swf pageUrl=http://www.allcomtv.com/etv3 live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>ETV Ethiopia</cname>
+	<item>
+	<title>ETV SVR1</title>
+	<link>rtmp://media8.vixtream.net:80/etvlive playpath=etv.stream swfUrl=http://www.allcomtv.com/vxplayer/player57.swf pageUrl=http://www.allcomtv.com/etv live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>ETV Ethiopia</cname>
+	<item>
+	<title>ETV SRV2</title>
+	<link>rtmp://213.55.98.102/live/livestream swfUrl=http://www.etvlive.gov.et/StrobeMediaPlayback.swf pageUrl=http://www.etvlive.gov.et/etv.html live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>alrayan</cname>
+	<item>
+	<title>Med</title>
+    <link>http://alrayyan_hls-lh.akamaihd.net/i/alrayyan_ar@2145/master.m3u8</link>
+    </item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Al Kout</cname>
+	<item><title>SD</title>
+	<link>rtmp://66.23.237.233:1935/alkout/alkout swfUrl=http://fpdownload.adobe.com/strobe/FlashMediaPlayback_101.swf pageUrl=http://www.alkouttv.net/live.aspx live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>KTV ARABE</cname>
+	<item>
+	<title>media.gov.kw</title>
+	<link>rtmp://91.140.238.7/rtmplive/rtpencoder/ch5.sdp timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>KTV ETRAA</cname>
+	<item>
+	<title>media.gov.kw</title>
+	<link>rtmp://91.140.238.7/rtmplive/rtpencoder/ch4.sdp timeout=20</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>KTV 2</cname>
+	<item>
+	<title>media.gov.kw</title>
+	<link>rtmp://91.140.238.7/rtmplive/rtpencoder/ch2.sdp timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Kuwait</cname>
+	<item>
+	<title>media.gov.kw</title>
+	<link>rtmp://91.140.238.7/rtmplive/rtpencoder/ch1.sdp timeout=20</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>KTV SPORT</cname>
+	<item>
+	<title>media.gov.kw</title>
+	<link>rtmp://91.140.238.7/rtmplive/rtpencoder/ch3.sdp timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>KTV PLUS</cname>
+	<item>
+	<title>media.gov.kw</title>
+	<link>rtmp://91.140.238.7/rtmplive/rtpencoder/ch6.sdp timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>KTV Sport Extra</cname>
+	<item>
+	<title>media.gov.kw</title>
+	<link>rtmp://91.140.238.7/rtmplive/rtpencoder/sportextra.sdp timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>KTV Sport Plus</cname>
+	<item>
+	<title>media.gov.kw</title>
+	<link>rtmp://91.140.238.7/rtmplive/rtpencoder/sportplus.sdp timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Libya Awalan</cname>
+	<item>
+	<title>Med</title>
+	<link>rtmp://41.128.145.24:1935/LibyaAwalan/LibyaAwalanStream swfUrl=http://p.jwpcdn.com/6/4/jwplayer.flash.swf pageUrl=http://libya-awalan.tv/%D8%A7%D9%84%D8%A8%D8%AB-%D8%A7%D9%84%D8%AD%D9%8A/ live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>VIN</cname>
+	<item>
+	<title>vintv.net</title>
+	<link>http://95.170.203.137:8088/smooth.isml/manifest(format=m3u8-aapl).m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Masira</cname>
+	<item>
+	<title>rtmp</title>
+	<link>rtmp://livestreaming4.itworkscdn.com/masira playpath=livetv1 swfUrl=http://www.almaserahtv.com/player.swf pageUrl=http://www.almasirah.tv/ live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Masira</cname>
+	<item>
+	<title>m3u8</title>
+	<link>http://livestreaming4.itworkscdn.com/masira/livetv1/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+	<streaminginfo>
+		<cname>TNN</cname>
+		<item>
+			<title>low</title>
+			<link>$doregex[get-m3u8]&amp;hdnea=st=$doregex[get-hdnea]</link>
+			<regex>
+			<name>get-m3u8</name>
+			<expres>27.*[^h]+(.*)</expres>
+			<page>$doregex[get-page]</page>
+			</regex>
+			<regex>
+			<name>get-page</name>
+			<expres>"m3u8_url":"([^"]*)</expres>
+			<page>http://new.livestream.com/accounts/2816313/events/2615039</page>
+			</regex>
+			<regex>
+			<name>get-hdnea</name>
+			<expres>hdnea=st=([^"]*)</expres>
+			<page>http://new.livestream.com/accounts/2816313/events/2615039</page>
+			</regex>
+		</item>
+
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Alghad Alarabi</cname>
+		<item>
+			<title>High</title>
+			<link>$doregex[get-m3u8]&amp;hdnea=st=$doregex[get-hdnea]</link>
+			<regex>
+			<name>get-m3u8</name>
+			<expres>486.*[^h]+(.*)</expres>
+			<page>$doregex[get-page]</page>
+			</regex>
+			<regex>
+			<name>get-page</name>
+			<expres>"m3u8_url":"([^"]*)</expres>
+			<page>http://new.livestream.com/alghadtv/events/2330953</page>
+			</regex>
+			<regex>
+			<name>get-hdnea</name>
+			<expres>hdnea=st=([^"]*)</expres>
+			<page>http://new.livestream.com/alghadtv/events/2330953</page>
+			</regex>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Dijlah</cname>
+		<item>
+			<title>m3u8</title>
+			<link>http://216.245.204.38:1935/dijlah/smil:a/chunklist.m3u8</link>
+		</item>
+	</streaminginfo>
+	
+	
+	<streaminginfo>
+		<cname>alkass</cname>
+		<item>
+			<title>qna.org</title>
+			<link>rtmp://AgendaStreamerx1.qna.org.qa/kas//kas timeout=20</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Baraem</cname>
+		<item>
+			<title> qna.org</title>
+			<link>rtmp://AgendaStreamerx1.qna.org.qa/brm//brm timeout=20</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Qatar</cname>
+		<item>
+			<title> qna.org</title>
+			<link>rtmp://AgendaStreamerx1.qna.org.qa/qtv//qtv timeout=20</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>alrayan</cname>
+		<item>
+			<title>qna.org</title>
+			<link>rtmp://AgendaStreamerx1.qna.org.qa/ryn//ryn timeout=20</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Al Majd Hadeeth</cname>
+		<item>
+			<title>high</title>
+			<link>http://188.40.138.23/hls/majdh/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Al Majd Hadeeth</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdh_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Al Majd</cname>
+		<item>
+			<title>high</title>
+			<link>http://188.40.138.23/hls/majdg/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Al Majd</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdg_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Science</cname>
+		<item>
+			<title>high</title>
+			<link>http://188.40.138.23/hls/majdsc/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Science</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdsc_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Kids</cname>
+		<item>
+			<title>high </title>
+			<link>http://188.40.138.23/hls/majdk/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Kids</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdk_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Almajd Quran</cname>
+		<item>
+			<title>high </title>
+			<link>http://188.40.138.23/hls/majdq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Quran</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdq_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>ALMAJD Natural</cname>
+		<item>
+			<title>high</title>
+			<link>http://188.40.138.23/hls/majdnat/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>ALMAJD Natural</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdnat_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>ALMAJD Documentary</cname>
+		<item>
+			<title>high </title>
+			<link>http://188.40.138.23/hls/majddoc/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>ALMAJD Documentary</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majddoc_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Masah</cname>
+		<item>
+			<title>high</title>
+			<link>http://188.40.138.23/hls/majdd/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Masah</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdd_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Basmah</cname>
+		<item>
+			<title>high </title>
+			<link>http://188.40.138.23/hls/majdb/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Basmah</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdb_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd News</cname>
+		<item>
+			<title>high</title>
+			<link>http://188.40.138.23/hls/majdnews/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd News</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdnews_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Rawdhah</cname>
+		<item>
+			<title>high</title>
+			<link>http://188.40.138.23/hls/majdr/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Rawdhah</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdr_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Tagareed</cname>
+		<item>
+			<title>high</title>
+			<link>http://188.40.138.23/hls/majdt/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	<streaminginfo>
+		<cname>Almajd Tagareed</cname>
+		<item>
+			<title>low</title>
+			<link>http://188.40.138.23/hls/majdt_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	
+	<streaminginfo>
+		<cname>Wesal Tv</cname>
+		<item>
+			<title>Kurdi high</title>
+			<link>http://188.40.138.23/hls/wesk/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Wesal Tv</cname>
+		<item>
+			<title>Kurdi low</title>
+			<link>http://188.40.138.23/hls/wesk_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>	
+	
+	<streaminginfo>
+		<cname>Wesal Tv</cname>
+		<item>
+			<title>Haq high</title>
+			<link>http://188.40.138.23/hls/wesh/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Wesal Tv</cname>
+		<item>
+			<title>Haq low</title>
+			<link>http://188.40.138.23/hls/wesh_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Wesal Tv</cname>
+		<item>
+			<title>English high</title>
+			<link>http://188.40.138.23/hls/wesen/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Wesal Tv</cname>
+		<item>
+			<title>English low</title>
+			<link>http://188.40.138.23/hls/wesen_lq/index.m3u8|User-Agent: Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>ALFALASTINIAH</cname>
+		<item>
+			<title>flv</title>
+			<link>rtmp://46.43.64.166:1935/flv/flv timeout=20</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>alwatan</cname>
+		<item>
+			<title>m3u8</title>
+			<link>http://alwatan_hls-lh.akamaihd.net/i/alwatan_ar@91111/master.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>BFMTV</cname>
+		<item>
+			<title>m3u8</title>
+			<link>http://bfmlive2-i.akamaihd.net/hls/live/214427/bfmtv/04.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Dream 1</cname>
+		<item>
+			<title>rtmp</title>
+			<link>rtmp://85.91.143.23/87521//87521.stream timeout=20</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>Dubai</cname>
+		<item>
+		<title>Low_160</title>
+		<link>rtmp://wms03.endavomedia.com:1935/dmilivedubaitv/dmilivedubaitv_1 timeout=20</link>
+		</item>
+	</streaminginfo>
+<streaminginfo>
+		<cname>Dubai</cname>
+		<item>
+			<title>Low 320</title>
+			<link>rtmp://wms03.endavomedia.com:1935/dmilivedubaitv/dmilivedubaitv_2 timeout=20</link>
+		</item>
+</streaminginfo>
+<streaminginfo>
+		<cname>Med</cname>
+		<item>
+			<title>Med_640</title>
+			<link>rtmp://wms03.endavomedia.com:1935/dmilivedubaitv/dmilivedubaitv_3 timeout=20</link>
+		</item>
+</streaminginfo>
+<streaminginfo>
+		<cname>Dubai</cname>
+		<item>
+			<title>High_720</title>
+			<link>rtmp://wms03.endavomedia.com:1935/dmilivedubaitv/dmilivedubaitv_4 timeout=20</link>
+		</item>
+</streaminginfo>		
+    <streaminginfo>
+		<cname>Alarabiya Ahdas</cname>
+		<item>
+			<title>alarabiya.tv</title>
+			<link>http://livestream7.alarabiya.tv/i/live_1@187753/master.m3u8</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>EnnaharTV algerie</cname>
+		<item>
+			<title>ennahartv.net</title>
+			<link>rtmp://87.98.155.194/live playpath=EnnaharTV swfUrl=http://www.ennahartv.net/live/player.swf live=1 pageUrl=http://www.ennahartv.net/ar/live/ timeout=20</link>
+		</item>
+	</streaminginfo>
+	
+	<streaminginfo>
+		<cname>France 24 FR</cname>
+		<item>
+			<title>france24.com</title>
+			<link>http://tv.flux.france24.com/4684/02.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Iqra</cname>
+		<item>
+			<title>ME</title>
+			<link>http://fl1.viastreaming.net/iqraatv/livestream/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Iqra</cname>
+		<item>
+			<title>asia</title>
+			<link>http://fl1.viastreaming.net/iqraatv2/livestream/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Iqra</cname>
+		<item>
+			<title>america</title>
+			<link>http://fl1.viastreaming.net/iqraatv1/livestream/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>Iqra</cname>
+		<item>
+			<title>europe</title>
+			<link>http://fl1.viastreaming.net/iqraatv3/livestream/playlist.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>SkyNewsArabia</cname>
+		<item>
+		<title>livestation SD</title>
+		<link>rtmp://hd7.lsops.net/live/ playpath=skynewsi_ar_372 swfUrl=http://static.ls-cdn.com/player/5.10/livestation-player.swf?1375015323 pageUrl=http://www.livestation.com/ar/channels/sky-news-arabia live=1 timeout=20</link>
+		</item>
+	</streaminginfo>
+<streaminginfo>
+		<cname>DW Arabic</cname>
+		<item>
+			<title>Asia</title>
+			<link>http://www.metafilegenerator.de/DWelle/tv-asia/ios/master.m3u8</link>
+		</item>
+</streaminginfo>
+<streaminginfo>
+		<cname>DW Arabic</cname>
+		<item>
+			<title>Europe</title>
+			<link>http://www.metafilegenerator.de/DWelle/tv-europa/ios/master.m3u8</link>
+		</item>
+</streaminginfo>
+<streaminginfo>
+		<cname>DW Arabic</cname>
+		<item>
+			<title>Latinoamerica</title>
+			<link>http://www.metafilegenerator.de/DWelle/tv-latinoamerica/ios/master.m3u8</link>
+		</item>
+</streaminginfo>
+
+	<streaminginfo>
+		<cname>DW Arabic</cname>
+		<item>
+			<title>Arabic</title>
+			<link>http://www.metafilegenerator.de/DWelle/tv-arabia/ios/master.m3u8</link>
+		</item>
+	</streaminginfo>
+	<streaminginfo>
+		<cname>alnabaa</cname>
+		<item>
+			<title> livestation</title>
+			<link>rtmp://alnabaa.lsops.net/live playpath=alnabaa_ar_584 swfUrl=http://static.ls-cdn.com/player/5.10/livestation-player.swf?1375015323 pageUrl=http://www.livestation.com/ar/al_nabaa live=1 timeout=20</link>
+		</item>
+	</streaminginfo>
+
+<streaminginfo>
+    <cname>Alkitab</cname>
+	<item>
+	<title>Low</title>
+	<link>rtmp://egservers.com/alkitab.live playpath=mp4:mystream.mp4 swfUrl=http://www.alkitab.ps/live/player.swf pageUrl=http://www.alkitab.ps/live/ live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Alaqsa</cname>
+	<item>
+	<title>Med</title>
+	<link>rtmp://5.9.151.112:1935/live/livestream swfUrl=http://5.9.151.112/swfs/SampleMediaPlayback.swf pageUrl=http://5.9.151.112/player.html live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Palestine AlYawm</cname>
+	<item>
+	<title>Original source:f4m You need to install f4m_tester addon from Shani Repo</title>
+	<link>plugin://plugin.video.f4mTester/?url=http://live.paltoday.tv:1935/paltv/live/manifest.f4m</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+   	<cname>Palestine AlYawm</cname>
+	<item>
+	<title>Med</title>
+	<link>http://live.paltoday.tv:1935/paltv/live/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+   	<cname>OTV Lebanon</cname>
+	<item>
+	<title>Med</title>
+	<link>http://livestreaming.itworkscdn.net:1935/otvmobile/otvlive_240p/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+   	<cname>Alqudis</cname>
+	<item>
+	<title>Low</title>
+	<link>rtmp://196.205.23.142:1935/livepkgr/livestream?adbe-live-event=liveevent swfUrl=http://www.qudstv.com/player.swf pageUrl=http://www.qudstv.com/LiveFeed.aspx live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+   	<cname>NBN</cname>
+	<item>
+	<title>Low</title>
+	<link>rtmp://lived.nbn.com.lb/nbn playpath=mpegts.stream swfUrl=http://www.nbn.com.lb/live/flowplayer/flowplayer-3.2.16.swf pageUrl=http://www.nbn.com.lb/live/ live=1 timeout=15</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Al Eman</cname>
+	<item>
+	<title>Low</title>
+	<link>http://liven.alimantv.com/liveimn.isml/manifest(format=m3u8-aapl).m3u8</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+    <cname>Shada</cname>
+	<item>
+	<title>Low</title>
+	<link>http://38.96.148.147:1935/live/livestream/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+
+<streaminginfo>
+    <cname>Roya</cname>
+	<item>
+	<title>Low</title>
+	<link>http://stream.joinvisions.net:1935/royalive/roya_2/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Roya</cname>
+	<item>
+	<title>Med</title>
+	<link>http://stream.joinvisions.net:1935/royalive/roya_1/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Roya</cname>
+	<item>
+	<title>High</title>
+	<link>http://212.35.75.18/roya/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+    <cname>7Stars</cname>
+	<item>
+	<title>Original source</title>
+	<link>rtmp://194.165.136.150/live playpath=myStream swfUrl=http://7stars.tv/Modules/Mdameer.JWPlayer/Contents/player.swf live=1 pageUrl=http://7stars.tv/ timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Secret</cname>
+	<item>
+	<title>Original source:f4m You need to install f4m_tester addon from Shani Repo</title>
+	<link>plugin://plugin.video.f4mTester/?url=http://streamer11.elementssys.com:8080/secretsx/archive/1402845244/now/manifest.f4m</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Edhak</cname>
+	<item>
+	<title>Original source:f4m You need to install f4m_tester addon from Shani Repo</title>
+	<link>plugin://plugin.video.f4mTester/?url=http://streamer11.elementssys.com:8080/edhakx/archive/1402844819/now/manifest.f4m</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Edhak</cname>
+	<item>
+	<title>original Source</title>
+	<link>http://94.127.209.149:8080/secretsx/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Secret</cname>
+	<item>
+	<title>original Source</title>
+	<link>http://94.127.209.149:8080/secretsx/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Africa</cname>
+	<item>
+	<title>TV 1</title>
+	<link>http://ukk.live.net.sa:1935/live/africatv/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Africa</cname>
+	<item>
+	<title>TV 2</title>
+	<link>http://ukk.live.net.sa:1935/live/africatv2/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Africa</cname>
+	<item>
+	<title>TV 3</title>
+	<link>http://ukk.live.net.sa:1935/live/africatv3/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Asia Sat</cname>
+	<item>
+	<title>Med</title>
+	<link>http://asialive.asiasat.tv:1935/live/asiatv256/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Asia Sat</cname>
+	<item>
+	<title>Low</title>
+	<link>http://asialive.asiasat.tv:1935/live/asiatv128/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Al Maaref</cname>
+	<item>
+	<title>original source</title>
+	<link>http://almaareftv.com:1935/live/1/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Aali</cname>
+	<item>
+	<title>High</title>
+	<link>http://aasaali-live.smooth.adaptive.level3.net/livefeed/aali/channel01.isml/Manifest(format=m3u8-aapl).m3u8</link>
+	</item>
+</streaminginfo>  
 <streaminginfo>
         <cname>sunnah TV</cname>
 	<item>
-	<title>Original Source</title>
+	<title>Low</title>
 	<link>http://46.245.160.224/medine/medine/gmswf.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>sunnah TV</cname>
+	<item>
+	<title>Med</title>
+	<link>http://46.245.160.224/medine/medine/chunklist_w1303351978.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>sunnah TV</cname>
+	<item>
+	<title>High</title>
+	<link>http://46.245.160.224/medine/medine/chunklist_w1367115191.m3u8</link>
 	</item>
 </streaminginfo>
 
 <streaminginfo>
     <cname>Aljazeera Balkans</cname>
-	<item><title>Low</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_low swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link><thumbnail></thumbnail></item>
+	<item><title>Low</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_low swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link></item>
 </streaminginfo>
 <streaminginfo>
     <cname>Aljazeera Balkans</cname>
-	<item><title>Original Source Med</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_med swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link><thumbnail></thumbnail></item>
+	<item><title>Original Source Med</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_med swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link></item>
 </streaminginfo>
 
 <streaminginfo>
     <cname>Aljazeera Balkans</cname>
-	<item><title> Original Source High</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_high swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link><thumbnail></thumbnail></item>
+	<item><title> Original Source High</title><link>rtmp://aljazeeraflashlivefs.fplive.net/aljazeeraflashlive-live/ playpath=aljazeera_balkans_high swfUrl=http://www.elahmad.com/tv/swf/aljazeera_balkans.swf live=1 PageUrl=http://www.elahmad.com/tv/aljazeera_balkans.php</link></item>
 </streaminginfo>
 <streaminginfo>
 	<cname>ERI.TV</cname>
@@ -33,7 +1128,7 @@
 	</item>
 </streaminginfo>
 <streaminginfo>
-<cname>Salam</cname>
+<cname>Al Salam</cname>
 <item><title>original source</title><link>http://streamer1.hamuraabi.com:1935/salam/live/playlist.m3u8</link></item>
 </streaminginfo>
 
@@ -80,12 +1175,23 @@
 </streaminginfo>
 <streaminginfo>
 	<cname>Palestine</cname>
-	<item><title>Original Source High</title><link>rtmp://vstream2.hadara.ps:1935/pbc/pbc_1 timeout=20</link><thumbnail></thumbnail></item>
+	<item><title>Original Source High</title><link>rtmp://vstream2.hadara.ps:1935/pbc/pbc_1 timeout=20</link></item>
 </streaminginfo>
-
 <streaminginfo>
 	<cname>Al Dafra</cname>
-	<item><title>Original source</title>
+	<item><title>low</title>
+	<link>http://live.aldafrah.tv:1935/live/aldafrah1/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Al Dafra</cname>
+	<item><title>Med</title>
+	<link>http://live.aldafrah.tv:1935/live/aldafrah2/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+	<cname>Al Dafra</cname>
+	<item><title>High</title>
 	<link>http://live.aldafrah.tv:1935/live/aldafrah3/playlist.m3u8</link>
 	</item>
 </streaminginfo>
@@ -93,32 +1199,126 @@
 <streaminginfo>
      	<cname>Noor Dubai</cname>
 	<item>
-	<title>Original source</title>
-	<link>http://cdnedvrnoordubaitv.endavomedia.com/smil:dmilivenoordubaitvhls.smil/playlist.m3u8</link>
+	<title>Low 160</title>
+	<link>rtmp://wms04.endavomedia.com:1935/dmilivenoordubaitv/dmilivenoordubaitv_1 timeout=20</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+     	<cname>Noor Dubai</cname>
+	<item>
+	<title>Low</title>
+	<link>rtmp://wms04.endavomedia.com:1935/dmilivenoordubaitv/dmilivenoordubaitv_2 timeout=20</link>
 	</item>
 </streaminginfo>
 <streaminginfo>
+     	<cname>Noor Dubai</cname>
+	<item>
+	<title>Med</title>
+	<link>rtmp://wms04.endavomedia.com:1935/dmilivenoordubaitv/dmilivenoordubaitv_3 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     	<cname>Noor Dubai</cname>
+	<item>
+	<title>High</title>
+	<link>rtmp://wms04.endavomedia.com:1935/dmilivenoordubaitv/dmilivenoordubaitv_4 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Noor Dubai</cname>
+	<item>
+	<title>LowSVR2</title>
+	<link>http://cdnedvrnoordubaitv.endavomedia.com/smil:dmilivenoordubaitvhls.smil/chunklist_b463056.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Noor Dubai</cname>
+	<item>
+	<title>Med SVR2</title>
+	<link>http://cdnedvrnoordubaitv.endavomedia.com/smil:dmilivenoordubaitvhls.smil/chunklist_b1396736.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Noor Dubai</cname>
+	<item>
+	<title>MedSVR2</title>
+	<link>http://cdnedvrnoordubaitv.endavomedia.com/smil:dmilivenoordubaitvhls.smil/chunklist_b270960.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+    <cname>Noor Dubai</cname>
+	<item>
+	<title>HighSVR2</title>
+	<link>http://cdnedvrnoordubaitv.endavomedia.com/smil:dmilivenoordubaitvhls.smil/chunklist_b925056.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     <cname>Sama Dubai</cname>
+	<item>
+	<title>Low</title>
+	<link>http://cdnedvrsamadubai.endavomedia.com/smil:dmilivesamadubaihls.smil/chunklist_b270960.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     <cname>Sama Dubai</cname>
+	<item>
+	<title>Med</title>
+	<link>http://cdnedvrsamadubai.endavomedia.com/smil:dmilivesamadubaihls.smil/chunklist_b925056.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+     <cname>Sama Dubai</cname>
+	<item>
+	<title>Med</title>
+	<link>http://cdnedvrsamadubai.endavomedia.com/smil:dmilivesamadubaihls.smil/chunklist_b463056.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+     <cname>Sama Dubai</cname>
+	<item>
+	<title>High</title>
+	<link>http://cdnedvrsamadubai.endavomedia.com/smil:dmilivesamadubaihls.smil/chunklist_b1396736.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
      	<cname>Sama Dubai</cname>
 	<item>
-	<title>Original source</title>
+	<title>High_master</title>
 	<link>http://cdnedvrsamadubai.endavomedia.com/smil:dmilivesamadubaihls.smil/playlist.m3u8</link>
 	</item>
 </streaminginfo>
 <streaminginfo>
      	<cname>Dubai</cname>
 	<item>
-	<title>Original source</title>
+	<title>High</title>
 	<link>http://cdnedvrdubaitv.endavomedia.com/smil:dmilivedubaitvhls.smil/playlist.m3u8</link>
 	</item>
 </streaminginfo>
 <streaminginfo>
      	<cname>Dubai Sport 3</cname>
 	<item>
-	<title>Original source</title>
+	<title>Low</title>
+	<link>http://cdnehlsdubaisports3.endavomedia.com/smil:dmilivedubaisports3.smil/chunklist_b270960.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+     	<cname>Dubai Sport 3</cname>
+	<item>
+	<title>High</title>
 	<link>http://dmilivedubaisports3.ios.internapcdn.net/dmiLiveDubaiSports3/live_1/dmilivedubaisports3_3/CCURstream1029600.m3u8</link>
 	</item>
 </streaminginfo>
-
+<streaminginfo>
+     	<cname>Dubai Sport 3</cname>
+	<item>
+	<title>High</title>
+	<link>http://cdnehlsdubaisports3.endavomedia.com/smil:dmilivedubaisports3.smil/chunklist_b1100000.m3u8</link>
+	</item>
+</streaminginfo>
 <streaminginfo>
      <cname>Karbala</cname>
 <item>
@@ -169,6 +1369,13 @@
 	</item>
 </streaminginfo>
 <streaminginfo>
+        <cname>Alarabiya</cname>
+	<item>
+	<title>SD</title>
+	<link>http://livestream5.alarabiya.tv/i/live_1@141854/index_1_av-p.m3u8?sd=10&amp;rebase=on</link>
+</item>
+</streaminginfo>
+<streaminginfo>
     <cname>Albadawiya</cname>
 	<item>
 	<title>Original source: You need to install f4m_tester addon from Shani Repo</title>
@@ -212,14 +1419,6 @@
 	<link>rtmp://79.134.137.65:1935/live/Sahraa.stream swfVfy=true live=true</link>
 	</item>
 </streaminginfo>
-<streaminginfo>
-    <cname>CBC Sofra</cname>
-	<item>
-	<title>Original Source</title>
-	<link>rtmp://41.196.200.11:9900/live//ssoofra.stream timeout=20</link>
-	</item>
-</streaminginfo>
-
 <streaminginfo>
         <cname>New Media</cname>
 	<item>
@@ -383,19 +1582,32 @@
 <streaminginfo>
         <cname>sunnah TV</cname>
 	<item>
-	<title>Original Source</title>
-	<link>rtmp://myafricanmega.tulix.tv:1935/map-alsunnah/map-alsunnah.stream</link>
+	<title>Low</title>
+	<link>rtmp://myafricanmega.tulix.tv:1935/map-alsunnah/map-alsunnah.stream timeout=20</link>
 	</item>
 </streaminginfo>
 
 <streaminginfo>
         <cname>Dubai Racing</cname>
 	<item>
-	<title>Original Source</title>
-	<link>http://cdnehlsdubairacing2.endavomedia.com/smil:dmilivedubairacing2.smil/gmswf.m3u8</link>
+	<title>Low</title>
+	<link>rtsp://wms04.endavomedia.com:1935/dmilivedubairacing2/dmilivedubairacing2_1 timeout=20</link>
 	</item>
 </streaminginfo>
-
+<streaminginfo>
+    <cname>Dubai Racing</cname>
+	<item>
+	<title>High</title>
+	<link>rtsp://wms04.endavomedia.com:1935/dmilivedubairacing2/dmilivedubairacing2_3 timeout=20</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Dubai Racing</cname>
+	<item>
+	<title>High_m3u8</title>
+	<link>http://cdnehlsdubairacing2.endavomedia.com/smil:dmilivedubairacing2.smil/playlist.m3u8</link>
+	</item>
+</streaminginfo>
 
 <streaminginfo>
         <cname>Dubai One</cname>
@@ -491,6 +1703,35 @@
 </streaminginfo>
 
 <streaminginfo><cname>Al Forat</cname><item><title>Original Source</title><link>rtmp://alforatlive.nanocdn.com:1935/live playpath=alforat256 swfUrl=http://www1.alforattv.net/modules/live/js/jwplayer/player.swf pageUrl=http://www1.alforattv.net live=1 swfVfy=1 timeout=10</link></item></streaminginfo> 
+
+<streaminginfo>
+	<cname>SkyNewsArabia</cname>
+	<item><title>720p</title><link>rtmp://llnwvps231.fc.llnwd.net/llnwvps231/ playpath=eND-IS0mT2csspFA-2vGVs_NjZq-ZuZTMIgeu3aYyqcFI_640_360_3 swfUrl=http://assets.delvenetworks.com/player/loader.swf live=1 pageUrl=http://www.skynewsarabia.com/web/home?view=live</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>SkyNewsArabia</cname>
+	<item>
+	<title>720p</title>
+	<link>http://skynewsl.skynews.cshls.lldns.net/skynews/skynewsl/skynewsl/skynewsl_800.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Quran TV ksa</cname>
+	<item>
+	<title>Med</title>
+	<link>http://46.245.160.224/mekke/mekke/chunklist_w248840820.m3u8</link>
+	</item>
+</streaminginfo>
+<streaminginfo>
+        <cname>Afaq</cname>
+	<item>
+	<title>Low</title>
+	<link>rtmp://208.43.70.75/live/afaqtv/livestream swfUrl=http://p.jwpcdn.com/6/8/jwplayer.flash.swf pageUrl=http://www.afaq.tv/ live=1 timeout=20</link>
+	</item>
+</streaminginfo>
+
 
 
 

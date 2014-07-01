@@ -1,3 +1,15 @@
+[B]Version 3.2.9[/B]
+LiveTV login bug
+
+[B]Version 3.2.8[/B]
+Small bug in launching default source from generic source
+
+[B]Version 3.2.7[/B]
+rename no premium code to web login ..
+
+[B]Version 3.2.6[/B]
+Now login option for Livetv.tn
+	
 [B]Version 3.2.5[/B]
 Colouring and postfix for default sources
 
