@@ -465,7 +465,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon id="plugin.video.shahidmbcnet"
        name="Shahid Arabic"
-       version="3.2.5"
+       version="3.2.9"
        provider-name="shani">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -549,7 +549,7 @@ This plugin has been re-written to provide XBMC users with an amazing and native
 
 <addon id="plugin.video.teledunet"
        name="Teledunet.com"
-       version="2.3.2"
+       version="2.3.3"
        provider-name="hadynz">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
