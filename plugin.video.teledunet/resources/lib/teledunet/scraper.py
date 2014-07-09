@@ -71,9 +71,10 @@ def __get_channel_time_player(channel_name):
     req.add_header('Cookie', __get_cookie_session())
 
     html = _get(req)
-    m = re.search('aut=\'\?id0=(.*?)\'', html, re.M | re.I)
-    time_player_str = eval(m.group(1))
-
+    #m = re.search('aut=\'\?id0=(.*?)\'', html, re.M | re.I)
+    #time_player_str = eval(m.group(1))
+    match =re.findall('aut=\'\?id0=(.*?)\'', html)
+    time_player_str=str(long(float(match[0])))
     
     #print 'set_favoris\(\''+channel_name+'\'.*?rtmp://(.*?)\''
     m = re.search('rtmp://(.*?)/%s\''%channel_name, html, re.M | re.I)
@@ -89,7 +90,7 @@ def __get_channel_time_player(channel_name):
         rtmp_url = m.group(1)
         rtmp_url='rtmp://%s/%s'%(rtmp_url,channel_name)
     play_path = rtmp_url[rtmp_url.rfind("/") + 1:]
-    return rtmp_url, play_path, repr(time_player_str).rstrip('0').rstrip('.')
+    return rtmp_url, play_path,time_player_str# repr(time_player_str).rstrip('0').rstrip('.')
 
 
 def get_rtmp_params(channel_name):
@@ -99,10 +100,10 @@ def get_rtmp_params(channel_name):
         'rtmp_url': rtmp_url,
         'playpath': play_path,
         'app': 'teledunet',
-        'swf_url': ('http://www.teledunet.com/player.swf?'
-                    'id0=%(time_player)s&'
-                   ) % {'time_player': time_player_id, 'channel_name': play_path, 'rtmp_url': rtmp_url},
-        'video_page_url': 'http://www.teledunet.com/player/?channel=%s conn=N:1 flashVer=WIN\2013,0,0,214' % play_path,
+        'swf_url': ('http://www.teledunet.com/mobile/player.swf?'
+                    'id0=%(time_player)s&channel=%(channel_name)s'
+                   ) % {'time_player': str(time_player_id), 'channel_name': channel_name, 'rtmp_url': rtmp_url},
+        'video_page_url': 'http://www.teledunet.com/mobile/?con conn=N:1 flashVer=WIN\\2013,0,0,214 swfVfy=true  timeout=20',
         'live': '1'
     }
 

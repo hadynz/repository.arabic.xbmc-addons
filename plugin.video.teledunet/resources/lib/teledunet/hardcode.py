@@ -38,10 +38,7 @@ HARDCODED_STREAMS = [{
                          'title': 'BeIn Sport 9',
                          'thumbnail': 'http://www.teledunet.com//player/icones/bein_sport_9.jpg',
                          'path': 'bein_sport_9'},
-                     {
-                         'title': 'BeIn Sport 10',
-                         'thumbnail': 'http://www.teledunet.com//player/icones/bein_sport_10.jpg',
-                         'path': 'bein_sport_10'},
+
                      {
                          'title': 'Abu Dhabi Al Oula',
                          'thumbnail': 'http://www.teledunet.com//player/icones/abu_dhabi.jpg',
@@ -72,12 +69,12 @@ HARDCODED_STREAMS = [{
                          'path': 'alhayat_1'},
                      {
                          'title': 'Al Hayat Series',
-                         'thumbnail': 'http://www.teledunet.com//player/icones/alhayat_series.jpg',
-                         'path': 'alhayat_series'},
+                         'thumbnail': 'http://www.teledunet.com//player/icones/al_hayat_series.jpg',
+                         'path': 'al_hayat_series'},
                      {
                          'title': 'Al Hayat Cinema',
-                         'thumbnail': 'http://www.teledunet.com//player/icones/alhayat_cinema.jpg',
-                         'path': 'alhayat_cinema'},
+                         'thumbnail': 'http://www.teledunet.com//player/icones/al_hayat_cinema.jpg',
+                         'path': 'al_hayat_cinema'},
                      {
                          'title': 'ART Aflam 2',
                          'thumbnail': 'http://www.teledunet.com//player/icones/art_aflam_2.jpg',
@@ -87,7 +84,7 @@ HARDCODED_STREAMS = [{
                          'thumbnail': 'http://www.teledunet.com//player/icones/aljazeera_children.jpg',
                          'path': 'aljazeera_children'},
                      {
-                         'title': 'ART Cinema',
+                         'title': 'ART Aflam 1',
                          'thumbnail': 'http://www.teledunet.com//player/icones/art_aflam_1.jpg',
                          'path': 'art_aflam_1'},
                      {
@@ -126,10 +123,6 @@ HARDCODED_STREAMS = [{
                          'title': 'Al Rafidain',
                          'thumbnail': 'http://www.teledunet.com//player/icones/al_rafidain.jpg',
                          'path': 'al_rafidain'},
-                     {
-                         'title': 'Dzair 24',
-                         'thumbnail': 'http://www.teledunet.com//player/icones/dzair_24.jpg',
-                         'path': 'dzair_24'},
                      {
                          'title': 'NBN',
                          'thumbnail': 'http://www.teledunet.com//player/icones/nbn.jpg',
@@ -203,10 +196,6 @@ HARDCODED_STREAMS = [{
                          'thumbnail': 'http://www.teledunet.com//player/icones/kalsan_tv.jpg',
                          'path': 'kalsan_tv'},
                      {
-                         'title': 'Eriteria TV',
-                         'thumbnail': 'http://www.teledunet.com//player/icones/eriteria_tv.jpg',
-                         'path': 'eriteria_tv'},
-                     {
                          'title': 'El Djazairia',
                          'thumbnail': 'http://www.teledunet.com//player/icones/el_djazairia.jpg',
                          'path': 'el_djazairia'},
@@ -223,41 +212,109 @@ HARDCODED_STREAMS = [{
                          'thumbnail': 'http://www.teledunet.com//player/icones/djibouti.jpg',
                          'path': 'djibouti'},
                      {
-                         'title': 'OSN Yahala HD +2',
-                         'thumbnail': 'http://www.lyngsat-logo.com/hires/oo/osn_ya_hala_hd_plus2.png',
-                         'path': 'osn_yahala'},
+                         'title': 'Libya Alriadya 1',
+                         'thumbnail': 'http://en.libyamediawiki.com/images/4/40/Lrt_ly_sport.jpeg',
+                         'path': 'libya_alriadya_1'},
                      {
-                         'title': 'OSN Yahala Drama',
-                         'thumbnail': 'http://press.osn.com/logo/logos/OYA.png',
-                         'path': 'osn_yahala_Drama'},
+                         'title': 'Al Kahera Wal Nas',
+                         'thumbnail': 'http://www.alkaherawalnas.com/images/logo-01.png',
+                         'path': 'al_kahera_wal_nas'},
                      {
-                         'title': 'OSN Yahala HD',
-                         'thumbnail': 'http://www.lyngsat-logo.com/hires/oo/osn_ya_hala_hd.png',
-                         'path': 'osn_yahala_hd'},
+                         'title': 'Al Kahera Wal Nas 2',
+                         'thumbnail': 'http://www.alkaherawalnas.com/images/logo-01.png',
+                         'path': 'al_kahera_wal_nas_2'},
                      {
-                         'title': 'OSN Movies Action HD',
-                         'thumbnail': 'http://www.lyngsat-logo.com/hires/oo/osn_movies_action_hd.png',
-                         'path': 'osn_moies_action'},
+                         'title': 'Al Oula',
+                         'thumbnail': 'http://www.satexpat.com/img/cha/eg/ertu_1_95x68.gif',
+                         'path': 'al_oula'},
                      {
-                         'title': 'OSN Movies HD +2',
-                         'thumbnail': 'http://www.lyngsat-logo.com/hires/oo/osn_movies_hd_plus2.png',
-                         'path': 'osn_moies_2'},
+                         'title': 'Alanwar',
+                         'thumbnail': 'http://www.lyngsat-logo.com/logo/tv/aa/al_anwar.jpg',
+                         'path': 'alanwar'},
                      {
-                         'title': 'OSN Movies Comedy',
-                         'thumbnail': 'http://www.lyngsat-logo.com/hires/oo/osn_movies_comedy_hd.png',
-                         'path': 'osn_moies_comdy'},
+                         'title': 'Aldafrah',
+                         'thumbnail': 'http://www.lyngsat-logo.com/logo/tv/aa/al_dafrah.png',
+                         'path': 'aldafrah'},
                      {
-                         'title': 'ART Hekayat',
-                         'thumbnail': 'http://www.lyngsat-logo.com/hires/aa/art_hekayat.png',
-                         'path': 'art-hek'},
+                         'title': 'Alhewar',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/aa/al_hiwar.png',
+                         'path': 'alhewar'},
                      {
-                         'title': 'ART Hekayat 2',
-                         'thumbnail': 'http://www.lyngsat-logo.com/hires/aa/art_hekayat2.png',
-                         'path': 'art-hek2'},
+                         'title': 'Aliraqiya Sport',
+                         'thumbnail': 'http://upload.wikimedia.org/wikipedia/en/9/98/Al_Iraqiya_logo.png',
+                         'path': 'aliraqiya_sport'},
                      {
-                         'title': 'OSN Movies Premiere HD',
-                         'thumbnail': 'http://www.lyngsat-logo.com/hires/oo/osn_movies_hd.png',
-                         'path': 'osn_moies_prem'},
+                         'title': 'Bein News',
+                         'thumbnail': 'http://upload.wikimedia.org/wikipedia/commons/2/20/Bein_sport_logo.png',
+                         'path': 'bein_news'},
+		     {
+                         'title': 'Dalel',
+                         'thumbnail': 'http://www.invision.com.sa/en/sites/default/files/imagecache/216x216/channels/2011/10/11/1154.jpg',
+                         'path': 'dalel'},
+                     {
+                         'title': 'Es TV',
+                         'thumbnail': 'http://www.tv-logo.com/pt-data/uploads/images/logo/ethiopia_somali_tv.jpg',
+                         'path': 'estv'},
+                     {
+                         'title': 'ETV Ethiopia',
+                         'thumbnail': 'http://1.bp.blogspot.com/-m4XUFK-_cZI/UWT0ntZBbmI/AAAAAAAAAx0/MleTQ1XcI6k/s400/Ethiopian%2BTV%2BETV.jpg',
+                         'path': 'etv_ethiopia'},
+                     {
+                         'title': 'Euro News',
+                         'thumbnail': 'http://img3.wikia.nocookie.net/__cb20091205135554/logopedia/images/9/93/Euronews_logo.svg',
+                         'path': 'euro_news'},
+                     {
+                         'title': 'Future',
+                         'thumbnail': 'http://www.arabe-media.com/tv/img84.jpg',
+                         'path': 'future'},
+                     {
+                         'title': 'Knn News',
+                         'thumbnail': 'http://www.freeetv.com/images/reydddd/KNN.jpg',
+                         'path': 'knn_news'},
+                     {
+                         'title': 'Noonkids',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/nn/noon_kids_tv_jo.png',
+                         'path': 'noonkids'},
+                     {
+                         'title': 'Ishtar',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/ii/ishtar_tv.png',
+                         'path': 'ishtar'},
+                     {
+                         'title': 'Noor Alsham',
+                         'thumbnail': 'http://upload.wikimedia.org/wikipedia/en/b/bf/Noor_Al-Sham_Logo.png',
+                         'path': 'noor_alsham'},
+                     {
+                         'title': 'Orient News',
+                         'thumbnail': 'http://radioteve.com/tele/arabes/arabemirates/logo/orientnews.jpg',
+                         'path': 'orient_news'},
+                     {
+                         'title': 'Oscar Drama',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/oo/oscar_drama.png',
+                         'path': 'oscar_drama'},
+                     {
+                         'title': 'Sama Syria',
+                         'thumbnail': 'http://upload.wikimedia.org/wikipedia/en/7/75/Sama_TV_Logo.png',
+                         'path': 'sama_syria'},
+                     {
+                         'title': 'Skynews',
+                         'thumbnail': 'http://img2.wikia.nocookie.net/__cb20100419120542/logopedia/images/c/c4/Sky_News_2007.png',
+                         'path': 'skynews'},
+                     {
+                         'title': 'Star Cinema 1',
+                         'thumbnail': 'http://www.magictvbox.com/wp-content/uploads/2013/05/star-cinema-1-channel1.jpg',
+                         'path': 'star_cinema'},
+                     {
+                         'title': 'Star Cinema 2',
+                         'thumbnail': 'http://www.magictvbox.com/wp-content/uploads/2013/05/star-cinema-channel.jpg',
+                         'path': 'star_cinema_2'},
+                     {
+                         'title': 'Sudan',
+                         'thumbnail': 'http://www.lyngsat-logo.com/hires/ss/sudan_tv.png',
+                         'path': 'sudan'},
+                     {
+                         'title': 'Telvza TV',
+                         'thumbnail': 'http://www.madwatch.net/wp-content/uploads/2013/12/LOGO-telvza.jpg',
+                         'path': 'telvza_tv'},
                      {
                          'title': 'Cartoon Network',
                          'thumbnail': 'http://www.teledunet.com//player/icones/cartoon_network.jpg',
