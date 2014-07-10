@@ -9,7 +9,10 @@ import xbmcaddon
 selfAddon = xbmcaddon.Addon()
 
 #HEADER_REFERER = 'http://www.teledunet.com/'
-HEADER_REFERER = 'http://www.teledunet.com/list_chaines.php'
+#HEADER_REFERER = 'http://www.teledunet.com/list_chaines.php'
+HEADER_REFERER = 'http://www.teledunet.com/'
+TELEDUNET_CHANNEL_PAGE = 'http://www.teledunet.com/mobile/?con'
+
 HEADER_HOST = 'www.teledunet.com'
 HEADER_USER_AGENT = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
 TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/mobile/?con'
@@ -23,9 +26,11 @@ def _get(request,post=None):
     """Performs a GET request for the given url and returns the response"""
     return opener.open(request,post).read()
 
-def _html(url):
+def _html(url, rheaders=None):
     """Downloads the resource at the given url and parses via BeautifulSoup"""
     headers = { "User-Agent": HEADER_USER_AGENT  }
+    if rheaders:
+        headers.update(rheaders);
     request = urllib2.Request (url , headers = headers)
     return BeautifulSoup(_get(request), convertEntities=BeautifulSoup.HTML_ENTITIES)
 
@@ -108,8 +113,14 @@ def get_rtmp_params(channel_name):
     }
 
 def get_channels():
-    html = _html(HEADER_REFERER)
-    channel_divs = lambda soup : soup.findAll("div", { "class" : re.compile("div_channel") })
+    loginname=selfAddon.getSetting( "teledunetTvLogin" )
+    #if not (loginname==None or loginname==""):
+    #    performLogin()
+    #req.add_header('Cookie', __get_cookie_session())
+    headers = { "Referer": HEADER_REFERER  }
+    html = _html(TELEDUNET_CHANNEL_PAGE,headers)
+#    channel_divs = lambda soup : soup.findAll("div", { "class" : re.compile("div_channel") })
+    channel_divs = lambda soup : soup.findAll("tr")
     channels = [ChannelItem(el=el) for el in channel_divs(html)]
 
     # Extend Teledunet list with custom hardcoded list created by community

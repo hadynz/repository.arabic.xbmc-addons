@@ -9,15 +9,15 @@ class ChannelItem:
             self.__parseJSON(json)
 
     def __parseElement(self, el):
-        anchorEl = el.find('a')
-        match_channel_name = re.match(r'.*\(\'(.*?)\'.*', anchorEl['onclick'], re.M | re.I)
-
-        self.title = str(anchorEl.findAll('span')[-1].contents[0])  # Copy out channel name, and not reference
-        self.thumbnail = anchorEl.find('img')['src']
-        if self.thumbnail: self.thumbnail=self.thumbnail.replace('tv_/icones','logo')
+        el=str(el)
+        match_channel_name = re.findall('<span id="cha.*?>(.*?)<', el)[0]
+        self.title = match_channel_name
+        self.thumbnail = re.findall('url\(\'(.*?)\'',el)[0]
+        if ' ' in self.thumbnail:
+            self.thumbnail=self.thumbnail.replace(' ','%20')
         if not self.thumbnail.startswith('http'): self.thumbnail='http://www.teledunet.com/'+self.thumbnail
-        self.path = match_channel_name.group(1)
-        self.isHD = len(anchorEl.findAll('font')) > 2
+        self.path = re.findall('<input type="hidd.*?value="(.*?)\"', el)[0].split('/')[-1]
+        self.isHD = False#len(anchorEl.findAll('font')) > 2
 
     def __parseJSON(self, json):
         self.title = json['title']

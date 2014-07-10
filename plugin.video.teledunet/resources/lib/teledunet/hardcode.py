@@ -38,7 +38,6 @@ HARDCODED_STREAMS = [{
                          'title': 'BeIn Sport 9',
                          'thumbnail': 'http://www.teledunet.com//player/icones/bein_sport_9.jpg',
                          'path': 'bein_sport_9'},
-
                      {
                          'title': 'Abu Dhabi Al Oula',
                          'thumbnail': 'http://www.teledunet.com//player/icones/abu_dhabi.jpg',
