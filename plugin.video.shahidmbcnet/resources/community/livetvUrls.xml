@@ -1,5 +1,37 @@
 <streaminginfos>
 <streaminginfo>
+        <cname>Saudi Quran</cname>
+        <chnumber>ch345</chnumber>
+	<link>http://www.livetv.tn/Saudi-Quaran-en-direct-live.html</link>
+</streaminginfo>
+<streaminginfo>
+        <cname>CNN</cname>
+        <chnumber>ch815</chnumber>
+	<link>http://www.livetv.tn/CNN-en-direct-live.html</link>
+</streaminginfo>
+<streaminginfo>
+        <cname>Qatar</cname>
+        <chnumber>ch401</chnumber>
+	<link>http://www.livetv.tn/Qatar-TV-en-direct-live.html</link>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>Imagines Movies</cname>
+        <chnumber>ch400</chnumber>
+	<link>http://www.livetv.tn/Imagines-Movies-en-direct-live.html</link>
+</streaminginfo>
+<streaminginfo>
+        <cname>Al Lubnania</cname>
+        <chnumber>ch321</chnumber>
+		<link>http://www.livetv.tn/Al-Lubnania-en-direct-live.html</link>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>B4U Plus</cname>
+        <chnumber>ch814</chnumber>
+	<link>http://www.livetv.tn/B4U-Plus-en-direct-live.html</link>
+</streaminginfo>
+<streaminginfo>
         <cname>First TV</cname>
         <chnumber>ch828</chnumber>
 <link>http://www.livetv.tn/First-TV-en-direct-live.html</link>
@@ -695,7 +727,7 @@
     <streaminginfo>
         <cname>TF1</cname>
         <chnumber>ch714</chnumber>
-        <link>http://www.livetv.tn/TF1-en-direct-live.html</link>
+        <link>http://www.livetv.tn/TF1-HD-en-direct-live.html</link>
     </streaminginfo>
 
     <streaminginfo>
@@ -947,7 +979,7 @@
     <streaminginfo>
         <cname>Iqra</cname>
         <chnumber>ch154</chnumber>
-    <link>http://www.livetv.tn/Iraq-Al-Hurra-en-direct-live.html</link></streaminginfo>
+    <link>http://www.livetv.tn/Iqra-TV-en-direct-live.html</link></streaminginfo>
     <streaminginfo>
         <cname>Jordan</cname>
         <chnumber>ch155</chnumber>
@@ -1073,12 +1105,12 @@
     <link>http://www.livetv.tn/ART-Hikayat-2-en-direct-live.html</link></streaminginfo>
 	<streaminginfo>
         <cname>ART Cinema</cname>
-        <chnumber>409</chnumber>
+        <chnumber>ch409</chnumber>
     <link>http://www.livetv.tn/ART-Cinema-en-direct-live.html</link></streaminginfo>
     <streaminginfo>
         <cname>Coran</cname>
         <chnumber>ch323</chnumber>
-<link>http://www.livetv.tn/Coran-TV-en-direct-live.html</link></streaminginfo>
+<link>http://www.livetv.tn/Coran-Tv-Algeria-en-direct-live.html</link></streaminginfo>
 
 <streaminginfo>
         <cname>Mecca TV</cname>
@@ -1127,6 +1159,18 @@
         <title>SRV2</title>
         <chnumber>ch830</chnumber>
     <link>http://www.livetv.tn/Bein-2-Full-HD-en-direct-live.html</link></streaminginfo>
+    
+<streaminginfo>
+        <cname>BeIn Sport 3</cname>
+        <chnumber>ch14</chnumber>
+    <link>http://www.livetv.tn/Bein-3-en-direct-live.html</link>
+</streaminginfo>
+
+<streaminginfo>
+        <cname>BeIn Sport 4</cname>
+        <chnumber>ch15</chnumber>
+    <link>http://www.livetv.tn/Bein-4-en-direct-live.html</link>
+</streaminginfo>
 	
    <streaminginfo>
         <cname>M6</cname>

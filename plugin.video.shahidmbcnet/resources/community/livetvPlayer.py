@@ -45,7 +45,7 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 		retryPlay=True
 		liveTvPremiumCode=selfAddon.getSetting( "liveTvPremiumCode" )
 		liveTvNonPremiumCode=selfAddon.getSetting( "liveTvNonPremiumCode" )
-		if liveTvPremiumCode=="" and liveTvNonPremiumCode=="":
+		if 1==2 and liveTvPremiumCode=="" and liveTvNonPremiumCode=="":
 				pDialog.close()
 				Msg="Please login using Livetv login option on main menu."
 				dialog = xbmcgui.Dialog()
@@ -67,7 +67,7 @@ def PlayStream(sourceEtree, urlSoup, name, url):
 					print 'no code speficied'
 					#no login for time being ;)
 				if lastWorkingCode=="" and liveTvNonPremiumCode=="" : #stop free account
-					if shouldforceLogin():
+					if 1==2 and shouldforceLogin():
 						print 'performing login'
 						if not performLogin():
 							timeD = 1000  #in miliseconds

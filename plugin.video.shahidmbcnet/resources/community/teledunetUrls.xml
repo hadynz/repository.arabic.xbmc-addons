@@ -1,5 +1,34 @@
 <streamingInfos>
 <streaminginfo>
+	<cname>Om Durman</cname>
+	<url>om_durman</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>NRJ 12</cname>
+	<url>nrj_12</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>HCTV</cname>
+	<url>hctv</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>NT1</cname>
+	<url>nt1</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>Universal Somali</cname>
+	<url>universal_somali_tv</url>
+</streaminginfo>
+<streaminginfo>
+	<cname>W9</cname>
+	<url>w9</url>
+</streaminginfo>
+
+<streaminginfo>
+	<cname>Tamazigh Algeria</cname>
+	<url>tamazight</url>
+</streaminginfo>
+<streaminginfo>
 	<cname>Quran TV ksa</cname>
 	<url>coran</url>
 </streaminginfo>

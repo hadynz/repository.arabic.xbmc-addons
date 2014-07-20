@@ -1,3 +1,9 @@
+[B]Version 3.3.1[/B]
+Support for Play next feature, so that when on source fails, it will move to next one.
+
+[B]Version 3.3.0[/B]
+support for livetv.fr
+
 [B]Version 3.2.9[/B]
 LiveTV login bug
 

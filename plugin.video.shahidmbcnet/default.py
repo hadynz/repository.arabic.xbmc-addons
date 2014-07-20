@@ -1035,18 +1035,21 @@ def PlayCommunityStream(channelId, name, mode):
 		enforceSourceSelection=False
 		#print 'playFirst',playFirst
 		done_playing=False
+		current_index=0
+		auto_skip=False
+		auto_skip=True if selfAddon.getSetting( "playOneByOne" )=="true" else False
 		while not done_playing:
 			#print 'trying again',enforceSourceSelection
 			ret = pDialog.create('XBMC', 'Trying to play the source')
 			#print 'dialogue creation'
 			done_playing=True
-			if enforceSourceSelection or (len (providers)>1 and not playFirst):
+			if (enforceSourceSelection or (len (providers)>1 and not playFirst)) and not auto_skip:
 				#print 'select sources'
 				selectedprovider=selectSource(providers)
 				if not selectedprovider:
 					return
 			else:
-				selectedprovider=providers[0]
+				selectedprovider=providers[current_index]
 				enforceSourceSelection=True
 			#print 'picking source'
 			(source,sInfo,order)=selectedprovider #pick first one
@@ -1073,6 +1076,34 @@ def PlayCommunityStream(channelId, name, mode):
 				time = 2000  #in miliseconds
 				line1="Failed playing from "+sourcename
 				xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%(__addonname__,line1, time, __icon__))
+				if auto_skip:
+					done_playing=False
+					current_index+=1
+					if current_index>len(providers):
+						done_playing=True
+					if not done_playing:
+						(s,i,o) =providers[current_index]
+						titles=''
+						if s.findtext('id')=="generic":
+							try:
+								#print 'trying generic name'
+								titles=s.findtext('sname')+': '+i.find('item').findtext('title')
+								#print 'trying generic name end '
+							except:
+								titles=s.findtext('sname')
+						else:
+							try:
+								titles=s.findtext('sname')+': '+i.findtext('title')
+							except: titles=s.findtext('sname')                       
+
+						ret = pDialog.create('XBMC', 'Trying to play the Item# %d of %d, Cancel in 3 seconds.\n Source:%s'%(current_index+1, len(providers),titles))
+
+						xbmc.sleep(3000)
+						if pDialog.iscanceled():
+							current_index=0
+							done_playing=False
+							enforceSourceSelection=True
+							auto_skip=False
 			#print 'donexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 		return 
 	except:

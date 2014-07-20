@@ -70,6 +70,8 @@
 			<setting label="32050" type="number" id="usethisviewmode" values="" default=""/>
             <setting label="32057" type="number" id="teledunetRetryCount" values="" default="5"/>
 	   <setting label="32063"  type="bool" id="filmonDontPlayplayHigh" default="False"/>
+       	   <setting label="32066"  type="bool" id="playOneByOne" default="False"/>
+
 					
      <!--  <setting label="32058" type="bool" id="addToFavMode" default="false"/>-->
 		 </category>

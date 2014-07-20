@@ -1,12 +1,5 @@
 <streamingInfos>
 	<streaminginfo>
-		<cname>RMC</cname>
-		<item>
-			<title>youtube</title>
-			<link>plugin://plugin.video.youtube/?action=play_video&amp;videoid=msqdbWgfltc</link>
-		</item>
-	</streaminginfo>
-	<streaminginfo>
 		<cname>arte</cname>
 		<item>
 			<title>maiyo</title>

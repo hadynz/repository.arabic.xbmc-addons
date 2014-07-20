@@ -1,5 +1,13 @@
 <streaminginfos>
 <streaminginfo>
+    <cname>Heya</cname>
+	<item>
+	<title>Med</title>
+	<link>http://cdn.magictvbox.com/live/10114.stream/playlist.m3u8</link>
+	</item>
+</streaminginfo>
+
+<streaminginfo>
         <cname>Mazeka zoom</cname>
 		<item><title>magictvbox</title><link>http://cdn.magictvbox.com/live/10143.stream/playlist.m3u8</link></item>
 </streaminginfo>
