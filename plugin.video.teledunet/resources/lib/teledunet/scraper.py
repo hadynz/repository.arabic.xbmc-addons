@@ -108,19 +108,21 @@ def get_rtmp_params(channel_name):
         'swf_url': ('http://www.teledunet.com/mobile/player.swf?'
                     'id0=%(time_player)s&channel=%(channel_name)s'
                    ) % {'time_player': str(time_player_id), 'channel_name': channel_name, 'rtmp_url': rtmp_url},
-        'video_page_url': 'http://www.teledunet.com/mobile/?con conn=N:1 flashVer=WIN\\2013,0,0,214 swfVfy=true  timeout=20',
+        'video_page_url': 'http://www.teledunet.com/mobile/ flashVer=WIN\\2014,0,0,145 swfVfy=true  timeout=20',
         'live': '1'
     }
 
 def get_channels():
     loginname=selfAddon.getSetting( "teledunetTvLogin" )
-    #if not (loginname==None or loginname==""):
-    #    performLogin()
-    #req.add_header('Cookie', __get_cookie_session())
+
+    _html(HEADER_REFERER)
+
     headers = { "Referer": HEADER_REFERER  }
     html = _html(TELEDUNET_CHANNEL_PAGE,headers)
 #    channel_divs = lambda soup : soup.findAll("div", { "class" : re.compile("div_channel") })
+    #print html
     channel_divs = lambda soup : soup.findAll("tr")
+    #print channel_divs
     channels = [ChannelItem(el=el) for el in channel_divs(html)]
 
     # Extend Teledunet list with custom hardcoded list created by community

@@ -9,7 +9,9 @@ class ChannelItem:
             self.__parseJSON(json)
 
     def __parseElement(self, el):
+
         el=str(el)
+        #print 'el',el 
         match_channel_name = re.findall('<span id="cha.*?>(.*?)<', el)[0]
         self.title = match_channel_name
         self.thumbnail = re.findall('url\(\'(.*?)\'',el)[0]
