@@ -136,6 +136,27 @@
 </addon>
 
 <addon
+  id="plugin.video.arabchannels"
+  version="1.0.9"
+  name="Arabic Live Streams"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.1.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Arabic TV channels from different providers</summary>
+    <description>Arabic TV channels from different providers</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
   id="plugin.video.arabicchannels"
   version="2.0.0"
   name="ARABIC CHANNELS"
