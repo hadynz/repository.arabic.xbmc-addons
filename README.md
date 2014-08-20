@@ -41,7 +41,7 @@ There are two main ways to install this XBMC repository:
 3. Choose: **repository.arabic.xbmc-addons-1.0.0.zip**
 
 ### 2. Manual Download and Installation
-1. Simply download the [repository zip](https://uutmfa.bn1301.livefilestore.com/y2m2quAtQpZVpS3DjaDNip9hE8_6ZcEoKmtl5j0XDeOi9R_j8jk72ovLw_wvUMsd3zMMBP0imWdQMpDTrkkSvm2H1UDeYgDrfx_ReGbvnwTtnw/repository.arabic.xbmc-addons.zip?download&psid=1) 
+1. Simply download the [repository zip](https://uutmfa.bn1301.livefilestore.com/y2mFUtmoNd-z8Ky80FC1tgTotl8T8P9WodHJlTQcyJV8rubjq9pkQZpQLMm_UPh7XYfsUjlqft2YgdXvc0u3GPtb-sJa0UIBb_v8gxzsOjjWF4/repository.arabic.xbmc-addons.zip?download&psid=1) 
 and install it in XBMC.
 2. Read the following [guide](http://wiki.xbmc.org/index.php?title=Add-ons#How_to_install_from_zip) 
 on the XBMC wiki to learn how to install addons from a repository.
