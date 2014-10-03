@@ -87,6 +87,18 @@ HARDCODED_STREAMS = [{
                          'thumbnail': 'http://www.teledunet.com//player/icones/art_aflam_1.jpg',
                          'path': 'art_aflam_1'},
                      {
+                         'title': 'ART Cinema',
+                         'thumbnail': 'http://www.teledunet.com//player/icones/art_cinema.jpg',
+                         'path': 'art_cinema'},
+                     {
+                         'title': 'ART Hikayat 1',
+                         'thumbnail': 'http://www.teledunet.com//player/icones/art_hikayet_1.jpg',
+                         'path': 'art_hikayet_1'},
+                     {
+                         'title': 'ART Hikayat 2',
+                         'thumbnail': 'http://www.teledunet.com//player/icones/art_hikayet_2.jpg',
+                         'path': 'art_hikayet_2'},
+                     {
                          'title': 'Tele Liban',
                          'thumbnail': 'http://www.teledunet.com//player/icones/tele_liban.jpg',
                          'path': 'tele_liban'},
