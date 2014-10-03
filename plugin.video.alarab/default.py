@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 import urllib,urllib2,xbmcplugin,xbmcgui,xbmcaddon
 
-__settings__ = xbmcaddon.Addon(id='plugin.video.alarabnet')
+__settings__ = xbmcaddon.Addon(id='plugin.video.alarab')
 __icon__ = __settings__.getAddonInfo('icon')
 __fanart__ = __settings__.getAddonInfo('fanart')
 __language__ = __settings__.getLocalizedString

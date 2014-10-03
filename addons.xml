@@ -20,20 +20,20 @@
 
 <addon
   id="plugin.video.alarab"
-  version="2.0.1"
-  name="AlARAB"
-  provider-name="(fixed by daschacka)">
+  version="2.0.2"
+  name="ALARAB"
+  provider-name="Daschacka">
   <requires>
     <import addon="xbmc.python"
-            version="2.1.0"/>
+            version="2.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>AlArabNet</summary>
-    <description>AlArabNet.</description>
+    <summary>Alarab VOD Arabic plugin by BISHA</summary>
+    <description>Alarab VOD Arabic plugin by BISHA. This plugin is completely FREE</description>
 
     <platform>all</platform>
   </extension>
