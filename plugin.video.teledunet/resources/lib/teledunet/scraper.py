@@ -85,7 +85,7 @@ def __get_channel_time_player(channel_name):
     m = re.search('rtmp://(.*?)/%s\''%channel_name, html, re.M | re.I)
     if  m ==None:
         print 'geting from backup file'
-        req = urllib2.Request("http://www.pastebin.com/download.php?i=fKh4gG5s")
+        req = urllib2.Request("http://pastebin.com/download.php?i=fKh4gG5s")
         html = _get(req)
         m = re.search('rtmp://(.*?)/%s\''%channel_name, html, re.M | re.I)
 
