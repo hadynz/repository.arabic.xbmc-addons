@@ -12,10 +12,16 @@ _pluginName = (sys.argv[0])
 
 
 def CATEGORIES():
-	addDir("Aflam","http://tv1.alarab.net/view-1_%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_1",1,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("Serie","http://tv1.alarab.net/view-1_%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_8",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("Serie Ajnabi","http://tv1.alarab.net/view-1_%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%A7%D8%AC%D9%86%D8%A8%D9%8A%D8%A9_1951",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("Serie Turki","http://tv1.alarab.net/view-1_%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%AA%D8%B1%D9%83%D9%8A%D8%A9_299",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("AFLAM ARAB","http://tv1.alarab.net/view-1_%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_1",1,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("SERIE ARAB","http://tv1.alarab.net/view-1_%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9_8",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("SERIE AJNABI","http://tv1.alarab.net/view-1_%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%A7%D8%AC%D9%86%D8%A8%D9%8A%D8%A9_1951",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("SERIE TURKI","http://tv1.alarab.net/view-1_%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%AA%D8%B1%D9%83%D9%8A%D8%A9_299",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("AFLAM AJNABI","http://tv1.alarab.net/view-5553/%D8%A7%D9%81%D9%84%D8%A7%D9%85-%D8%A7%D8%AC%D9%86%D8%A8%D9%8A%D8%A9",1,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("THEATER","http://tv1.alarab.net/view-313/%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A7%D8%AA",1,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("TV PROGRAM","http://tv1.alarab.net/view-311/%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("TV CHANNEL","http://tv1.alarab.net/view-5807/%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("VIDEO CLIP","http://tv1.alarab.net/view-10/%D9%81%D9%8A%D8%AF%D9%8A%D9%88-%D9%83%D9%84%D9%8A%D8%A8",1,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	addDir("CARTOON","http://tv1.alarab.net/view-4/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D9%83%D8%B1%D8%AA%D9%88%D9%86",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
 
 def getMovie(url):
 	openerx = urllib2.build_opener()
