@@ -15,7 +15,7 @@ TELEDUNET_CHANNEL_PAGE = 'http://www.teledunet.com/mobile/?con'
 
 HEADER_HOST = 'www.teledunet.com'
 HEADER_USER_AGENT = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/mobile/?con'
+TELEDUNET_TIMEPLAYER_URL = 'http://www.teledunet.com/mobile/'
 PPV_CHANNEL_URL='rtmp://5.135.134.110:1935/teledunet/'
 
 cj = cookielib.CookieJar()
@@ -69,6 +69,14 @@ def __get_channel_time_player(channel_name):
     url = TELEDUNET_TIMEPLAYER_URL# % channel_name
     print url
     # Set custom header parameters to simulate request is coming from website
+    req = urllib2.Request('http://www.teledunet.com/spacer.php')
+    req.add_header('Referer', HEADER_REFERER)
+    req.add_header('Host', HEADER_HOST)
+    req.add_header('User-agent', HEADER_USER_AGENT)
+    req.add_header('Cookie', __get_cookie_session())
+    html = _get(req)#dummycall
+    
+    
     req = urllib2.Request(url)
     req.add_header('Referer', HEADER_REFERER)
     req.add_header('Host', HEADER_HOST)
@@ -108,7 +116,7 @@ def get_rtmp_params(channel_name):
         'swf_url': ('http://www.teledunet.com/mobile/player.swf?'
                     'id0=%(time_player)s&channel=%(channel_name)s'
                    ) % {'time_player': str(time_player_id), 'channel_name': channel_name, 'rtmp_url': rtmp_url},
-        'video_page_url': 'http://www.teledunet.com/mobile/ flashVer=WIN\\2014,0,0,145 swfVfy=true  timeout=20',
+        'video_page_url': 'http://www.teledunet.com/mobile/ flashVer=WIN\\2015,0,0,189 swfVfy=true  timeout=20',
         'live': '1'
     }
 
