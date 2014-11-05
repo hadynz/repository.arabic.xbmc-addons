@@ -55,16 +55,23 @@ def performLogin():
     post = urllib.urlencode(post)
     link = _get(req,post)
 
-    req = urllib2.Request('http://www.teledunet.com/')#access main page too
-    req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
-    _get(req,post)
-
 
 def __get_channel_time_player(channel_name):
     loginname=selfAddon.getSetting( "teledunetTvLogin" )
     
     if not (loginname==None or loginname==""):
         performLogin()
+
+    post=None
+    req = urllib2.Request('http://www.teledunet.com/')#access main page too
+    req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
+    _get(req,post)
+
+    post=None
+    req = urllib2.Request('http://www.teledunet.com/')#access main page too
+    req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
+    req.add_header('Referer','http://www.teledunet.com/boutique/connexion.php')
+    _get(req,post)
         
     url = TELEDUNET_TIMEPLAYER_URL# % channel_name
     print url
@@ -73,7 +80,7 @@ def __get_channel_time_player(channel_name):
     req.add_header('Referer', HEADER_REFERER)
     req.add_header('Host', HEADER_HOST)
     req.add_header('User-agent', HEADER_USER_AGENT)
-    req.add_header('Cookie', __get_cookie_session())
+    #req.add_header('Cookie', __get_cookie_session())
     html = _get(req)#dummycall
     
     
@@ -81,7 +88,7 @@ def __get_channel_time_player(channel_name):
     req.add_header('Referer', HEADER_REFERER)
     req.add_header('Host', HEADER_HOST)
     req.add_header('User-agent', HEADER_USER_AGENT)
-    req.add_header('Cookie', __get_cookie_session())
+    #req.add_header('Cookie', __get_cookie_session())
 
     html = _get(req)
     #m = re.search('aut=\'\?id0=(.*?)\'', html, re.M | re.I)
