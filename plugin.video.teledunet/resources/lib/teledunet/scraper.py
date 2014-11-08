@@ -5,6 +5,7 @@ from BeautifulSoup import BeautifulSoup
 from models import ChannelItem
 from hardcode import HARDCODED_STREAMS
 import xbmcaddon
+import time
 #addon_id = 'plugin.video.shahidmbcnet'
 selfAddon = xbmcaddon.Addon()
 
@@ -55,46 +56,81 @@ def performLogin():
     post = urllib.urlencode(post)
     link = _get(req,post)
 
-
 def __get_channel_time_player(channel_name):
     loginname=selfAddon.getSetting( "teledunetTvLogin" )
-    
+    mobileHtml=None
     if not (loginname==None or loginname==""):
         performLogin()
+    try:
+        post=None
+        req = urllib2.Request('http://www.teledunet.com/')#access main page too
+        req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
+        _get(req,post)
 
-    post=None
-    req = urllib2.Request('http://www.teledunet.com/')#access main page too
-    req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
-    _get(req,post)
+        post=None
+        req = urllib2.Request('http://www.teledunet.com/boutique/connexion.php')#access main page too
+        req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
+        req.add_header('Referer','http://www.teledunet.com/')
+        _get(req,post)
 
-    post=None
-    req = urllib2.Request('http://www.teledunet.com/')#access main page too
-    req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
-    req.add_header('Referer','http://www.teledunet.com/boutique/connexion.php')
-    _get(req,post)
+        post=None
+        rnd=time.time()*1000
+        post={'rndval':rnd}
+        post = urllib.urlencode(post)
+        req = urllib2.Request('http://www.teledunet.com/who_watch_channel.php?refresh=1')#access main page too
+        req.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36')
+        req.add_header('Referer','http://www.teledunet.com/')
+        html=_get(req,post)
         
+        answer=re.findall('answer\',\'(.*?)\'', html)
+        if answer and len(answer)>0:
+            answer=answer[0]
+            rnd=time.time()*1000
+            post={'answer':answer,'rndval':rnd}
+            post = urllib.urlencode(post)
+            #Set custom header parameters to simulate request is coming from website
+            req = urllib2.Request('http://www.teledunet.com/spacer.php')
+            req.add_header('Referer', HEADER_REFERER)
+            req.add_header('Host', HEADER_HOST)
+            req.add_header('User-agent', HEADER_USER_AGENT)
+            #req.add_header('Cookie', __get_cookie_session())
+            req.add_header('Referer','http://www.teledunet.com/')
+            html = _get(req,post)#dummycall
+            time_player_temp=re.findall('id0=(.*)', html)
+            if time_player_temp and len(time_player_temp)>0:
+                time_player_str=time_player_temp[0]
+
+        url = TELEDUNET_TIMEPLAYER_URL# % channel_name
+        
+        req = urllib2.Request(url)
+        req.add_header('Referer', HEADER_REFERER)
+        req.add_header('Host', HEADER_HOST)
+        req.add_header('User-agent', HEADER_USER_AGENT)
+        #req.add_header('Cookie', __get_cookie_session())
+        mobileHtml = _get(req)#dummycall
+        if not time_player_str:
+            match =re.findall('aut=\'\?id0=(.*?)\'', mobileHtml)
+            time_player_str=str(long(float(match[0])))
+    except:
+        print 'error in fetching time, using dummy value'
+        time_player_str='256424249709'#fallback
+    
     url = TELEDUNET_TIMEPLAYER_URL# % channel_name
     print url
-    # Set custom header parameters to simulate request is coming from website
-    req = urllib2.Request('http://www.teledunet.com/spacer.php')
-    req.add_header('Referer', HEADER_REFERER)
-    req.add_header('Host', HEADER_HOST)
-    req.add_header('User-agent', HEADER_USER_AGENT)
-    #req.add_header('Cookie', __get_cookie_session())
-    html = _get(req)#dummycall
-    
-    
-    req = urllib2.Request(url)
-    req.add_header('Referer', HEADER_REFERER)
-    req.add_header('Host', HEADER_HOST)
-    req.add_header('User-agent', HEADER_USER_AGENT)
-    #req.add_header('Cookie', __get_cookie_session())
 
-    html = _get(req)
+    
+    if mobileHtml is None:
+        req = urllib2.Request(url)
+        req.add_header('Referer', HEADER_REFERER)
+        req.add_header('Host', HEADER_HOST)
+        req.add_header('User-agent', HEADER_USER_AGENT)
+        #req.add_header('Cookie', __get_cookie_session())
+        html = _get(req)
+    else:
+        html=mobileHtml
     #m = re.search('aut=\'\?id0=(.*?)\'', html, re.M | re.I)
     #time_player_str = eval(m.group(1))
-    match =re.findall('aut=\'\?id0=(.*?)\'', html)
-    time_player_str=str(long(float(match[0])))
+
     
     #print 'set_favoris\(\''+channel_name+'\'.*?rtmp://(.*?)\''
     m = re.search('rtmp://(.*?)/%s\''%channel_name, html, re.M | re.I)
