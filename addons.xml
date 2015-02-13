@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.3alshashaYoutube"
-	name="3alshasha Arabic Movies"
-	version="1.0.1"
-	provider-name="Amio(Hassuni/xbmcarabic.com)">
+<addon
+  id="plugin.video.cartoonarabi"
+  version="1.2.1"
+  name="CARTOONARABIC "
+  provider-name="Bisha">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
   </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">3alshasha a Youtube Channel dedicated to Arabic movies and films.</summary>
-    <description lang="en">3alshasha a Youtube Channel dedicated to Arabic movies and films.</description>
+    <summary>CARTOONARABIC vod Arabic plugin</summary>
+    <description>CARTOONARABIC Arabic plugin</description>
+
     <platform>all</platform>
   </extension>
+</addon>
+
+<addon id="plugin.video.dailytube4u.com"
+       name="DailyTube4U.com"
+       version="1.0.3"
+       provider-name="hadynz">
+    <requires>
+        <import addon="xbmc.python" version="2.0"/>
+        <import addon="script.module.beautifulsoup" version="3.0.8"/>
+        <import addon="script.module.xbmcswift2" version="1.1.1" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>DailyTube4U.com</summary>
+        <description>Watch a huge variety of OnDemand online Arabic TV streams provided and maintained by dailytube4u.com.
+
+The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kalam, Nas Book, Ibrahim Wal Nas and others.
+        </description>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon
@@ -35,61 +60,6 @@
     <summary>AlArabNet</summary>
     <description>AlArabNet.</description>
 
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.albernameg"
-       name="Al Bernameg"
-       version="1.0.0"
-       provider-name="Moe">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="2.9.2"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>alBernameg.com</summary>
-    <description>الحلقات الكاملة من برنامج البرنامج مع باسم يوسف</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.AlJadeedNews"
-	name="Al Jadeed News"
-	version="1.0.0"
-	provider-name="Amio(Relax1000)">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Al Jadeed Online News Replay</summary>
-    <description lang="en">Al Jadeed Online News Replay</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.AlJadeedPrograms"
-	name="Al Jadeed Programs"
-	version="1.0.1"
-	provider-name="Amio">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">3alshasha Youtube</summary>
-    <description lang="en">3alshasha Youtube</description>
     <platform>all</platform>
   </extension>
 </addon>
@@ -114,10 +84,66 @@
     </extension>
 </addon>
 
+<addon id="plugin.video.glarab"
+       name="GLArab"
+       version="0.0.4"
+       provider-name="babak">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.beautifulsoup" version="3.0.8"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>GLArab</summary>
+    <description>GLArab Addon for XBMC - requires the GLArab plugin (proxy) on the local network.</description>
+    <platform>all</platform>
+    <language>ar</language>
+  </extension>
+</addon>
+
+<addon id="plugin.video.Islamic"
+	name="Khotba Youtube"
+	version="1.0.1"
+	provider-name="Amio">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">موقع المرئيات الإسلامية</summary>
+    <description lang="en">موقع المرئيات الإسلامية</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.samiratvYoutube"
+	name="Samira TV Youtube"
+	version="1.0.1"
+	provider-name="Amio">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Samira TV Youtube</summary>
+    <description lang="en">Samira TV Youtube</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon
-  id="plugin.video.alqudseyes"
+  id="plugin.video.dubaitv"
   version="1.2.0"
-  name="Alqudseyes"
+  name="DUBAI TV"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
@@ -128,38 +154,114 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Alqudseyes vod Arabic plugin</summary>
-    <description>Alqudseyes Arabic plugin. This plugin is completely FREE”</description>
+    <summary>DUBAI TV vod Arabic plugin</summary>
+    <description>DUBAI TV Arabic plugin, This plugin is FREE</description>
 
     <platform>all</platform>
   </extension>
 </addon>
 
 <addon
-  id="plugin.video.arabchannels"
-  version="1.0.9"
-  name="Arabic Live Streams"
+  id="plugin.video.dramacafe"
+  version="1.1.0"
+  name="DRAMACAFE "
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.1.1"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Arabic TV channels from different providers</summary>
-    <description>Arabic TV channels from different providers</description>
+    <summary>DRAMACAFE vod Arabic plugin</summary>
+    <description>DRAMACAFE Arabic plugin. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>
 </addon>
 
 <addon
-  id="plugin.video.arabicchannels"
-  version="2.0.0"
-  name="ARABIC CHANNELS"
+  id="plugin.video.sonara"
+  version="1.9.0"
+  name="Sonara"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Sonara vod Arabic plugin</summary>
+    <description>Sonara Arabic plugin. This plugin is completely FREE</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.sotwesoora.tv"
+       name="Sotwesoora.tv"
+       version="1.0.2"
+       provider-name="hadynz">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.beautifulsoup" version="3.0.8"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Sotwesoora.tv</summary>
+        <description>Sotwesoora.tv plugin for XBMC. Scrapes Arabic movies from the famous online service.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.3alshashaYoutube"
+	name="3alshasha Arabic Movies"
+	version="1.0.1"
+	provider-name="Amio(Hassuni/xbmcarabic.com)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">3alshasha a Youtube Channel dedicated to Arabic movies and films.</summary>
+    <description lang="en">3alshasha a Youtube Channel dedicated to Arabic movies and films.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.MTVLebanon"
+	name="MTV Lebanon"
+	version="1.0.0"
+	provider-name="Amio(Relax1000)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">MTV Lebanon Replay Youtube Videos</summary>
+    <description lang="en">MTV Lebanon Replay Youtube Videos</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.rotana"
+  version="1.0.0"
+  name="ROTANA"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
@@ -170,8 +272,128 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Arabic Channels</summary>
-    <description>Arabic Channels</description>
+    <summary>Rotana vod Arabic plugin</summary>
+    <description>Rotana Arabic plugin.</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.unofficalteledunet"
+  version="1.3.0"
+  name="Unoffical Teledunet Plugin"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Unoffical teledunet</summary>
+    <description>Unoffical teledunet plugin.</description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.dardarkom"
+  version="1.3.0"
+  name="DARDARKOM MOVIES"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="1.1"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>DARDARKOM MOVIES Arabic plugin</summary>
+    <description>DARDARKOM MOVIES plugin, Arabic , Hollywood, European and Bollywood movies </description>
+
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.AlJadeedNews"
+	name="Al Jadeed News"
+	version="1.0.0"
+	provider-name="Amio(Relax1000)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Al Jadeed Online News Replay</summary>
+    <description lang="en">Al Jadeed Online News Replay</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.teledunet"
+       name="Teledunet.com"
+       version="2.4.0"
+       provider-name="hadynz">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.beautifulsoup" version="3.0.8"/>
+        <import addon="script.module.xbmcswift2" version="1.1.1" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Teledunet.com</summary>
+        <description>Télé du Net is a free online broadcasting service based in Tunisia that is dedicated to online viewers that live outside the Arab world.
+
+It broadcasts channels through the internet 24/7. The service is completely free to use and has a great compilation of channels to choose from.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="plugin.video.AlJadeedPrograms"
+	name="Al Jadeed Programs"
+	version="1.0.1"
+	provider-name="Amio">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">3alshasha Youtube</summary>
+    <description lang="en">3alshasha Youtube</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="plugin.video.bokra"
+  version="4.0.0"
+  name="BOKRA"
+  provider-name="Bisha">
+  <requires>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Bokra vod Arabic plugin</summary>
+    <description>Bokra Arabic plugin. This plugin is completely FREE” </description>
 
     <platform>all</platform>
   </extension>
@@ -218,189 +440,6 @@
 </addon>
 
 <addon
-  id="plugin.video.bokra"
-  version="3.8.0"
-  name="BOKRA"
-  provider-name="Bisha">
-  <requires>
-    <import addon="xbmc.python"
-            version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Bokra vod Arabic plugin</summary>
-    <description>Bokra Arabic plugin. This plugin is completely FREE” </description>
-
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon
-  id="plugin.video.cartoonarabi"
-  version="1.2.1"
-  name="CARTOONARABIC "
-  provider-name="Bisha">
-  <requires>
-    <import addon="xbmc.python"
-            version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>CARTOONARABIC vod Arabic plugin</summary>
-    <description>CARTOONARABIC Arabic plugin</description>
-
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.dailytube4u.com"
-       name="DailyTube4U.com"
-       version="1.0.3"
-       provider-name="hadynz">
-    <requires>
-        <import addon="xbmc.python" version="2.0"/>
-        <import addon="script.module.beautifulsoup" version="3.0.8"/>
-        <import addon="script.module.xbmcswift2" version="1.1.1" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>DailyTube4U.com</summary>
-        <description>Watch a huge variety of OnDemand online Arabic TV streams provided and maintained by dailytube4u.com.
-
-The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kalam, Nas Book, Ibrahim Wal Nas and others.
-        </description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon
-  id="plugin.video.dardarkom"
-  version="1.3.0"
-  name="DARDARKOM MOVIES"
-  provider-name="Bisha">
-  <requires>
-    <import addon="xbmc.python"
-            version="1.1"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>DARDARKOM MOVIES Arabic plugin</summary>
-    <description>DARDARKOM MOVIES plugin, Arabic , Hollywood, European and Bollywood movies </description>
-
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon
-  id="plugin.video.dramacafe"
-  version="1.1.0"
-  name="DRAMACAFE "
-  provider-name="Bisha">
-  <requires>
-    <import addon="xbmc.python"
-            version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>DRAMACAFE vod Arabic plugin</summary>
-    <description>DRAMACAFE Arabic plugin. This plugin is completely FREE”</description>
-
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon
-  id="plugin.video.dubaitv"
-  version="1.2.0"
-  name="DUBAI TV"
-  provider-name="Bisha">
-  <requires>
-    <import addon="xbmc.python"
-            version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>DUBAI TV vod Arabic plugin</summary>
-    <description>DUBAI TV Arabic plugin, This plugin is FREE</description>
-
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.glarab"
-       name="GLArab"
-       version="0.0.4"
-       provider-name="babak">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.beautifulsoup" version="3.0.8"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>GLArab</summary>
-    <description>GLArab Addon for XBMC - requires the GLArab plugin (proxy) on the local network.</description>
-    <platform>all</platform>
-    <language>ar</language>
-  </extension>
-</addon>
-
-<addon id="plugin.video.Islamic"
-	name="Khotba Youtube"
-	version="1.0.1"
-	provider-name="Amio">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">موقع المرئيات الإسلامية</summary>
-    <description lang="en">موقع المرئيات الإسلامية</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.MTVLebanon"
-	name="MTV Lebanon"
-	version="1.0.0"
-	provider-name="Amio(Relax1000)">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">MTV Lebanon Replay Youtube Videos</summary>
-    <description lang="en">MTV Lebanon Replay Youtube Videos</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon
   id="plugin.video.panet"
   version="1.9.0"
   name="Panet"
@@ -421,41 +460,86 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   </extension>
 </addon>
 
+<addon id="plugin.video.shahidmbcnet"
+       name="Shahid Arabic"
+       version="3.3.1"
+       provider-name="shani">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.beautifulsoup" version="3.0.8"/>
+    <import addon="plugin.video.youtube" version="2.9.2"/>
+	<import addon="script.module.elementtree" version="1.2.8"/>
+	<import addon="script.common.plugin.cache" version="0.9.1"/>
+
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>ShahidMBC.net XBMC Client</summary>
+    <description>Formally known as ShahidMBC.net. This plugin fetches the video sources from ShahidMBC.net, youtube and some Live channels which you can play on XBMC compatible plateforms</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.albernameg"
+       name="Al Bernameg"
+       version="1.0.0"
+       provider-name="Moe">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="plugin.video.youtube" version="2.9.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>alBernameg.com</summary>
+    <description>الحلقات الكاملة من برنامج البرنامج مع باسم يوسف</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon
-  id="plugin.video.rotana"
-  version="1.0.0"
-  name="ROTANA"
+  id="plugin.video.alqudseyes"
+  version="1.2.0"
+  name="Alqudseyes"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
-            version="2.0"/>
+            version="2.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Rotana vod Arabic plugin</summary>
-    <description>Rotana Arabic plugin.</description>
+    <summary>Alqudseyes vod Arabic plugin</summary>
+    <description>Alqudseyes Arabic plugin. This plugin is completely FREE”</description>
 
     <platform>all</platform>
   </extension>
 </addon>
 
-<addon id="plugin.video.samiratvYoutube"
-	name="Samira TV Youtube"
-	version="1.0.1"
-	provider-name="Amio">
+<addon
+  id="plugin.video.syriadrama"
+  version="1.2.0"
+  name="Syria Drama"
+  provider-name="Bisha">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="3.0.0"/>
+    <import addon="xbmc.python"
+            version="2.1.0"/>
   </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
+  <extension point="xbmc.python.pluginsource"
+             library="default.py">
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">Samira TV Youtube</summary>
-    <description lang="en">Samira TV Youtube</description>
+    <summary>Syria Drama vod Arabic plugin</summary>
+    <description>Syria Drama Arabic plugin. This plugin is completely FREE”</description>
+
     <platform>all</platform>
   </extension>
 </addon>
@@ -482,131 +566,5 @@ This plugin has been re-written to provide XBMC users with an amazing and native
         </description>
         <platform>all</platform>
     </extension>
-</addon>
-
-<addon id="plugin.video.shahidmbcnet"
-       name="Shahid Arabic"
-       version="3.3.1"
-       provider-name="shani">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-	<import addon="script.module.beautifulsoup" version="3.0.8"/>
-    <import addon="plugin.video.youtube" version="2.9.2"/>
-	<import addon="script.module.elementtree" version="1.2.8"/>
-	<import addon="script.common.plugin.cache" version="0.9.1"/>
-
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>ShahidMBC.net XBMC Client</summary>
-    <description>Formally known as ShahidMBC.net. This plugin fetches the video sources from ShahidMBC.net, youtube and some Live channels which you can play on XBMC compatible plateforms</description>
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon
-  id="plugin.video.sonara"
-  version="1.9.0"
-  name="Sonara"
-  provider-name="Bisha">
-  <requires>
-    <import addon="xbmc.python"
-            version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Sonara vod Arabic plugin</summary>
-    <description>Sonara Arabic plugin. This plugin is completely FREE</description>
-
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.sotwesoora.tv"
-       name="Sotwesoora.tv"
-       version="1.0.2"
-       provider-name="hadynz">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.beautifulsoup" version="3.0.8"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource"
-               library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Sotwesoora.tv</summary>
-        <description>Sotwesoora.tv plugin for XBMC. Scrapes Arabic movies from the famous online service.</description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon
-  id="plugin.video.syriadrama"
-  version="1.2.0"
-  name="Syria Drama"
-  provider-name="Bisha">
-  <requires>
-    <import addon="xbmc.python"
-            version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Syria Drama vod Arabic plugin</summary>
-    <description>Syria Drama Arabic plugin. This plugin is completely FREE”</description>
-
-    <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.teledunet"
-       name="Teledunet.com"
-       version="2.4.0"
-       provider-name="hadynz">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.beautifulsoup" version="3.0.8"/>
-        <import addon="script.module.xbmcswift2" version="1.1.1" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Teledunet.com</summary>
-        <description>Télé du Net is a free online broadcasting service based in Tunisia that is dedicated to online viewers that live outside the Arab world.
-
-It broadcasts channels through the internet 24/7. The service is completely free to use and has a great compilation of channels to choose from.</description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
-<addon
-  id="plugin.video.unofficalteledunet"
-  version="1.3.0"
-  name="Unoffical Teledunet Plugin"
-  provider-name="Bisha">
-  <requires>
-    <import addon="xbmc.python"
-            version="2.1.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-             library="default.py">
-    <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Unoffical teledunet</summary>
-    <description>Unoffical teledunet plugin.</description>
-
-    <platform>all</platform>
-  </extension>
 </addon>
 </addons>
