@@ -174,7 +174,7 @@ def get_video_file(url):
 		    file_name = (str(itr).split('file": "')[1]).replace('"','').strip()
 
 
-	    my_video_url = 'rtmp://vod.bokra.net:1935/vod/_definst_/ playpath='+file_name+' swfUrl=http://bokra.net/inc/player/jwplayer5.swf'
+	    my_video_url = 'rtmp://vod.bokra.net:1935/vod/_definst_/ playpath='+file_name+' swfUrl=http://bokra.net/inc/player/jwplayer5.swf pageURL='+url+' swfVfy=true timeout=90'
 
 #my_video_url = 'rtmp://vod.bokra.net:1935/vod/_definst_/ playpath='+file_name+' swfUrl=http://bokra.net/inc/player/jwplayer5.swf pageURL='+url+' swfVfy=true'
 	    listItem = xbmcgui.ListItem(path=str(my_video_url))
