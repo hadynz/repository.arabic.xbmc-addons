@@ -178,7 +178,7 @@ url=None
 name=None
 mode=None
 
-from BeautifulSoup import BeautifulStoneSoup, BeautifulSoup, BeautifulSOAP
+
 try:
     import json
 except:
