@@ -45,9 +45,9 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon
   id="plugin.video.alarab"
-  version="2.0.4"
+  version="2.0.5"
   name="AlArab"
-  provider-name="daschacka">
+  provider-name="BISHA">
   <requires>
     <import addon="xbmc.python"
             version="2.1.0"/>
@@ -184,7 +184,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon
   id="plugin.video.sonara"
-  version="2.0.0"
+  version="2.1.0"
   name="Sonara"
   provider-name="Bisha">
   <requires>
@@ -197,7 +197,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Sonara vod Arabic plugin</summary>
-    <description>Sonara Arabic plugin. This plugin is completely FREE</description>
+    <description>Sonara Arabic plugin.</description>
 
     <platform>all</platform>
   </extension>

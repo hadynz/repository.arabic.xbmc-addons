@@ -154,44 +154,22 @@ def listEpos(url):
 
 def getVideoFile(url):
 	try:
-			url='http://www.sonara.net/video_player_new.php?ID='+str(url) 
-			req = urllib2.Request(url)
-			req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-			req.add_header('Cookie', 'InterstitialAd=1; __utma=261095506.1294916015.1370631116.1370631116.1370631116.1; __utmb=261095506.9.10.1370631116; __utmc=261095506; __utmz=261095506.1370631116.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); geo_user=INT; popupbannerA=1')
-			response = urllib2.urlopen(req)
-			link=response.read()
-			target= re.findall(r"<script type='text/javascript'>(.*?)\s(.*?)</script>", link, re.DOTALL)
-			target=str(target).split(',')
-			mp4File=''
-			swfFile=''
-			rtmp=''
-			for itr in target:
-				
-				if 'mp4' in itr:
-					mp4File=str(itr).split("&image=")[0]
-					mp4File=str(mp4File).replace("\'mp4:","").strip()
-					mp4File=str(mp4File).replace("\/","mp4:/").strip()
-				if ("flv") in itr:
-					mp4File = str(itr).split("&image")[0]
-					mp4File=str(mp4File).replace("\'flv:","").strip()
-					mp4File=str(mp4File).replace("\/","flv:/").strip()
-					mp4File = str(mp4File).split("/")[1]
-				if 'SWFObject' in itr:
-					swfFile=str( itr).split("SWFObject")[1]
-					swfFile=str(swfFile).split("http:")[1]
-					swfFile=str(swfFile).split(".swf")[0]
-					swfFile="http:"+swfFile+".swf"
-				if 'rtmp' in itr:
-					rtmp=str( itr).split("');")[0]
-					rtmp=str( rtmp).split("rtmp:")[1]
-					rtmp=rtmp[:-1]
-					rtmp="rtmp:"+rtmp
-					swfFile="http://www.sonara.net/mediaplayera/player.swf"
-					
-				
-			playingpath=rtmp+" swfUrl="+swfFile+" playpath="+mp4File+" timeout=15"
-			listItem = xbmcgui.ListItem(path=str(playingpath))
-			xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+		url='http://www.sonara.net/video_player_new.php?ID='+str(url)
+		req = urllib2.Request(url)
+		response = urllib2.urlopen(req,timeout=1)
+		link=response.read()
+		for rows in link.split(";"):
+			if "dlk.addVariable" and 'file'in rows:
+				myvideo = rows.split(",")[1].split("&image")[0].replace("'","").strip()
+				   
+			if "dlk.addVariable" and 'streamer'in rows:
+				streamer = rows.split(",")[1].replace("'","").replace(")","").strip()
+				print streamer
+
+		swfFile="http://www.sonara.net/mediaplayera/player.swf"
+		playingpath=streamer+" swfUrl="+swfFile+" playpath="+myvideo+" timeout=15"
+		listItem = xbmcgui.ListItem(path=str(playingpath))
+		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	except:
 		pass
 				

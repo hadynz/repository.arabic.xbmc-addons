@@ -99,22 +99,10 @@ def getSerieFolge(url):
 		addDir("("+seitenzahlselected+"/"+str(seitenwieviel)+") Next Page",nextpagelink,3,"http://wadeni.com/images/icons/0alarab-net.jpg")	
 
 def PlayMovie(url):
-		opener = urllib2.build_opener()
-		sock = opener.open(url)
-		content = sock.read() 
-		sock.close()
-		source1 = content.split('http://alarabplayers.alarab.net')
-		source2 = source1[1].split('"')
-		filewrong = "http://alarabplayers.alarab.net"+source2[0]
-		opener2 = urllib2.build_opener()
-		sock2 = opener.open(filewrong)
-		content2 = sock2.read() 
-		sock2.close()
-		source3 = content2.split("'file': '")
-		source4 = source3[1].split("'")
-		fileright = source4[0]
-		print fileright
-		listItem = xbmcgui.ListItem(path=str(fileright))
+		req = urllib2.Request(url)
+    		response = urllib2.urlopen(req,timeout=1)
+    		link=response.read().split('<PARAM NAME="movie" value="')[1].split('&provider=')[0].strip().split("file=")[1]
+		listItem = xbmcgui.ListItem(path=str(link))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 
                 
