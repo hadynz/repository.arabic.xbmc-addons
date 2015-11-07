@@ -142,6 +142,11 @@ def get_film_video_file(url):
     for items in str(target).split(','):
         if "mp4:" in items:
             my_film= items.split('mp4:')[1].replace('"',"").strip()
+    if my_film=='':
+        target= re.findall(r'{ type: "video/mp4",(.*?)" }', link, re.DOTALL)
+
+        my_film= target[0].split('src:')[1].replace('"',"").strip()
+
     
     listItem = xbmcgui.ListItem(path=str(my_film))
     xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
