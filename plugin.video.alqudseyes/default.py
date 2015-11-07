@@ -28,107 +28,123 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
-	#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'https://pbs.twimg.com/profile_images/1124212894/qudseyes.jpg'))
-	addDir('افلام','http://aflam.alqudseyes.com/',1,'http://aflam.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات','http://mosalsalat.alqudseyes.com/',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('برامج تلفزيون','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86/c8',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات تركية','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%AA%D8%B1%D9%83%D9%8A%D8%A9/c1',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات خليجية','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%AE%D9%84%D9%8A%D8%AC%D9%8A%D8%A9/c6',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات رمضان 2011','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%B1%D9%85%D8%B6%D8%A7%D9%86-2011/c10',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات رمضان 2012','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%B1%D9%85%D8%B6%D8%A7%D9%86-2012/c11',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات سورية','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%B3%D9%88%D8%B1%D9%8A%D8%A9/c4',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات كارتون','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D9%83%D8%A7%D8%B1%D8%AA%D9%88%D9%86/c7',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات لبنانية','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D9%84%D8%A8%D9%86%D8%A7%D9%86%D9%8A%D8%A9/c5',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات مدبلجة','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D9%85%D8%AF%D8%A8%D9%84%D8%AC%D8%A9/c12',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	addDir('مسلسلات مصرية','http://mosalsalat.alqudseyes.com/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D9%85%D8%B5%D8%B1%D9%8A%D8%A9/c9',2,'http://mosalsalat.alqudseyes.com/site_images/aqe_logo_new.png')
-	
-def checkURL(url):
-    p = urlparse(url)
-    h = HTTP(p[1])
-    h.putrequest('HEAD', p[2])
-    h.endheaders()
-    if h.getreply()[0] == 200: return 1
-    else: return 0
-	
 
-def listEpos(url):
-    
-   
+	addDir('مسلسلات تركية ','http://www.alqudseyes.com/series?sort=desc&category=19&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات عربية ','http://www.alqudseyes.com/series?sort=desc&category=20&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات مصرية ','http://www.alqudseyes.com/series?sort=desc&category=21&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات سورية ','http://www.alqudseyes.com/series?sort=desc&category=22&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات لبنانية ','http://www.alqudseyes.com/series?sort=desc&category=23&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات خليجية ','http://www.alqudseyes.com/series?sort=desc&category=24&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات كرتون ','http://www.alqudseyes.com/series?sort=desc&category=25&sort_by=date&series=100&page=',2,'')
+	addDir('برامج ','http://www.alqudseyes.com/series?sort=desc&category=26&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات رمضان 2011 ','http://www.alqudseyes.com/series?sort=desc&category=27&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات رمضان 2012 ','http://www.alqudseyes.com/series?sort=desc&category=28&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات رمضان 2014 ','http://www.alqudseyes.com/series?sort=desc&category=30&sort_by=date&series=100&page=',2,'')
+	addDir('مسلسلات مدبلجة ','http://www.alqudseyes.com/series?sort=desc&category=29&sort_by=date&series=100&page=',2,'')
+
+	addDir('افلام دراما ','http://www.alqudseyes.com/movies?sort=desc&category=2&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام كوميديا ','http://www.alqudseyes.com/movies?sort=desc&category=3&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام رومانس وحب  ','http://www.alqudseyes.com/movies?sort=desc&category=4&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام اكشن ومغامرات ','http://www.alqudseyes.com/movies?sort=desc&category=5&sort_by=date&movies=100&page=',1,'')
+	addDir('مسرحيات','http://www.alqudseyes.com/movies?sort=desc&category=6&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام اجتماعي','http://www.alqudseyes.com/movies?sort=desc&category=7&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام تركية ومدبلجة','http://www.alqudseyes.com/movies?sort=desc&category=11&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام الزمن القديم ','http://www.alqudseyes.com/movies?sort=desc&category=13&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام وثائقية ','http://www.alqudseyes.com/movies?sort=desc&category=14&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام عادل امام ','http://www.alqudseyes.com/movies?sort=desc&category=15&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام سورية ','http://www.alqudseyes.com/movies?sort=desc&category=16&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام مصرية ','http://www.alqudseyes.com/movies?sort=desc&category=17&sort_by=date&movies=100&page=',1,'')
+	addDir('افلام هندية ','http://www.alqudseyes.com/movies?sort=desc&category=18&sort_by=date&movies=100&page=',1,'')
+
+
+
+def listAlqudsFilmContent(url):
+
+    try:
+    	for i in range(1,6):
+	    req = urllib2.Request(url+str(i))
+	    response = urllib2.urlopen(req,timeout=1)
+	    link=response.read()
+	    target= re.findall(r'<article class="movie">(.*?)\s(.*?)<div class="grid-col">', link, re.DOTALL)
+
+	    for items in target:
+		for itr in items:
+		   my_data = str(itr).split('</figure>')[0].split(' <figure class="movie-image">')
+		   my_url = my_data[0].replace(' <a href="','').replace('">','').strip()
+
+		   for i in my_data:
+		       if ' <img src=' in i :
+		            my_name =  i.split('alt="')[1].replace('">','').strip()
+		            my_img =  i.split('alt="')[0].replace('<img src="','').replace('"','').strip()
+			    print my_img
+
+		            my_url =my_url.split('movies')
+		            my_final_url = my_url[0]+'movies/watch'+my_url[1]
+		            print my_name
+		            print my_final_url
+		            print my_img.strip()
+			    addLink(my_name,my_final_url,3,my_img)
+    except:
+	pass
+
+def listAlqudsSerieContent(url):
+    try:
+    	for i in range(1,6):
+	    req = urllib2.Request(url+str(i))
+	    response = urllib2.urlopen(req,timeout=1)
+	    link=response.read()
+	    target= re.findall(r'<article class="movie">(.*?)\s(.*?)<div class="grid-col">', link, re.DOTALL)
+
+	    for items in target:
+		for itr in items:
+		   my_data = str(itr).split('</figure>')[0].split(' <figure class="movie-image">')
+		   my_url = my_data[0].replace(' <a href="','').replace('">','').strip()
+
+		   for i in my_data:
+		       if ' <img src=' in i :
+		            my_name =  i.split('alt="')[1].replace('">','').strip()
+		            my_img =  i.split('alt="')[0].replace('<img src="','').replace('"','').strip()
+		            print my_name
+		            print my_url
+		            print my_img.strip()
+			    addDir(my_name,my_url,4,my_img )
+    except:
+	pass
+
+def getAlgudsSerie(url):
+
     req = urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
     response = urllib2.urlopen(req)
     link=response.read()
-    target= re.findall(r'<div class="thumbnail">(.*?)\s(.*?)<h2 class="itemtitle">', link, re.DOTALL)
     response.close()
-    for items in  target:
-        mytarg=str( items[1]).split('" width="150" height="225" /><br />')
-        mytarg=str( mytarg[0]).strip()
-        mytarg=str( mytarg).split('">')
-        name_and_path=str(mytarg[0]).replace('<a title="', '')
-            #print name_and_path
-        thumb=str(mytarg[1]).replace('<img src="', '').strip()
-        thumb=(str(thumb).split('" width="150"'))[0]
-        name=str((str( name_and_path).split(" href="))[0]).replace('"', '').strip()
-        path=str((str( name_and_path).split(" href="))[1]).replace('"', '').strip()
-            #print path
-        path='http://mosalsalat.alqudseyes.com'+path
-        thumb='http://mosalsalat.alqudseyes.com'+thumb
-        print name
-        print path
-        addLink(name,path,3,thumb)
-		
-def getAllFilms(url,videoType):
-    
-    my_url=url
-    for i in range(0,40):
-        url=my_url+"/page/"+str(i)
-    
-        req = urllib2.Request(url)
-        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-        response = urllib2.urlopen(req)
-        link=response.read()
-        target= re.findall(r'<div class="thumbnail">(.*?)\s(.*?)<h2 class="itemtitle">', link, re.DOTALL)
-        response.close()
-        for items in  target:
-            mytarg=str( items[1]).split('" width="150" height="225" /><br />')
-            mytarg=str( mytarg[0]).strip()
-            mytarg=str( mytarg).split('">')
-            name_and_path=str(mytarg[0]).replace('<a title="', '')
-            #print name_and_path
-            thumb=str(mytarg[1]).replace('<img src="', '').strip()
-            name=str((str( name_and_path).split(" href="))[0]).replace('"', '').strip()
-            path=str((str( name_and_path).split(" href="))[1]).replace('"', '').strip()
-            #print path
-            if videoType=='film':
-				path='http://aflam.alqudseyes.com'+path
-				thumb='http://aflam.alqudseyes.com'+thumb
-				addLink(name,path,3,thumb)
-                
-            elif videoType=='mosalsal':
-				path='http://mosalsalat.alqudseyes.com'+path
-				thumb='http://mosalsalat.alqudseyes.com'+thumb
-				addDir(name,path,4,thumb)
-           
+    target= re.findall(r'<div class="info-episodes">(.*?)\s(.*?)</div>', link, re.DOTALL)
+    for items in target:
+        for i in  items:
+            if i !='':
+                my_url_data = i.split('">')[0].replace('<h5><a href="','').strip()
+                my_name_data = i.split('">')[1].replace('</a></h5>','').strip()
+                my_url_data =my_url_data.split('series')
+                my_final_url = my_url_data[0]+'series/watch'+my_url_data[1]
+                print my_name_data
+                print my_final_url
+		addLink(my_name_data,my_final_url,3,'')
 
 
-	
 def get_film_video_file(url):
-	req = urllib2.Request(url)
-	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-	response = urllib2.urlopen(req)
-	link=response.read()
-	response.close()
-   
-	url_ch=str(re.compile("'file': '(.+?)',").findall(link))
-	url_ch=url_ch.replace("['", "")
-	url_ch=url_ch.replace("']", "").strip()
-    #rtmp://media.alqudseyes.com/vod/ swfUrl=http://mosalsalat.alqudseyes.com/player/jw6/jwplayer.flash.swf playpath=mp4:/series/Tarabish/E003.m4v
-	url_ch=str(url_ch).split('mp4:')
+    req = urllib2.Request(url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+    response = urllib2.urlopen(req)
+    link=response.read()
+    response.close()
+    my_film =''
+    target= re.findall(r'videoType:"HTML5",(.*?)\s(.*?)prerollAD:"yes",', link, re.DOTALL)
+    for items in str(target).split(','):
+        if "mp4:" in items:
+            my_film= items.split('mp4:')[1].replace('"',"").strip()
     
-	url_ch=url_ch[0]+' swfUrl=http://mosalsalat.alqudseyes.com/player/jw6/jwplayer.flash.swf playpath=mp4:'+url_ch[1]
-	#url_ch='http://assets.delvenetworks.com/player/loader.swf?playerForm=64fc5d4a5f47400fac523fba125a8de8&&mediaId=92bb83bb29d145d99b057cb8ef7d3020&&defaultQuality=Download&amp;allowHttpDownload=true&amp;pdBitrate=224&amp;allowSharePanel=true&amp;allowEmbed=true'
-	listItem = xbmcgui.ListItem(path=str(url_ch))
-	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+    listItem = xbmcgui.ListItem(path=str(my_film))
+    xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	
 			
 
@@ -208,16 +224,16 @@ if mode==None or url==None or len(url)<1:
        
 elif mode==1:
         print ""+url
-        getAllFilms(url,'film')
+        listAlqudsFilmContent(url)
 	
 elif mode==2:
         print ""+url
-        getAllFilms(url,'mosalsal')
+        listAlqudsSerieContent(url)
 elif mode==3:
         print ""+url
         get_film_video_file(url)
 elif mode==4:
         print ""+url
-        listEpos(url)
+        getAlgudsSerie(url)
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

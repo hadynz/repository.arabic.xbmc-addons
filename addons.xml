@@ -504,7 +504,7 @@ It broadcasts channels through the internet 24/7. The service is completely free
 
 <addon
   id="plugin.video.alqudseyes"
-  version="1.3.0"
+  version="2.0.0"
   name="Alqudseyes"
   provider-name="Bisha">
   <requires>
@@ -517,7 +517,7 @@ It broadcasts channels through the internet 24/7. The service is completely free
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Alqudseyes vod Arabic plugin</summary>
-    <description>Alqudseyes Arabic plugin. This plugin is completely FREE”</description>
+    <description>Alqudseyes Arabic plugin”</description>
 
     <platform>all</platform>
   </extension>
