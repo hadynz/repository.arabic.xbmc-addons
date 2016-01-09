@@ -3,10 +3,10 @@
   id="plugin.video.alarab"
   version="2.0.5"
   name="AlArab"
-  provider-name="BISHA">
+  provider-name="daschacka">
   <requires>
     <import addon="xbmc.python"
-            version="2.1.0"/>
+            version="3.1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
@@ -15,7 +15,7 @@
   <extension point="xbmc.addon.metadata">
     <summary>AlArabNet</summary>
     <description>AlArabNet.</description>
-   
+
     <platform>all</platform>
   </extension>
 </addon>

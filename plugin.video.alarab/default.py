@@ -1,5 +1,6 @@
 # -*- coding: utf8 -*-
 import urllib,urllib2,xbmcplugin,xbmcgui,xbmcaddon
+import re
 
 __settings__ = xbmcaddon.Addon(id='plugin.video.alarab')
 __icon__ = __settings__.getAddonInfo('icon')
@@ -26,7 +27,7 @@ def CATEGORIES():
 def getMovie(url):
 	openerx = urllib2.build_opener()
 	sockx = openerx.open(url)
-	contentx = sockx.read() 
+	contentx = sockx.read()
 	sockx.close()
 	wieviele = contentx.count('<div class="video-box">')
 	teilen = contentx.split('<div class="video-box">')
@@ -51,7 +52,7 @@ def getMovie(url):
 def getSerie(url):
 	openerx = urllib2.build_opener()
 	sockx = openerx.open(url)
-	contentx = sockx.read() 
+	contentx = sockx.read()
 	sockx.close()
 	wieviele = contentx.count('<div class="video-box">')
 	teilen = contentx.split('<div class="video-box">')
@@ -72,11 +73,11 @@ def getSerie(url):
 		nextpagelink1 = seitenzahl3[1].split('"')
 		nextpagelink = "http://tv1.alarab.net" + nextpagelink1[7]
 		addDir("("+seitenzahlselected+"/"+str(seitenwieviel)+") Next Page",nextpagelink,2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-		
+
 def getSerieFolge(url):
 	openerx = urllib2.build_opener()
 	sockx = openerx.open(url)
-	contentx = sockx.read() 
+	contentx = sockx.read()
 	sockx.close()
 	wieviele = contentx.count('<div class="video-box">')
 	teilen = contentx.split('<div class="video-box">')
@@ -85,7 +86,7 @@ def getSerieFolge(url):
 		imgjetzt = linkjetzt[3]
 		urljetzt = "http://tv1.alarab.net/"+linkjetzt[1]
 		namejetzt = linkjetzt[5]
-		addLink(namejetzt,urljetzt,4,imgjetzt)	
+		addLink(namejetzt,urljetzt,4,imgjetzt)
 	seitenzahl1 = contentx.split('<div class="pages"><center>')
 	seitenzahl2 = seitenzahl1[1].split("</div></center></div>")
 	seitenzahl3 = seitenzahl2[0].split('tsc_3d_button blue"')
@@ -96,16 +97,31 @@ def getSerieFolge(url):
 	if int(seitenzahlselected) < seitenwieviel:
 		nextpagelink1 = seitenzahl3[1].split('"')
 		nextpagelink = "http://tv1.alarab.net" + nextpagelink1[7]
-		addDir("("+seitenzahlselected+"/"+str(seitenwieviel)+") Next Page",nextpagelink,3,"http://wadeni.com/images/icons/0alarab-net.jpg")	
+		addDir("("+seitenzahlselected+"/"+str(seitenwieviel)+") Next Page",nextpagelink,3,"http://wadeni.com/images/icons/0alarab-net.jpg")
 
 def PlayMovie(url):
-		req = urllib2.Request(url)
-    		response = urllib2.urlopen(req,timeout=1)
-    		link=response.read().split('<PARAM NAME="movie" value="')[1].split('&provider=')[0].strip().split("file=")[1]
-		listItem = xbmcgui.ListItem(path=str(link))
+		opener = urllib2.build_opener()
+		sock = opener.open(url)
+		content = sock.read()
+		sock.close()
+		source1 = content.split('http://alarabplayers.alarab.net')
+		fileright = getFlvAddress(source1[0])
+		print 'Used Url is:', fileright		
+		listItem = xbmcgui.ListItem(path=str(fileright))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 
-                
+def getFlvAddress(par_sHtmlContent):
+		# search for the .flv address and change the flv. prefix to flv2.	
+		sFlvAddress = re.search(r'file=.*?\.flv', par_sHtmlContent, re.DOTALL)
+		
+		sFlvAddress = sFlvAddress.group()
+
+		iHttpStartIndex = sFlvAddress.find('=') 
+
+		sFinalAndCorrectedFlvAddress = sFlvAddress[iHttpStartIndex+1:].replace('flv.', 'flv2.')
+		
+		return sFinalAndCorrectedFlvAddress
+
 def get_params():
         param=[]
         paramstring=sys.argv[2]
@@ -121,7 +137,7 @@ def get_params():
                         splitparams=pairsofparams[i].split('=')
                         if (len(splitparams))==2:
                                 param[splitparams[0]]=splitparams[1]
-                                
+
         return param
 
 
@@ -134,7 +150,7 @@ def addLink(name,url,mode,iconimage):
     liz.setProperty("IsPlayable","true");
     ok=xbmcplugin.addDirectoryItem(handle=_thisPlugin,url=u,listitem=liz,isFolder=False)
     return ok
-	
+
 
 
 def addDir(name,url,mode,iconimage):
@@ -145,14 +161,14 @@ def addDir(name,url,mode,iconimage):
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
         return ok
 
-              
+
 params=get_params()
 url=None
 name=None
 mode=None
 
 
-	
+
 try:
         url=urllib.unquote_plus(params["url"])
 except:
