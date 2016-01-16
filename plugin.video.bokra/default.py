@@ -144,15 +144,16 @@ def get_video_file(url):
     response_target = urllib2.urlopen(req_target)
     link_target=response_target.read()
     link_file= re.findall(r'"file":(.*?)\s(.*?)",', link_target, re.DOTALL)
-    link_streamer= re.findall(r'"streamer":(.*?)\s(.*?)",', link_target, re.DOTALL)
-    link_flash= re.findall(r'"flashplayer":(.*?)\s(.*?)",', link_target, re.DOTALL)
-    link_flash= link_flash[0]
-    link_flash= 'http://nadstream.shahidlive.com'+link_flash[1].replace('"','').strip()
-    link_file= link_file[0]
-    link_file= link_file[1]
-    link_streamer= link_streamer[0]
-    link_streamer= link_streamer[1]
-    final_video_url = link_streamer.replace('"','').strip()+' playpath='+link_file.replace('"','').strip()+' swfUrl='+link_flash+ ' timeout=20'
+    final_video_url= str(link_file[0][1]).replace('"','').strip()
+    #link_streamer= re.findall(r'"streamer":(.*?)\s(.*?)",', link_target, re.DOTALL)
+    #link_flash= re.findall(r'"flashplayer":(.*?)\s(.*?)",', link_target, re.DOTALL)
+    #link_flash= link_flash[0]
+    #link_flash= 'http://nadstream.shahidlive.com'+link_flash[1].replace('"','').strip()
+    #link_file= link_file[0]
+    #link_file= link_file[1]
+    #link_streamer= link_streamer[0]
+    #link_streamer= link_streamer[1]
+    #final_video_url = link_streamer.replace('"','').strip()+' playpath='+link_file.replace('"','').strip()+' swfUrl='+link_flash+ ' timeout=20'
     listItem = xbmcgui.ListItem(path=str(final_video_url))
     xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
    
