@@ -104,6 +104,12 @@ def listAlqudsSerieContent(url):
 		       if ' <img src=' in i :
 		            my_name =  i.split('alt="')[1].replace('">','').strip()
 		            my_img =  i.split('alt="')[0].replace('<img src="','').replace('"','').strip()
+			    try:
+				name = str(name).split('<div')[0]
+				
+			    except:
+				print 'exception caught'
+			        pass
 		            print my_name
 		            print my_url
 		            print my_img.strip()
@@ -125,7 +131,7 @@ def getAlgudsSerie(url):
                 my_url_data = i.split('">')[0].replace('<h5><a href="','').strip()
                 my_name_data = i.split('">')[1].replace('</a></h5>','').strip()
                 my_url_data =my_url_data.split('series')
-                my_final_url = my_url_data[0]+'series/watch'+my_url_data[1]
+                my_final_url = my_url_data[0]+'series'+my_url_data[1]
                 print my_name_data
                 print my_final_url
 		addLink(my_name_data,my_final_url,3,'')
