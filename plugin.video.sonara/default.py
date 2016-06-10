@@ -30,6 +30,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 def CATEGORIES():
 	#xbmc.executebuiltin('Notification(%s, %s, %d, %s)'%('WARNING','This addon is completely FREE DO NOT buy any products from http://tvtoyz.com/', 16000, 'http://upload.wikimedia.org/wikipedia/he/e/ed/Sonara_logo_.gif'))
+	addDir('2016 مسلسلات رمضان ','http://www.sonara.net/vncat/92/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA-%D8%B1%D9%85%D8%B6%D8%A7%D9%86-2016',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
 	addDir('مسلسلات رمضان ','http://www.sonara.net/vncat/90/',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
 	addDir('مسلسلات رمضان 2014','http://www.sonara.net/vncat/86/%D9%85%D8%B3%D9%84%D8%B3%D9%84%D8%A7%D8%AA_%D8%B1%D9%85%D8%B6%D8%A7%D9%86_2014',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
 	addDir('مسلسلات رمضان 2013','http://www.sonara.net/videon-85.html',1,'http://profile.ak.fbcdn.net/hprofile-ak-ash4/s160x160/416801_327989490581599_1718150811_a.jpg')
@@ -158,6 +159,7 @@ def getVideoFile(url):
 		req = urllib2.Request(url)
 		response = urllib2.urlopen(req,timeout=1)
 		link=response.read()
+		print link
 		for rows in link.split(";"):
 			if "dlk.addVariable" and 'file'in rows:
 				myvideo = rows.split(",")[1].split("&image")[0].replace("'","").strip()
@@ -167,7 +169,7 @@ def getVideoFile(url):
 				print streamer
 
 		swfFile="http://www.sonara.net/mediaplayera/player.swf"
-		playingpath=streamer+" swfUrl="+swfFile+" playpath="+myvideo+" timeout=15"
+		playingpath=streamer+" swfUrl="+swfFile+" playpath="+myvideo+ ' pageUrl='+url+" timeout=25"
 		listItem = xbmcgui.ListItem(path=str(playingpath))
 		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
 	except:

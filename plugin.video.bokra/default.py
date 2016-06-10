@@ -35,24 +35,93 @@ def patch_http_response_read(func):
     return inner
 httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
-def get_categories(url):
+def list_cats(url):
+    all_cats ={}
+    req = urllib2.Request(url)
+    response = urllib2.urlopen(req,timeout=15)
+    link = response.read()
+
+    target = re.findall(r'<ul class="hidden-xs">(.*?)\s(.*?)</ul>', link, re.DOTALL)
+    for items in target:
+        for itr in items:
+            if itr !='':
+                for val in itr.split('</a></li>'):
+                    if val !='':
+                        try:
+							my_path = 'http://shahidlive.com'+val.strip().split('href="')[1].split('">')[0]
+							my_name = val.strip().split('href="')[1].split('">')[1]
+							if 'مسلسلات' in my_name:
+								addDir(my_name,my_path,1,'')
+							else :
+								addDir(my_name,my_path,2,'')
+							all_cats[my_name]=my_path
+                        except:
+                            pass
+    return all_cats
+    
+
+def list_epos(url):
+	
+    all_cats = {}
+    req = urllib2.Request(url)
+    response = urllib2.urlopen(req)
+    link = response.read()
+    target = re.findall(r'<div class="col-xs-5 no-pd-left ">(.*?)\s(.*?)<script>', link, re.DOTALL)
+    for epo in target:
+        for it in epo:
+            for my_con in it.split('</div>'):
+                if 'href' in my_con:
+                    target = re.findall(r'<a href="(.*?)\s(.*?)" class="center-block">', my_con, re.DOTALL)
+                    for i in target:
+						name=str( i[1]).split('=')[1].replace('"',"").strip()
+						path= 'http://shahidlive.com'+i[0].replace('"',"").strip()
+						addLink(name,path,3,'')
+
+def get_video_file(url):
+	url = 'http://shahidlive.com/Play/'+url.split('Video-')[1]+'-681-382'
+	req = urllib2.Request(url)
+	req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	response = urllib2.urlopen(req)
+	link=response.read()
+	target= re.findall(r'<iframe src="(.*?)\s(.*?)"', link, re.DOTALL)
+	target= target[0]
+	target = target[0].replace('"','').strip()
+
+	req_target = urllib2.Request(target)
+	req_target.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+	response_target = urllib2.urlopen(req_target)
+	link_target=response_target.read()
+	print link_target
+    #RTMPVideoURL(url=RTMP_URL, clip=PLAYPATH, swf_url=swf_url, args=(dict()))
+	video_url= str(link_target).split('<source src="')[1].split('" type=')[0].strip().split('vod')
+
+	app = video_url[1].split(':')[0].replace('&','')
+	play_path = video_url[1].split(':')[1]
+	comp = video_url[0]+' app=vod playPath='+play_path
+	listItem = xbmcgui.ListItem(path=str(comp))
+	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+   
+ 
+
+def get_max_page(url):
+    my_nr_list = []
     req = urllib2.Request(url)
     req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
     response = urllib2.urlopen(req)
     link=response.read()
+    target= re.findall(r'<ul class="pagination">(.*?)\s(.*?)</div>', link, re.DOTALL)
 
-    target= re.findall(r' <ul class="hidden-xs">(.*?)\s(.*?) </ul>', link, re.DOTALL)
-    mylist= [items for i in  target for items in i if items !='']
-    final_catergories = [it for itr in mylist for it in itr.split('/a></li>') if '="' in str(it)  ]
-    for itr in  final_catergories:
-        my_data =itr.split('="')[1]
-        path =  'http://shahidlive.com'+my_data.split('">')[0]
-        title =  my_data.split('">')[1]
-        title = title.replace('<','')
-	if 'مسلسلات' in str(title):
-		addDir(title,path,1,'')
-	elif 'افلام' in str(title):
-		addDir(title,path,2,'')
+    for item in target:
+        for itr in item:
+            for i in  itr.split('class="page"'):
+                try:
+                    my_list_item= i.split('</a></li><li class=')[0].split('">')[1]
+                    if my_list_item.isdigit():
+                        my_nr_list.append(my_list_item)
+                except:
+                    pass
+
+    return max (my_nr_list)
 
 def list_cat_content(url):
     max_nr = int(get_max_page(url))
@@ -72,36 +141,21 @@ def list_cat_content(url):
 
                       item= item.split('">')
                       try:
-                        path =  'http://shahidlive.com'+item[1].replace('<a href="','').strip()
-                        img =  item[3].split('="')[1].split('"')[0].strip()
-                        title = item[6].replace('<h4>','').strip()
-			addDir(title,path,3,img)
-			
+						path =  'http://shahidlive.com'+item[1].replace('<a href="','').strip()
+						img =  item[3].split('="')[1].split('"')[0].strip()
+						title = item[6].replace('<h4>','').strip()
+						addDir(title,path,2,img)
+						print path
+						print img
+						print title
+
+
+
                       except:
                           pass
         except:
 
             print 'Nothing ti view'
-
-		
-def get_max_page(url):
-    my_nr_list = []
-    req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link=response.read()
-    target= re.findall(r'<ul class="pagination">(.*?)\s(.*?)</div>', link, re.DOTALL)
-    for item in target:
-        for itr in item:
-            for i in  itr.split('class="page"'):
-                try:
-                    my_list_item= i.split('</a></li><li class=')[0].split('">')[1]
-                    if my_list_item.isdigit():
-                        my_nr_list.append(my_list_item)
-                except:
-                    pass
-
-    return max (my_nr_list)
 
 def get_episodes(url):
 
@@ -110,52 +164,31 @@ def get_episodes(url):
 
         for iter in range(0,max_nr):
             url = url.split('-')[0] +'-'+ url.split('-')[1]+'-'+str(iter)
-            print url
             req = urllib2.Request(url)
             req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
             response = urllib2.urlopen(req)
             link=response.read()
+            sum_target = str(link).split(' <meta name="description" content="')[1].split('" />')[0]
+            print sum_target
             target= re.findall(r' <a href="(.*?)\s(.*?)<img src="(.*?)\s(.*?)class(.*?)\s(.*?)<div class="title"><h4>(.*?)\s(.*?)</h4></div>', link, re.DOTALL)
             counter = 0
             for itr in  target:
                 counter =counter +1
                 if counter > 1:
-                    video = 'http://shahidlive.com'+ itr[0].replace('">','').strip()
-                    img =   itr[2].replace('"','').strip()
-                    name = itr[6]+' '+ itr[7]
-                    name= name.strip()
-		    addLink(name,video,4,img)
-                    
+					video = 'http://shahidlive.com'+ itr[0].replace('">','').strip()
+					img =   itr[2].replace('"','').strip()+' '+itr[3].strip().replace('"','').replace(' ', '%20' )
+					name = itr[6]+' '+ itr[7]
+					name= name.strip()
+					addLink(name,video,3,img)
+                    #print name
+                    #print img
+                    #print video
+
+
+
+
     except:
         pass
-      
-def get_video_file(url):
-    url = 'http://shahidlive.com/Play/'+url.split('Video-')[1]+'-681-382'
-    req = urllib2.Request(url)
-    req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response = urllib2.urlopen(req)
-    link=response.read()
-    target= re.findall(r'<iframe src="(.*?)\s(.*?)"', link, re.DOTALL)
-    target= target[0]
-    target = target[0].replace('"','').strip()
-
-    req_target = urllib2.Request(target)
-    req_target.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
-    response_target = urllib2.urlopen(req_target)
-    link_target=response_target.read()
-    link_file= re.findall(r'"file":(.*?)\s(.*?)",', link_target, re.DOTALL)
-    final_video_url= str(link_file[0][1]).replace('"','').strip()
-    #link_streamer= re.findall(r'"streamer":(.*?)\s(.*?)",', link_target, re.DOTALL)
-    #link_flash= re.findall(r'"flashplayer":(.*?)\s(.*?)",', link_target, re.DOTALL)
-    #link_flash= link_flash[0]
-    #link_flash= 'http://nadstream.shahidlive.com'+link_flash[1].replace('"','').strip()
-    #link_file= link_file[0]
-    #link_file= link_file[1]
-    #link_streamer= link_streamer[0]
-    #link_streamer= link_streamer[1]
-    #final_video_url = link_streamer.replace('"','').strip()+' playpath='+link_file.replace('"','').strip()+' swfUrl='+link_flash+ ' timeout=20'
-    listItem = xbmcgui.ListItem(path=str(final_video_url))
-    xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
    
 
                 
@@ -225,22 +258,18 @@ print "Name: "+str(name)
 
 if mode==None or url==None or len(url)<1:
         print ""
-        get_categories('http://shahidlive.com/')
+        list_cats('http://shahidlive.com/')
        
 elif mode==1:
         print ""+url
         list_cat_content(url)
-	
 elif mode==2:
-	print ""+url
-	get_episodes(url)
-
+        print ""+url
+        get_episodes(url)
+	
 elif mode==3:
 	print ""+url
-	get_episodes(url)
-elif mode==4:
-	print ""+url
 	get_video_file(url)
-			
+	
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))

@@ -28,6 +28,7 @@ httplib.HTTPResponse.read = patch_http_response_read(httplib.HTTPResponse.read)
 
 
 def CATEGORIES():
+	addDir(' 2016 مسلسلات رمضان  ','http://www.alqudseyes.com/series?sort=desc&category=78&sort_by=date&series=100&page=',2,'')
 
 	addDir('مسلسلات تركية ','http://www.alqudseyes.com/series?sort=desc&category=19&sort_by=date&series=100&page=',2,'')
 	addDir('مسلسلات عربية ','http://www.alqudseyes.com/series?sort=desc&category=20&sort_by=date&series=100&page=',2,'')
