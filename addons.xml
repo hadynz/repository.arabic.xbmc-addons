@@ -360,7 +360,7 @@ The service includes TV shows such as Al Qahera Al Youm, Al Bernameg, Akher Kala
 
 <addon
   id="plugin.video.panet"
-  version="1.9.0"
+  version="2.1.0"
   name="Panet"
   provider-name="Bisha">
   <requires>
