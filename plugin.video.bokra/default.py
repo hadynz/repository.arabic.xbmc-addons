@@ -95,10 +95,10 @@ def get_video_file(url):
     #RTMPVideoURL(url=RTMP_URL, clip=PLAYPATH, swf_url=swf_url, args=(dict()))
 	video_url= str(link_target).split('<source src="')[1].split('" type=')[0].strip().split('vod')
 
-	app = video_url[1].split(':')[0].replace('&','')
-	play_path = video_url[1].split(':')[1]
-	comp = video_url[0]+' app=vod playPath='+play_path
-	listItem = xbmcgui.ListItem(path=str(comp))
+	video_url_1 = ''.join(video_url)
+	sep = '"'
+	rest = video_url_1.split(sep,1)[0]
+	listItem = xbmcgui.ListItem(path=str(rest))
 	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
    
  

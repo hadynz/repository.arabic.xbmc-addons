@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="plugin.video.bokra"
-  version="5.2.0"
+  version="5.3.0"
   name="BOKRA"
   provider-name="Bisha">
   <requires>
     <import addon="xbmc.python"
             version="2.1.0"/>
+			<import addon="script.module.web-pdb" version="1.0"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
              library="default.py">
