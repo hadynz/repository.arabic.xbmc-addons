@@ -1,6 +1,18 @@
 # -*- coding: utf8 -*-
-import urllib,urllib2,xbmcplugin,xbmcgui,xbmcaddon
+import urllib,urllib2,re,xbmcplugin,xbmcgui
+import xbmc, xbmcgui, xbmcplugin, xbmcaddon
+from httplib import HTTP
+from urlparse import urlparse
+import StringIO
+import urllib2,urllib
 import re
+import httplib
+import time
+import xbmcgui
+from urllib2 import Request, build_opener, HTTPCookieProcessor, HTTPHandler
+import cookielib
+import datetime
+
 
 __settings__ = xbmcaddon.Addon(id='plugin.video.alarab')
 __icon__ = __settings__.getAddonInfo('icon')
@@ -10,118 +22,77 @@ _thisPlugin = int(sys.argv[1])
 _pluginName = (sys.argv[0])
 
 
+def getCats(url):
+	req = urllib2.Request(url)
+	response = urllib2.urlopen(req)
+	link = response.read()
+	target = re.findall(r'<div id="nav">(.*?)</div>', link, re.DOTALL)
+	for items in target:
+		mypath = re.findall(r' href="/(.*?)/', items)
+		myname = myname = re.findall(r'" >(.*?)</a></li>', items)
+		for it_name, it_mypath in zip(myname, mypath):
+			holder = 'http://tv1.alarab.com/'+it_mypath +'/'
+			addDir(it_name,holder,2,"")
 
 
-def CATEGORIES():
-	addDir("RAMADAN MORROCAN SERIES","/ramadan2016/مغربية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN SYRIAN SERIES","http://tv1.alarab.com/ramadan2016/سورية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN EGYPTIAN SERIES","http://tv1.alarab.net/ramadan2016/مصرية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN KHALIJI SERIES","http://tv1.alarab.net/ramadan2016/خليجية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN LEBANESE SERIES","http://tv1.alarab.net/ramadan2016/لبانينة",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN KUWAITI SERIES","http://tv1.alarab.net/ramadan2016/كويتية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN SAUDI SERIES","http://tv1.alarab.net/ramadan2016/سعودية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN JORDANIAN SERIES","http://tv1.alarab.net/ramadan2016/اردنية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN BAHRAINI SERIES","http://tv1.alarab.net/ramadan2016/بحرينية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
-	addDir("RAMADAN EMARATI SERIES","http://tv1.alarab.net/ramadan2016/اماراتية",2,"http://wadeni.com/images/icons/0alarab-net.jpg")
 
-def getMovie(url):
-	openerx = urllib2.build_opener()
-	sockx = openerx.open(url)
-	contentx = sockx.read()
-	sockx.close()
-	wieviele = contentx.count('<div class="video-box">')
-	teilen = contentx.split('<div class="video-box">')
-	for i in range(1,wieviele+1):
-		linkjetzt = teilen[i].split('"')
-		imgjetzt = linkjetzt[3]
-		urljetzt = "http://tv1.alarab.net/"+linkjetzt[1]
-		namejetzt = linkjetzt[5]
-		addLink(namejetzt,urljetzt,4,imgjetzt)
-	seitenzahl1 = contentx.split('<div class="pages"><center>')
-	seitenzahl2 = seitenzahl1[1].split("</div></center></div>")
-	seitenzahl3 = seitenzahl2[0].split('tsc_3d_button blue"')
-	seitenzahl4 = seitenzahl3[1].split(">")
-	seitenzahl5 = seitenzahl4[1].split("<")
-	seitenzahlselected = seitenzahl5[0]
-	seitenwieviel = seitenzahl2[0].count("href")
-	if int(seitenzahlselected) < seitenwieviel:
-		nextpagelink1 = seitenzahl3[1].split('"')
-		nextpagelink = "http://tv1.alarab.net" + nextpagelink1[7]
-		addDir("("+seitenzahlselected+"/"+str(seitenwieviel)+") Next Page",nextpagelink,1,"http://wadeni.com/images/icons/0alarab-net.jpg")
+def getTVSeries(url): 
+	req = urllib2.Request(url)
+	response = urllib2.urlopen(req)
+	link = response.read()
+	target_pg = re.findall(r'<a class="tsc_3d(.*?)</a>', link, re.DOTALL)
+	target_ep = re.findall(r'<div class="video-box">(.*?)</a></div>', link, re.DOTALL)
+	target_page_counter = re.findall(r'<a class="tsc_3d_button blue"(.*?)</a>', link)
+	for counts in target_page_counter:
+		real_number = counts.split('title=" \xd8\xb5\xd9\x81\xd8\xad\xd8\xa9 ')[1].split('" >')[0]
+	counter = int(real_number)+1
+	for eps in target_ep:
+		ep_path = re.findall(r' href="/(.*?)">', eps)
+		ep_name = re.findall(r'alt="(.*?)" />', eps)
+		for names, paths in zip(ep_name, ep_path):
+			holder = 'http://tv1.alarab.com/' + paths #set path
+			addDir(names,holder,3,"")
+	for pg in target_pg:
 
-def getSerie(url):
-	openerx = urllib2.build_opener()
-	sockx = openerx.open(url)
-	contentx = sockx.read()
-	sockx.close()
-	wieviele = contentx.count('<div class="video-box">')
-	teilen = contentx.split('<div class="video-box">')
-	for i in range(1,wieviele+1):
-		linkjetzt = teilen[i].split('"')
-		imgjetzt = linkjetzt[3]
-		urljetzt = "http://tv1.alarab.net/"+linkjetzt[1]
-		namejetzt = linkjetzt[5]
-		addDir(namejetzt,urljetzt,3,imgjetzt)
-	seitenzahl1 = contentx.split('<div class="pages"><center>')
-	seitenzahl2 = seitenzahl1[1].split("</div></center></div>")
-	seitenzahl3 = seitenzahl2[0].split('tsc_3d_button blue"')
-	seitenzahl4 = seitenzahl3[1].split(">")
-	seitenzahl5 = seitenzahl4[1].split("<")
-	seitenzahlselected = seitenzahl5[0]
-	seitenwieviel = seitenzahl2[0].count("href")
-	if int(seitenzahlselected) < seitenwieviel:
-		nextpagelink1 = seitenzahl3[1].split('"')
-		nextpagelink = "http://tv1.alarab.net" + nextpagelink1[7]
-		addDir("("+seitenzahlselected+"/"+str(seitenwieviel)+") Next Page",nextpagelink,2,"http://wadeni.com/images/icons/0alarab-net.jpg")
+		pg_path_str = pg.split('href="')[1].split('"')[0]
+		pg_path_link = 'http://tv1.alarab.com/' + pg_path_str
+		#pg_number_str = re.findall(r' title=" \xd8\xb5\xd9\x81\xd8\xad\xd8\xa9 (.*?)" >',pg)
+		pg_number_str = pg.split('title=" \xd8\xb5\xd9\x81\xd8\xad\xd8\xa9 ')[1].split('" >')[0]
+		pg_number = int(pg_number_str)
+		if (counter == pg_number):
+			addDir('Next Page', pg_path_link, 2, "")
+
+	
+
 
 def getSerieFolge(url):
-	openerx = urllib2.build_opener()
-	sockx = openerx.open(url)
-	contentx = sockx.read()
-	sockx.close()
-	wieviele = contentx.count('<div class="video-box">')
-	teilen = contentx.split('<div class="video-box">')
-	for i in range(1,wieviele+1):
-		linkjetzt = teilen[i].split('"')
-		imgjetzt = linkjetzt[3]
-		urljetzt = "http://tv1.alarab.net/"+linkjetzt[1]
-		namejetzt = linkjetzt[5]
-		addLink(namejetzt,urljetzt,4,imgjetzt)
-	seitenzahl1 = contentx.split('<div class="pages"><center>')
-	seitenzahl2 = seitenzahl1[1].split("</div></center></div>")
-	seitenzahl3 = seitenzahl2[0].split('tsc_3d_button blue"')
-	seitenzahl4 = seitenzahl3[1].split(">")
-	seitenzahl5 = seitenzahl4[1].split("<")
-	seitenzahlselected = seitenzahl5[0]
-	seitenwieviel = seitenzahl2[0].count("href")
-	if int(seitenzahlselected) < seitenwieviel:
-		nextpagelink1 = seitenzahl3[1].split('"')
-		nextpagelink = "http://tv1.alarab.net" + nextpagelink1[7]
-		addDir("("+seitenzahlselected+"/"+str(seitenwieviel)+") Next Page",nextpagelink,3,"http://wadeni.com/images/icons/0alarab-net.jpg")
+	req = urllib2.Request(url)
+	response = urllib2.urlopen(req)
+	link = response.read()
+	#target_episodes = re.findall(r'<div class="fav">(.*?)</div>\s+</a>', link, re.DOTALL)
+	target_episodes = re.findall(r'<div class="related_on">(.*?)<div id="results">', link, re.DOTALL)
+	print target_episodes
+	for episodes in target_episodes:
+		episode_name = re.findall(r'div class="">(.*?)</div',episodes,re.DOTALL)
+		episode_path = re.findall(r'a href="/(.*?)"', episodes,re.DOTALL)
+		for name, paths in zip(episode_name, episode_path):
+			holder = 'http://tv1.alarab.com/'+paths
+			print name
+			print paths
+			addLink(name,holder,4,"")
 
-def PlayMovie(url):
-		opener = urllib2.build_opener()
-		sock = opener.open(url)
-		content = sock.read()
-		sock.close()
-		source1 = content.split('http://alarabplayers.alarab.net')
-		fileright = getFlvAddress(source1[0])
-		print 'Used Url is:', fileright		
-		listItem = xbmcgui.ListItem(path=str(fileright))
-		xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+def Play(url):
+	url1 = 'http://alarabplayers.alarab.com/?vid='+url.split('v')[2]
+	url2 = url1.split('-')[0]
+	req = urllib2.Request(url2)
+	response = urllib2.urlopen(req)
+	link=response.read()
+	video_url = str(link).split('file: "')[1].split('"')[0]
+	listItem = xbmcgui.ListItem(path=str(video_url))
+	xbmcplugin.setResolvedUrl(_thisPlugin, True, listItem)
+	
 
-def getFlvAddress(par_sHtmlContent):
-		# search for the .flv address and change the flv. prefix to flv2.	
-		sFlvAddress = re.search(r'file=.*?\.flv', par_sHtmlContent, re.DOTALL)
-		
-		sFlvAddress = sFlvAddress.group()
 
-		iHttpStartIndex = sFlvAddress.find('=') 
-
-		sFinalAndCorrectedFlvAddress = sFlvAddress[iHttpStartIndex+1:].replace('flv.', 'flv2.')
-		sFinalAndCorrectedFlvAddress = sFinalAndCorrectedFlvAddress.replace('/flv/','/new/flv/')
-		
-		return sFinalAndCorrectedFlvAddress
 
 def get_params():
         param=[]
@@ -189,19 +160,19 @@ print "Name: "+str(name)
 
 if mode==None or url==None or len(url)<1:
         print ""
-        CATEGORIES()
+        getCats('http://tv1.alarab.com')
 elif mode==1:
 	print ""+url
 	getMovie(url)
 elif mode==2:
 	print ""+url
-	getSerie(url)
+	getTVSeries(url)
 elif mode==3:
 	print ""+url
 	getSerieFolge(url)
 elif mode==4:
 	print ""+url
-	PlayMovie(url)
+	Play(url)
 
 
-xbmcplugin.endOfDirectory(int(sys.argv[1]))
+xbmcplugin.endOfDirectory(int(sys.argv[1]), updateListing=True)
