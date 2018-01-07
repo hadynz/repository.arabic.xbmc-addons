@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.albernameg"
-       name="Al Bernameg"
+<addon id="plugin.video.AlNoorTV"
+       name="Al Noor TV"
        version="1.0.0"
        provider-name="Moe">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="plugin.video.youtube" version="2.9.2"/>
+    <import addon="xbmc.python" version="2.7.13"/>
+    <import addon="plugin.video.vimeo" version="4.1.4"/>
   </requires>
   <extension point="xbmc.python.pluginsource"
             library="default.py">
         <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>alBernameg.com</summary>
-    <description>الحلقات الكاملة من برنامج البرنامج مع باسم يوسف</description>
+    <summary>AlNoorTV.co</summary>
+    <description>موقع النور</description>
     <platform>all</platform>
   </extension>
 </addon>

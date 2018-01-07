@@ -27,7 +27,7 @@ class Generator:
         for addon in addons:
             try:
                 # skip any file or .git folder
-                if ( not os.path.isdir( addon ) or addon == ".git" ): continue
+                if ( not os.path.isdir( addon ) or addon == ".git" or addon == "repo"): continue
                 # create path
                 _path = os.path.join( addon, "addon.xml" )
                 # split lines for stripping
@@ -64,6 +64,7 @@ class Generator:
         try:
             # write data to the file
             open( file, "w" ).write( data )
+            print "Sucessfully saved {0}".format(file)
         except Exception, e:
             # oops
             print "An error occurred saving %s file!\n%s" % ( file, e, )

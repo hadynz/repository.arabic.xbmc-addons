@@ -1,0 +1,25 @@
+<!--<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="30001">
+        <setting label="30200" type="text"   id="username" default=""/>
+        <setting label="30201" type="text"   id="password" option="hidden"  enable="!eq(-1,)" default=""/>
+        <setting label="32053" type="slider" id="limit" subsetting="true" default="20" range="5,5,100" option="int" />
+        <setting type="sep"/>
+        <setting id="debug" type="bool" label="32013" default="false"/>
+    </category>
+    
+</settings>
+-->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <category label="30001">
+    <setting label="30200" id="username" type="text"  default="" />
+    <setting label="30201" id="password" type="text" option="hidden" enable="!eq(-1,)" default="" />
+    <setting label="30318" type="labelenum" id="language" lvalues="30321|30322|30323" default=""/>
+	
+
+    <setting id="validLogin" type="text" visible="false" default="false" />
+	
+  </category>
+
+</settings>
