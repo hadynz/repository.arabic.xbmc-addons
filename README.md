@@ -33,10 +33,12 @@ The following is a listing of the Arabic XBMC addons available from this reposit
 15 | Dubai TV |http://vod.dmi.ae/ | No | Movies, TV Series
 16 | CARTOONARABI|http://www.cartoonarabi.com| No | Movies, TV Series
 17 | Arabic Live Stream Super Collection|Several providers | No | Live TV
+18 | Al Noor TV |http://alnoortv.co | Yes | Movies, TV Series
+
 ## Installation
 There are two main ways to install this XBMC repository:
 ### 1. Using XBMC HUB's Fusion Server (recommended)
-1. Add http://fusion.xbmchub.com as a media source (or follow steps **1-13** from the following URL: http://www.xbmchub.com/blog/2012/04/24/fusion-easy-addon-installation-for-xbmc).
+1. Add http://fusion.tvaddons.co as a media source (or follow steps **1-13** from the following URL: https://www.tvaddons.co/fusion-kodi-krypton/).
 2. Browse to the following direction structure: **/video/world/arabic**
 3. Choose: **repository.arabic.xbmc-addons-1.0.0.zip**
 
