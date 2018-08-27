@@ -43,7 +43,7 @@ MODE_EPISODE_DET = 4
 MODE_PLAY_VIDEO = 5
 
 links = {}
-links['main'] = 'http://alnoortv.co/'
+links['main'] = 'https://www.alnoortv.co/'
 links['login'] = urljoin(links['main'], 'public/login/')
 
 class myhtmlparser(HTMLParser):
@@ -74,7 +74,8 @@ def getSelectedLanguage():
     
 
 def getRootCategories():
-    url = urljoin(links['main'],'public/home/', getSelectedLanguage())
+    url = urljoin(links['main'],'public/home/'+ getSelectedLanguage())
+    # sys.stderr.write("URL IS: "+ url)
     data, current_url, code = getData(url)
     if 'error' not in current_url and code <= 302:
         allSeries = re.findall(r'<li class="has-submenu">(.*?)</li>', data, re.DOTALL)
@@ -98,7 +99,7 @@ def listTopics(url):
     if 'error' not in current_url and code <= 302:
         #(?:<section\sclass="category-content">)?(?:.*?(<img\s+?src.*?>).*?(<a.*?</a>).*?)(?:<span class="page-numbers current">)?
         topics = re.findall(r'(?:<section\sclass="category-content">)?(?:.*?(<img\s.+?src.*?>).*?(<a.*?</a>).*?)(?:<span class="page-numbers current">)?', data, re.DOTALL)
-        
+        next_page = re.findall(r'(?:<a onclick\=\"toSeries\(\')(\d+)(?:\'\)\" class\=\"next page-numbers\")', data, re.DOTALL)
         for topic in topics:
             try:
                 iconimage, name = topic
@@ -114,8 +115,15 @@ def listTopics(url):
                 addDir(name, addr, MODE_LIST_EPISODES, iconimage)
             except:
                 pass
+        if next_page:
+            try:
+                addDir("-->", url.replace(str(int(next_page[-1])-1), next_page[-1]), MODE_LIST_TOPICS)
+            except:
+                pass
+        
 
 def listEpisodes(url):
+    # xbmc.executebuiltin("Container.SetViewMode(515)")
     data, current_url, code = getData(url)
     if 'error' not in current_url and code <= 302:
         episodes = re.findall(r'(<img\ssrc=.*?>)(?:\s+)(<a.+?>)(?:.+?)(<a href="#">.+?>)', data, re.DOTALL)
@@ -156,32 +164,29 @@ def hasValidLogin():
     return settings.getSetting('validLogin') == "True"
 
 def login():
+    sys.stderr.write("Error: Login called")
     i = 0
     success = False
     login_url = urljoin(links['login'], getSelectedLanguage())
     while True:
-        req = urllib2.Request(login_url)
-        req.add_header('Content-Type', 'application/x-www-form-urlencoded')
-        req.add_header('Host', 'alnoortv.co')
-        data = prepareCredentials()
-        req.add_data(data)
-        req.add_header('Content-Length', str(len(data)))
-        response = urllib2.urlopen(req)
-        login_urlfound = ''
-        try:
-            login_urlfound=re.findall(r'(href="/public/login/?)', data, re.DOTALL)
-        except:
-            pass
+        req_data = prepareCredentials()
+        for x in range(7):
+            response = urllib2.urlopen(login_url, req_data)
+            cookie = response.headers.dict.get('set-cookie','') or response.headers.dict.get('Set-Cookie','')
+            if ('error' not in response.url and cookie):
+                success = True
+                settings.setSetting('cookie', cookie) 
+                settings.setSetting('validLogin', str(success))
+                break
         i+=1
-        if (i>3 or not login_urlfound and ('error' not in response.url and response.headers.dict.get('set-cookie',''))):
-            success = False
-            settings.setSetting('cookie', response.headers.dict.get('set-cookie','')) 
-            settings.setSetting('validLogin', str(success))
-            break
-        else:
+        if success == False and i<=3:
             settings.openSettings()
+        else:
+            break
+
     if not success:
         showErrorMessage("", language(30602))
+        exit()
 
 def prepareCredentials():
     username = settings.getSetting('username')
@@ -191,23 +196,21 @@ def prepareCredentials():
 
 
     # Shows a more user-friendly notification
-def getData(url):       
+def getData(url):
+    if not settings.getSetting('cookie') and not hasValidLogin():
+        login()
     if settings.getSetting('cookie'):
         opener.addheaders.append(('Cookie', settings.getSetting('cookie')))
         response = opener.open(url)
         data = response.read()
         opener.close()
-        login_urlfound = ''
-        try:
-            login_urlfound=re.findall(r'(href="/public/login/?)', data, re.DOTALL)
-        except:
-            pass
-        if login_urlfound or 'error' in response.url or response.code  > 302:
+        if ("href\=\"/public/login/" in data) or 'error' in response.url or response.code  > 302:
             login()
+            response = opener.open(url)
+            data = response.read()
         return data, response.url, response.code 
-    else:
-        login()
-    pass
+ 
+    return '', 'error', 666
             
     
 

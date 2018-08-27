@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.AlNoorTV"
        name="Al Noor TV"
-       version="1.0.0"
+       version="1.2.0"
        provider-name="Moe">
   <requires>
     <import addon="xbmc.python" version="2.7.13"/>
@@ -15,5 +15,14 @@
     <summary>AlNoorTV.co</summary>
     <description>موقع النور</description>
     <platform>all</platform>
+    <news>
+    Version 1.2.0
+    - Switched to new https site https://www.alnoortv.co/
+    - Added next page option for series list
+    - Fixed menus to show in selected language
+    - some first login enhancements 
+    Version 1.0.0
+    - Initial version
+    </news>
   </extension>
 </addon>

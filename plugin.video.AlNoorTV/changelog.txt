@@ -1,2 +1,6 @@
+[B]Version 1.2.0[/B]
+- Switched to new https site https://www.alnoortv.co/
+- Added next page option for series list
+- Fixed menus to show in selected language 
 [B]Version 1.0.0[/B]
 - Initial version
