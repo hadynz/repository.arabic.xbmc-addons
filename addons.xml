@@ -78,7 +78,7 @@
 
 <addon id="plugin.video.AlNoorTV"
        name="Al Noor TV"
-       version="1.2.0"
+       version="1.2.1"
        provider-name="Moe">
   <requires>
     <import addon="xbmc.python" version="2.7.13"/>
@@ -93,6 +93,8 @@
     <description>موقع النور</description>
     <platform>all</platform>
     <news>
+    Version 1.2.1
+    - Fixed login issues preventing play item to be added
     Version 1.2.0
     - Switched to new https site https://www.alnoortv.co/
     - Added next page option for series list
