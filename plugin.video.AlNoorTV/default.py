@@ -12,15 +12,20 @@ if REMOTE_DBG:
         sys.stderr.write("Error: " +
             "You must add org.python.pydev.debug.pysrc to your PYTHONPATH.")
 
-import xbmc, xbmcgui, xbmcplugin
-import urllib2, urllib, cgi, re
-from HTMLParser import HTMLParser
-import xbmcaddon
-import traceback
 import os
+import re
 import sys
-import json
+import urllib
+import urllib2
+from cookielib import LWPCookieJar
+from cStringIO import StringIO
+from HTMLParser import HTMLParser
 from urlparse import urljoin
+
+import xbmc
+import xbmcaddon
+import xbmcgui
+import xbmcplugin
 
 addon_id = 'plugin.video.AlNoorTV'
 settings = xbmcaddon.Addon(id=addon_id)
@@ -32,8 +37,6 @@ addonPath = xbmcaddon.Addon().getAddonInfo("path")
 addonArt = os.path.join(addonPath, 'resources/images')
 plugin = int(sys.argv[1])
 msg_duration = 2000
-opener = urllib2.build_opener()
-# settings.setSetting('cookie','')
 
 # Setting constants
 MODE_LIST_CATEGORIES = 1
@@ -45,6 +48,15 @@ MODE_PLAY_VIDEO = 5
 links = {}
 links['main'] = 'https://www.alnoortv.co/'
 links['login'] = urljoin(links['main'], 'public/login/')
+
+cj = LWPCookieJar()
+if settings.getSetting('cookie'):
+    try:
+        f = StringIO(settings.getSetting('cookie'))
+        cj._really_load(f, '', True, True)
+    except:
+        pass
+opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
 
 class myhtmlparser(HTMLParser):
     def __init__(self):
@@ -144,17 +156,16 @@ def listEpisodes(url):
                 parser.feed(iconimage)
                 iconimage = parser.NEWATTRS[0][0][-1]
                 addDir(name, addr[1:], MODE_EPISODE_DET, iconimage, cat="DefaultVideo.png")
-            except:
+            except:               
                 pass
 
 def episodeDetails(url):
     data, current_url, code = getData(url)
     try:
-        video_id = re.findall(r'(?:https://player.vimeo.com/video/|https://player.vimeo.com/)(\d+)', data, re.DOTALL)
-
-        uurl = 'plugin://plugin.video.vimeo/play/?video_id=%s' % video_id[0]
+        video_id = re.findall(r'(?:https://player.vimeo.com/video/|https://player.vimeo.com/)(\d+)', data, re.DOTALL)        
+        uurl = 'plugin://plugin.video.vimeo/play/?video_id='+ str(video_id[0])
         addDir('Play', uurl, MODE_PLAY_VIDEO, iconimage='', cat="DefaultVideo.png")
-    except:
+    except:        
         pass
 
 def findStringBetween(text, start='', end=''):
@@ -163,20 +174,19 @@ def findStringBetween(text, start='', end=''):
 def hasValidLogin():
     return settings.getSetting('validLogin') == "True"
 
-def login():
-    sys.stderr.write("Error: Login called")
+def login():    
     i = 0
     success = False
     login_url = urljoin(links['login'], getSelectedLanguage())
     while True:
         req_data = prepareCredentials()
-        for x in range(7):
-            response = urllib2.urlopen(login_url, req_data)
+        for x in range(1):
+            response = opener.open(login_url, req_data) 
             cookie = response.headers.dict.get('set-cookie','') or response.headers.dict.get('Set-Cookie','')
-            if ('error' not in response.url and cookie):
+            data = response.read()
+            if (len(re.findall(r'(href="/public/login/?)', data, re.DOTALL)) == 0 and 'error' not in response.url and cookie):
                 success = True
-                settings.setSetting('cookie', cookie) 
-                settings.setSetting('validLogin', str(success))
+                settings.setSetting('cookie', "#LWP-Cookies-2.0\n"+ cj.as_lwp_str())
                 break
         i+=1
         if success == False and i<=3:
@@ -200,11 +210,11 @@ def getData(url):
     if not settings.getSetting('cookie') and not hasValidLogin():
         login()
     if settings.getSetting('cookie'):
-        opener.addheaders.append(('Cookie', settings.getSetting('cookie')))
         response = opener.open(url)
         data = response.read()
         opener.close()
-        if ("href\=\"/public/login/" in data) or 'error' in response.url or response.code  > 302:
+        # sys.stderr.write("public login is len: "+ str(len(re.findall(r'(href="/public/login/?)', data, re.DOTALL))) )
+        if len(re.findall(r'(href="/public/login/?)', data, re.DOTALL))>0 or 'error' in response.url or response.code  > 302:
             login()
             response = opener.open(url)
             data = response.read()
@@ -232,7 +242,7 @@ def addDir(name,url,mode=2,iconimage='', cat="DefaultFolder.png"):
         folder = True
         liz=xbmcgui.ListItem(name, iconImage=cat, thumbnailImage=iconimage)
         if mode != MODE_PLAY_VIDEO:
-            url = urljoin(links['main'], url)
+            url = urljoin(links['main'], url)            
             u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
         else:
             u = url+"&mode="+str(mode)
