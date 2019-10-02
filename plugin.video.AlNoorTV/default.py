@@ -162,9 +162,12 @@ def listEpisodes(url):
 def episodeDetails(url):
     data, current_url, code = getData(url)
     try:
-        video_id = re.findall(r'(?:https://player.vimeo.com/video/|https://player.vimeo.com/)(\d+)', data, re.DOTALL)        
-        uurl = 'plugin://plugin.video.vimeo/play/?video_id='+ str(video_id[0])
-        addDir('Play', uurl, MODE_PLAY_VIDEO, iconimage='', cat="DefaultVideo.png")
+        res = re.findall(r'(http\S+\.mp4|http://img.alnoortv.co\S+\.jpg)', data, re.DOTALL)
+        uurl = str(res[0])
+        img = "DefaultVideo.png"
+        if len(res[1])>0:
+            img = str(res[1])
+        addDir('Play', uurl, MODE_PLAY_VIDEO, iconimage='', cat=img)
     except:        
         pass
 
@@ -245,7 +248,7 @@ def addDir(name,url,mode=2,iconimage='', cat="DefaultFolder.png"):
             url = urljoin(links['main'], url)            
             u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
         else:
-            u = url+"&mode="+str(mode)
+            u = url #+"&mode="+str(mode)
             liz.setProperty('IsPlayable', 'true')
             folder = False
         

@@ -16,6 +16,8 @@
     <description>موقع النور</description>
     <platform>all</platform>
     <news>
+    Version 1.3.0
+    - Bug fixes so the addon is back to working state
     Version 1.2.1
     - Fixed login issues preventing play item to be added
     Version 1.2.0
